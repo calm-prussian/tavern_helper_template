@@ -18,6 +18,13 @@ export const Schema = z.object({
         })
         .prefault({}),
 
+      路况: z
+        .object({
+          能见度: z.enum(['良好', '有限', '低', '极低']).prefault('良好'),
+          路面: z.enum(['干燥', '湿滑', '积雪', '结冰']).prefault('干燥'),
+        })
+        .prefault({}),
+
       位置: z
         .object({
           国家: z.string().prefault('德国'),
@@ -54,6 +61,10 @@ export const Schema = z.object({
           终点: z.string().prefault('待选择'),
           货物名称: z.string().prefault('待选择'),
           挂车类型: z.string().prefault('待选择'),
+          途经城市: z
+            .array(z.string())
+            .transform(data => data.slice(0, 3))
+            .prefault([]),
           报酬: z.coerce
             .number()
             .transform(v => Math.max(0, Math.round(v)))

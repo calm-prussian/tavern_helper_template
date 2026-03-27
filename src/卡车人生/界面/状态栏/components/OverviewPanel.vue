@@ -27,6 +27,19 @@
           <span class="meta-value">{{ radio_icon }} {{ radio_title }}</span>
           <span class="meta-sub">{{ radio_meta_text }}</span>
         </div>
+
+        <div class="meta-item" :class="{ 'meta-item-warn': road_surface_warn || visibility_warn }">
+          <div class="radio-head">
+            <span class="meta-label">路况</span>
+            <span class="pill" :class="road_class">{{ store.data.世界.路况.路面 }}</span>
+          </div>
+          <span class="meta-value" :class="{ 'warn-text': road_surface_warn || visibility_warn }">
+            {{ road_icon }} {{ store.data.世界.路况.路面 }}
+          </span>
+          <span class="meta-sub" :class="{ 'warn-text': visibility_warn }">
+            能见度 {{ store.data.世界.路况.能见度 }}
+          </span>
+        </div>
       </div>
     </article>
 
@@ -110,6 +123,29 @@ const radio_class = computed(() => ({
   safe: store.data.车辆.电台.状态 === '开启',
   neutral: store.data.车辆.电台.状态 === '未开启',
   caution: store.data.车辆.电台.状态 === '已关闭',
+}));
+
+const road_surface_warn = computed(() => ['积雪', '结冰'].includes(store.data.世界.路况.路面));
+const visibility_warn = computed(() => ['低', '极低'].includes(store.data.世界.路况.能见度));
+
+const road_icon = computed(() => {
+  if (store.data.世界.路况.路面 === '结冰') {
+    return '🧊';
+  }
+  if (store.data.世界.路况.路面 === '积雪') {
+    return '❄️';
+  }
+  if (store.data.世界.路况.路面 === '湿滑') {
+    return '🌧️';
+  }
+  return '🛣️';
+});
+
+const road_class = computed(() => ({
+  safe: store.data.世界.路况.路面 === '干燥',
+  neutral: store.data.世界.路况.路面 === '湿滑',
+  warn: store.data.世界.路况.路面 === '积雪',
+  danger: store.data.世界.路况.路面 === '结冰',
 }));
 
 const fuel_percent = computed(() => {
@@ -216,7 +252,7 @@ const transport_class = computed(() => ({
 
 .meta-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
 }
 
@@ -227,6 +263,11 @@ const transport_class = computed(() => ({
   padding: 12px;
   border-radius: 12px;
   background: rgba(30, 41, 59, 0.88);
+}
+
+.meta-item-warn {
+  box-shadow: inset 0 0 0 1px rgba(249, 115, 22, 0.28);
+  background: rgba(51, 33, 19, 0.76);
 }
 
 .radio-head {
@@ -245,6 +286,11 @@ const transport_class = computed(() => ({
   font-size: 0.95rem;
   color: var(--c-text);
   font-weight: 700;
+}
+
+.meta-value.warn-text,
+.meta-sub.warn-text {
+  color: #fdba74;
 }
 
 .meta-sub {
@@ -366,7 +412,7 @@ const transport_class = computed(() => ({
 
 @media (max-width: 980px) {
   .meta-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

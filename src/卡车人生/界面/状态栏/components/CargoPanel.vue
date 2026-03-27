@@ -14,10 +14,11 @@
         <div class="reward-box">€ {{ reward_text }}</div>
       </div>
 
-      <div class="route-card">
-        <span>{{ store.data.运输.当前货单.起点 }}</span>
-        <span class="arrow">→</span>
-        <span>{{ store.data.运输.当前货单.终点 }}</span>
+      <div class="route-card route-chain">
+        <template v-for="(city, index) in route_nodes" :key="`${city}-${index}`">
+          <span class="route-node" :class="route_node_class(index)">{{ city }}</span>
+          <span v-if="index < route_nodes.length - 1" class="arrow">→</span>
+        </template>
       </div>
 
       <div class="progress-head">
@@ -59,7 +60,7 @@
       </div>
 
       <div v-if="monitor_entries.length" class="monitor-grid">
-        <div v-for="([name, value]) in monitor_entries" :key="name" class="monitor-item">
+        <div v-for="[name, value] in monitor_entries" :key="name" class="monitor-item">
           <span class="monitor-key">{{ name }}</span>
           <span class="monitor-value">{{ value }}</span>
         </div>
@@ -104,11 +105,30 @@ function formatMinutes(minutes: number) {
   return `${hour}小时${minute}分`;
 }
 
-const deadline_text = computed(() => (store.data.运输.当前货单.有时限 ? formatMinutes(store.data.运输.当前货单.时限分钟) : '无时限'));
-const remaining_time_text = computed(() => (store.data.运输.当前货单.有时限 ? formatMinutes(store.data.运输.当前货单.剩余时间分钟) : '不限制'));
+const deadline_text = computed(() =>
+  store.data.运输.当前货单.有时限 ? formatMinutes(store.data.运输.当前货单.时限分钟) : '无时限',
+);
+const remaining_time_text = computed(() =>
+  store.data.运输.当前货单.有时限 ? formatMinutes(store.data.运输.当前货单.剩余时间分钟) : '不限制',
+);
 
 const task_tags = computed(() => Object.keys(store.data.运输.当前货单.任务标签));
 const monitor_entries = computed(() => Object.entries(store.data.运输.当前货单.特种任务监控));
+
+const route_nodes = computed(() => {
+  const middle = store.data.运输.当前货单.途经城市.filter(Boolean);
+  return [store.data.运输.当前货单.起点, ...middle, store.data.运输.当前货单.终点].filter(Boolean);
+});
+
+function route_node_class(index: number) {
+  if (route_nodes.value.length <= 1) {
+    return 'route-node-active';
+  }
+
+  const progress = trip_percent.value / 100;
+  const threshold = index / (route_nodes.value.length - 1);
+  return progress >= threshold ? 'route-node-active' : 'route-node-idle';
+}
 
 const status_class = computed(() => ({
   neutral: ['待选择', '待出发'].includes(store.data.运输.状态),
@@ -132,9 +152,7 @@ const status_class = computed(() => ({
 }
 
 .highlight-card {
-  background:
-    linear-gradient(180deg, rgba(245, 158, 11, 0.08), transparent 60%),
-    rgba(15, 23, 42, 0.64);
+  background: linear-gradient(180deg, rgba(245, 158, 11, 0.08), transparent 60%), rgba(15, 23, 42, 0.64);
 }
 
 .full-span {
@@ -219,6 +237,27 @@ const status_class = computed(() => ({
   color: var(--c-text);
   font-weight: 700;
   text-align: center;
+}
+
+.route-chain {
+  flex-wrap: wrap;
+}
+
+.route-node {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  font-size: 0.84rem;
+}
+
+.route-node-active {
+  background: rgba(56, 189, 248, 0.14);
+  color: #bae6fd;
+}
+
+.route-node-idle {
+  background: rgba(15, 23, 42, 0.48);
+  color: var(--c-muted);
 }
 
 .arrow {
