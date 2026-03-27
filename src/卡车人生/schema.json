@@ -1,0 +1,443 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "世界": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "时间": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "日期": {
+              "default": "三月初",
+              "type": "string"
+            },
+            "时刻": {
+              "default": "09:05",
+              "type": "string"
+            }
+          }
+        },
+        "天气": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "代码": {
+              "default": "overcast",
+              "type": "string",
+              "enum": [
+                "clear",
+                "cloudy",
+                "overcast",
+                "rain",
+                "storm",
+                "snow",
+                "fog",
+                "wind"
+              ]
+            },
+            "气温": {
+              "default": 2,
+              "type": "number"
+            }
+          }
+        },
+        "位置": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "国家": {
+              "default": "德国",
+              "type": "string"
+            },
+            "城市": {
+              "default": "柏林",
+              "type": "string"
+            },
+            "道路": {
+              "default": "停靠",
+              "type": "string"
+            },
+            "地点类型": {
+              "default": "停车场",
+              "type": "string",
+              "enum": [
+                "公司",
+                "停车场",
+                "货运站",
+                "服务区",
+                "加油站",
+                "边境",
+                "高速",
+                "城区",
+                "维修站",
+                "商店",
+                "港口",
+                "仓库",
+                "其他"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "运输": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "状态": {
+          "default": "待选择",
+          "type": "string",
+          "enum": [
+            "待选择",
+            "待出发",
+            "运输中",
+            "交货中",
+            "已完成"
+          ]
+        },
+        "当前货单": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "起点": {
+              "default": "柏林",
+              "type": "string"
+            },
+            "终点": {
+              "default": "待选择",
+              "type": "string"
+            },
+            "货物名称": {
+              "default": "待选择",
+              "type": "string"
+            },
+            "挂车类型": {
+              "default": "待选择",
+              "type": "string"
+            },
+            "报酬": {
+              "type": "number"
+            },
+            "总距离km": {
+              "type": "number"
+            },
+            "剩余km": {
+              "type": "number"
+            },
+            "有时限": {
+              "type": "boolean"
+            },
+            "时限分钟": {
+              "type": "number"
+            },
+            "剩余时间分钟": {
+              "type": "number"
+            },
+            "任务标签": {
+              "default": {},
+              "type": "object",
+              "propertyNames": {
+                "type": "string",
+                "description": "任务标签"
+              },
+              "additionalProperties": {
+                "type": "boolean"
+              }
+            },
+            "特种任务监控": {
+              "default": {},
+              "type": "object",
+              "propertyNames": {
+                "type": "string",
+                "description": "监控项名"
+              },
+              "additionalProperties": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "车辆": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "车型": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "品牌": {
+              "default": "雷诺",
+              "type": "string"
+            },
+            "型号": {
+              "default": "T 480",
+              "type": "string"
+            },
+            "驾驶室规格": {
+              "default": "高顶",
+              "type": "string"
+            },
+            "底盘规格": {
+              "default": "4x2",
+              "type": "string"
+            }
+          }
+        },
+        "组件": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "发动机": {
+              "default": {},
+              "type": "object",
+              "properties": {
+                "型号": {
+                  "default": "原厂480马力柴油机",
+                  "type": "string"
+                },
+                "性能": {
+                  "default": "长途均衡",
+                  "type": "string"
+                }
+              }
+            },
+            "变速箱": {
+              "default": {},
+              "type": "object",
+              "properties": {
+                "型号": {
+                  "default": "原厂12挡AMT",
+                  "type": "string"
+                },
+                "性能": {
+                  "default": "平顺省力",
+                  "type": "string"
+                }
+              }
+            },
+            "悬挂": {
+              "default": {},
+              "type": "object",
+              "properties": {
+                "型号": {
+                  "default": "原厂长途悬挂",
+                  "type": "string"
+                },
+                "性能": {
+                  "default": "舒适稳定",
+                  "type": "string"
+                }
+              }
+            },
+            "刹车": {
+              "default": {},
+              "type": "object",
+              "properties": {
+                "型号": {
+                  "default": "原厂气刹系统",
+                  "type": "string"
+                },
+                "性能": {
+                  "default": "制动线性",
+                  "type": "string"
+                }
+              }
+            },
+            "轮胎": {
+              "default": {},
+              "type": "object",
+              "properties": {
+                "型号": {
+                  "default": "标准长途轮胎",
+                  "type": "string"
+                },
+                "性能": {
+                  "default": "耐磨稳定",
+                  "type": "string"
+                }
+              }
+            },
+            "油箱": {
+              "default": {},
+              "type": "object",
+              "properties": {
+                "型号": {
+                  "default": "原厂铝合金油箱",
+                  "type": "string"
+                },
+                "容量L": {
+                  "default": 540,
+                  "type": "number"
+                }
+              }
+            }
+          }
+        },
+        "燃油": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "当前L": {
+              "default": 491,
+              "type": "number"
+            }
+          }
+        },
+        "行驶": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "车速": {
+              "type": "number"
+            },
+            "限速": {
+              "type": "number"
+            }
+          }
+        },
+        "疲劳": {
+          "default": "低",
+          "type": "string",
+          "enum": [
+            "低",
+            "中",
+            "高",
+            "危险"
+          ]
+        },
+        "车况": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "发动机": {
+              "default": "良好",
+              "type": "string",
+              "enum": [
+                "优秀",
+                "良好",
+                "注意",
+                "需维修"
+              ]
+            },
+            "变速箱": {
+              "default": "良好",
+              "type": "string",
+              "enum": [
+                "优秀",
+                "良好",
+                "注意",
+                "需维修"
+              ]
+            },
+            "轮胎": {
+              "default": "良好",
+              "type": "string",
+              "enum": [
+                "优秀",
+                "良好",
+                "注意",
+                "需维修"
+              ]
+            },
+            "刹车": {
+              "default": "良好",
+              "type": "string",
+              "enum": [
+                "优秀",
+                "良好",
+                "注意",
+                "需维修"
+              ]
+            },
+            "底盘": {
+              "default": "良好",
+              "type": "string",
+              "enum": [
+                "优秀",
+                "良好",
+                "注意",
+                "需维修"
+              ]
+            }
+          }
+        },
+        "电台": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "状态": {
+              "default": "未开启",
+              "type": "string",
+              "enum": [
+                "未开启",
+                "开启",
+                "已关闭"
+              ]
+            },
+            "名称": {
+              "type": "string"
+            },
+            "国家": {
+              "type": "string"
+            },
+            "地区": {
+              "type": "string"
+            },
+            "节目类型": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "经济": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "余额": {
+          "default": 8340,
+          "type": "number"
+        }
+      }
+    },
+    "驾驶室": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "装饰品": {
+          "default": {},
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "enum": [
+              "挂件",
+              "摆件",
+              "座套",
+              "方向盘套",
+              "遮阳板饰品",
+              "氛围灯",
+              "地毯",
+              "窗帘",
+              "其他"
+            ]
+          },
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

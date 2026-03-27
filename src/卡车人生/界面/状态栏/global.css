@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --c-bg: #0f172a;
+  --c-panel: #172033;
+  --c-panel-soft: #1e293b;
+  --c-panel-strong: #0b1220;
+  --c-border: #334155;
+  --c-text: #e5edf7;
+  --c-muted: #94a3b8;
+  --c-accent: #f59e0b;
+  --c-accent-soft: #fbbf24;
+  --c-green: #22c55e;
+  --c-yellow: #eab308;
+  --c-orange: #f97316;
+  --c-red: #ef4444;
+  --c-cyan: #38bdf8;
+  --c-purple: #a78bfa;
+  --shadow-panel: 0 12px 30px rgba(15, 23, 42, 0.36);
+  --font-dashboard: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Microsoft YaHei', monospace;
+}
+
+body {
+  background: transparent;
+  color: var(--c-text);
+  font-family: var(--font-dashboard);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
