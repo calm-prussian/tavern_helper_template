@@ -14,15 +14,18 @@
         </div>
 
         <div class="meta-item">
-          <span class="meta-label">时间</span>
-          <span class="meta-value">{{ store.data.世界.时间.时刻 }}</span>
-          <span class="meta-sub">{{ store.data.世界.时间.日期 }}</span>
+          <span class="meta-label">速度</span>
+          <span class="meta-value" :class="{ overspeed: is_overspeed }">{{ speed_text }}</span>
+          <span class="meta-sub">限速 {{ limit_text }}</span>
         </div>
 
         <div class="meta-item">
-          <span class="meta-label">天气</span>
-          <span class="meta-value">{{ weather_icon }} {{ weather_text }}</span>
-          <span class="meta-sub">{{ temperature_text }}</span>
+          <div class="radio-head">
+            <span class="meta-label">电台</span>
+            <span class="pill" :class="radio_class">{{ store.data.车辆.电台.状态 }}</span>
+          </div>
+          <span class="meta-value">{{ radio_icon }} {{ radio_title }}</span>
+          <span class="meta-sub">{{ radio_meta_text }}</span>
         </div>
       </div>
     </article>
@@ -30,6 +33,7 @@
     <article class="panel-card">
       <div class="section-head">
         <span class="section-title">驾驶状态</span>
+        <span class="fatigue-pill" :class="fatigue_class">😴 疲劳 {{ store.data.车辆.疲劳 }}</span>
       </div>
 
       <div class="quick-grid">
@@ -42,23 +46,6 @@
             <div class="progress-fill fuel" :class="{ warn: fuel_percent <= 20 }" :style="{ width: `${fuel_percent}%` }"></div>
           </div>
           <span class="quick-hint">容量 {{ store.data.车辆.组件.油箱.容量L }}L</span>
-        </div>
-
-        <div class="quick-item">
-          <div class="quick-head">
-            <span>😴 疲劳</span>
-            <span class="pill" :class="fatigue_class">{{ store.data.车辆.疲劳 }}</span>
-          </div>
-          <div class="quick-line">{{ fatigue_hint }}</div>
-        </div>
-
-        <div class="quick-item">
-          <div class="quick-head">
-            <span>🚦 速度</span>
-            <span class="pill" :class="{ danger: is_overspeed }">{{ is_overspeed ? '超速' : '正常' }}</span>
-          </div>
-          <div class="quick-line" :class="{ overspeed: is_overspeed }">{{ speed_text }}</div>
-          <span class="quick-hint">限速 {{ limit_text }}</span>
         </div>
 
         <div class="quick-item">
@@ -82,17 +69,6 @@ import { useDataStore } from '../store';
 const store = useDataStore();
 const formatter = new Intl.NumberFormat('en-US');
 
-const weather_map: Record<string, { icon: string; label: string }> = {
-  clear: { icon: '☀️', label: '晴朗' },
-  cloudy: { icon: '⛅', label: '多云' },
-  overcast: { icon: '☁️', label: '阴天' },
-  rain: { icon: '🌧️', label: '降雨' },
-  storm: { icon: '⛈️', label: '风暴' },
-  snow: { icon: '❄️', label: '降雪' },
-  fog: { icon: '🌫️', label: '有雾' },
-  wind: { icon: '💨', label: '大风' },
-};
-
 const balance_text = computed(() => formatter.format(store.data.经济.余额));
 
 const location_line = computed(() => {
@@ -100,10 +76,37 @@ const location_line = computed(() => {
   return `${国家} · ${城市}`;
 });
 
-const weather_info = computed(() => weather_map[store.data.世界.天气.代码] ?? { icon: '🌤️', label: store.data.世界.天气.代码 });
-const weather_icon = computed(() => weather_info.value.icon);
-const weather_text = computed(() => weather_info.value.label);
-const temperature_text = computed(() => `${store.data.世界.天气.气温}°C`);
+const radio_icon = computed(() => {
+  if (store.data.车辆.电台.状态 === '开启') {
+    return '📻';
+  }
+  if (store.data.车辆.电台.状态 === '已关闭') {
+    return '🔇';
+  }
+  return '📡';
+});
+
+const radio_title = computed(() => {
+  if (store.data.车辆.电台.状态 === '开启') {
+    return store.data.车辆.电台.名称 || '未命名频道';
+  }
+  if (store.data.车辆.电台.状态 === '已关闭') {
+    return '已关闭';
+  }
+  return '未开启';
+});
+
+const radio_meta_text = computed(() => {
+  const regions = [store.data.车辆.电台.国家, store.data.车辆.电台.地区].filter(Boolean).join(' · ');
+  const program = store.data.车辆.电台.节目类型 || '节目类型未知';
+  return `${regions || '地区未锁定'} · ${program}`;
+});
+
+const radio_class = computed(() => ({
+  safe: store.data.车辆.电台.状态 === '开启',
+  neutral: store.data.车辆.电台.状态 === '未开启',
+  caution: store.data.车辆.电台.状态 === '已关闭',
+}));
 
 const fuel_percent = computed(() => {
   const capacity = store.data.车辆.组件.油箱.容量L;
@@ -115,15 +118,6 @@ const fuel_percent = computed(() => {
 });
 
 const fuel_text = computed(() => `${store.data.车辆.燃油.当前L}/${store.data.车辆.组件.油箱.容量L}L`);
-
-const fatigue_hint_map: Record<string, string> = {
-  低: '精神稳定，可继续行驶',
-  中: '已出现轻微疲态',
-  高: '困倦明显，建议靠站休整',
-  危险: '继续驾驶将有事故风险',
-};
-
-const fatigue_hint = computed(() => fatigue_hint_map[store.data.车辆.疲劳] ?? '状态未知');
 
 const fatigue_class = computed(() => ({
   safe: store.data.车辆.疲劳 === '低',
@@ -205,6 +199,17 @@ const transport_class = computed(() => ({
   font-weight: 700;
 }
 
+.fatigue-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
 .meta-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -218,6 +223,13 @@ const transport_class = computed(() => ({
   padding: 12px;
   border-radius: 12px;
   background: rgba(30, 41, 59, 0.88);
+}
+
+.radio-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
 }
 
 .meta-label {
@@ -343,8 +355,19 @@ const transport_class = computed(() => ({
 }
 
 @media (max-width: 720px) {
-  .meta-grid,
   .quick-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 980px) {
+  .meta-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .meta-grid {
     grid-template-columns: 1fr;
   }
 }

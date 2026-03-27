@@ -3,7 +3,7 @@ export const Schema = z.object({
     .object({
       时间: z
         .object({
-          日期: z.string().prefault('三月初'),
+          日期: z.string().prefault('2025-03-01'),
           时刻: z.string().prefault('09:05'),
         })
         .prefault({}),

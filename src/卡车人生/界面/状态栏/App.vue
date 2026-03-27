@@ -1,6 +1,12 @@
 <template>
   <div class="dashboard-shell">
-    <TabNav v-model="active_tab" :tabs="tabs" title="Morgenrot Fracht" :subtitle="truck_subtitle" />
+    <TabNav
+      v-model="active_tab"
+      :tabs="tabs"
+      title="Morgenrot Fracht"
+      :subtitle="truck_subtitle"
+      :weather="weather_badge"
+    />
 
     <section class="content-area">
       <OverviewPanel v-if="active_tab === 'overview'" />
@@ -31,6 +37,28 @@ const tabs = [
 const active_tab = useLocalStorage('truck_life.status_bar.active_tab', 'overview');
 
 const truck_subtitle = computed(() => `${store.data.车辆.车型.品牌} ${store.data.车辆.车型.型号}`);
+
+const weather_map: Record<string, { icon: string; label: string }> = {
+  clear: { icon: '☀️', label: '晴朗' },
+  cloudy: { icon: '⛅', label: '多云' },
+  overcast: { icon: '☁️', label: '阴天' },
+  rain: { icon: '🌧️', label: '降雨' },
+  storm: { icon: '⛈️', label: '风暴' },
+  snow: { icon: '❄️', label: '降雪' },
+  fog: { icon: '🌫️', label: '有雾' },
+  wind: { icon: '💨', label: '大风' },
+};
+
+const weather_badge = computed(() => {
+  const weather = weather_map[store.data.世界.天气.代码] ?? { icon: '🌤️', label: store.data.世界.天气.代码 };
+  return {
+    date: store.data.世界.时间.日期,
+    time: store.data.世界.时间.时刻,
+    icon: weather.icon,
+    text: weather.label,
+    temperature: `${store.data.世界.天气.气温}°C`,
+  };
+});
 </script>
 
 <style lang="scss" scoped>

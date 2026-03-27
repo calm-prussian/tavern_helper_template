@@ -20,14 +20,13 @@
       </div>
 
       <div class="component-list">
-        <div v-for="item in component_items" :key="item.name" class="component-row">
+        <div v-for="item in component_items" :key="item.name" class="component-card">
           <div class="component-info">
             <div class="component-title-line">
               <span class="component-name">{{ item.name }}</span>
               <span class="status-pill" :class="condition_class_map[item.condition]">{{ item.condition }}</span>
             </div>
-            <div class="component-model">{{ item.model }}</div>
-            <div class="component-performance">{{ item.performance }}</div>
+            <div class="component-meta">{{ item.model }} · {{ item.performance }}</div>
           </div>
 
           <div class="condition-meter">
@@ -215,18 +214,20 @@ const summary_class = computed(() => {
 }
 
 .component-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
 }
 
-.component-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 14px;
-  padding: 12px;
+.component-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px 10px;
+  align-items: center;
+  padding: 10px 12px;
   border-radius: 12px;
   background: rgba(30, 41, 59, 0.88);
+  min-width: 0;
 }
 
 .component-info {
@@ -243,19 +244,24 @@ const summary_class = computed(() => {
 .component-name {
   color: var(--c-text);
   font-weight: 700;
+  font-size: 0.98rem;
 }
 
-.component-model,
-.component-performance {
-  margin-top: 4px;
+.component-meta {
+  margin-top: 2px;
   color: var(--c-muted);
-  font-size: 0.8rem;
+  font-size: 0.74rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .condition-meter {
   display: flex;
   align-items: center;
   gap: 6px;
+  justify-content: flex-end;
+  align-self: center;
 }
 
 .dot {
@@ -283,8 +289,8 @@ const summary_class = computed(() => {
 }
 
 @media (max-width: 720px) {
-  .component-row {
-    flex-direction: column;
+  .component-list {
+    grid-template-columns: 1fr;
   }
 }
 </style>
