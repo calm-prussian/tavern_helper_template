@@ -412,6 +412,24 @@
         }
       }
     },
+    "驾驶档案": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "累计里程km": {
+          "type": "number"
+        },
+        "累计油耗L": {
+          "type": "number"
+        },
+        "累计完成货单数": {
+          "type": "number"
+        },
+        "累计收入": {
+          "type": "number"
+        }
+      }
+    },
     "驾驶室": {
       "default": {},
       "type": "object",

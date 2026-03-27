@@ -43,7 +43,11 @@
             <span :class="['quick-emphasis', { warn: fuel_percent <= 20 }]">{{ fuel_text }}</span>
           </div>
           <div class="progress-track">
-            <div class="progress-fill fuel" :class="{ warn: fuel_percent <= 20 }" :style="{ width: `${fuel_percent}%` }"></div>
+            <div
+              class="progress-fill fuel"
+              :class="{ warn: fuel_percent <= 20 }"
+              :style="{ width: `${fuel_percent}%` }"
+            ></div>
           </div>
           <span class="quick-hint">容量 {{ store.data.车辆.组件.油箱.容量L }}L</span>
         </div>
@@ -128,7 +132,9 @@ const fatigue_class = computed(() => ({
 
 const speed_text = computed(() => `${store.data.车辆.行驶.车速} km/h`);
 const limit_text = computed(() => `${store.data.车辆.行驶.限速 || '--'} km/h`);
-const is_overspeed = computed(() => store.data.车辆.行驶.限速 > 0 && store.data.车辆.行驶.车速 > store.data.车辆.行驶.限速);
+const is_overspeed = computed(
+  () => store.data.车辆.行驶.限速 > 0 && store.data.车辆.行驶.车速 > store.data.车辆.行驶.限速,
+);
 
 const trip_percent = computed(() => {
   const total = store.data.运输.当前货单.总距离km;
@@ -168,9 +174,7 @@ const transport_class = computed(() => ({
 }
 
 .info-card {
-  background:
-    linear-gradient(180deg, rgba(245, 158, 11, 0.08), transparent 60%),
-    rgba(15, 23, 42, 0.64);
+  background: linear-gradient(180deg, rgba(245, 158, 11, 0.08), transparent 60%), rgba(15, 23, 42, 0.64);
 }
 
 .section-head {

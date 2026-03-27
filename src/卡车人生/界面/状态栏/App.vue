@@ -13,11 +13,13 @@
       <CargoPanel v-else-if="active_tab === 'cargo'" />
       <VehiclePanel v-else-if="active_tab === 'vehicle'" />
       <CabinPanel v-else-if="active_tab === 'cabin'" />
+      <ArchivePanel v-else-if="active_tab === 'archive'" />
     </section>
   </div>
 </template>
 
 <script setup lang="ts">
+import ArchivePanel from './components/ArchivePanel.vue';
 import CabinPanel from './components/CabinPanel.vue';
 import CargoPanel from './components/CargoPanel.vue';
 import OverviewPanel from './components/OverviewPanel.vue';
@@ -32,6 +34,7 @@ const tabs = [
   { id: 'cargo', label: '货单' },
   { id: 'vehicle', label: '车况' },
   { id: 'cabin', label: '驾驶室' },
+  { id: 'archive', label: '驾驶档案' },
 ];
 
 const active_tab = useLocalStorage('truck_life.status_bar.active_tab', 'overview');

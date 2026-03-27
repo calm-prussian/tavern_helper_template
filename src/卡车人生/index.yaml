@@ -1,12 +1,13 @@
 # yaml-language-server: $schema=https://testingcf.jsdelivr.net/gh/StageDog/tavern_sync/dist/schema/character.zh.json
 头像: 头像
-版本: ""
-作者: ""
-备注: ""
+版本: ''
+作者: ''
+备注: ''
 
 第一条消息:
   - 文件: 第一条消息/0
-  - 内容: "[TRUCK_DATA] 停靠,柏林,待选择,0,0,91,491,540,8340,09:05,overcast,2,低,良好,0,- |
+  - 内容:
+      "[TRUCK_DATA] 停靠,柏林,待选择,0,0,91,491,540,8340,09:05,overcast,2,低,良好,0,- |
       -,-,- | -,-,未开启\r\n"
 
 角色描述: "<role>\r
@@ -1351,6 +1352,15 @@
             经济: z
               .object({
                 余额: z.coerce.number().transform(v => Math.round(v)).prefault(8340),
+              })
+              .prefault({}),
+
+            驾驶档案: z
+              .object({
+                累计里程km: z.coerce.number().transform(v => Math.max(0, Math.round(v))).prefault(0),
+                累计油耗L: z.coerce.number().transform(v => Math.max(0, Math.round(v))).prefault(0),
+                累计完成货单数: z.coerce.number().transform(v => Math.max(0, Math.round(v))).prefault(0),
+                累计收入: z.coerce.number().transform(v => Math.max(0, Math.round(v))).prefault(0),
               })
               .prefault({}),
 

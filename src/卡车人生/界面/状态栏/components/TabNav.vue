@@ -9,7 +9,7 @@
         </div>
       </div>
 
-      <div class="weather" v-if="props.weather">
+      <div v-if="props.weather" class="weather">
         <div class="weather-line weather-line-main">
           <span class="weather-main">{{ props.weather.icon }} {{ props.weather.text }}</span>
           <span class="weather-temp">{{ props.weather.temperature }}</span>
@@ -103,13 +103,22 @@ const model = defineModel<string>({ required: true });
 }
 
 .tabs {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
   background: rgba(15, 23, 42, 0.56);
   border: 1px solid rgba(148, 163, 184, 0.18);
   border-radius: 10px;
-  overflow: hidden;
-  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  scrollbar-width: none;
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
 }
 
 .weather {
@@ -152,7 +161,9 @@ const model = defineModel<string>({ required: true });
   border: none;
   background: transparent;
   color: var(--c-muted);
-  padding: 9px 12px;
+  padding: 9px 20px;
+  min-width: 108px;
+  flex: 0 0 auto;
   cursor: pointer;
   font-size: 0.84rem;
   letter-spacing: 0.04em;
@@ -173,9 +184,7 @@ const model = defineModel<string>({ required: true });
 
 .tab-button.active {
   color: var(--c-text);
-  background:
-    linear-gradient(180deg, rgba(245, 158, 11, 0.28), rgba(245, 158, 11, 0.12)),
-    rgba(15, 23, 42, 0.72);
+  background: linear-gradient(180deg, rgba(245, 158, 11, 0.28), rgba(245, 158, 11, 0.12)), rgba(15, 23, 42, 0.72);
   box-shadow: inset 0 -1px 0 var(--c-accent);
 }
 
@@ -210,16 +219,9 @@ const model = defineModel<string>({ required: true });
 
   .tab-button {
     text-align: center;
-    padding: 10px 6px;
+    padding: 10px 14px;
+    min-width: 92px;
     font-size: 0.8rem;
-  }
-
-  .tab-button:nth-child(2n) {
-    border-right: none;
-  }
-
-  .tab-button:nth-child(-n + 2) {
-    border-bottom: 1px solid rgba(148, 163, 184, 0.15);
   }
 }
 

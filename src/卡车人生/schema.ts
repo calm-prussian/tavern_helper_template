@@ -11,7 +11,10 @@ export const Schema = z.object({
       天气: z
         .object({
           代码: z.enum(['clear', 'cloudy', 'overcast', 'rain', 'storm', 'snow', 'fog', 'wind']).prefault('overcast'),
-          气温: z.coerce.number().transform(v => Math.round(v)).prefault(2),
+          气温: z.coerce
+            .number()
+            .transform(v => Math.round(v))
+            .prefault(2),
         })
         .prefault({}),
 
@@ -21,7 +24,21 @@ export const Schema = z.object({
           城市: z.string().prefault('柏林'),
           道路: z.string().prefault('停靠'),
           地点类型: z
-            .enum(['公司', '停车场', '货运站', '服务区', '加油站', '边境', '高速', '城区', '维修站', '商店', '港口', '仓库', '其他'])
+            .enum([
+              '公司',
+              '停车场',
+              '货运站',
+              '服务区',
+              '加油站',
+              '边境',
+              '高速',
+              '城区',
+              '维修站',
+              '商店',
+              '港口',
+              '仓库',
+              '其他',
+            ])
             .prefault('停车场'),
         })
         .prefault({}),
@@ -37,12 +54,27 @@ export const Schema = z.object({
           终点: z.string().prefault('待选择'),
           货物名称: z.string().prefault('待选择'),
           挂车类型: z.string().prefault('待选择'),
-          报酬: z.coerce.number().transform(v => Math.max(0, Math.round(v))).prefault(0),
-          总距离km: z.coerce.number().transform(v => Math.max(0, Math.round(v))).prefault(0),
-          剩余km: z.coerce.number().transform(v => Math.max(0, Math.round(v))).prefault(0),
+          报酬: z.coerce
+            .number()
+            .transform(v => Math.max(0, Math.round(v)))
+            .prefault(0),
+          总距离km: z.coerce
+            .number()
+            .transform(v => Math.max(0, Math.round(v)))
+            .prefault(0),
+          剩余km: z.coerce
+            .number()
+            .transform(v => Math.max(0, Math.round(v)))
+            .prefault(0),
           有时限: z.boolean().prefault(false),
-          时限分钟: z.coerce.number().transform(v => Math.max(0, Math.round(v))).prefault(0),
-          剩余时间分钟: z.coerce.number().transform(v => Math.max(0, Math.round(v))).prefault(0),
+          时限分钟: z.coerce
+            .number()
+            .transform(v => Math.max(0, Math.round(v)))
+            .prefault(0),
+          剩余时间分钟: z.coerce
+            .number()
+            .transform(v => Math.max(0, Math.round(v)))
+            .prefault(0),
           任务标签: z
             .record(z.string().describe('任务标签'), z.boolean())
             .transform(data => _.pickBy(data, value => value === true))
@@ -106,7 +138,10 @@ export const Schema = z.object({
           油箱: z
             .object({
               型号: z.string().prefault('原厂铝合金油箱'),
-              容量L: z.coerce.number().transform(v => Math.max(1, Math.round(v))).prefault(540),
+              容量L: z.coerce
+                .number()
+                .transform(v => Math.max(1, Math.round(v)))
+                .prefault(540),
             })
             .prefault({}),
         })
@@ -114,14 +149,23 @@ export const Schema = z.object({
 
       燃油: z
         .object({
-          当前L: z.coerce.number().transform(v => Math.max(0, Math.round(v))).prefault(491),
+          当前L: z.coerce
+            .number()
+            .transform(v => Math.max(0, Math.round(v)))
+            .prefault(491),
         })
         .prefault({}),
 
       行驶: z
         .object({
-          车速: z.coerce.number().transform(v => Math.max(0, Math.round(v))).prefault(0),
-          限速: z.coerce.number().transform(v => Math.max(0, Math.round(v))).prefault(0),
+          车速: z.coerce
+            .number()
+            .transform(v => Math.max(0, Math.round(v)))
+            .prefault(0),
+          限速: z.coerce
+            .number()
+            .transform(v => Math.max(0, Math.round(v)))
+            .prefault(0),
         })
         .prefault({}),
 
@@ -151,7 +195,31 @@ export const Schema = z.object({
 
   经济: z
     .object({
-      余额: z.coerce.number().transform(v => Math.round(v)).prefault(8340),
+      余额: z.coerce
+        .number()
+        .transform(v => Math.round(v))
+        .prefault(8340),
+    })
+    .prefault({}),
+
+  驾驶档案: z
+    .object({
+      累计里程km: z.coerce
+        .number()
+        .transform(v => Math.max(0, Math.round(v)))
+        .prefault(0),
+      累计油耗L: z.coerce
+        .number()
+        .transform(v => Math.max(0, Math.round(v)))
+        .prefault(0),
+      累计完成货单数: z.coerce
+        .number()
+        .transform(v => Math.max(0, Math.round(v)))
+        .prefault(0),
+      累计收入: z.coerce
+        .number()
+        .transform(v => Math.max(0, Math.round(v)))
+        .prefault(0),
     })
     .prefault({}),
 
