@@ -1,0 +1,617 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "default": {},
+  "type": "object",
+  "properties": {
+    "世界": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "当前时间": {
+          "default": "1848-02-22 09:30",
+          "type": "string"
+        },
+        "当前日期阶段": {
+          "default": "1848-02-22上午",
+          "type": "string"
+        },
+        "当前革命阶段": {
+          "default": "禁宴危机",
+          "type": "string"
+        },
+        "天气": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "体感": {
+              "default": "阴冷",
+              "type": "string"
+            },
+            "天空": {
+              "default": "低云",
+              "type": "string"
+            },
+            "风势": {
+              "default": "微风",
+              "type": "string"
+            },
+            "降水": {
+              "default": "无",
+              "type": "string"
+            }
+          }
+        },
+        "宏观局势": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "政权稳定度": {
+              "default": 78,
+              "type": "number"
+            },
+            "群众动员度": {
+              "default": 24,
+              "type": "number"
+            },
+            "革命烈度": {
+              "default": 16,
+              "type": "number"
+            },
+            "城市秩序度": {
+              "default": 73,
+              "type": "number"
+            },
+            "谣言扩散度": {
+              "default": 32,
+              "type": "number"
+            },
+            "经济压迫感": {
+              "default": 86,
+              "type": "number"
+            },
+            "饥馑焦虑度": {
+              "default": 71,
+              "type": "number"
+            },
+            "开火风险度": {
+              "default": 18,
+              "type": "number"
+            }
+          }
+        },
+        "当前主叙事焦点": {
+          "default": [
+            "禁宴令余波正在扩散",
+            "街头在观望与聚集之间摇摆"
+          ],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "近期事务": {
+          "default": {},
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "事务名"
+          },
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "城市": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "巴黎总体": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "通行状态": {
+              "default": "基本可通行",
+              "type": "string"
+            },
+            "夜间照明": {
+              "default": "正常",
+              "type": "string"
+            },
+            "街头集会密度": {
+              "default": "中",
+              "type": "string"
+            },
+            "交通受阻度": {
+              "default": 12,
+              "type": "number"
+            },
+            "路障扩散趋势": {
+              "default": 5,
+              "type": "number"
+            }
+          }
+        },
+        "核心地点": {
+          "default": {},
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "地点名"
+          },
+          "additionalProperties": {
+            "default": {},
+            "type": "object",
+            "properties": {
+              "控制方": {
+                "default": "未定",
+                "type": "string"
+              },
+              "周边戒备": {
+                "default": "未知",
+                "type": "string"
+              },
+              "象征风险度": {
+                "type": "number"
+              },
+              "人群压力": {
+                "type": "number"
+              },
+              "人群密度": {
+                "default": "未知",
+                "type": "string"
+              },
+              "武装密度": {
+                "default": "未知",
+                "type": "string"
+              },
+              "紧张度": {
+                "type": "number"
+              },
+              "是否发生开火": {
+                "type": "boolean"
+              },
+              "通行能力": {
+                "default": "未知",
+                "type": "string"
+              },
+              "部队机动性": {
+                "default": "未知",
+                "type": "string"
+              },
+              "群众停留意愿": {
+                "default": "未知",
+                "type": "string"
+              },
+              "政治象征度": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "街区": {
+          "default": {},
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "街区名"
+          },
+          "additionalProperties": {
+            "default": {},
+            "type": "object",
+            "properties": {
+              "人群动员度": {
+                "type": "number"
+              },
+              "贫困压力": {
+                "type": "number"
+              },
+              "街垒数量": {
+                "type": "number"
+              },
+              "巷战潜力": {
+                "type": "number"
+              },
+              "军警压力": {
+                "type": "number"
+              },
+              "围观者比例": {
+                "type": "number"
+              },
+              "谣言密度": {
+                "type": "number"
+              },
+              "消息生产速率": {
+                "type": "number"
+              },
+              "传单传播速率": {
+                "type": "number"
+              },
+              "突袭风险": {
+                "type": "number"
+              },
+              "主要口号": {
+                "default": [],
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "派系": {
+      "default": {},
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "description": "派系名"
+      },
+      "additionalProperties": {
+        "default": {},
+        "type": "object",
+        "properties": {
+          "权威度": {
+            "type": "number"
+          },
+          "应对速度": {
+            "type": "number"
+          },
+          "强硬程度": {
+            "type": "number"
+          },
+          "退让意愿": {
+            "type": "number"
+          },
+          "信息掌握度": {
+            "type": "number"
+          },
+          "内部一致性": {
+            "type": "number"
+          },
+          "街头号召力": {
+            "type": "number"
+          },
+          "议会影响力": {
+            "type": "number"
+          },
+          "控制群众能力": {
+            "type": "number"
+          },
+          "对革命失控的恐惧": {
+            "type": "number"
+          },
+          "宣传活跃度": {
+            "type": "number"
+          },
+          "组织联络度": {
+            "type": "number"
+          },
+          "借势能力": {
+            "type": "number"
+          },
+          "对群众失控的担忧": {
+            "type": "number"
+          },
+          "生存压力": {
+            "type": "number"
+          },
+          "集体愤怒": {
+            "type": "number"
+          },
+          "持续行动意愿": {
+            "type": "number"
+          },
+          "武装准备度": {
+            "type": "number"
+          },
+          "对王朝忠诚度": {
+            "type": "number"
+          },
+          "对市民同情度": {
+            "type": "number"
+          },
+          "开火服从度": {
+            "type": "number"
+          },
+          "倒向群众概率": {
+            "type": "number"
+          },
+          "中层犹豫度": {
+            "type": "number"
+          },
+          "纪律性": {
+            "type": "number"
+          },
+          "街头压制力": {
+            "type": "number"
+          },
+          "疲劳度": {
+            "type": "number"
+          },
+          "对巷战适应度": {
+            "type": "number"
+          },
+          "传闻放大能力": {
+            "type": "number"
+          },
+          "传单生产速率": {
+            "type": "number"
+          },
+          "政治口号扩散度": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "事件": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "革命三日": {
+          "default": {},
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "事件名"
+          },
+          "additionalProperties": {
+            "default": {},
+            "type": "object",
+            "properties": {
+              "状态": {
+                "default": "未开始",
+                "type": "string"
+              },
+              "烈度": {
+                "type": "number"
+              },
+              "备注": {
+                "type": "string"
+              },
+              "是否超出温和派控制": {
+                "type": "boolean"
+              },
+              "是否出现短暂缓和": {
+                "type": "boolean"
+              },
+              "是否触发": {
+                "type": "boolean"
+              },
+              "死伤震动度": {
+                "type": "number"
+              },
+              "已形成街垒潮": {
+                "type": "boolean"
+              },
+              "城区覆盖度": {
+                "type": "number"
+              },
+              "是否退位": {
+                "type": "boolean"
+              },
+              "国家机器离散度": {
+                "type": "number"
+              },
+              "是否成形": {
+                "type": "boolean"
+              },
+              "合法性竞争度": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "后续接口": {
+          "default": {},
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "后续议题"
+          },
+          "additionalProperties": {
+            "default": {},
+            "type": "object",
+            "properties": {
+              "状态": {
+                "default": "锁定",
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "历史分歧": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "默认历史航道": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "二月革命爆发": {
+              "default": true,
+              "type": "boolean"
+            },
+            "王朝崩溃": {
+              "default": true,
+              "type": "boolean"
+            },
+            "临时政府成立": {
+              "default": true,
+              "type": "boolean"
+            },
+            "六月危机高概率到来": {
+              "default": true,
+              "type": "boolean"
+            }
+          }
+        },
+        "当前偏移": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "偏移度": {
+              "type": "number"
+            },
+            "偏移来源": {
+              "default": [
+                "无"
+              ],
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "是否进入新世界线": {
+              "type": "boolean"
+            }
+          }
+        },
+        "已改写节点": {
+          "default": {},
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "改写节点名"
+          },
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "潜在改写预警": {
+          "default": [
+            "无"
+          ],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "历史锚点压力": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "宴会运动升级压力": {
+              "default": 84,
+              "type": "number"
+            },
+            "街头流血触发压力": {
+              "default": 72,
+              "type": "number"
+            },
+            "国民自卫军倒向压力": {
+              "default": 51,
+              "type": "number"
+            },
+            "王朝失控压力": {
+              "default": 66,
+              "type": "number"
+            },
+            "工人问题积压压力": {
+              "default": 79,
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+    "玩家占位": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "当前身份": {
+          "default": "未定",
+          "type": "string"
+        },
+        "所属阶层": {
+          "default": "未定",
+          "type": "string"
+        },
+        "当前落点": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "街区": {
+              "default": "未定",
+              "type": "string"
+            },
+            "具体地点": {
+              "default": "未定",
+              "type": "string"
+            }
+          }
+        },
+        "已知信息面": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "识字程度": {
+              "default": "未定",
+              "type": "string"
+            },
+            "能接触的消息源": {
+              "default": [],
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "个人状态": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "体力": {
+              "default": 100,
+              "type": "number"
+            },
+            "饥饿度": {
+              "type": "number"
+            },
+            "负伤度": {
+              "type": "number"
+            },
+            "被注意程度": {
+              "type": "number"
+            }
+          }
+        },
+        "行动力": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "个人影响力": {
+              "type": "number"
+            },
+            "可号召人数": {
+              "type": "number"
+            },
+            "可用资源": {
+              "default": {},
+              "type": "object",
+              "propertyNames": {
+                "type": "string",
+                "description": "资源名"
+              },
+              "additionalProperties": {
+                "type": "string"
+              }
+            },
+            "可进入派系网络": {
+              "default": [],
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

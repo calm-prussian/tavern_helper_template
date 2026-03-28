@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* 配色方案 - 1848年法国报纸/传单风格 */
+  --c-ink: #1a1209; /* 主文字 / 边框 */
+  --c-crimson: #8b1a1a; /* 革命红：危机类进度条、高亮 */
+  --c-cobalt: #1a3a6b; /* 宪章蓝：秩序类进度条、高亮 */
+  --c-sienna: #7a4f2a; /* 民生棕：民生类进度条 */
+  --c-parchment: #f5efdc; /* 羊皮纸底色 */
+  --c-cream: #fffef5; /* 卡片底色 */
+  --c-sepia: #9e8866; /* 次要文字 / 分隔线 */
+  --c-sepia-light: #d4c8a8; /* 浅棕边框 */
+  --c-tricolor-r: #c1392b; /* 法国三色旗：红 */
+  --c-tricolor-w: #f5f5f5; /* 法国三色旗：白 */
+  --c-tricolor-b: #2471a3; /* 法国三色旗：蓝 */
+  --c-status-active: #d4a017; /* 进行中：琥珀色 */
+  --c-status-done: #2e7d32; /* 已发生：深绿 */
+  --c-status-locked: #757575; /* 锁定：灰 */
+
+  /* 字体 */
+  --font-headline: 'Georgia', 'SimSun', serif;
+  --font-body: 'Courier New', 'Microsoft YaHei', monospace;
+}
