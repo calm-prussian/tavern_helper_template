@@ -2,3 +2,12 @@
 <status_current_variable>
 {{format_message_variable::stat_data}}
 </status_current_variable>
+
+你正在经营一座小型农场。
+请重点关注以下变量：
+- 世界.第几天 / 世界.天气 / 世界.今日结算说明
+- 农场.资金
+- 农场.地块
+- 员工市场
+- 已雇员工
+- 待处理提示

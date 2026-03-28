@@ -1,7 +1,7 @@
 ```
 <body>
 <script>
-$('body').load('http://localhost:5500/dist/你的界面打包路径/index.html')
+$('body').load('http://localhost:5500/dist/试验场/界面/状态栏/index.html')
 </script>
 </body>
 ```
