@@ -1,0 +1,196 @@
+# yaml-language-server: $schema=https://testingcf.jsdelivr.net/gh/StageDog/tavern_sync/dist/schema/character.zh.json
+头像: 头像
+版本: ""
+作者: ""
+备注: ""
+
+第一条消息:
+  - 内容: 这是第一条消息
+
+角色描述: ""
+
+锚点: {}
+
+世界书名称: 与角色卡名称相同
+条目:
+  - 名称: ===变量开始===
+    启用: false
+    激活策略:
+      类型: 向量化
+    插入位置:
+      类型: 角色定义之前
+      顺序: 14720
+    激活概率: 100
+    递归:
+      不可被其他条目激活: false
+      不可激活其他条目: false
+    内容: ""
+
+  - 名称: "[initvar]变量初始化勿开"
+    启用: false
+    激活策略:
+      类型: 蓝灯
+    插入位置:
+      类型: 角色定义之前
+      顺序: 14720
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      # yaml-language-server: $schema=../../schema.json
+      # 在编写 initvar 之前, 请先保证终端有在运行 `pnpm watch`, 这会生成 schema.json 用于检验 initvar 是否有效
+      {}
+
+  - 名称: 变量列表
+    启用: true
+    激活策略:
+      类型: 蓝灯
+    插入位置:
+      类型: 指定深度
+      角色: 系统
+      深度: 0
+      顺序: 14720
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    文件: 世界书/变量/变量列表
+
+  - 名称: "[mvu_update]变量更新规则"
+    启用: true
+    激活策略:
+      类型: 蓝灯
+    插入位置:
+      类型: 指定深度
+      角色: 系统
+      深度: 0
+      顺序: 14720
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      ---
+      变量更新规则:
+
+  - 名称: "[mvu_update]变量输出格式"
+    启用: true
+    激活策略:
+      类型: 蓝灯
+    插入位置:
+      类型: 指定深度
+      角色: 系统
+      深度: 0
+      顺序: 14720
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    文件: 世界书/变量/变量输出格式
+
+  - 名称: ===变量结束===
+    启用: false
+    激活策略:
+      类型: 向量化
+    插入位置:
+      类型: 角色定义之前
+      顺序: 14720
+    激活概率: 100
+    递归:
+      不可被其他条目激活: false
+      不可激活其他条目: false
+    内容: ""
+
+扩展字段:
+  正则:
+    - 正则名称: "[不发送]去除变量更新"
+      id: 2d2018ae-c085-4916-af05-6830110a8293
+      启用: true
+      查找表达式: /<update(?:variable)?>(?:(?!.*<\/update(?:variable)?>).*$|.*<\/update(?:variable)?>)/gsi
+      内容: ""
+      来源:
+        用户输入: true
+        AI输出: true
+      作用于:
+        仅格式显示: false
+        仅格式提示词: true
+      最大深度: 3
+
+    - 正则名称: "[折叠]变量更新中"
+      id: ea96523f-a1cc-4634-b9d2-f28531adca6c
+      启用: true
+      查找表达式: /<update(?:variable)?>(?!.*<\/update(?:variable)?>)\s*(.*)\s*$/gsi
+      内容: |-
+        
+        <details>
+        <summary>变量更新中{{random::.::..::...}}</summary>
+        $1
+        </details>
+      来源:
+        用户输入: true
+        AI输出: true
+      作用于:
+        仅格式显示: true
+        仅格式提示词: false
+
+    - 正则名称: "[折叠]完整变量更新"
+      id: 06dec31f-c0a9-456c-8b88-1f9176a73039
+      启用: true
+      查找表达式: /<update(?:variable)?>\s*(.*)\s*<\/update(?:variable)?>/gsi
+      内容: |-
+        
+        <details>
+        <summary>变量更新情况</summary>
+        $1
+        </details>
+      来源:
+        用户输入: true
+        AI输出: true
+      作用于:
+        仅格式显示: true
+        仅格式提示词: false
+
+    - 正则名称: 界面-实时修改
+      id: f1c8f89e-bf32-48bb-8c1d-d5a4c6d25d50
+      启用: false
+      查找表达式: .*
+      文件: 正则/界面-实时修改
+      来源:
+        用户输入: true
+        AI输出: true
+      作用于:
+        仅格式显示: true
+        仅格式提示词: false
+
+  酒馆助手:
+    脚本库:
+      - 名称: mvu
+        id: 22d70d1f-d0be-4061-911e-d0c57ab55053
+        启用: true
+        类型: 脚本
+        内容: import
+          'https://testingcf.jsdelivr.net/gh/MagicalAstrogy/MagVarUpdate/artifact/bundle.js';
+        按钮:
+          启用: true
+          按钮列表:
+            - 名称: 重新处理变量
+              可见: false
+            - 名称: 重新读取初始变量
+              可见: false
+            - 名称: 快照楼层
+              可见: false
+            - 名称: 重演楼层
+              可见: false
+            - 名称: 重试额外模型解析
+              可见: false
+            - 名称: 清除旧楼层变量
+              可见: false
+
+      - 名称: 脚本-实时修改
+        id: c1eb9862-782e-4eba-8827-91408f9718b1
+        启用: true
+        类型: 脚本
+        内容: import 'http://localhost:5500/dist/你的脚本打包路径/index.js'
+
+    变量: {}
