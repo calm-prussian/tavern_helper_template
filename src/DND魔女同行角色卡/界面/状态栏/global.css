@@ -1,0 +1,39 @@
+:root {
+  --bg: rgba(17, 20, 27, 0.94);
+  --panel: rgba(28, 33, 43, 0.92);
+  --panel-soft: rgba(40, 46, 58, 0.9);
+  --line: rgba(226, 185, 124, 0.22);
+  --line-strong: rgba(226, 185, 124, 0.4);
+  --text: #f4ecdb;
+  --muted: #c3b6a0;
+  --accent: #d89a49;
+  --accent-soft: #7a5b35;
+  --danger: #b85d5d;
+  --success: #7db18a;
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+  font-family: 'Georgia', 'Times New Roman', 'PingFang SC', 'Microsoft YaHei', serif;
+  color: var(--text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: transparent;
+}
+
+body {
+  color: var(--text);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}

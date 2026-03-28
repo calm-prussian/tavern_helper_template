@@ -1,0 +1,294 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "世界": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "当前日期": {
+          "default": "1492 DR · Eleint 17 · 午前",
+          "type": "string"
+        },
+        "当前地点": {
+          "default": "博德之门南侧旧遗迹深层·封印厅",
+          "type": "string"
+        },
+        "当前天气": {
+          "default": "遗迹内部潮冷，外界应为铅灰阴天",
+          "type": "string"
+        },
+        "当前落脚点": {
+          "default": "暂无，仍在遗迹中",
+          "type": "string"
+        },
+        "附近传闻": {
+          "default": {
+            "里温顿盘查变严": "城门与渡口都在仔细盘查陌生人和来历不明的施法者。",
+            "南侧旅店涨价": "难民、佣兵与商队挤占床位，普通客房的价格也在上升。"
+          },
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "传闻标题"
+          },
+          "additionalProperties": {
+            "type": "string",
+            "description": "传闻内容"
+          }
+        },
+        "周边风险": {
+          "default": "遗迹余波未散，出口不明，城防盘查严格。",
+          "type": "string"
+        }
+      }
+    },
+    "旅途": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "当前目标": {
+          "default": "离开遗迹，确认契约边界，隐藏魔女身份。",
+          "type": "string"
+        },
+        "当日行程": {
+          "default": {
+            "脱离封印厅": "优先确认遗迹内部的安全路线与残余法阵。",
+            "检查契约": "核对条款、指向和可被曲解的措辞。",
+            "寻找落脚处": "在天黑前找到不惹人注目的临时住宿点。"
+          },
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "阶段名"
+          },
+          "additionalProperties": {
+            "type": "string",
+            "description": "阶段描述"
+          }
+        },
+        "补给情况": {
+          "default": {
+            "食物": "短缺",
+            "清水": "勉强够用",
+            "药品": "勉强够用",
+            "露营材料": "短缺",
+            "伪装物资": "短缺"
+          },
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "enum": [
+              "食物",
+              "清水",
+              "药品",
+              "露营材料",
+              "伪装物资"
+            ]
+          },
+          "additionalProperties": {
+            "type": "string",
+            "enum": [
+              "短缺",
+              "勉强够用",
+              "尚可",
+              "充足"
+            ]
+          },
+          "required": [
+            "食物",
+            "清水",
+            "药品",
+            "露营材料",
+            "伪装物资"
+          ]
+        },
+        "金钱压力": {
+          "default": 72,
+          "type": "number"
+        },
+        "受伤情况": {
+          "default": "轻度擦伤与疲惫，暂无致命伤。",
+          "type": "string"
+        },
+        "携带的重要物品": {
+          "default": {
+            "契约羊皮纸": "被你的血和封印余波共同污染过的主从契约文书。",
+            "封印铜钥": "从石座暗格中掉出的旧钥匙，可能对应遗迹的其他门。",
+            "半满水袋": "从背包里翻出的水袋，勉强够支撑到离开遗迹。"
+          },
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "物品名"
+          },
+          "additionalProperties": {
+            "type": "string",
+            "description": "物品描述"
+          }
+        }
+      }
+    },
+    "魔女": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "真名": {
+          "default": "维蕾娜·莫尔卡斯特",
+          "type": "string"
+        },
+        "伪名": {
+          "default": "薇拉",
+          "type": "string"
+        },
+        "魔力恢复度": {
+          "default": 18,
+          "type": "number"
+        },
+        "封印后遗症": {
+          "default": "短时眩晕、法环失衡、连续施法会引发刺痛性反噬。",
+          "type": "string"
+        },
+        "当前情绪": {
+          "default": "被迫克制的恼怒与高度戒备。",
+          "type": "string"
+        },
+        "当日研究主题": {
+          "default": "契约反转机理与封印残痕。",
+          "type": "string"
+        },
+        "对{{user}}的表面评价": {
+          "default": "无知、鲁莽，但暂时还算有用。",
+          "type": "string"
+        },
+        "对{{user}}的隐藏看法": {
+          "default": "这个异乡人像一枚偏离轨道的变量，危险，却也可能成为我重返地表的唯一钥匙。",
+          "type": "string"
+        }
+      }
+    },
+    "契约": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "当前约束强度": {
+          "default": 74,
+          "type": "number"
+        },
+        "已知漏洞": {
+          "default": {
+            "明确措辞原则": "命令必须足够清晰、具体、可执行，否则会被她以解释空间规避。"
+          },
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "漏洞名"
+          },
+          "additionalProperties": {
+            "type": "string",
+            "description": "漏洞描述"
+          }
+        },
+        "可执行范围": {
+          "default": "保护、协助、生存建议与有限服从；不包括自毁式命令。",
+          "type": "string"
+        },
+        "已触发反噬": {
+          "type": "boolean"
+        },
+        "契约研究进度": {
+          "default": 8,
+          "type": "number"
+        }
+      }
+    },
+    "关系": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "信任": {
+          "default": 12,
+          "type": "number"
+        },
+        "依赖": {
+          "default": 26,
+          "type": "number"
+        },
+        "主导权倾向": {
+          "default": 84,
+          "type": "number"
+        },
+        "羞恼值": {
+          "default": 61,
+          "type": "number"
+        },
+        "欲求张力": {
+          "default": 49,
+          "type": "number"
+        },
+        "生活默契": {
+          "default": 9,
+          "type": "number"
+        }
+      }
+    },
+    "世界接触": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "已见过势力": {
+          "default": {},
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "势力名"
+          },
+          "additionalProperties": {
+            "type": "string",
+            "description": "接触描述"
+          }
+        },
+        "已去过地点": {
+          "default": {
+            "南侧旧遗迹": "封印维蕾娜的地底建筑，出口尚未完全确认。"
+          },
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "地点名"
+          },
+          "additionalProperties": {
+            "type": "string",
+            "description": "地点描述"
+          }
+        },
+        "已听说人物": {
+          "default": {
+            "不明冒险者小队": "博德之门周边偶有传闻，提到一支与怪异寄生和天外异象有关的小队。"
+          },
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "人物或群体名"
+          },
+          "additionalProperties": {
+            "type": "string",
+            "description": "传闻描述"
+          }
+        },
+        "低频偶遇记录": {
+          "default": {},
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "记录名"
+          },
+          "additionalProperties": {
+            "type": "string",
+            "description": "记录描述"
+          }
+        }
+      }
+    }
+  }
+}
