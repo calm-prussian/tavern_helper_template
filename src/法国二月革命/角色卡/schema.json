@@ -8,15 +8,15 @@
       "type": "object",
       "properties": {
         "当前时间": {
-          "default": "1848-02-22 09:30",
+          "default": "1848-02-20 08:30",
           "type": "string"
         },
         "当前日期阶段": {
-          "default": "1848-02-22上午",
+          "default": "1848-02-20上午",
           "type": "string"
         },
         "当前革命阶段": {
-          "default": "禁宴危机",
+          "default": "宴会风声渐紧",
           "type": "string"
         },
         "天气": {
@@ -46,43 +46,43 @@
           "type": "object",
           "properties": {
             "政权稳定度": {
-              "default": 78,
+              "default": 82,
               "type": "number"
             },
             "群众动员度": {
-              "default": 24,
+              "default": 11,
               "type": "number"
             },
             "革命烈度": {
-              "default": 16,
+              "default": 5,
               "type": "number"
             },
             "城市秩序度": {
-              "default": 73,
+              "default": 81,
               "type": "number"
             },
             "谣言扩散度": {
-              "default": 32,
+              "default": 18,
               "type": "number"
             },
             "经济压迫感": {
-              "default": 86,
+              "default": 84,
               "type": "number"
             },
             "饥馑焦虑度": {
-              "default": 71,
+              "default": 69,
               "type": "number"
             },
             "开火风险度": {
-              "default": 18,
+              "default": 3,
               "type": "number"
             }
           }
         },
         "当前主叙事焦点": {
           "default": [
-            "禁宴令余波正在扩散",
-            "街头在观望与聚集之间摇摆"
+            "宴会的消息开始在咖啡馆和工坊间来回传",
+            "多数人仍先顾着工钱、面包和今天的差事"
           ],
           "type": "array",
           "items": {

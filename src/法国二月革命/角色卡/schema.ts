@@ -2,9 +2,9 @@ export const Schema = z
   .object({
     世界: z
       .object({
-        当前时间: z.string().prefault('1848-02-22 09:30'),
-        当前日期阶段: z.string().prefault('1848-02-22上午'),
-        当前革命阶段: z.string().prefault('禁宴危机'),
+        当前时间: z.string().prefault('1848-02-20 08:30'),
+        当前日期阶段: z.string().prefault('1848-02-20上午'),
+        当前革命阶段: z.string().prefault('宴会风声渐紧'),
         天气: z
           .object({
             体感: z.string().prefault('阴冷'),
@@ -18,38 +18,38 @@ export const Schema = z
             政权稳定度: z.coerce
               .number()
               .transform(value => _.clamp(value, 0, 100))
-              .prefault(78),
+              .prefault(82),
             群众动员度: z.coerce
               .number()
               .transform(value => _.clamp(value, 0, 100))
-              .prefault(24),
+              .prefault(11),
             革命烈度: z.coerce
               .number()
               .transform(value => _.clamp(value, 0, 100))
-              .prefault(16),
+              .prefault(5),
             城市秩序度: z.coerce
               .number()
               .transform(value => _.clamp(value, 0, 100))
-              .prefault(73),
+              .prefault(81),
             谣言扩散度: z.coerce
               .number()
               .transform(value => _.clamp(value, 0, 100))
-              .prefault(32),
+              .prefault(18),
             经济压迫感: z.coerce
               .number()
               .transform(value => _.clamp(value, 0, 100))
-              .prefault(86),
+              .prefault(84),
             饥馑焦虑度: z.coerce
               .number()
               .transform(value => _.clamp(value, 0, 100))
-              .prefault(71),
+              .prefault(69),
             开火风险度: z.coerce
               .number()
               .transform(value => _.clamp(value, 0, 100))
-              .prefault(18),
+              .prefault(3),
           })
           .prefault({}),
-        当前主叙事焦点: z.array(z.string()).prefault(['禁宴令余波正在扩散', '街头在观望与聚集之间摇摆']),
+        当前主叙事焦点: z.array(z.string()).prefault(['宴会的消息开始在咖啡馆和工坊间来回传', '多数人仍先顾着工钱、面包和今天的差事']),
         近期事务: z.record(z.string().describe('事务名'), z.string()).prefault({}),
       })
       .prefault({}),
