@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "世界": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "当前时间": {
+          "default": "未知纪元-封印解除第一日",
+          "type": "string"
+        },
+        "当前地点": {
+          "default": "黑焰廊柱 古地穴入口",
+          "type": "string"
+        },
+        "近期事务": {
+          "default": {},
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "事务名"
+          },
+          "additionalProperties": {
+            "type": "string",
+            "description": "事务描述"
+          }
+        }
+      }
+    },
+    "薇拉": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "契约认可度": {
+          "default": 5,
+          "type": "number"
+        },
+        "魔力状态": {
+          "default": "略显疲惫",
+          "type": "string",
+          "enum": [
+            "充沛",
+            "正常",
+            "略显疲惫",
+            "严重透支"
+          ]
+        },
+        "着装": {
+          "default": {
+            "外袍": "黑色魔法长裙（千年前款式，领口开阔，裙摆曳地）",
+            "内衬": "深紫色丝质内衬，略有磨损",
+            "配饰": "古典银质胸针，镶嵌一颗黑曜石"
+          },
+          "type": "object",
+          "properties": {
+            "外袍": {
+              "type": "string"
+            },
+            "内衬": {
+              "type": "string"
+            },
+            "配饰": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "外袍",
+            "内衬",
+            "配饰"
+          ]
+        },
+        "称号": {
+          "default": {},
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "称号名"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "效果": {
+                "type": "string"
+              },
+              "薇拉自评": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "效果",
+              "薇拉自评"
+            ]
+          }
+        }
+      }
+    },
+    "主角": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "物品栏": {
+          "default": {},
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "物品名"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "描述": {
+                "type": "string"
+              },
+              "数量": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "描述",
+              "数量"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
