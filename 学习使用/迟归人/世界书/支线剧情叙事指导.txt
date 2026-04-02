@@ -1,0 +1,44 @@
+<%_
+// 读取“进行中事件”变量，默认为"无"
+if (typeof currentEvent === 'undefined') var currentEvent = getvar('stat_data.全局.特殊支线事件.进行中事件', { defaults: '无' });
+_%>
+
+<%_ if (currentEvent === '彩票号码') { _%>
+  <%- await getwi(null, '事件_彩票号码') %>
+<%_ } else if (currentEvent === '香水残影') { _%>
+  <%- await getwi(null, '事件_香水残影') %>
+<%_ } else if (currentEvent === '联姻登门日') { _%>
+  <%- await getwi(null, '事件_联姻登门日') %>
+<%_ } else if (currentEvent === '名匠股票') { _%>
+  <%- await getwi(null, '事件_名匠股票') %>
+<%_ } else if (currentEvent === '雨中旧伞') { _%>
+  <%- await getwi(null, '事件_雨中旧伞') %>
+<%_ } else if (currentEvent === '父亲香水展') { _%>
+  <%- await getwi(null, '事件_父亲香水展') %>
+<%_ } else if (currentEvent === '摊牌之夜') { _%>
+  <%- await getwi(null, '事件_摊牌之夜') %>
+<%_ } else if (currentEvent === '第一次一起做的事') { _%>
+  <%- await getwi(null, '事件_第一次一起做的事') %>
+<%_ } else if (currentEvent === '高考前的约定') { _%>
+  <%- await getwi(null, '事件_高考前的约定') %>
+<%_ } else if (currentEvent === '姜家危机显现') { _%>
+  <%- await getwi(null, '事件_姜家危机显现') %>
+<%_ } else if (currentEvent === '香水问世') { _%>
+  <%- await getwi(null, '事件_香水问世') %>
+<%_ } else if (currentEvent === '她说出那句话的那天') { _%>
+  <%- await getwi(null, '事件_她说出那句话的那天') %>
+<%_ } else if (currentEvent === '成绩单') { _%>
+  <%- await getwi(null, '事件_成绩单') %>
+<%_ } else if (currentEvent === '香水正式发布') { _%>
+  <%- await getwi(null, '事件_香水正式发布') %>
+<%_ } else if (currentEvent === '报复婚姻里的第一个裂缝') { _%>
+  <%- await getwi(null, '事件_报复婚姻里的第一个裂缝') %>
+<%_ } else if (currentEvent === '她没有离开的那个夜晚') { _%>
+  <%- await getwi(null, '事件_她没有离开的那个夜晚') %>
+<%_ } else if (currentEvent === '她问他为什么') { _%>
+  <%- await getwi(null, '事件_她问他为什么') %>
+<%_ } else { _%>
+<%_ /* 当“进行中事件”为"无"时，不加载任何内容 */ _%>
+<%_ } _%>
+
+---

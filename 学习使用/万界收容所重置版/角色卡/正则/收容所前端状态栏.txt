@@ -1,0 +1,643 @@
+```html
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;padding:0;font-family:'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;-webkit-font-smoothing:antialiased}
+:root{
+  --bg0:rgba(6,8,16,0.96);
+  --bg1:rgba(14,18,32,0.92);
+  --bg2:rgba(22,28,48,0.94);
+  --bg3:rgba(30,38,62,0.96);
+  --bd:rgba(70,130,255,0.12);
+  --bd2:rgba(70,130,255,0.3);
+  --ac:#4a9eff;
+  --ac2:#7bb8ff;
+  --ac-dim:rgba(74,158,255,0.1);
+  --ac-glow:rgba(74,158,255,0.06);
+  --t1:#e2eaf5;
+  --t2:#8a9ab8;
+  --t3:#4e6080;
+  --bar:linear-gradient(90deg,#4a9eff,#7b5aff);
+  --bar-bg:rgba(40,50,80,0.45);
+  --danger:#ff4a6a;
+  --ok:#4aff8a;
+  --warn:#ffb84a;
+  --r1:#b0b8c8;--r2:#4a9eff;--r3:#a855f7;--r4:#fbbf24;--r5:#ef4444;
+}
+.wr{
+  width:100%;
+  background:var(--bg0);
+  color:var(--t1);
+  border:1px solid var(--bd);
+  border-radius:10px;
+  overflow:hidden;
+  font-size:13px;
+  line-height:1.5;
+  position:relative;
+}
+.wr::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--ac),transparent);opacity:.5;
+}
+.hd{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:10px 14px;border-bottom:1px solid var(--bd);background:var(--ac-glow);
+  flex-wrap:wrap;gap:6px;
+}
+.hd-t{font-size:14px;font-weight:700;letter-spacing:1px;color:var(--ac2)}
+.hd-i{display:flex;flex-wrap:wrap;gap:8px 10px;font-size:11px;color:var(--t2)}
+.hd-i b{font-weight:600;color:var(--t1)}
+.nv{display:flex;border-bottom:1px solid var(--bd);overflow-x:auto;scrollbar-width:none}
+.nv::-webkit-scrollbar{display:none}
+.nv-b{
+  flex:1;min-width:0;padding:8px 2px;background:0;border:none;
+  border-bottom:2px solid transparent;color:var(--t3);
+  font-size:11px;font-weight:600;cursor:pointer;transition:all .2s;
+  font-family:inherit;text-align:center;white-space:nowrap;
+}
+.nv-b:hover{color:var(--t2);background:var(--ac-glow)}
+.nv-b.on{color:var(--ac2);border-bottom-color:var(--ac);background:rgba(74,158,255,0.08)}
+.pn{display:none;padding:10px 12px}
+.pn.on{display:block}
+.cd{
+  background:var(--bg1);border:1px solid var(--bd);border-radius:8px;
+  margin-bottom:8px;overflow:hidden;transition:border-color .2s;
+}
+.cd:hover{border-color:var(--bd2)}
+.cd-h{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:8px 12px;cursor:pointer;transition:background .15s;user-select:none;
+}
+.cd-h:hover{background:var(--bg2)}
+.cd-h .arr{font-size:10px;color:var(--t3);transition:transform .25s;display:inline-block}
+.cd-h.open .arr{transform:rotate(90deg)}
+.cd-t{font-size:12px;font-weight:700;color:var(--ac2);display:flex;align-items:center;gap:5px}
+.cd-b{padding:6px 12px 10px;border-top:1px solid var(--bd);display:none}
+.cd-b.open{display:block}
+.rw{display:flex;justify-content:space-between;align-items:flex-start;padding:2px 0;font-size:12px;gap:8px}
+.rw .lb{color:var(--t2);flex-shrink:0;white-space:nowrap}
+.rw .vl{color:var(--t1);font-weight:600;text-align:right;word-break:break-word}
+.rw .vl.ac{color:var(--ac2)}
+.br-w{width:100%;height:5px;background:var(--bar-bg);border-radius:3px;overflow:hidden;margin-top:2px}
+.br-f{height:100%;border-radius:3px;transition:width .4s}
+.br-r{padding:3px 0}
+.br-l{display:flex;justify-content:space-between;font-size:11px;margin-bottom:1px}
+.br-l .lb{color:var(--t2)}.br-l .vl{color:var(--t1);font-weight:600}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:4px 10px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px}
+.tg{
+  display:inline-flex;align-items:center;gap:3px;
+  padding:3px 9px;margin:3px 3px 3px 0;
+  background:var(--ac-dim);border:1px solid rgba(74,158,255,0.2);
+  border-radius:5px;font-size:11px;color:var(--ac2);
+  cursor:pointer;transition:all .15s;user-select:none;
+}
+.tg:hover{background:rgba(74,158,255,0.18);border-color:var(--bd2)}
+.tg .dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.tg-d{
+  display:none;padding:6px 10px;margin:0 3px 4px 0;
+  background:var(--bg2);border:1px solid var(--bd);border-radius:5px;
+  font-size:11px;color:var(--t2);line-height:1.6;
+}
+.tg-d.open{display:block}
+.tg-cat{font-size:10px;color:var(--t3);margin-right:4px}
+.tg.combo{border-color:rgba(251,191,36,0.25);background:rgba(251,191,36,0.06)}
+.tg.combo:hover{background:rgba(251,191,36,0.12);border-color:rgba(251,191,36,0.4)}
+.sp{
+  background:var(--bg1);border:1px solid var(--bd);border-radius:8px;
+  margin-bottom:6px;overflow:hidden;transition:border-color .2s;
+}
+.sp:hover{border-color:var(--bd2)}
+.sp-h{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:9px 12px;cursor:pointer;transition:background .15s;user-select:none;
+}
+.sp-h:hover{background:var(--bg2)}
+.sp-n{font-size:13px;font-weight:700;color:var(--t1)}
+.sp-a{font-size:11px;color:var(--ac2);margin-left:5px}
+.sp-m{font-size:11px;color:var(--t3)}
+.sp-d{display:none;padding:0 12px 10px;border-top:1px solid var(--bd)}
+.sp-d.open{display:block}
+.sc{margin-top:8px}
+.sc-h{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:4px 0;cursor:pointer;user-select:none;
+}
+.sc-h:hover .sc-t{color:var(--ac2)}
+.sc-t{font-size:11px;font-weight:700;color:var(--ac);letter-spacing:.3px;transition:color .15s}
+.sc-h .arr{font-size:9px;color:var(--t3);transition:transform .25s;display:inline-block}
+.sc-h.open .arr{transform:rotate(90deg)}
+.sc-b{display:none;padding-bottom:2px}
+.sc-b.open{display:block}
+.desc-blk{
+  padding:4px 0;font-size:11px;color:var(--t2);line-height:1.65;word-break:break-word;
+}
+.desc-blk .desc-lb{
+  font-size:10px;color:var(--t3);font-weight:600;margin-bottom:2px;letter-spacing:.3px;
+}
+.desc-blk+.desc-blk{border-top:1px solid var(--bd);padding-top:6px;margin-top:4px}
+.qt{
+  background:var(--bg1);border:1px solid var(--bd);border-radius:8px;
+  padding:9px 12px;margin-bottom:6px;transition:border-color .2s;
+}
+.qt:hover{border-color:var(--bd2)}
+.qt-id{font-size:11px;color:var(--t3);margin-bottom:3px}
+.ds{
+  background:var(--bg1);border:1px solid var(--bd);border-radius:8px;
+  padding:9px 12px;margin-bottom:6px;transition:border-color .2s;
+}
+.ds:hover{border-color:var(--bd2)}
+.st-a{color:var(--ok)}.st-s{color:var(--warn)}
+.it-r{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:5px 0;border-bottom:1px solid var(--bd);font-size:12px;
+}
+.it-r:last-child{border-bottom:none}
+.it-n{color:var(--t1);font-weight:600}
+.it-q{color:var(--ac2);font-weight:700;font-size:13px}
+.it-desc{font-size:11px;color:var(--t2);margin-top:1px}
+.it-sub{font-size:10px;color:var(--t3);margin-top:1px}
+.emp{text-align:center;padding:20px 0;color:var(--t3);font-size:12px}
+.r1{color:var(--r1)}.r2{color:var(--r2)}.r3{color:var(--r3)}.r4{color:var(--r4)}.r5{color:var(--r5)}
+.d-r1{background:var(--r1)}.d-r2{background:var(--r2)}.d-r3{background:var(--r3)}.d-r4{background:var(--r4)}.d-r5{background:var(--r5)}
+.bg-r1{background:rgba(176,184,200,0.08)}.bg-r2{background:rgba(74,158,255,0.08)}.bg-r3{background:rgba(168,85,247,0.08)}.bg-r4{background:rgba(251,191,36,0.08)}.bg-r5{background:rgba(239,68,68,0.08)}
+.st-c{text-align:center;padding:6px 0}
+.st-n{font-size:22px;font-weight:700}
+.st-l{font-size:11px;color:var(--t2);margin-top:1px}
+.tk{
+  background:var(--bg2);border:1px solid var(--bd);border-radius:6px;
+  padding:6px 10px;margin-bottom:4px;
+}
+.tk-s{font-size:11px}
+.tk-d{font-size:11px;color:var(--t2);margin-top:2px}
+.evo-bar{display:flex;gap:0;margin:6px 0 4px;border-radius:4px;overflow:hidden;height:22px;background:var(--bar-bg)}
+.evo-seg{display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;letter-spacing:.3px;transition:all .3s}
+.exh-slot{
+  background:var(--bg1);border:1px solid var(--bd);border-radius:8px;
+  padding:9px 12px;margin-bottom:6px;transition:border-color .2s;
+}
+.exh-slot:hover{border-color:var(--bd2)}
+.exh-badge{
+  display:inline-block;padding:1px 7px;border-radius:3px;font-size:10px;font-weight:600;
+}
+.exh-idle{background:rgba(78,96,128,0.3);color:var(--t3)}
+.exh-deployed{background:rgba(74,158,255,0.15);color:var(--ac2)}
+.exh-busy{background:rgba(239,68,68,0.15);color:var(--danger)}
+@media(max-width:420px){
+  .g2{grid-template-columns:1fr}
+  .nv-b{font-size:10px;padding:7px 2px}
+  .hd-t{font-size:13px}
+}
+</style>
+<script type="module">
+function rc(r){
+  if(!r)return'r1';
+  var s=String(r);
+  if(s.includes('红')||s.includes('LV5')||s==='5')return'r5';
+  if(s.includes('金')||s.includes('LV4')||s==='4')return'r4';
+  if(s.includes('紫')||s.includes('LV3')||s==='3')return'r3';
+  if(s.includes('蓝')||s.includes('LV2')||s==='2')return'r2';
+  return'r1';
+}
+function re(r){
+  if(!r)return'⚪';
+  var s=String(r);
+  if(s.includes('红')||s.includes('LV5')||s==='5')return'🔴';
+  if(s.includes('金')||s.includes('LV4')||s==='4')return'🟡';
+  if(s.includes('紫')||s.includes('LV3')||s==='3')return'🟣';
+  if(s.includes('蓝')||s.includes('LV2')||s==='2')return'🔵';
+  return'⚪';
+}
+function pe(p){
+  if(!p)return'❓';
+  if(p.includes('媚姬'))return'👸';
+  if(p.includes('肉壶'))return'🔮';
+  if(p.includes('雌兽'))return'🐾';
+  return'❓';
+}
+function rt(r){
+  if(!r)return'⚖️ 未定';
+  if(r.includes('淫荡'))return'🔥 淫荡';
+  if(r.includes('爱慕'))return'💗 爱慕';
+  return'⚖️ 未定';
+}
+function lvName(n){
+  var m={1:'LV1 白色阶',2:'LV2 蓝色阶',3:'LV3 紫色阶',4:'LV4 金色阶',5:'LV5 红色阶'};
+  return m[n]||'LV1 白色阶';
+}
+function bar(lb,v,mx,em,clr){
+  var p=mx>0?Math.min(100,Math.round(v/mx*100)):0;
+  var bg=clr||'var(--bar)';
+  return '<div class="br-r"><div class="br-l"><span class="lb">'+em+' '+lb+'</span><span class="vl">'+v+'/'+mx+'</span></div><div class="br-w"><div class="br-f" style="width:'+p+'%;background:'+bg+'"></div></div></div>';
+}
+function esc(s){
+  if(!s)return'';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+/* ═══ 判断是否为空对象或null/undefined ═══ */
+function isEmpty(o){
+  if(!o)return true;
+  if(typeof o==='object'&&Object.keys(o).length===0)return true;
+  return false;
+}
+function populateCharacterData(){
+  var d=_.get(getAllVariables(),'stat_data',{});
+  var pl=_.get(d,'玩家',{});
+  var fc=_.get(d,'收容所',{});
+  var specs=_.get(d,'收容物',{});
+  var dos=_.get(d,'后日谈档案',{});
+  var exh=_.get(d,'展厅',{});
+  var lvNum=fc.等级||1;
+  var lvStr=lvName(lvNum);
+  /* ═══ 顶栏 ═══ */
+  $('#h-nm').text(pl.名字||'待设置');
+  $('#h-dy').text(fc.游戏日期||'第1日');
+  $('#h-sp').text((fc.源点||0)+' SP');
+  $('#h-lv').text(lvStr);
+  /* ═══ 总览-玩家 ═══ */
+  $('#o-nm').text(pl.名字||'待设置');
+  $('#o-sx').text(pl.性别||'待设置');
+  var xp=pl.XP偏好||{};
+  var xpK=Object.keys(xp);
+  if(xpK.length>0){
+    $('#o-xp').html(xpK.map(function(k){
+      var v=xp[k];
+      var dots='';for(var i=0;i<5;i++){dots+='<span style="display:inline-block;width:6px;height:6px;border-radius:50%;margin:0 1px;background:'+(i<(v.强度||1)?'var(--warn)':'var(--bg3)')+'"></span>';}
+      return '<div style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;margin:2px 3px 2px 0;background:var(--ac-dim);border:1px solid rgba(74,158,255,0.2);border-radius:5px;font-size:11px;color:var(--ac2)">'+esc(k)+' '+dots+'</div>';
+    }).join(''));
+  }else{
+    $('#o-xp').html('<span style="color:var(--t3)">暂无</span>');
+  }
+  /* ═══ 总览-收容所 ═══ */
+  $('#o-lv').text(lvStr).attr('class','vl '+rc(String(lvNum)));
+  $('#o-sp').text((fc.源点||0)+' SP');
+  var hb=fc.栖息地||{};
+  $('#o-hb').text((hb.已用||0)+' / '+(hb.总容量||2));
+  $('#o-ast').text(fc.当前助手||'璇玑系统');
+  var spaces=['主控室','栖息地','改造舱'];
+  if(lvNum>=2)spaces.push('寝所','陈列室');
+  if(lvNum>=3)spaces.push('培养房');
+  var sei={'主控室':'🖥️','栖息地':'🏠','改造舱':'🔬','寝所':'🛏️','陈列室':'🏛️','培养房':'🧫'};
+  $('#o-spc').html(spaces.map(function(s){return '<span class="tg">'+(sei[s]||'📦')+' '+s+'</span>';}).join(''));
+  var mods=_.get(fc,'改造舱模组.已解锁',[]);
+  $('#o-mod').html(mods.length>0?mods.map(function(m){return '<span class="tg">🔧 '+esc(m)+'</span>';}).join(''):'<span style="color:var(--t3)">无</span>');
+  /* ═══ 运营概况 ═══ */
+  var specKeys=Object.keys(specs);
+  var dosKeys=Object.keys(dos);
+  var items=pl.道具库存||{};
+  var itemKeys=Object.keys(items);
+  var exhSlots=_.get(exh,'展位',{});
+  var exhCount=Object.keys(exhSlots).length;
+  $('#o-sc').text(specKeys.length);
+  $('#o-qc').text(isEmpty(fc.当前委托)?0:1);
+  $('#o-dc').text(dosKeys.length);
+  $('#o-ic').text(itemKeys.length);
+  $('#o-ec').text(exhCount);
+  /* ═══ 收容物列表 ═══ */
+  var $sl=$('#sp-list');$sl.empty();
+  if(specKeys.length===0){$sl.html('<div class="emp">📭 暂无收容物</div>');}
+  else {
+    specKeys.forEach(function(name,idx){
+      var s=specs[name];
+      /* ═══ 修正：移除多余层级，按真实变量结构读取 ═══ */
+      var sAlias=_.get(s,'别称','')||'';
+      var sRace=_.get(s,'种族','')||'';
+      var sWorld=_.get(s,'收容世界','')||'';
+      var sSource=_.get(s,'来源','')||'';
+      var sType=_.get(s,'类型','')||'';
+      var sRarity=_.get(s,'稀有度','')||'';
+      var sCombat=_.get(s,'战斗力','')||'';
+      var sHabitat=_.get(s,'栖息地单元','')||'';
+      var sPregnancy=_.get(s,'妊娠状态','正常')||'正常';
+      var sPhase=_.get(s,'形态位阶','')||'';
+      var sLooks=_.get(s,'外貌','')||'';
+      var sBody=_.get(s,'身材','')||'';
+      var sBWH=_.get(s,'三围','')||'';
+      var sDress=_.get(s,'装扮','')||'';
+      var sPersonality=_.get(s,'性格特质','')||'';
+      var sFall=_.get(s,'堕落度',0)||0;
+      var sSubmit=_.get(s,'屈服度',0)||0;
+      var sLewd=_.get(s,'淫乱度',0)||0;
+      var sLove=_.get(s,'爱慕度',0)||0;
+      var sRoute=_.get(s,'路线倾向','未定')||'未定';
+      var sPTagCount=_.get(s,'普通标签数',0)||0;
+      var sComboCount=_.get(s,'组合效应数',0)||0;
+      var sEvoPoints=_.get(s,'进化总点数',0)||0;
+      var tags=_.get(s,'普通标签',{})||{};
+      var combos=_.get(s,'组合效应',{})||{};
+      var tasks=_.get(s,'培育任务',{})||{};
+      var alias=sAlias?'【'+esc(sAlias)+'】':'';
+      var tagKeys=Object.keys(tags);
+      var cKeys=Object.keys(combos);
+      var pn=sPTagCount||tagKeys.length;
+      var cn=sComboCount||cKeys.length;
+      var tp=sEvoPoints||(pn+cn*3);
+      var taskKeys=Object.keys(tasks);
+      /* 标签html */
+      var tagHtml='';
+      if(tagKeys.length>0){
+        tagKeys.forEach(function(tn,ti){
+          var td=tags[tn];
+          var rr=_.get(td,'稀有度','白色')||'白色';
+          var ef=_.get(td,'效果','')||'';
+          tagHtml+='<span class="tg" data-tgi="'+idx+'-'+ti+'"><span class="dot d-'+rc(rr)+'"></span>'+esc(tn)+'</span>';
+          tagHtml+='<div class="tg-d" id="tgd-'+idx+'-'+ti+'"><span class="tg-cat">['+esc(rr)+']</span> '+esc(ef)+'</div>';
+        });
+      }else{tagHtml='<span style="color:var(--t3);font-size:11px">暂无标签</span>';}
+      /* 组合效应html */
+      var comboHtml='';
+      if(cKeys.length>0){
+        cKeys.forEach(function(cn2,ci){
+          var cd=combos[cn2];
+          var rr=_.get(cd,'稀有度','蓝色')||'蓝色';
+          var ef=_.get(cd,'效果','')||'';
+          comboHtml+='<span class="tg combo" data-cbi="'+idx+'-'+ci+'"><span class="dot d-'+rc(rr)+'"></span>⚡'+esc(cn2)+'</span>';
+          comboHtml+='<div class="tg-d" id="cbd-'+idx+'-'+ci+'"><span class="tg-cat">['+esc(rr)+'] 组合效应</span> '+esc(ef)+'</div>';
+        });
+      }
+      /* 任务html */
+      var taskHtml='';
+      if(taskKeys.length>0){
+        taskKeys.forEach(function(tk2){
+          var tv=tasks[tk2];
+          var si=_.get(tv,'状态','进行中')==='已完成'?'✅':'⏳';
+          taskHtml+='<div class="tk"><div class="rw"><span class="lb">'+si+' '+esc(tk2)+'</span><span class="vl tk-s">'+esc(_.get(tv,'状态','进行中'))+'</span></div><div class="tk-d">'+esc(_.get(tv,'描述',''))+'</div></div>';
+        });
+      }else{taskHtml='<span style="color:var(--t3);font-size:11px">暂无任务</span>';}
+      /* 进化条 */
+      var evoHtml='';
+      var s1c=tp>=4?'rgba(176,184,200,0.5)':'rgba(176,184,200,0.2)';
+      var s2c=tp>=4?(tp>=9?'rgba(74,158,255,0.5)':'rgba(74,158,255,0.25)'):'rgba(74,158,255,0.08)';
+      var s3c=tp>=9?'rgba(168,85,247,0.5)':'rgba(168,85,247,0.08)';
+      evoHtml='<div class="evo-bar">';
+      evoHtml+='<div class="evo-seg" style="width:33%;background:'+s1c+';color:'+(tp>=4?'#fff':'var(--t3)')+'">🐾 雌兽</div>';
+      evoHtml+='<div class="evo-seg" style="width:34%;background:'+s2c+';color:'+(tp>=9?'#fff':(tp>=4?'var(--ac2)':'var(--t3)'))+'">🔮 肉壶</div>';
+      evoHtml+='<div class="evo-seg" style="width:33%;background:'+s3c+';color:'+(tp>=9?'#fff':'var(--t3)')+'">👸 媚姬</div>';
+      evoHtml+='</div>';
+      /* 栖息地显示 */
+      var habitatStr=sHabitat?esc(sHabitat):'—';
+      /* 组装卡片 */
+      var htm='<div class="sp">'+
+        '<div class="sp-h" data-si="'+idx+'">'+
+          '<div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">'+
+            '<span class="sp-n">'+re(sRarity)+' '+esc(name)+'</span>'+
+            (alias?'<span class="sp-a">'+alias+'</span>':'')+
+          '</div>'+
+          '<span class="sp-m">'+pe(sPhase)+' '+esc(sPhase)+'</span>'+
+        '</div>'+
+        '<div class="sp-d" id="spd-'+idx+'">'+
+          /* 基础信息 */
+          '<div class="sc"><div class="sc-h open" data-sec="sba-'+idx+'"><span class="sc-t">📋 基础信息</span><span class="arr">▶</span></div>'+
+          '<div class="sc-b open" id="sba-'+idx+'">'+
+            '<div class="g2">'+
+              '<div class="rw"><span class="lb">种族</span><span class="vl">'+esc(sRace||'—')+'</span></div>'+
+              '<div class="rw"><span class="lb">世界</span><span class="vl">'+esc(sWorld||'—')+'</span></div>'+
+              '<div class="rw"><span class="lb">来源</span><span class="vl">'+esc(sSource||'—')+'</span></div>'+
+              '<div class="rw"><span class="lb">类型</span><span class="vl">'+esc(sType||'—')+'</span></div>'+
+              '<div class="rw"><span class="lb">稀有度</span><span class="vl '+rc(sRarity)+'">'+esc(sRarity||'—')+'</span></div>'+
+              '<div class="rw"><span class="lb">战斗力</span><span class="vl">'+esc(sCombat||'—')+'</span></div>'+
+              '<div class="rw"><span class="lb">栖息地</span><span class="vl">'+habitatStr+'</span></div>'+
+              '<div class="rw"><span class="lb">妊娠</span><span class="vl">'+esc(sPregnancy)+'</span></div>'+
+            '</div>'+
+          '</div></div>'+
+          /* 外貌档案 */
+          '<div class="sc"><div class="sc-h" data-sec="slk-'+idx+'"><span class="sc-t">👁️ 外貌档案</span><span class="arr">▶</span></div>'+
+          '<div class="sc-b" id="slk-'+idx+'">'+
+            '<div class="desc-blk"><div class="desc-lb">外貌</div>'+esc(sLooks||'—')+'</div>'+
+            '<div class="desc-blk"><div class="desc-lb">身材</div>'+esc(sBody||'—')+'</div>'+
+            '<div class="rw" style="margin-top:4px"><span class="lb">三围</span><span class="vl">'+esc(sBWH||'—')+'</span></div>'+
+            '<div class="desc-blk"><div class="desc-lb">装扮</div>'+esc(sDress||'—')+'</div>'+
+          '</div></div>'+
+          /* 性格特质 */
+          '<div class="sc"><div class="sc-h" data-sec="spr-'+idx+'"><span class="sc-t">💭 性格特质</span><span class="arr">▶</span></div>'+
+          '<div class="sc-b" id="spr-'+idx+'">'+
+            '<div class="desc-blk">'+esc(sPersonality||'—')+'</div>'+
+          '</div></div>'+
+          /* 调教数值 */
+          '<div class="sc"><div class="sc-h" data-sec="sst-'+idx+'"><span class="sc-t">📊 调教数值</span><span class="arr">▶</span></div>'+
+          '<div class="sc-b" id="sst-'+idx+'">'+
+            bar('堕落度',sFall,100,'💀','linear-gradient(90deg,#7b5aff,#a855f7)')+
+            bar('屈服度',sSubmit,100,'🔗','linear-gradient(90deg,#4a9eff,#7bb8ff)')+
+            bar('淫乱度',sLewd,100,'🔥','linear-gradient(90deg,#ff4a6a,#ff8a9e)')+
+            bar('爱慕度',sLove,100,'💗','linear-gradient(90deg,#f472b6,#fda4af)')+
+            '<div class="rw" style="margin-top:4px"><span class="lb">路线倾向</span><span class="vl">'+rt(sRoute)+'</span></div>'+
+          '</div></div>'+
+          /* 进化数据 */
+          '<div class="sc"><div class="sc-h" data-sec="sev-'+idx+'"><span class="sc-t">🧬 进化数据</span><span class="arr">▶</span></div>'+
+          '<div class="sc-b" id="sev-'+idx+'">'+
+            '<div class="g3">'+
+              '<div class="rw"><span class="lb">标签</span><span class="vl">'+pn+'</span></div>'+
+              '<div class="rw"><span class="lb">效应</span><span class="vl">'+cn+'</span></div>'+
+              '<div class="rw"><span class="lb">总点</span><span class="vl ac">'+tp+'</span></div>'+
+            '</div>'+
+            evoHtml+
+            '<div style="font-size:10px;color:var(--t3);text-align:center;margin-top:2px">雌兽态 &lt;4 · 肉壶态 4~8 · 媚姬态 9+</div>'+
+          '</div></div>'+
+          /* 色情标签 */
+          '<div class="sc"><div class="sc-h" data-sec="stg-'+idx+'"><span class="sc-t">🏷️ 色情标签 ('+tagKeys.length+')</span><span class="arr">▶</span></div>'+
+          '<div class="sc-b" id="stg-'+idx+'">'+tagHtml+'</div></div>'+
+          /* 组合效应 */
+          (cKeys.length>0?
+          '<div class="sc"><div class="sc-h" data-sec="scb-'+idx+'"><span class="sc-t">⚡ 组合效应 ('+cKeys.length+')</span><span class="arr">▶</span></div>'+
+          '<div class="sc-b" id="scb-'+idx+'">'+comboHtml+'</div></div>':'')+
+          /* 培育任务 */
+          '<div class="sc"><div class="sc-h" data-sec="stk-'+idx+'"><span class="sc-t">📝 培育任务 ('+taskKeys.length+'/3)</span><span class="arr">▶</span></div>'+
+          '<div class="sc-b" id="stk-'+idx+'">'+taskHtml+'</div></div>'+
+        '</div>'+
+      '</div>';
+      $sl.append(htm);
+    });
+  }
+  /* ═══ 委托 ═══ */
+  var $ql=$('#qt-list');$ql.empty();
+  var cq=fc.当前委托;
+  if(isEmpty(cq)){
+    $ql.html('<div class="emp">📭 暂无进行中的委托</div>');
+  }else{
+    $ql.append(
+      '<div class="qt">'+
+        '<div class="qt-id">📌 '+esc(_.get(cq,'委托编号','—'))+'</div>'+
+        '<div class="rw"><span class="lb">委托方</span><span class="vl">'+esc(_.get(cq,'委托方','—'))+'</span></div>'+
+        '<div class="rw"><span class="lb">目标</span><span class="vl">'+esc(_.get(cq,'目标名称','—'))+'</span></div>'+
+        '<div class="rw"><span class="lb">改造目标</span><span class="vl" style="font-size:11px;font-weight:400">'+esc(_.get(cq,'改造目标','—'))+'</span></div>'+
+        '<div class="rw"><span class="lb">报酬</span><span class="vl ac">'+esc(_.get(cq,'报酬范围','—'))+'</span></div>'+
+      '</div>'
+    );
+  }
+  /* ═══ 展厅 ═══ */
+  var $el=$('#exh-list');$el.empty();
+  if(lvNum<2){
+    $el.html('<div class="emp">🔒 展厅需要收容所等级 ≥ LV2 解锁</div>');
+  }else{
+    var slots=_.get(exh,'展位',{});
+    var fame=_.get(exh,'声望记录',{});
+    var slotKeys=Object.keys(slots);
+    if(slotKeys.length===0){
+      $el.html('<div class="emp">📭 暂无展位数据</div>');
+    }else{
+      slotKeys.forEach(function(sid){
+        var sl=slots[sid];
+        var st=_.get(sl,'状态','空闲');
+        var sn=_.get(sl,'收容物名称',null);
+        var badgeCls=st==='空闲'?'exh-idle':(st==='接客中'?'exh-busy':'exh-deployed');
+        var fameData=sn?fame[sn]:null;
+        var fameStr=fameData?esc(_.get(fameData,'声望等级','无名'))+' ('+(_.get(fameData,'累计声望点数',0))+'pt)':'—';
+        $el.append(
+          '<div class="exh-slot">'+
+            '<div class="rw"><span class="lb">展位 #'+esc(sid)+'</span><span class="exh-badge '+badgeCls+'">'+esc(st)+'</span></div>'+
+            '<div class="rw"><span class="lb">收容物</span><span class="vl">'+(sn?esc(sn):'空')+'</span></div>'+
+            (sn?'<div class="rw"><span class="lb">声望</span><span class="vl">'+fameStr+'</span></div>':'')+
+          '</div>'
+        );
+      });
+    }
+  }
+  /* ═══ 档案 ═══ */
+  var $dl=$('#ds-list');$dl.empty();
+  if(dosKeys.length===0){
+    $dl.html('<div class="emp">📭 暂无后日谈档案</div>');
+  }else{
+    dosKeys.forEach(function(dn){
+      var dd=dos[dn];
+      var sc2=_.get(dd,'档案状态','活跃')==='已封存'?'st-s':'st-a';
+      var si2=_.get(dd,'档案状态','活跃')==='已封存'?'🔒':'🟢';
+      $dl.append(
+        '<div class="ds">'+
+          '<div class="rw"><span class="lb">📁 '+esc(dn)+(dd.最终别称?'【'+esc(dd.最终别称)+'】':'')+'</span><span class="vl '+sc2+'">'+si2+' '+esc(_.get(dd,'档案状态','活跃'))+'</span></div>'+
+          '<div class="rw"><span class="lb">形态</span><span class="vl">'+esc(_.get(dd,'最终形态','—'))+'</span></div>'+
+          '<div class="rw"><span class="lb">地点</span><span class="vl">'+esc(_.get(dd,'所在地点','—'))+'</span></div>'+
+          '<div class="rw"><span class="lb">最后观察</span><span class="vl">'+esc(_.get(dd,'最后观察日期','—'))+'</span></div>'+
+        '</div>'
+      );
+    });
+  }
+  /* ═══ 道具 ═══ */
+  var $il=$('#it-list');$il.empty();
+  if(itemKeys.length===0){
+    $il.html('<div class="emp">📭 道具栏为空</div>');
+  }else{
+    itemKeys.forEach(function(iname){
+      var iv=items[iname];
+      var limitStr='';
+      if(_.get(iv,'每日限用',null)!=null){
+        limitStr='今日 '+(_.get(iv,'今日已用',0))+'/'+iv.每日限用;
+      }
+      $il.append(
+        '<div class="it-r">'+
+          '<div><div class="it-n">'+esc(iname)+'</div>'+(limitStr?'<div class="it-sub">'+limitStr+'</div>':'')+'</div>'+
+          '<span class="it-q">×'+(_.get(iv,'数量',0))+'</span>'+
+        '</div>'
+      );
+    });
+  }
+}
+async function init(){
+  await waitGlobalInitialized('Mvu');
+  populateCharacterData();
+  eventOn(Mvu.events.VARIABLE_UPDATE_ENDED,function(){
+    populateCharacterData();
+  });
+  /* Tab切换 */
+  $(document).on('click','.nv-b',function(){
+    var t=$(this).data('pn');
+    $('.nv-b').removeClass('on');$(this).addClass('on');
+    $('.pn').removeClass('on');$('#pn-'+t).addClass('on');
+  });
+  /* 收容物展开/折叠 */
+  $(document).on('click','.sp-h',function(){
+    var i=$(this).data('si');
+    $('#spd-'+i).toggleClass('open');
+  });
+  /* 子区块展开/折叠 */
+  $(document).on('click','.sc-h',function(){
+    var sec=$(this).data('sec');
+    $(this).toggleClass('open');
+    $('#'+sec).toggleClass('open');
+  });
+  /* 卡片展开/折叠 */
+  $(document).on('click','.cd-h',function(){
+    $(this).toggleClass('open');
+    $(this).next('.cd-b').toggleClass('open');
+  });
+  /* 标签详情展开 */
+  $(document).on('click','.tg[data-tgi]',function(){
+    var id=$(this).data('tgi');
+    $('#tgd-'+id).toggleClass('open');
+  });
+  /* 组合效应详情展开 */
+  $(document).on('click','.tg[data-cbi]',function(){
+    var id=$(this).data('cbi');
+    $('#cbd-'+id).toggleClass('open');
+  });
+}
+$(errorCatched(init));
+</script>
+</head>
+<body>
+<div class="wr">
+  <div class="hd">
+    <div class="hd-t">⚙️ 万界收容所</div>
+    <div class="hd-i">
+      <span>👤 <b id="h-nm">—</b></span>
+      <span>📅 <b id="h-dy">—</b></span>
+      <span>💎 <b id="h-sp">—</b></span>
+      <span>🏷️ <b id="h-lv">—</b></span>
+    </div>
+  </div>
+  <div class="nv">
+    <button class="nv-b on" data-pn="ov">📡总览</button>
+    <button class="nv-b" data-pn="sp">🧬收容物</button>
+    <button class="nv-b" data-pn="qt">📋委托</button>
+    <button class="nv-b" data-pn="exh">🏛️展厅</button>
+    <button class="nv-b" data-pn="ds">📂档案</button>
+    <button class="nv-b" data-pn="it">🎒道具</button>
+  </div>
+  <div class="pn on" id="pn-ov">
+    <div class="cd">
+      <div class="cd-h open"><span class="cd-t">👤 指挥官档案</span><span class="arr">▶</span></div>
+      <div class="cd-b open">
+        <div class="rw"><span class="lb">姓名</span><span class="vl" id="o-nm">—</span></div>
+        <div class="rw"><span class="lb">性别</span><span class="vl" id="o-sx">—</span></div>
+        <div style="margin-top:5px"><div style="font-size:11px;color:var(--t2);margin-bottom:3px">🎯 XP偏好</div><div id="o-xp" style="display:flex;flex-wrap:wrap;gap:2px"></div></div>
+      </div>
+    </div>
+    <div class="cd">
+      <div class="cd-h open"><span class="cd-t">🏗️ 收容所状态</span><span class="arr">▶</span></div>
+      <div class="cd-b open">
+        <div class="g2">
+          <div class="rw"><span class="lb">等级</span><span class="vl" id="o-lv">—</span></div>
+          <div class="rw"><span class="lb">源点</span><span class="vl ac" id="o-sp">—</span></div>
+          <div class="rw"><span class="lb">栖息地</span><span class="vl" id="o-hb">—</span></div>
+          <div class="rw"><span class="lb">助手</span><span class="vl" id="o-ast">—</span></div>
+        </div>
+        <div style="margin-top:5px"><div style="font-size:11px;color:var(--t2);margin-bottom:3px">🔓 已解锁空间</div><div id="o-spc" style="display:flex;flex-wrap:wrap;gap:3px"></div></div>
+        <div style="margin-top:5px"><div style="font-size:11px;color:var(--t2);margin-bottom:3px">🔧 改造舱模组</div><div id="o-mod" style="display:flex;flex-wrap:wrap;gap:3px"></div></div>
+      </div>
+    </div>
+    <div class="cd">
+      <div class="cd-h open"><span class="cd-t">📊 运营概况</span><span class="arr">▶</span></div>
+      <div class="cd-b open">
+        <div class="g3" style="gap:0">
+          <div class="st-c"><div class="st-n" style="color:var(--ac2)" id="o-sc">0</div><div class="st-l">🧬 收容物</div></div>
+          <div class="st-c"><div class="st-n" style="color:var(--warn)" id="o-qc">0</div><div class="st-l">📋 委托</div></div>
+          <div class="st-c"><div class="st-n" style="color:var(--ok)" id="o-dc">0</div><div class="st-l">📂 档案</div></div>
+        </div>
+        <div class="g3" style="gap:0;margin-top:4px">
+          <div class="st-c"><div class="st-n" style="color:var(--t2)" id="o-ic">0</div><div class="st-l">🎒 道具</div></div>
+          <div class="st-c"><div class="st-n" style="color:var(--danger)" id="o-ec">0</div><div class="st-l">🏛️ 展位</div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pn" id="pn-sp"><div id="sp-list"></div></div>
+  <div class="pn" id="pn-qt"><div id="qt-list"></div></div>
+  <div class="pn" id="pn-exh"><div id="exh-list"></div></div>
+  <div class="pn" id="pn-ds"><div id="ds-list"></div></div>
+  <div class="pn" id="pn-it"><div id="it-list"></div></div>
+</div>
+</body>
+</html>
+```

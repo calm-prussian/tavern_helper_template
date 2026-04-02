@@ -1,0 +1,15 @@
+<%_
+if (typeof xieYunniangAff === 'undefined') var xieYunniangAff = getvar('stat_data.谢芸娘.好感度', { defaults: 15 });
+_%>
+
+<%_ if (xieYunniangAff >= 160) { _%>
+<%- await getwi(null, '谢芸娘_阶段05_如胶似漆期') %>
+<%_ } else if (xieYunniangAff >= 120) { _%>
+<%- await getwi(null, '谢芸娘_阶段04_学会拒绝期') %>
+<%_ } else if (xieYunniangAff >= 80) { _%>
+<%- await getwi(null, '谢芸娘_阶段03_勉强开口期') %>
+<%_ } else if (xieYunniangAff >= 40) { _%>
+<%- await getwi(null, '谢芸娘_阶段02_暗涌浮现期') %>
+<%_ } else { _%>
+<%- await getwi(null, '谢芸娘_阶段01_温柔如常期') %>
+<%_ } _%>

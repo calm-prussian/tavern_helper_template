@@ -1,0 +1,383 @@
+```html
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ffffff;
+    }
+
+    /* 提亮了整体卡片颜色，增加了半透明和磨砂感 */
+    .gwen-status-bar {
+      background: rgba(60, 60, 70, 0.85);
+      border: 2px solid #ff66b2;
+      border-radius: 8px;
+      padding: 12px;
+      margin: 10px 0;
+      box-shadow: 0 0 15px rgba(255, 102, 178, 0.4);
+      font-size: 13px;
+    }
+
+    .section-header {
+      color: #ff80df;
+      font-weight: bold;
+      border-bottom: 1px solid rgba(255, 102, 178, 0.4);
+      padding-bottom: 4px;
+      margin-bottom: 8px;
+      margin-top: 8px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-shadow: 0 0 5px rgba(255, 102, 178, 0.3);
+      user-select: none; /* 防止点击时选中文本 */
+    }
+
+    .section-header:first-child {
+      margin-top: 0;
+    }
+
+    .section-header:hover {
+      background: rgba(255, 102, 178, 0.15);
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+
+    .info-item {
+      display: flex;
+      flex-direction: column;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 6px;
+      border-radius: 4px;
+      border-left: 3px solid #00e6e6;
+    }
+
+    .info-label {
+      color: #cccccc;
+      font-size: 11px;
+      margin-bottom: 2px;
+    }
+
+    .info-value {
+      font-weight: 500;
+      word-break: break-word;
+      color: #ffffff;
+    }
+
+    .value-highlight {
+      color: #00ffff;
+    }
+
+    .long-text {
+      grid-column: 1 / -1;
+    }
+
+    /* === 电量方块专用样式 === */
+    .battery-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .battery-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .battery-label {
+      font-size: 10px;
+      color: #cccccc;
+      margin-bottom: 4px;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .battery-box {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid #ff66b2;
+      border-radius: 4px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 用横线条纹模拟10点一格的刻度 */
+    .battery-box::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: repeating-linear-gradient(
+        to bottom,
+        transparent,
+        transparent calc(10% - 1px),
+        rgba(0,0,0,0.6) calc(10% - 1px),
+        rgba(0,0,0,0.6) 10%
+      );
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    /* 白色电量填充 */
+    .battery-fill {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: #ffffff;
+      height: 0%; /* 由JS动态修改 */
+      z-index: 1;
+      transition: height 0.4s ease;
+    }
+
+    /* 黄色数字居中 */
+    .battery-value {
+      position: relative;
+      z-index: 3;
+      color: #ffff00;
+      font-weight: bold;
+      font-size: 14px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    }
+    /* ======================= */
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 4px;
+    }
+
+    .data-table th, .data-table td {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 6px;
+      text-align: left;
+    }
+
+    .data-table th {
+      background: rgba(255, 102, 178, 0.15);
+      color: #ff80df;
+      width: 30%;
+      font-size: 12px;
+    }
+
+    .data-table td {
+      background: rgba(0, 0, 0, 0.3);
+      font-size: 12px;
+      color: #ffffff;
+    }
+
+    .collapsible-content {
+      display: block;
+    }
+  </style>
+  <script type="module">
+    function populateCharacterData() {
+      const all_variables = getAllVariables();
+
+      /* --- 世界状态 --- */
+      const time = _.get(all_variables, 'stat_data.世界.当前时间', '未知');
+      const date = _.get(all_variables, 'stat_data.世界.当前日期', '未知');
+      $('#val-time').text(time);
+      $('#val-date').text(date);
+
+      const affairsObj = _.get(all_variables, 'stat_data.世界.近期事务', {});
+      const affairsText = Object.entries(affairsObj).map(([k, v]) => `${k}: ${v}`).join('; ') || '无';
+      $('#val-affairs').text(affairsText);
+
+      /* --- 格温内心与行为 --- */
+      $('#val-thought').text(_.get(all_variables, 'stat_data.格温史黛西.内心反应', '暂无数据'));
+      $('#val-action').text(_.get(all_variables, 'stat_data.格温史黛西.当前行为', '暂无数据'));
+
+      /* --- 核心数值获取 --- */
+      const affection = _.get(all_variables, 'stat_data.格温史黛西.好感度', 0);
+      const trust = _.get(all_variables, 'stat_data.格温史黛西.信赖值', 0);
+      const corruption = _.get(all_variables, 'stat_data.格温史黛西.堕落值', -100);
+      const exposure = _.get(all_variables, 'stat_data.格温史黛西.露出倾向', 0);
+      const awareness = _.get(all_variables, 'stat_data.格温史黛西.身份觉察度', 0);
+
+      // 显示黄色数字
+      $('#val-affection').text(affection);
+      $('#val-trust').text(trust);
+      $('#val-corruption').text(corruption);
+      $('#val-exposure').text(exposure);
+      $('#val-awareness').text(awareness);
+
+      /* --- 计算电量高度 (按10%卡一格) --- */
+      // 辅助函数：将数值按10为步长向下取整，转为0-100%
+      const getBatPct = (val) => Math.min(100, Math.max(0, Math.floor(val / 10) * 10));
+
+      // 常规0~100数值
+      $('#fill-affection').css('height', getBatPct(affection) + '%');
+      $('#fill-trust').css('height', getBatPct(trust) + '%');
+      $('#fill-awareness').css('height', getBatPct(awareness) + '%');
+
+      // 露出倾向 0~5：乘以20映射到0~100
+      $('#fill-exposure').css('height', getBatPct(exposure * 20) + '%');
+
+      // 堕落值 -100~100：跨度200，按比例映射到0~100 (比如 -100是0格，0是5格，100是满格)
+      const corrPct = (corruption + 100) / 2;
+      $('#fill-corruption').css('height', getBatPct(corrPct) + '%');
+
+      /* --- 着装与身体状态表格 --- */
+      const clothing = _.get(all_variables, 'stat_data.格温史黛西.着装', {});
+      $('#val-cloth-top').text(_.get(clothing, '上装', '无'));
+      $('#val-cloth-bottom').text(_.get(clothing, '下装', '无'));
+      $('#val-cloth-inner').text(_.get(clothing, '内衣', '无'));
+      $('#val-cloth-socks').text(_.get(clothing, '袜子', '无'));
+      $('#val-cloth-shoes').text(_.get(clothing, '鞋子', '无'));
+      $('#val-cloth-acc').text(_.get(clothing, '饰品', '无'));
+
+      const organs = _.get(all_variables, 'stat_data.格温史黛西.性器官状态', {});
+      $('#val-organ-pussy').text(_.get(organs, '小穴状态', '未知'));
+      $('#val-organ-boobs').text(_.get(organs, '胸部状态', '未知'));
+      $('#val-organ-ass').text(_.get(organs, '臀部状态', '未知'));
+      $('#val-organ-feet').text(_.get(organs, '足部状态', '未知'));
+    }
+
+    async function init() {
+      await waitGlobalInitialized('Mvu');
+      populateCharacterData();
+
+      eventOn(Mvu.events.VARIABLE_UPDATE_ENDED, () => {
+        populateCharacterData();
+      });
+
+      // 绑定折叠点击事件
+      $('.section-header').off('click').on('click', function () {
+        const $content = $(this).next('.collapsible-content');
+        $content.slideToggle(200);
+        const $icon = $(this).find('.toggle-icon');
+        $icon.text($icon.text() === '▼' ? '▶' : '▼');
+      });
+    }
+
+    $(errorCatched(init));
+  </script>
+</head>
+<body>
+  <div class="gwen-status-bar">
+
+    <!-- 世界状态 -->
+    <div class="section-header">
+      <span>🌐 世界情报</span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="collapsible-content">
+      <div class="info-grid">
+        <div class="info-item">
+          <span class="info-label">当前时间</span>
+          <span class="info-value value-highlight" id="val-time">-</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">当前日期</span>
+          <span class="info-value value-highlight" id="val-date">-</span>
+        </div>
+        <div class="info-item long-text">
+          <span class="info-label">近期事务</span>
+          <span class="info-value" id="val-affairs">-</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 核心动态与数值 -->
+    <div class="section-header">
+      <span>🕷️ 蜘蛛格温状态</span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="collapsible-content">
+      <div class="info-grid">
+        <div class="info-item long-text">
+          <span class="info-label">内心反应</span>
+          <span class="info-value" id="val-thought">-</span>
+        </div>
+        <div class="info-item long-text">
+          <span class="info-label">当前行为</span>
+          <span class="info-value" id="val-action">-</span>
+        </div>
+      </div>
+
+      <!-- 核心数值：5个方块并排展示 -->
+      <div class="battery-container">
+        <div class="battery-item">
+          <span class="battery-label">好感度</span>
+          <div class="battery-box">
+            <div class="battery-fill" id="fill-affection"></div>
+            <div class="battery-value" id="val-affection">0</div>
+          </div>
+        </div>
+        <div class="battery-item">
+          <span class="battery-label">信赖值</span>
+          <div class="battery-box">
+            <div class="battery-fill" id="fill-trust"></div>
+            <div class="battery-value" id="val-trust">0</div>
+          </div>
+        </div>
+        <div class="battery-item">
+          <span class="battery-label">堕落值</span>
+          <div class="battery-box">
+            <div class="battery-fill" id="fill-corruption"></div>
+            <div class="battery-value" id="val-corruption">0</div>
+          </div>
+        </div>
+        <div class="battery-item">
+          <span class="battery-label">露出倾向</span>
+          <div class="battery-box">
+            <div class="battery-fill" id="fill-exposure"></div>
+            <div class="battery-value" id="val-exposure">0</div>
+          </div>
+        </div>
+        <div class="battery-item">
+          <span class="battery-label">觉察度</span>
+          <div class="battery-box">
+            <div class="battery-fill" id="fill-awareness"></div>
+            <div class="battery-value" id="val-awareness">0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 着装与身体状态 -->
+    <div class="section-header">
+      <span>👗 私密档案</span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="collapsible-content">
+      <div class="info-label" style="margin-top: 4px;">着装状态</div>
+      <table class="data-table">
+        <tbody>
+          <tr><th>上装</th><td id="val-cloth-top">-</td></tr>
+          <tr><th>下装</th><td id="val-cloth-bottom">-</td></tr>
+          <tr><th>内衣</th><td id="val-cloth-inner">-</td></tr>
+          <tr><th>袜子</th><td id="val-cloth-socks">-</td></tr>
+          <tr><th>鞋子</th><td id="val-cloth-shoes">-</td></tr>
+          <tr><th>饰品</th><td id="val-cloth-acc">-</td></tr>
+        </tbody>
+      </table>
+
+      <div class="info-label" style="margin-top: 8px;">性器官状态</div>
+      <table class="data-table">
+        <tbody>
+          <tr><th>小穴</th><td id="val-organ-pussy">-</td></tr>
+          <tr><th>胸部</th><td id="val-organ-boobs">-</td></tr>
+          <tr><th>臀部</th><td id="val-organ-ass">-</td></tr>
+          <tr><th>足部</th><td id="val-organ-feet">-</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</body>
+</html>
+```

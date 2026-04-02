@@ -1,0 +1,15 @@
+<%_
+if (typeof ayiAff === 'undefined') var ayiAff = getvar('stat_data.阿依.好感度', { defaults: 10 });
+_%>
+
+<%_ if (ayiAff >= 160) { _%>
+<%- await getwi(null, '阿依_阶段05_如胶似漆期') %>
+<%_ } else if (ayiAff >= 120) { _%>
+<%- await getwi(null, '阿依_阶段04_扎根此处期') %>
+<%_ } else if (ayiAff >= 80) { _%>
+<%- await getwi(null, '阿依_阶段03_文化分享期') %>
+<%_ } else if (ayiAff >= 40) { _%>
+<%- await getwi(null, '阿依_阶段02_熟人待遇期') %>
+<%_ } else { _%>
+<%- await getwi(null, '阿依_阶段01_好奇观望期') %>
+<%_ } _%>

@@ -1,0 +1,361 @@
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>组合效应合成炉</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+            background: transparent;
+            padding: 4px;
+        }
+        .forge-wrap {
+            max-width: 640px;
+            margin: 0 auto;
+            background: linear-gradient(145deg, #0a0c18 0%, #0e1025 50%, #080e1a 100%);
+            border: 1px solid rgba(180, 74, 255, 0.15);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 0 28px rgba(180, 74, 255, 0.06), inset 0 1px 0 rgba(180, 74, 255, 0.05);
+        }
+        /* ===== 顶部标题 ===== */
+        .forge-title {
+            text-align: center;
+            padding: 14px 16px 6px;
+            font-size: 15px;
+            font-weight: 700;
+            color: #b44aff;
+            letter-spacing: 4px;
+            text-shadow: 0 0 12px rgba(180, 74, 255, 0.35);
+        }
+        .forge-subtitle {
+            text-align: center;
+            font-size: 11px;
+            color: #443355;
+            letter-spacing: 2px;
+            padding-bottom: 10px;
+        }
+        /* ===== 状态栏 ===== */
+        .status-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 16px 12px;
+            gap: 24px;
+            flex-wrap: wrap;
+            border-top: 1px solid rgba(180, 74, 255, 0.06);
+            border-bottom: 1px solid rgba(180, 74, 255, 0.06);
+        }
+        .st-item {
+            font-size: 12px;
+            color: #556677;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .st-val {
+            color: #b44aff;
+            font-weight: 600;
+        }
+        .st-val.highlight {
+            color: #ffd700;
+        }
+        /* ===== 说明区 ===== */
+        .forge-guide {
+            margin: 12px 12px 0;
+            padding: 10px 14px;
+            background: rgba(180, 74, 255, 0.04);
+            border: 1px solid rgba(180, 74, 255, 0.1);
+            border-radius: 6px;
+            font-size: 12px;
+            color: #6a5580;
+            line-height: 1.8;
+        }
+        .forge-guide b {
+            color: #9966bb;
+            font-weight: 600;
+        }
+        /* ===== 标签列表 ===== */
+        .tag-section {
+            padding: 12px;
+        }
+        .tag-section-title {
+            font-size: 11px;
+            color: #443355;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            padding-left: 2px;
+        }
+        .tag-list {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+        .tag-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 10px 12px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(180, 74, 255, 0.06);
+            border-radius: 6px;
+            transition: border-color 0.2s ease;
+            cursor: default;
+        }
+        .tag-row:hover {
+            border-color: rgba(180, 74, 255, 0.2);
+        }
+        .tag-num {
+            font-size: 11px;
+            color: #3a2a4a;
+            min-width: 18px;
+            padding-top: 2px;
+            flex-shrink: 0;
+        }
+        .tag-body {
+            flex: 1;
+        }
+        .tag-head {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 4px;
+        }
+        .tag-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: #c8b0e0;
+        }
+        .rarity-badge {
+            font-size: 10px;
+            padding: 1px 7px;
+            border-radius: 3px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            flex-shrink: 0;
+        }
+        .r-white  { background: rgba(180,180,180,0.10); color: #999999; border: 1px solid rgba(180,180,180,0.2); }
+        .r-blue   { background: rgba(74,158,255,0.10);  color: #4a9eff; border: 1px solid rgba(74,158,255,0.22); }
+        .r-purple { background: rgba(180,74,255,0.10);  color: #b44aff; border: 1px solid rgba(180,74,255,0.22); }
+        .r-gold   { background: rgba(255,215,0,0.10);   color: #ffd700; border: 1px solid rgba(255,215,0,0.22); }
+        .r-red    { background: rgba(255,74,74,0.10);   color: #ff4a4a; border: 1px solid rgba(255,74,74,0.22); }
+        .tag-desc {
+            font-size: 11px;
+            color: #4a3a5a;
+            line-height: 1.6;
+        }
+        .tag-copy-btn {
+            flex-shrink: 0;
+            padding: 3px 9px;
+            font-size: 10px;
+            background: rgba(180, 74, 255, 0.06);
+            border: 1px solid rgba(180, 74, 255, 0.14);
+            border-radius: 3px;
+            color: #775599;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            align-self: center;
+        }
+        .tag-copy-btn:hover {
+            background: rgba(180, 74, 255, 0.15);
+            color: #b44aff;
+            border-color: rgba(180, 74, 255, 0.3);
+        }
+        .tag-copy-btn.copied {
+            color: #55cc88;
+            border-color: rgba(85, 204, 136, 0.3);
+            background: rgba(85, 204, 136, 0.06);
+        }
+        /* ===== 提示区 ===== */
+        .forge-tip {
+            margin: 0 12px 12px;
+            padding: 12px 14px;
+            background: rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(180, 74, 255, 0.08);
+            border-left: 3px solid rgba(180, 74, 255, 0.35);
+            border-radius: 0 6px 6px 0;
+            font-size: 12px;
+            color: #7a6090;
+            line-height: 1.8;
+        }
+        .forge-tip span {
+            color: #9966cc;
+        }
+        /* ===== 空/错误 ===== */
+        .empty {
+            text-align: center;
+            padding: 36px 20px;
+            color: #3a2a4a;
+            font-size: 13px;
+        }
+        .loading {
+            text-align: center;
+            padding: 30px;
+            color: #443355;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="forge-wrap" id="forge">
+        <div class="loading">⚗️ 正在连接合成炉...</div>
+    </div>
+    <script>
+        /* ========== 获取消息内容 ========== */
+        function getMessageData() {
+            var chatMessages = getChatMessages(getCurrentMessageId());
+            if (!chatMessages || chatMessages.length === 0) {
+                console.error("无法获取消息内容");
+                return null;
+            }
+            return chatMessages[0].message;
+        }
+        /* ========== 解析数据 ========== */
+        function parseForge(text) {
+            var data = {
+                target: '',
+                tagCount: '',
+                triggerNum: '',
+                comboCount: '',
+                tags: [],
+                tip: ''
+            };
+            var wm = text.match(/<combo_forge>([\s\S]*?)<\/combo_forge>/);
+            if (!wm || !wm[1]) return data;
+            var c = wm[1];
+            var tm = c.match(/\[目标\|([^\]]*)\]/);
+            if (tm) data.target = tm[1].trim();
+            var nm = c.match(/\[普通标签数\|([^\]]*)\]/);
+            if (nm) data.tagCount = nm[1].trim();
+            var fnm = c.match(/\[触发倍数\|([^\]]*)\]/);
+            if (fnm) data.triggerNum = fnm[1].trim();
+            var cm = c.match(/\[已有组合效应数\|([^\]]*)\]/);
+            if (cm) data.comboCount = cm[1].trim();
+            var tipm = c.match(/\[提示\|([^\]]*)\]/);
+            if (tipm) data.tip = tipm[1].trim();
+            /* 提取 --- 之间的标签列表 */
+            var blockM = c.match(/---\s*([\s\S]*?)\s*---/);
+            if (blockM && blockM[1]) {
+                var lines = blockM[1].trim().split('\n');
+                for (var i = 0; i < lines.length; i++) {
+                    var line = lines[i].trim();
+                    if (!line) continue;
+                    /* 格式：序号. 标签名 | 稀有度 | 描述 */
+                    var lm = line.match(/^(\d+)\.\s*([^|]+)\|([^|]+)\|(.+)$/);
+                    if (lm) {
+                        data.tags.push({
+                            num: lm[1].trim(),
+                            name: lm[2].trim(),
+                            rarity: lm[3].trim(),
+                            desc: lm[4].trim()
+                        });
+                    }
+                }
+            }
+            return data;
+        }
+        /* ========== 稀有度样式 ========== */
+        function rarityClass(r) {
+            if (r.indexOf('红') !== -1) return 'r-red';
+            if (r.indexOf('金') !== -1) return 'r-gold';
+            if (r.indexOf('紫') !== -1) return 'r-purple';
+            if (r.indexOf('蓝') !== -1) return 'r-blue';
+            return 'r-white';
+        }
+        /* ========== 复制标签名 ========== */
+        function copyTag(btn, name) {
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(name).then(function() {
+                    btn.textContent = '✓ 已复制';
+                    btn.classList.add('copied');
+                    setTimeout(function() {
+                        btn.textContent = '复制';
+                        btn.classList.remove('copied');
+                    }, 1500);
+                });
+            } else {
+                var ta = document.createElement('textarea');
+                ta.value = name;
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                btn.textContent = '✓ 已复制';
+                btn.classList.add('copied');
+                setTimeout(function() {
+                    btn.textContent = '复制';
+                    btn.classList.remove('copied');
+                }, 1500);
+            }
+        }
+        /* ========== 渲染 ========== */
+        function renderForge(d) {
+            var h = '';
+            h += '<div class="forge-title">⚗️ 组合效应合成炉 ⚗️</div>';
+            h += '<div class="forge-subtitle">COMBO EFFECT FORGE</div>';
+            /* 状态栏 */
+            h += '<div class="status-bar">';
+            h += '<div class="st-item">🧬 收容物 <span class="st-val">' + (d.target || '—') + '</span></div>';
+            h += '<div class="st-item">🏷️ 普通标签 <span class="st-val highlight">' + (d.tagCount || '0') + '</span></div>';
+            h += '<div class="st-item">✨ 组合效应 <span class="st-val">' + (d.comboCount || '0') + '</span></div>';
+            h += '<div class="st-item">⚡ 触发节点 <span class="st-val">' + (d.triggerNum || '—') + '</span></div>';
+            h += '</div>';
+            /* 说明 */
+            h += '<div class="forge-guide">';
+            h += '💡 从下方标签中<b>选择3个</b>进行融合，直接在对话框中告诉我你想合成的3个标签名即可。<br>';
+            h += '⚠️ 合成将消耗所选的3个普通标签，生成1个更强大的组合效应，进化点数维持不变。';
+            h += '</div>';
+            /* 标签列表 */
+            h += '<div class="tag-section">';
+            h += '<div class="tag-section-title">— 当前普通标签列表 —</div>';
+            if (d.tags.length === 0) {
+                h += '<div class="empty">暂无普通标签</div>';
+            } else {
+                h += '<div class="tag-list">';
+                for (var i = 0; i < d.tags.length; i++) {
+                    var t = d.tags[i];
+                    var rc = rarityClass(t.rarity || '');
+                    h += '<div class="tag-row">';
+                    h += '<span class="tag-num">' + t.num + '.</span>';
+                    h += '<div class="tag-body">';
+                    h += '<div class="tag-head">';
+                    h += '<span class="tag-name">' + (t.name || '') + '</span>';
+                    h += '<span class="rarity-badge ' + rc + '">' + (t.rarity || '') + '</span>';
+                    h += '</div>';
+                    h += '<div class="tag-desc">' + (t.desc || '') + '</div>';
+                    h += '</div>';
+                    h += '<button class="tag-copy-btn" onclick="copyTag(this,\'' + (t.name || '').replace(/'/g, "\\'") + '\')">复制</button>';
+                    h += '</div>';
+                }
+                h += '</div>';
+            }
+            h += '</div>';
+            /* 提示 */
+            if (d.tip) {
+                h += '<div class="forge-tip">📝 <span>' + d.tip + '</span></div>';
+            }
+            document.getElementById('forge').innerHTML = h;
+        }
+        /* ========== 主函数 ========== */
+        function init() {
+            try {
+                var msg = getMessageData();
+                if (!msg) {
+                    document.getElementById('forge').innerHTML = '<div class="loading">❌ 无法连接合成炉</div>';
+                    return;
+                }
+                var data = parseForge(msg);
+                renderForge(data);
+            } catch (err) {
+                console.error("渲染错误:", err);
+                document.getElementById('forge').innerHTML = '<div class="loading">❌ 系统故障：' + err.message + '</div>';
+            }
+        }
+        $(function() { init(); });
+    </script>
+</body>
+</html>
+```

@@ -1,0 +1,5 @@
+<char_create>
+认证系统已就绪
+</char_create>
+
+<StatusPlaceHolderImpl/>

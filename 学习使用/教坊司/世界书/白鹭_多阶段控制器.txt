@@ -1,0 +1,15 @@
+<%_
+if (typeof baiLuAff === 'undefined') var baiLuAff = getvar('stat_data.白鹭.好感度', { defaults: -10 });
+_%>
+
+<%_ if (baiLuAff >= 160) { _%>
+<%- await getwi(null, '白鹭_阶段05_如胶似漆期') %>
+<%_ } else if (baiLuAff >= 120) { _%>
+<%- await getwi(null, '白鹭_阶段04_信任依赖期') %>
+<%_ } else if (baiLuAff >= 80) { _%>
+<%- await getwi(null, '白鹭_阶段03_勉强承认期') %>
+<%_ } else if (baiLuAff >= 40) { _%>
+<%- await getwi(null, '白鹭_阶段02_困惑观察期') %>
+<%_ } else { _%>
+<%- await getwi(null, '白鹭_阶段01_本能敌视期') %>
+<%_ } _%>

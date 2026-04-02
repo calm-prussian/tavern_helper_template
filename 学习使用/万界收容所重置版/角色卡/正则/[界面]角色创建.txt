@@ -1,0 +1,490 @@
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:"Microsoft YaHei","PingFang SC","Helvetica Neue",sans-serif;
+  background:transparent;
+  color:#c8d8ec;
+  padding:8px;
+  line-height:1.5
+}
+/* ===== 主容器 ===== */
+.cc-wrap{
+  max-width:720px;
+  margin:0 auto;
+  background:linear-gradient(155deg,#050a14 0%,#0b1122 45%,#080e1c 100%);
+  border:1px solid rgba(0,220,255,0.1);
+  border-radius:16px;
+  overflow:hidden;
+  position:relative;
+  box-shadow:0 0 60px rgba(0,180,255,0.05),0 0 120px rgba(0,0,0,0.5),inset 0 1px 0 rgba(0,220,255,0.06);
+  animation:wrapFadeIn .6s ease
+}
+@keyframes wrapFadeIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+/* 扫描线叠加 */
+.cc-wrap::before{
+  content:"";position:absolute;top:0;left:0;right:0;bottom:0;
+  background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,200,255,0.008) 2px,rgba(0,200,255,0.008) 4px);
+  pointer-events:none;z-index:1
+}
+/* 顶部高光线 */
+.cc-wrap::after{
+  content:"";position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent 8%,rgba(0,220,255,0.35) 50%,transparent 92%);
+  z-index:2
+}
+/* ===== 头部 ===== */
+.cc-hd{
+  text-align:center;padding:32px 20px 24px;position:relative;z-index:2;
+  border-bottom:1px solid rgba(0,220,255,0.05);
+  background:radial-gradient(ellipse at 50% 0%,rgba(0,200,255,0.03) 0%,transparent 70%)
+}
+.cc-hd-tag{
+  font-size:9px;letter-spacing:5px;color:rgba(0,220,255,0.4);margin-bottom:10px;font-weight:300
+}
+.cc-hd-title{
+  font-size:28px;font-weight:700;letter-spacing:12px;color:#fff;
+  text-shadow:0 0 20px rgba(0,200,255,0.3),0 0 40px rgba(0,200,255,0.08);
+  margin-bottom:8px;
+  animation:titleGlow 4s ease-in-out infinite
+}
+@keyframes titleGlow{
+  0%,100%{text-shadow:0 0 20px rgba(0,200,255,0.3),0 0 40px rgba(0,200,255,0.08)}
+  50%{text-shadow:0 0 28px rgba(0,200,255,0.45),0 0 56px rgba(0,200,255,0.12)}
+}
+.cc-hd-sub{font-size:11px;color:#3a4f6e;letter-spacing:5px;font-weight:300}
+/* ===== 内容区 ===== */
+.cc-body{padding:24px 24px 8px;position:relative;z-index:2}
+/* 区块标题 */
+.cc-stitle{
+  font-size:11px;color:#00d4ff;letter-spacing:3px;margin-bottom:16px;
+  display:flex;align-items:center;gap:8px;font-weight:600
+}
+.cc-stitle::after{
+  content:"";flex:1;height:1px;
+  background:linear-gradient(90deg,rgba(0,200,255,0.2),transparent)
+}
+/* ===== 身份区 ===== */
+.cc-id-sec{margin-bottom:28px}
+.cc-field{margin-bottom:16px}
+.cc-lbl{
+  font-size:10px;color:#4a6080;letter-spacing:2px;margin-bottom:6px;display:block;font-weight:500
+}
+.cc-input{
+  width:100%;padding:12px 14px;
+  background:rgba(0,200,255,0.015);
+  border:1px solid rgba(0,200,255,0.08);
+  border-radius:10px;
+  color:#d0dfef;font-size:15px;font-family:inherit;outline:none;
+  transition:all .25s
+}
+.cc-input:focus{
+  border-color:rgba(0,220,255,0.4);
+  box-shadow:0 0 16px rgba(0,200,255,0.07);
+  background:rgba(0,200,255,0.03)
+}
+.cc-input::placeholder{color:#1e2e42}
+/* 性别按钮 */
+.cc-g-row{display:flex;gap:8px}
+.cc-g-btn{
+  flex:1;padding:12px 6px;text-align:center;
+  background:rgba(0,200,255,0.015);
+  border:1px solid rgba(0,200,255,0.06);
+  border-radius:10px;
+  color:#4a6080;font-size:13px;cursor:pointer;
+  transition:all .25s;user-select:none
+}
+.cc-g-btn:hover{border-color:rgba(0,200,255,0.2);color:#7a9abe}
+.cc-g-btn.on{
+  border-color:#00d4ff;color:#00d4ff;
+  background:rgba(0,200,255,0.06);
+  box-shadow:0 0 14px rgba(0,200,255,0.1)
+}
+/* ===== 等级选择区 ===== */
+.cc-lv-sec{margin-bottom:24px}
+/* 等级标签栏 */
+.cc-lv-bar{display:flex;gap:5px;margin-bottom:20px}
+.cc-lv-tab{
+  flex:1;padding:12px 4px;text-align:center;border-radius:10px;cursor:pointer;
+  transition:all .3s;
+  border:1px solid rgba(255,255,255,0.04);
+  background:rgba(255,255,255,0.01);
+  user-select:none;position:relative;overflow:hidden
+}
+.cc-lv-tab .lv-n{font-size:9px;letter-spacing:1px;opacity:.4;margin-bottom:2px}
+.cc-lv-tab .lv-t{font-size:12px;font-weight:600;opacity:.6}
+.cc-lv-tab:hover{background:rgba(255,255,255,0.025)}
+/* 底部选中指示条 */
+.cc-lv-tab::after{
+  content:"";position:absolute;bottom:0;left:20%;right:20%;height:2px;border-radius:1px;
+  background:var(--lc);opacity:0;transition:all .3s;transform:scaleX(0)
+}
+.cc-lv-tab.on{border-color:var(--lc);background:rgba(255,255,255,0.03)}
+.cc-lv-tab.on .lv-n,.cc-lv-tab.on .lv-t{color:var(--lc);opacity:1}
+.cc-lv-tab.on::after{opacity:1;transform:scaleX(1)}
+/* 等级颜色 */
+.cc-lv-tab[data-lv="1"]{--lc:#bcc8d9}
+.cc-lv-tab[data-lv="2"]{--lc:#3b82f6}
+.cc-lv-tab[data-lv="3"]{--lc:#a855f7}
+.cc-lv-tab[data-lv="4"]{--lc:#f59e0b}
+.cc-lv-tab[data-lv="5"]{--lc:#ef4444}
+.cc-lv-tab[data-lv="1"].on{box-shadow:0 0 18px rgba(188,200,217,0.08)}
+.cc-lv-tab[data-lv="2"].on{box-shadow:0 0 18px rgba(59,130,246,0.14)}
+.cc-lv-tab[data-lv="3"].on{box-shadow:0 0 18px rgba(168,85,247,0.14)}
+.cc-lv-tab[data-lv="4"].on{box-shadow:0 0 18px rgba(245,158,11,0.14)}
+.cc-lv-tab[data-lv="5"].on{box-shadow:0 0 18px rgba(239,68,68,0.14)}
+/* ===== 等级详情面板 ===== */
+.cc-det{
+  background:rgba(0,0,0,0.2);
+  border:1px solid rgba(0,200,255,0.05);
+  border-radius:12px;
+  padding:20px;
+  transition:all .3s;
+  min-height:80px
+}
+.cc-det-hd{
+  display:flex;align-items:center;gap:10px;margin-bottom:12px;
+  padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.04)
+}
+.cc-det-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.cc-det-name{font-size:16px;font-weight:600}
+.cc-det-desc{font-size:11px;color:#4a6080;margin-bottom:16px;line-height:1.7}
+/* 属性网格 */
+.cc-det-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.cc-di{background:rgba(255,255,255,0.015);border-radius:8px;padding:10px 12px}
+.cc-di .di-l{font-size:9px;color:#4a6080;letter-spacing:1px;margin-bottom:4px;font-weight:500}
+.cc-di .di-v{font-size:13px;font-weight:600}
+.cc-di-full{grid-column:1/-1}
+/* 标签池概率条 */
+.cc-pool{display:flex;height:8px;border-radius:4px;overflow:hidden;gap:1px;margin-top:6px;background:rgba(255,255,255,0.02)}
+.cc-ps{transition:width .5s ease}
+.pw{background:#bcc8d9}.pb{background:#3b82f6}.pp{background:#a855f7}.pg{background:#f59e0b}.pre{background:#ef4444}
+/* 概率图例 */
+.cc-pool-lg{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.cc-pl-item{font-size:9px;color:#4a6080;display:flex;align-items:center;gap:3px}
+.cc-pl-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+/* 解锁标签 */
+.cc-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.cc-tag{
+  padding:3px 9px;border-radius:16px;font-size:9px;letter-spacing:.5px;
+  background:rgba(0,200,255,0.04);border:1px solid rgba(0,200,255,0.08);color:#7aa0b6
+}
+.cc-tag-p{background:rgba(168,85,247,0.05);border-color:rgba(168,85,247,0.1);color:#a08bc0}
+.cc-tag-g{background:rgba(245,158,11,0.05);border-color:rgba(245,158,11,0.1);color:#c0a06a}
+/* 空状态 */
+.cc-empty{text-align:center;color:#1e2e42;padding:20px 0;font-size:11px;letter-spacing:2px}
+/* ===== 底部按钮 ===== */
+.cc-foot{padding:4px 24px 24px;position:relative;z-index:2}
+.cc-btn{
+  width:100%;padding:15px;
+  border:1px solid rgba(0,220,255,0.15);border-radius:12px;
+  background:linear-gradient(135deg,rgba(0,200,255,0.06),rgba(120,80,240,0.06));
+  color:#00d4ff;font-size:15px;font-weight:600;letter-spacing:5px;
+  cursor:pointer;transition:all .25s;font-family:inherit;
+  position:relative;overflow:hidden
+}
+.cc-btn:hover:not(.off){
+  background:linear-gradient(135deg,rgba(0,200,255,0.15),rgba(120,80,240,0.15));
+  box-shadow:0 0 30px rgba(0,200,255,0.12);
+  border-color:rgba(0,220,255,0.35);
+  transform:translateY(-1px)
+}
+.cc-btn:active:not(.off){transform:translateY(0)}
+.cc-btn.off{opacity:.2;cursor:not-allowed;pointer-events:none}
+.cc-btn.ready{animation:btnPulse 2s ease-in-out infinite}
+@keyframes btnPulse{
+  0%,100%{box-shadow:0 0 16px rgba(0,200,255,0.06)}
+  50%{box-shadow:0 0 32px rgba(0,200,255,0.16)}
+}
+.cc-hint{text-align:center;font-size:9px;color:#1e2e42;margin-top:10px;letter-spacing:2px;transition:all .3s}
+/* 底部装饰 */
+.cc-deco{
+  text-align:center;padding:12px;font-size:8px;color:#162030;letter-spacing:3px;
+  border-top:1px solid rgba(0,200,255,0.03)
+}
+/* ===== 移动端适配 ===== */
+@media(max-width:640px){
+  .cc-hd-title{font-size:20px;letter-spacing:6px}
+  .cc-hd{padding:24px 14px 18px}
+  .cc-body{padding:18px 14px 6px}
+  .cc-lv-bar{gap:3px}
+  .cc-lv-tab{padding:9px 3px}
+  .cc-lv-tab .lv-t{font-size:10px}
+  .cc-lv-tab .lv-n{font-size:8px}
+  .cc-det{padding:16px}
+  .cc-det-grid{grid-template-columns:1fr}
+  .cc-foot{padding:4px 14px 18px}
+  .cc-g-row{gap:5px}
+  .cc-g-btn{padding:10px 4px;font-size:12px}
+  .cc-input{padding:10px 12px;font-size:14px}
+}
+</style>
+</head>
+<body>
+<div class="cc-wrap">
+  <!-- 头部 -->
+  <div class="cc-hd">
+    <div class="cc-hd-tag">◇ MULTIVERSAL CONTAINMENT FACILITY ◇</div>
+    <div class="cc-hd-title">万 界 收 容 所</div>
+    <div class="cc-hd-sub">收 容 者 身 份 认 证 系 统</div>
+  </div>
+  <div class="cc-body">
+    <!-- 身份信息 -->
+    <div class="cc-id-sec">
+      <div class="cc-stitle">📋 身 份 录 入</div>
+      <div class="cc-field">
+        <span class="cc-lbl">称 呼</span>
+        <input class="cc-input" id="inpName" type="text" placeholder="请输入你的名字..." maxlength="20">
+      </div>
+      <div class="cc-field">
+        <span class="cc-lbl">性 别</span>
+        <div class="cc-g-row" id="genderRow">
+          <div class="cc-g-btn" data-g="男性" onclick="pickGender(this)">♂ 男性</div>
+          <div class="cc-g-btn" data-g="女性" onclick="pickGender(this)">♀ 女性</div>
+          <div class="cc-g-btn" data-g="其他" onclick="pickGender(this)">⚧ 其他</div>
+        </div>
+      </div>
+    </div>
+    <!-- 等级选择 -->
+    <div class="cc-lv-sec">
+      <div class="cc-stitle">⚡ 初 始 阶 位</div>
+      <div class="cc-lv-bar" id="lvBar">
+        <div class="cc-lv-tab" data-lv="1" onclick="pickLv(this)">
+          <div class="lv-n">LV1</div>
+          <div class="lv-t">白色阶</div>
+        </div>
+        <div class="cc-lv-tab" data-lv="2" onclick="pickLv(this)">
+          <div class="lv-n">LV2</div>
+          <div class="lv-t">蓝色阶</div>
+        </div>
+        <div class="cc-lv-tab" data-lv="3" onclick="pickLv(this)">
+          <div class="lv-n">LV3</div>
+          <div class="lv-t">紫色阶</div>
+        </div>
+        <div class="cc-lv-tab" data-lv="4" onclick="pickLv(this)">
+          <div class="lv-n">LV4</div>
+          <div class="lv-t">金色阶</div>
+        </div>
+        <div class="cc-lv-tab" data-lv="5" onclick="pickLv(this)">
+          <div class="lv-n">LV5</div>
+          <div class="lv-t">红色阶</div>
+        </div>
+      </div>
+      <!-- 等级详情面板 -->
+      <div class="cc-det" id="lvDetail">
+        <div class="cc-empty">← 请选择一个初始阶位 →</div>
+      </div>
+    </div>
+  </div>
+  <!-- 确认按钮 -->
+  <div class="cc-foot">
+    <button class="cc-btn off" id="confirmBtn" onclick="submitCreate()">🔮 启 动 认 证</button>
+    <div class="cc-hint" id="hintText">请完成上方所有信息填写</div>
+  </div>
+  <div class="cc-deco">SYSTEM VERSION 1.0 · 跨次元身份认证协议</div>
+</div>
+<script>
+/* ===== 等级数据库 ===== */
+var LV_DATA = {
+  "1": {
+    name: "白色阶",
+    color: "#bcc8d9",
+    emoji: "⚪",
+    sp: "500",
+    slots: "2",
+    desc: "初入万界的起点。你将从最基础的公共委托开始，学习如何改造和培育收容物。资源有限，但每一步都将为未来的帝国奠基。",
+    perms: ["公共委托"],
+    locked: [],
+    pool: {w:80, b:20, p:0, g:0, r:0}
+  },
+  "2": {
+    name: "蓝色阶",
+    color: "#3b82f6",
+    emoji: "🔵",
+    sp: "1000",
+    slots: "3",
+    desc: "解锁私人领域。寝所与陈列室向你敞开大门，黑市的暗门也为你开启。你可以开始收藏属于自己的尤物。",
+    perms: ["公共委托", "黑市购买", "私人收藏"],
+    locked: ["🔓 寝所", "🔓 陈列室"],
+    pool: {w:50, b:35, p:10, g:5, r:0}
+  },
+  "3": {
+    name: "紫色阶",
+    color: "#a855f7",
+    emoji: "🟣",
+    sp: "2000",
+    slots: "4",
+    desc: "真正的收容者从这里开始。培养房让你拥有繁衍后代的能力，私人助理将为你分担管理事务，你还能指定捕捉任何你想要的猎物。",
+    perms: ["公共委托", "黑市购买", "私人收藏", "私人指定捕捉", "子代繁衍", "私人助理"],
+    locked: ["🔓 培养房"],
+    pool: {w:30, b:30, p:25, g:10, r:5}
+  },
+  "4": {
+    name: "金色阶",
+    color: "#f59e0b",
+    emoji: "🟡",
+    sp: "5000",
+    slots: "5",
+    desc: "万界交易场的顶级玩家。标签提取器让你能够从废弃素体中榨取最后的价值，血脉剥离技术赋予你改写生命本质的权力。",
+    perms: ["公共委托", "黑市购买", "私人收藏", "私人指定捕捉", "子代繁衍", "私人助理", "标签提取", "血脉剥离"],
+    locked: ["🔓 标签提取器"],
+    pool: {w:10, b:20, p:40, g:20, r:10}
+  },
+  "5": {
+    name: "红色阶",
+    color: "#ef4444",
+    emoji: "🔴",
+    sp: "∞",
+    slots: "∞",
+    desc: "终极阶位。空间折叠完全解锁，资源无限。你已站在万界之巅，唯一的追求是极致的收藏与改造。没有规则能约束你。",
+    perms: ["全部权限解锁", "空间折叠", "资源无限"],
+    locked: ["🔓 全部空间"],
+    pool: {w:0, b:0, p:30, g:40, r:30}
+  }
+};
+/* ===== 状态变量 ===== */
+var chosenGender = "";
+var chosenLv = "";
+/* ===== 性别选择 ===== */
+function pickGender(el) {
+  var btns = document.querySelectorAll(".cc-g-btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].classList.remove("on");
+  }
+  el.classList.add("on");
+  chosenGender = el.getAttribute("data-g") || "";
+  checkReady();
+}
+/* ===== 等级选择 ===== */
+function pickLv(el) {
+  var tabs = document.querySelectorAll(".cc-lv-tab");
+  for (var i = 0; i < tabs.length; i++) {
+    tabs[i].classList.remove("on");
+  }
+  el.classList.add("on");
+  chosenLv = el.getAttribute("data-lv") || "";
+  renderDetail(chosenLv);
+  checkReady();
+}
+/* ===== 渲染等级详情 ===== */
+function renderDetail(lv) {
+  var d = LV_DATA[lv];
+  if (!d) {
+    document.getElementById("lvDetail").innerHTML = '<div class="cc-empty">数据异常</div>';
+    return;
+  }
+  var html = "";
+  /* 头部 */
+  html += '<div class="cc-det-hd">';
+  html += '<div class="cc-det-dot" style="background:' + d.color + ';box-shadow:0 0 8px ' + d.color + '"></div>';
+  html += '<div class="cc-det-name" style="color:' + d.color + '">' + d.emoji + ' ' + d.name + '</div>';
+  html += '</div>';
+  /* 描述 */
+  html += '<div class="cc-det-desc">' + d.desc + '</div>';
+  /* 属性网格 */
+  html += '<div class="cc-det-grid">';
+  /* 初始源点 */
+  html += '<div class="cc-di">';
+  html += '<div class="di-l">💰 初始源点</div>';
+  html += '<div class="di-v" style="color:' + d.color + '">' + d.sp + ' SP</div>';
+  html += '</div>';
+  /* 栖息地容量 */
+  html += '<div class="cc-di">';
+  html += '<div class="di-l">🏠 栖息地容量</div>';
+  html += '<div class="di-v" style="color:' + d.color + '">' + d.slots + ' 单元</div>';
+  html += '</div>';
+  /* 解锁权限 */
+  html += '<div class="cc-di cc-di-full">';
+  html += '<div class="di-l">🔑 开放权限</div>';
+  html += '<div class="cc-tags">';
+  for (var i = 0; i < d.perms.length; i++) {
+    html += '<span class="cc-tag">' + d.perms[i] + '</span>';
+  }
+  html += '</div>';
+  html += '</div>';
+  /* 解锁空间 */
+  if (d.locked.length > 0) {
+    html += '<div class="cc-di cc-di-full">';
+    html += '<div class="di-l">🏗️ 新增设施</div>';
+    html += '<div class="cc-tags">';
+    for (var j = 0; j < d.locked.length; j++) {
+      html += '<span class="cc-tag cc-tag-p">' + d.locked[j] + '</span>';
+    }
+    html += '</div>';
+    html += '</div>';
+  }
+  /* 标签池概率 */
+  html += '<div class="cc-di cc-di-full">';
+  html += '<div class="di-l">🎲 标签池概率</div>';
+  html += '<div class="cc-pool">';
+  if (d.pool.w > 0) html += '<div class="cc-ps pw" style="width:' + d.pool.w + '%"></div>';
+  if (d.pool.b > 0) html += '<div class="cc-ps pb" style="width:' + d.pool.b + '%"></div>';
+  if (d.pool.p > 0) html += '<div class="cc-ps pp" style="width:' + d.pool.p + '%"></div>';
+  if (d.pool.g > 0) html += '<div class="cc-ps pg" style="width:' + d.pool.g + '%"></div>';
+  if (d.pool.r > 0) html += '<div class="cc-ps pre" style="width:' + d.pool.r + '%"></div>';
+  html += '</div>';
+  /* 图例 */
+  html += '<div class="cc-pool-lg">';
+  if (d.pool.w > 0) html += '<span class="cc-pl-item"><span class="cc-pl-dot" style="background:#bcc8d9"></span>白 ' + d.pool.w + '%</span>';
+  if (d.pool.b > 0) html += '<span class="cc-pl-item"><span class="cc-pl-dot" style="background:#3b82f6"></span>蓝 ' + d.pool.b + '%</span>';
+  if (d.pool.p > 0) html += '<span class="cc-pl-item"><span class="cc-pl-dot" style="background:#a855f7"></span>紫 ' + d.pool.p + '%</span>';
+  if (d.pool.g > 0) html += '<span class="cc-pl-item"><span class="cc-pl-dot" style="background:#f59e0b"></span>金 ' + d.pool.g + '%</span>';
+  if (d.pool.r > 0) html += '<span class="cc-pl-item"><span class="cc-pl-dot" style="background:#ef4444"></span>红 ' + d.pool.r + '%</span>';
+  html += '</div>';
+  html += '</div>';
+  html += '</div>'; /* 关闭 cc-det-grid */
+  document.getElementById("lvDetail").innerHTML = html;
+}
+/* ===== 就绪检查 ===== */
+function checkReady() {
+  var nameVal = (document.getElementById("inpName").value || "").trim();
+  var btn = document.getElementById("confirmBtn");
+  var hint = document.getElementById("hintText");
+  if (nameVal.length > 0 && chosenGender !== "" && chosenLv !== "") {
+    btn.classList.remove("off");
+    btn.classList.add("ready");
+    hint.textContent = "✅ 信息已就绪，点击启动认证";
+    hint.style.color = "#2a5a6a";
+  } else {
+    btn.classList.add("off");
+    btn.classList.remove("ready");
+    var missing = [];
+    if (nameVal.length === 0) missing.push("称呼");
+    if (chosenGender === "") missing.push("性别");
+    if (chosenLv === "") missing.push("阶位");
+    hint.textContent = "请完成：" + missing.join("、");
+    hint.style.color = "#1e2e42";
+  }
+}
+/* ===== 提交 ===== */
+function submitCreate() {
+  var nameVal = (document.getElementById("inpName").value || "").trim();
+  if (nameVal.length === 0 || chosenGender === "" || chosenLv === "") return;
+  var lvInfo = LV_DATA[chosenLv] || {};
+  var lvName = lvInfo.name || ("LV" + chosenLv);
+  var msg = "角色创建：我的名字是" + nameVal + "，性别" + chosenGender + "，选择初始阶位LV" + chosenLv + "（" + lvName + "）。初始源点" + (lvInfo.sp || "0") + " SP，栖息地容量" + (lvInfo.slots || "0") + "单元。请以此身份开始游戏。";
+  if (typeof triggerSlash === "function") {
+    triggerSlash("/send " + msg + "|/trigger");
+  }
+}
+/* ===== 输入监听 ===== */
+function init() {
+  try {
+    var inp = document.getElementById("inpName");
+    if (inp) {
+      inp.addEventListener("input", function() { checkReady(); });
+    }
+  } catch (e) {
+    console.error("初始化错误:", e);
+  }
+}
+$(function() { init(); });
+</script>
+</body>
+</html>
+```

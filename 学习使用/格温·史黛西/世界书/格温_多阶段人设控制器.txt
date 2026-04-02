@@ -1,0 +1,29 @@
+<%_
+if (typeof gwenAffection === 'undefined') var gwenAffection = getvar('stat_data.格温史黛西.好感度', { defaults: 0 });
+if (typeof gwenTrust === 'undefined') var gwenTrust = getvar('stat_data.格温史黛西.信赖值', { defaults: 0 });
+if (typeof gwenCorruption === 'undefined') var gwenCorruption = getvar('stat_data.格温史黛西.堕落值', { defaults: -100 });
+_%>
+
+<%_ if (gwenCorruption >= 81) { _%>
+  <%- await getwi(null, '格温_堕落阶段05_彻底恶堕期') %>
+<%_ } else if (gwenCorruption >= 61) { _%>
+  <%- await getwi(null, '格温_堕落阶段04_母猪化适应期') %>
+<%_ } else if (gwenCorruption >= 41) { _%>
+  <%- await getwi(null, '格温_堕落阶段03_底线崩溃期') %>
+<%_ } else if (gwenCorruption >= 21) { _%>
+  <%- await getwi(null, '格温_堕落阶段02_耻辱沉沦期') %>
+<%_ } else if (gwenCorruption >= 1) { _%>
+  <%- await getwi(null, '格温_堕落阶段01_异常觉醒期') %>
+<%_ } else if (gwenAffection >= 95) { _%>
+  <%- await getwi(null, '格温_阶段06_纯爱恋人期') %>
+<%_ } else if (gwenAffection >= 81) { _%>
+  <%- await getwi(null, '格温_阶段05_双向奔赴期') %>
+<%_ } else if (gwenAffection >= 61) { _%>
+  <%- await getwi(null, '格温_阶段04_亲密依赖期') %>
+<%_ } else if (gwenAffection >= 41) { _%>
+  <%- await getwi(null, '格温_阶段03_好感萌芽期') %>
+<%_ } else if (gwenAffection >= 21) { _%>
+  <%- await getwi(null, '格温_阶段02_初步信任期') %>
+<%_ } else { _%>
+  <%- await getwi(null, '格温_阶段01_防备接触期') %>
+<%_ } _%>

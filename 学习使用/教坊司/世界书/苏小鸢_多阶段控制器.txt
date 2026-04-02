@@ -1,0 +1,15 @@
+<%_
+if (typeof suXiaoyuanAff === 'undefined') var suXiaoyuanAff = getvar('stat_data.苏小鸢.好感度', { defaults: 20 });
+_%>
+
+<%_ if (suXiaoyuanAff >= 160) { _%>
+<%- await getwi(null, '苏小鸢_阶段05_如胶似漆期') %>
+<%_ } else if (suXiaoyuanAff >= 120) { _%>
+<%- await getwi(null, '苏小鸢_阶段04_真心相待期') %>
+<%_ } else if (suXiaoyuanAff >= 80) { _%>
+<%- await getwi(null, '苏小鸢_阶段03_偶尔不笑期') %>
+<%_ } else if (suXiaoyuanAff >= 40) { _%>
+<%- await getwi(null, '苏小鸢_阶段02_笑中裂缝期') %>
+<%_ } else { _%>
+<%- await getwi(null, '苏小鸢_阶段01_笑面如花期') %>
+<%_ } _%>
