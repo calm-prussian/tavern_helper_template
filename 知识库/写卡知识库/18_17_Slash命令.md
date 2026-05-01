@@ -21,10 +21,20 @@ triggerSlash(command) → Promise<string>
     await createChatMessages([{role:'user', message:'你好'}]);
     await triggerSlash('/trigger');
 
+    // 发送消息并触发AI回复（推荐用法，替代旧的 /setinput）
+    await triggerSlash('/send 你好，请帮我更新变量');
+    await triggerSlash('/trigger');
+
     // 刷新页面
     triggerSlash('/reload-page');
 
     // 获取最后一条消息的id(但更建议用 getLastMessageId())
     const id = await triggerSlash('/pass {{lastMessageId}}');
+
+⚠️ 两个实用技巧：
+- /setinput：将文本放入输入框，用户可手动修改后再发送
+- /send + /trigger：直接发送文本并触发AI回复，用户无修改机会
+  - /send 仅放入输入框不发送，需配合 /trigger 触发回复
+  - 用法：await triggerSlash('/send ' + message); await triggerSlash('/trigger');
 
   完整命令列表请参考项目中的 slash_command.txt 文件。

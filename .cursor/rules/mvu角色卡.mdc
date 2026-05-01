@@ -205,5 +205,54 @@ example: |- # just examples, don't copy them literally
       check:
         - 在对应变量值发生变化或遭遇相关事件后可更新，其他情况不应更新
         - 语言应保持第一人称/贴近主角口吻
-        - 主角的评价并不会被主角本人看到，也不会在剧情中出现
+         - 主角的评价并不会被主角本人看到，也不会在剧情中出现
 ```
+
+## index.yaml 状态栏与脚本的调试/发布双模式
+
+MVU 角色卡的 `index.yaml` 中，状态栏正则和脚本库必须同时提供调试和发布两套配置，通过启用/禁用切换：
+
+### 状态栏正则
+
+```yaml
+- 正则名称: '[界面]状态栏(调试)'
+  启用: true                     # 调试时启用
+  替换为: |-
+    ```
+    <body>
+    <script>
+    $('body').load('http://localhost:5500/dist/<角色卡名>/界面/状态栏/index.html')
+    </script>
+    </body>
+    ```
+
+- 正则名称: '[界面]状态栏(发布)'
+  启用: false                    # 发布时启用
+  替换为: |-
+    ```
+    <body>
+    <script>
+    $('body').load('https://testingcf.jsdelivr.net/gh/StageDog/tavern_helper_template/dist/<角色卡名>/界面/状态栏/index.html')
+    </script>
+    </body>
+    ```
+```
+
+### 脚本库
+
+```yaml
+- 名称: 变量结构(调试)
+  启用: false                    # 调试时启用
+  内容: |-
+    import 'http://localhost:5500/dist/<角色卡名>/脚本/变量结构/index.js';
+
+- 名称: 变量结构(发布)
+  启用: true                     # 发布时启用
+  内容: |-
+    import 'https://testingcf.jsdelivr.net/gh/StageDog/tavern_helper_template/dist/<角色卡名>/脚本/变量结构/index.js';
+```
+
+规则：
+- 调试版默认启用，发布版默认禁用（本地开发环境）
+- 发布时手动关闭调试版、开启发布版
+- 两个版本用不同 id 避免冲突

@@ -49,6 +49,12 @@ YAML格式，与Schema对应：
 - 全量：开局消息中<UpdateVariable><initvar>完整YAML</initvar></UpdateVariable>
 - 增量：<UpdateVariable><JSONPatch>[{"op":"replace","path":"/角色/好感度","value":50}]</JSONPatch></UpdateVariable>
 
+⚠️ 初始变量类型必须与 Schema 匹配：
+- z.coerce.number() 会将非数字字符串转为 NaN（如 "年龄: 无" → NaN）
+- prefault 仅在输入为 undefined 时生效，字符串 "无" 不会触发默认值
+- 反例：年龄: z.coerce.number().prefault(18) 配合 年龄: 无 → NaN
+- 正确做法：初始值用数字 年龄: 18，或在 transform 中处理 isNaN
+
 三、变量列表
 
 条目名：变量列表（不加[mvu_update]），D0/D1，顺序200
