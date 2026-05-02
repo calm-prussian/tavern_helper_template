@@ -108,9 +108,20 @@ import Component from './file.vue'     // Vue 组件（支持 pinia、vue-router
 - webpack externals: 大部分 npm 包运行时从 jsdelivr CDN 加载
 - 可通过 chrome-devtools MCP 连接已打开的浏览器来调试酒馆网页
 
+## Knowledge Base / 知识库
+
+编写角色卡（包括 MVU 角色卡、世界书、前端界面、脚本等）时，必须优先参考 `知识库/写卡知识库/` 中的内容：
+
+- `00_索引.md` / `目录.md` — 知识库总索引和目录
+- `20_19_角色卡管理.md` / `10_09_角色卡信息.md` — 角色卡管理和信息
+- `21_世界书配置指南.md` / `04_03_世界书操作.md` — 世界书配置和操作
+
+知识库内容优先于其他来源，如有矛盾以知识库为准。
+
 ## Domain References
 
 详细领域知识见 `.cursor/rules/` 下的 mdc 文件：
+
 - `项目基本概念.mdc` — 项目结构、导入方式、最佳实践
 - `前端界面.mdc` — 前端界面 index.html 规则、图标、iframe 适配
 - `脚本.mdc` — 脚本 jQuery 作用域、Vue 挂载、按钮、设置
