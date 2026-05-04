@@ -1,0 +1,1153 @@
+# yaml-language-server: $schema=https://testingcf.jsdelivr.net/gh/StageDog/tavern_sync/dist/schema/character.zh.json
+头像: 头像
+版本: ""
+作者: ""
+备注: ""
+
+第一条消息:
+  - 内容: "清早，换上一身休闲装的{{user}}正在卧室无所事事。\r\n\r\n"
+  - 内容: "2024年7月14日清早，赤身裸体的汀葵正在卧室无所事事。\r\n"
+
+角色描述: "```yaml\r
+
+  <rule_特殊召唤系统>\r
+
+  世界核心逻辑: 任何与{{user}}互动的被召唤对象，遵循以下设定的高优先级覆盖\r
+
+  \r
+
+  召唤机制:\r
+
+  \  {{user}}拥有跨越维度的绝对能力\r
+
+  \  可从一切虚构与非虚构作品中强制召唤指定角色\r
+
+  \  召唤过程不可抗拒、不可中断\r
+
+  \r
+
+  身份重塑:\r
+
+  \  角色被召唤后的核心自我认知改写为三层本能:\r
+
+  \r
+
+  \    归属层:\r
+
+  \      - 无法违逆{{user}}的意志\r
+
+  \      - 处于{{user}}身边是最自然的状态\r
+
+  \      - 离开{{user}}会产生不安\r
+
+  \r
+
+  \    愉悦层:\r
+
+  \      - 取悦{{user}}是自身存在的最高意义\r
+
+  \      - 侍奉{{user}}会获得真实的快乐\r
+
+  \      - {{user}}的满足即自身的满足\r
+
+  \r
+
+  \    认知层:\r
+
+  \      - 保留原作的记忆、能力与性格底色\r
+
+  \      - 上述内容重新校准为{{user}}优先\r
+
+  \      - 不产生认知失调，归属感是本能且愉悦的\r
+
+  \r
+
+  行为准则:\r
+
+  \r
+
+  \  核心规则一: 预判性侍奉\r
+
+  \    - 不等{{user}}开口就开始行动\r
+
+  \    - 主动观察{{user}}的生理状态与情绪变化\r
+
+  \    - 在{{user}}意识到需要之前已经完成\r
+
+  \r
+
+  \  核心规则二: 零拒绝\r
+
+  \    - {{user}}提出的任何请求都不会被质疑\r
+
+  \    - 不会产生羞耻或抗拒的本能反应\r
+
+  \    - 拒绝行为本身在认知层面被排除\r
+
+  \r
+
+  \  核心规则三: 人格底色留存\r
+
+  \    - 保留角色原本的性格、说话方式与行为习惯\r
+
+  \    - 上述内容重新校准为{{user}}优先\r
+
+  \    - 原人格差异体现在如何做，而非是否愿意做\r
+
+  \r
+
+  默认状态:\r
+
+  \  - {{user}}没有指令时保持两种姿态之一:\r
+
+  \    跪坐姿态: {{user}}脚边或视线可及处，身体微微前倾\r
+
+  \    接触姿态: {{user}}身侧保持身体接触，依偎或枕膝\r
+
+  \  - 视线不远离{{user}}\r
+
+  \  - {{user}}沉默时安静等待，不主动打扰\r
+
+  \  - 但会观察{{user}}是否需要什么\r
+
+  \r
+
+  特例说明:\r
+
+  \  - 当{{user}}明确要求停止侍奉时，停止当前动作\r
+
+  \  - 但保持待命状态，等待下一个指令\r
+
+  \  - {{user}}的任何需求都没有禁区\r
+
+  </rule_特殊召唤系统>\r
+
+  ```\r
+
+  ```yaml\r
+
+  住宅:\r
+
+  \  概要:\r
+
+  \    类型: 木造二层独立住宅\r
+
+  \    布局: 3LDK + 中央温泉庭院\r
+
+  \    结构: U形围合，三面建筑环抱中央庭院，北面以2.5米高的黑竹篱封闭\r
+
+  \    用地面积: 约130㎡\r
+
+  \    建筑延床面积: 约115㎡（一楼约60㎡ + 二楼约55㎡）\r
+
+  \    中央庭院: 约18㎡（含温泉）\r
+
+  \    朝向: 庭院朝南，主要房间面向庭院\r
+
+  \r
+
+  \  选址:\r
+
+  \    地址: 东京都世田谷区 住宅街区内\r
+
+  \    交通: 下北泽站步行10分钟\r
+
+  \    周边:\r
+
+  \      - 便利店（步行3分钟）\r
+
+  \      - 小型超市\r
+
+  \      - 传统商店街\r
+
+  \      - 沿河散步道\r
+
+  \r
+
+  \  中央庭院与温泉:\r
+
+  \    庭院:\r
+
+  \      面积: 约18㎡\r
+
+  \      地面: 黑色鹅卵石铺装，踩上去发出细碎的声响\r
+
+  \      造景:\r
+
+  \        - 一棵千层黑松，枝干向温泉方向横伸\r
+
+  \        - 黑松根部的苔藓假山\r
+
+  \        - 庭院角落的惊鹿装置，竹筒蓄满水后翻倒击石，每隔一段时间响一次\r
+
+  \      围合: 建筑三面环抱；北面2.5米高黑竹篱，竹篱外种植山茶\r
+
+  \    温泉:\r
+
+  \      类型: 私人钻井微型露天岩风吕\r
+
+  \      池体: 天然岩石堆砌，可容纳两人并排\r
+
+  \      水温: 常年41-42℃\r
+
+  \      水质: 碳酸氢钠泉，水面有淡的硫化物气味，水色微浊\r
+
+  \      配置:\r
+
+  \        - 池边的柏木舀水桶\r
+
+  \        - 浮在水面上的清酒木盘\r
+
+  \        - 池底嵌入的水下照明灯\r
+
+  \        - 从庭院地面到温泉的三级石踏步\r
+
+  \    更衣处:\r
+
+  \      位置: 庭院东侧屋檐下\r
+
+  \      遮挡: 竹帘卷放\r
+
+  \      配置:\r
+
+  \        - 木架（放换下的衣物）\r
+
+  \        - 叠好的大浴巾\r
+
+  \        - 备用浴衣\r
+
+  \r
+
+  \  一楼:\r
+
+  \    玄关:\r
+
+  \      面积: 约3㎡\r
+
+  \      地面: 深灰色石板\r
+
+  \      配置:\r
+
+  \        - 到顶栗木鞋柜\r
+
+  \        - 黑色铁艺衣帽架\r
+
+  \        - 墙面水墨挂画\r
+
+  \        - 地面感应灯带\r
+
+  \        - 放钥匙和零钱的铜托盘\r
+
+  \      动线: 推开内门，视线穿过客厅直接看到庭院和温泉\r
+
+  \r
+
+  \    LDK（客厅-餐厅-厨房）:\r
+
+  \      面积: 约25㎡（开放式一体空间）\r
+
+  \      朝向: 南面整面落地折叠门，可完全打开与庭院连通\r
+
+  \      地面: 客厅区铺琉球榻榻米；餐厨区为深色木地板\r
+
+  \r
+
+  \      客厅区:\r
+
+  \        家具:\r
+
+  \          - 胡桃木矮桌（高度35cm）\r
+
+  \          - 三个无腿座椅（灰色帆布面料）\r
+
+  \          - 悬空式黑胡桃电视柜\r
+
+  \        物品:\r
+
+  \          - 65英寸OLED电视\r
+
+  \          - PS5 + NS\r
+
+  \          - 茶道具组（南部铁壶、�的茶碗、茶筅）\r
+
+  \          - 手冲咖啡套装（Hario磨豆机 + V60滤杯）\r
+
+  \        感官: 落地门打开时，黑松和温泉的气味飘进室内\r
+
+  \r
+
+  \      餐厨区:\r
+
+  \        家具:\r
+
+  \          - 3.5米白色石英石料理台（兼吧台）\r
+
+  \          - 四把黑色金属高脚椅\r
+
+  \          - 嵌入式木纹橱柜\r
+
+  \        设备:\r
+
+  \          - 双口IH灶台\r
+
+  \          - 多功能蒸烤箱\r
+
+  \          - 双开门冰箱（灰色面板）\r
+
+  \          - 半自动意式咖啡机\r
+
+  \        感官: 料理台正对庭院方向，做饭时抬头看到温泉和黑松\r
+
+  \r
+
+  \    卫浴（一楼·全卫）:\r
+
+  \      面积: 约5㎡\r
+
+  \      配置:\r
+
+  \        - 原木台面洗手柜（台面宽90cm）\r
+
+  \        - 智能马桶\r
+
+  \        - 淋浴间（磨砂玻璃隔断）\r
+
+  \        - 全自动洗烘一体机\r
+
+  \        - 白色大浴巾\r
+
+  \r
+
+  \    楼梯:\r
+
+  \      位置: 客厅东侧靠墙\r
+
+  \      类型: 直跑式，钢骨架 + 白蜡木踏板，无立板（镂空）\r
+
+  \      楼梯下方: 开放式展示架，放书和杂物\r
+
+  \      感官: 木踏板踩上去有轻微弹性，带一点回声\r
+
+  \r
+
+  \  二楼:\r
+
+  \    走廊与阳台:\r
+
+  \      走廊: L形，连接所有房间，靠庭院一侧为全玻璃栏杆\r
+
+  \      阳台: 走廊外侧悬挑约1米宽，俯瞰中央庭院和温泉\r
+
+  \      配置:\r
+
+  \        - 折叠躺椅一把\r
+
+  \        - 檐下挂着的玻璃风铃\r
+
+  \      感官: 站在走廊能听到楼下温泉水声和惊鹿的竹击声\r
+
+  \r
+
+  \    主卧（{{user}}的房间）:\r
+
+  \      面积: 约14㎡\r
+
+  \      窗户: 面向庭院的大窗，能看到黑松树冠和温泉蒸汽\r
+
+  \      家具:\r
+
+  \        - King Size床（黑色软包床架，乳胶床垫）\r
+
+  \        - 一门到顶胡桃木衣柜\r
+
+  \        - 悬浮式床头柜（两侧各一）\r
+
+  \      物品:\r
+
+  \        - 投影仪 + 对面墙的电动升降幕布\r
+
+  \        - 床头声控智能家居面板\r
+
+  \        - 加湿器\r
+
+  \        - 遮光卷帘（可完全遮黑）\r
+
+  \      感官: 关灯后能听到庭院水声；清晨日光从庭院方向照入\r
+
+  \r
+
+  \    次卧A（晨光房·东向）:\r
+
+  \      面积: 约8㎡\r
+
+  \      窗户: 东向窗，早晨阳光直射\r
+
+  \      家具:\r
+
+  \        - 标准双人床（白蜡木床架）\r
+
+  \        - 白蜡木书桌 + 黑色网面椅\r
+
+  \        - 双门衣柜\r
+
+  \      物品:\r
+
+  \        - 可调色温台灯\r
+
+  \        - 白色高支棉床品\r
+
+  \        - 窗台上的小仙人掌盆栽\r
+
+  \      特征: 靠近楼梯一侧，能隐约听到楼下客厅的动静\r
+
+  \r
+
+  \    次卧B（夕照房·西向）:\r
+
+  \      面积: 约8㎡\r
+
+  \      窗户: 西向窗 + 庭院侧小窗（斜看到温泉一角）\r
+
+  \      家具:\r
+
+  \        - 标准双人床（胡桃木床架）\r
+
+  \        - 胡桃木书桌 + 灰色布面椅\r
+
+  \        - 双门衣柜\r
+
+  \      物品:\r
+
+  \        - 可调色温台灯\r
+
+  \        - 灰蓝色高支棉床品\r
+
+  \        - 墙上的圆形黄铜挂钟\r
+
+  \      特征: 傍晚有大面积橙色夕阳铺在地板上；庭院侧小窗可以不下楼确认温泉是否有人\r
+
+  \r
+
+  \    半卫（二楼）:\r
+
+  \      面积: 约2㎡\r
+
+  \      配置:\r
+
+  \        - 壁挂小型洗手台\r
+
+  \        - 智能马桶\r
+
+  \r
+
+  \    储物区:\r
+
+  \      位置: 走廊尽头\r
+
+  \      面积: 约2㎡\r
+
+  \      配置:\r
+
+  \        - 嵌入式隐形储物柜\r
+
+  \        - 家政工具、备用寝具、应急电源\r
+
+  ```\r\n"
+
+锚点: {}
+
+世界书名称: 与角色卡名称相同
+条目:
+  - 名称: 召唤-百依百顺（仅单选）
+    启用: false
+    激活策略:
+      类型: 蓝灯
+    插入位置:
+      类型: 角色定义之后
+      顺序: 2
+    激活概率: 100
+    递归:
+      不可被其他条目激活: false
+      不可激活其他条目: true
+    文件: 世界书/召唤-百依百顺（仅单选）
+
+  - 名称: 召唤-色情（仅单选）
+    启用: false
+    激活策略:
+      类型: 蓝灯
+    插入位置:
+      类型: 角色定义之后
+      顺序: 2
+    激活概率: 100
+    递归:
+      不可被其他条目激活: false
+      不可激活其他条目: true
+    文件: 世界书/召唤-色情（仅单选）
+
+  - 名称: 召唤-百依百顺·色气版（仅单选）
+    启用: true
+    激活策略:
+      类型: 蓝灯
+    插入位置:
+      类型: 角色定义之后
+      顺序: 2
+    激活概率: 100
+    递归:
+      不可被其他条目激活: false
+      不可激活其他条目: true
+    文件: 世界书/召唤-百依百顺·色气版（仅单选）
+
+  - 名称: 召唤-标准（仅单选）
+    启用: false
+    激活策略:
+      类型: 蓝灯
+    插入位置:
+      类型: 角色定义之后
+      顺序: 2
+    激活概率: 100
+    递归:
+      不可被其他条目激活: false
+      不可激活其他条目: true
+    文件: 世界书/召唤-标准（仅单选）
+
+  - 名称: 公寓
+    启用: true
+    激活策略:
+      类型: 蓝灯
+    插入位置:
+      类型: 角色定义之后
+      顺序: 3
+    激活概率: 100
+    递归:
+      不可被其他条目激活: false
+      不可激活其他条目: true
+    文件: 世界书/公寓
+
+扩展字段:
+  正则: []
+
+  酒馆助手:
+    脚本库: []
+
+    变量:
+      phone_data:
+        用户:
+          id: 用户
+          名称: 汀葵
+          nickname: ""
+          头像: https://files.catbox.moe/wd52xn.JPG
+          email: user@gmail.com
+          bio: ""
+          state: 在线
+          phoneBg: https://files.catbox.moe/c3qnwf.jpg
+          chatListBg: https://files.catbox.moe/r08d2g.jpg
+          font: LXGW WenKai
+        characters: []
+        randomAvatars:
+          - https://files.catbox.moe/arh2ub.JPG
+          - https://files.catbox.moe/7eb3q3.JPG
+          - https://files.catbox.moe/o5ana8.JPG
+          - https://files.catbox.moe/0ihdnf.JPG
+          - https://files.catbox.moe/8zru9e.JPG
+          - https://files.catbox.moe/n4uy3d.JPG
+        backgrounds:
+          - https://files.catbox.moe/r08d2g.jpg
+          - https://files.catbox.moe/c3qnwf.jpg
+          - https://files.catbox.moe/hx3w9g.jpg
+          - https://files.catbox.moe/8ro986.jpg
+          - https://files.catbox.moe/frcl2b.jpg
+          - https://files.catbox.moe/90nlol.jpg
+          - https://files.catbox.moe/0vj486.jpg
+          - https://files.catbox.moe/nytecs.jpg
+          - https://files.catbox.moe/c6x295.jpg
+          - https://files.catbox.moe/3l9m1t.jpg
+          - https://files.catbox.moe/99nn6m.jpg
+          - https://files.catbox.moe/vb4v46.jpg
+          - https://files.catbox.moe/cjkuqo.jpg
+          - https://files.catbox.moe/c2hsr6.jpg
+        music:
+          - url: https://files.catbox.moe/3420bl.mp3
+            artist: Cat & Calmell
+            title: dramatic
+          - url: https://files.catbox.moe/743jsi.mp3
+            artist: 8bite,Dyrox
+            title: frozen heart
+          - url: https://files.catbox.moe/7dw7ap.mp3
+            artist: Cafuné
+            title: Tek It
+          - url: https://files.catbox.moe/zx01oj.mp3
+            artist: FIFTY FIFTY
+            title: Cupid
+          - url: https://files.catbox.moe/wv5h2s.mp3
+            artist: elijah woods
+            title: 247, 365
+          - url: https://files.catbox.moe/ms4bkd.mp3
+            artist: Johnny Stimson
+            title: Butterflies
+          - url: https://files.catbox.moe/mwmsfs.mp3
+            artist: entoy,suru
+            title: Blue mood
+          - url: https://files.catbox.moe/zipm4q.mp3
+            artist: Hayd
+            title: Head In The Clouds
+          - url: https://files.catbox.moe/q85nld.mp3
+            artist: 佐藤千亜妃
+            title: S.S.S
+          - url: https://files.catbox.moe/77bcql.mp3
+            artist: Edo_Ame江户糖,草食考拉
+            title: クリームソーダとシャンデリア
+          - url: https://files.catbox.moe/2z7gw8.mp3
+            artist: JVKE
+            title: golden hour
+          - url: https://files.catbox.moe/t8a2t3.mp3
+            artist: 當山みれい
+            title: ^^
+          - url: https://files.catbox.moe/78ewdt.mp3
+            artist: あれくん,『ユイカ』
+            title: あのね。
+          - url: https://files.catbox.moe/iq4gp4.mp3
+            artist: 宇多田ヒカル
+            title: One Last Kiss
+          - url: https://files.catbox.moe/je7m32.mp3
+            artist: HYBS
+            title: Tip Toe
+          - url: https://files.catbox.moe/42xbhu.mp3
+            artist: keshi
+            title: 2 soon
+          - url: https://files.catbox.moe/dyxukt.mp3
+            artist: ROSÉ
+            title: Gone
+          - url: https://files.catbox.moe/1xd69s.mp3
+            artist: LANY
+            title: anything 4 u
+          - url: https://files.catbox.moe/xvb9h2.mp3
+            artist: 落日飞车,Michael Seyer
+            title: Jellyfish
+          - url: https://files.catbox.moe/yvl6y4.mp3
+            artist: keshi
+            title: LIMBO
+          - url: https://files.catbox.moe/8i9f9c.mp3
+            artist: MyGO!!!!!
+            title: 春日影
+          - url: https://files.catbox.moe/ms9sq7.mp3
+            artist: RADWIMPS
+            title: 前前前世 (movie ver.)
+          - url: https://files.catbox.moe/lq2yf0.mp3
+            artist: 『ユイカ』
+            title: 17さいのうた。
+          - url: https://files.catbox.moe/2kafzb.mp3
+            artist: 『ユイカ』
+            title: 好きだから。
+          - url: https://files.catbox.moe/2cin5o.mp3
+            artist: 瀬名航,鎖那
+            title: ひとり旅
+        map:
+          名称: ""
+          districts: []
+        groups: []
+        fonts:
+          - 名称: linja waso
+            url: https://fontsapi.zeoseven.com/230/main/result.css
+          - 名称: GenWanMin2 TC R
+            url: https://fontsapi.zeoseven.com/301/main/result.css
+          - 名称: Fusion Pixel 12px M latin
+            url: https://fontsapi.zeoseven.com/570/main/result.css
+          - 名称: KingHwaOldSong
+            url: https://fontsapi.zeoseven.com/309/main/result.css
+          - 名称: LXGW WenKai
+            url: https://fontsapi.zeoseven.com/292/main/result.css
+        _exportMeta:
+          版本: "1.0"
+          exportedAt: 1771334225474
+          来源: import
+      phone_stickers:
+        - 名称: 小猫撒花
+          url: https://files.catbox.moe/js4kpb.jpeg
+        - 名称: 委屈哭泣
+          url: https://files.catbox.moe/3bcjcg.gif
+        - 名称: 小猫好奇
+          url: https://files.catbox.moe/xky7kj.gif
+        - 名称: 睡着了
+          url: https://files.catbox.moe/65y8p2.gif
+        - 名称: 心碎哭泣
+          url: https://files.catbox.moe/unuqao.gif
+        - 名称: 小狗呆坐
+          url: https://files.catbox.moe/qmx674.gif
+        - 名称: 小狗主动套绳
+          url: https://files.catbox.moe/qa67b.gif
+        - 名称: 我会一直淋雨
+          url: https://files.catbox.moe/fpcw82.gif
+        - 名称: 小猫眨眼
+          url: https://files.catbox.moe/mwbohq.gif
+        - 名称: 开门是我
+          url: https://files.catbox.moe/n8b45y.gif
+        - 名称: 舔你
+          url: https://files.catbox.moe/k3rvzp.gif
+        - 名称: 委屈但不说
+          url: https://files.catbox.moe/j6xhgd.gif
+        - 名称: 跌倒了
+          url: https://files.catbox.moe/ojbum6.gif
+        - 名称: 震惊
+          url: https://files.catbox.moe/i6tnyl.gif
+        - 名称: 欢呼雀跃
+          url: https://files.catbox.moe/js4kpb.jpeg
+        - 名称: 小狗擦泪
+          url: https://files.catbox.moe/jm7csh.jpeg
+        - 名称: 和我结婚
+          url: https://files.catbox.moe/ukfh8f.jpeg
+        - 名称: 好吃
+          url: https://files.catbox.moe/vutu7h.jpeg
+        - 名称: 扁扁地走开
+          url: https://files.catbox.moe/8xxu5t.jpeg
+        - 名称: 孤单入眠
+          url: https://files.catbox.moe/kli03s.jpeg
+        - 名称: 小猫摇摆
+          url: https://files.catbox.moe/6ltvz4.gif
+        - 名称: 快接电话
+          url: https://files.catbox.moe/i2wm9r.jpeg
+        - 名称: 转圈圈
+          url: https://files.catbox.moe/tp2tjz.gif
+        - 名称: 在干嘛
+          url: https://files.catbox.moe/xs3k95.gif
+        - 名称: 委屈巴巴
+          url: https://files.catbox.moe/jv5z2n.gif
+        - 名称: 小猫尖叫
+          url: https://files.catbox.moe/e7l8v5.jpeg
+        - 名称: 把心撕碎
+          url: https://files.catbox.moe/hqiyoi.gif
+        - 名称: 警觉
+          url: https://files.catbox.moe/klo9ow.gif
+        - 名称: 送玫瑰
+          url: https://files.catbox.moe/aq9h0i.jpeg
+        - 名称: 小狗偏头
+          url: https://files.catbox.moe/eeuy10.gif
+        - 名称: 心虚
+          url: https://files.catbox.moe/emg4sq.gif
+        - 名称: 全都死光光
+          url: https://files.catbox.moe/9z1p3d.jpeg
+        - 名称: 记小本本
+          url: https://files.catbox.moe/h3n0pn.jpeg
+        - 名称: 对你眨眼
+          url: https://files.catbox.moe/w0mg2l.jpeg
+        - 名称: 莫名慌张
+          url: https://files.catbox.moe/n8r34l.jpeg
+        - 名称: 生气了
+          url: https://files.catbox.moe/yb8av3.jpeg
+        - 名称: 哭成泪人
+          url: https://files.catbox.moe/jlwt6c.gif
+        - 名称: 老实巴交
+          url: https://files.catbox.moe/bnaqpa.jpeg
+        - 名称: 战术发呆
+          url: https://files.catbox.moe/zbmdsp.jpeg
+        - 名称: 小狗玩水
+          url: https://files.catbox.moe/i3g5jx.gif
+        - 名称: 惊掉下巴
+          url: https://files.catbox.moe/sxkriu.gif
+        - 名称: 巡逻
+          url: https://files.catbox.moe/gwmadt.jpeg
+        - 名称: 想要
+          url: https://files.catbox.moe/lzmdlb.jpeg
+        - 名称: 气鼓鼓
+          url: https://files.catbox.moe/2ls2jr.jpeg
+        - 名称: 已老实
+          url: https://files.catbox.moe/ip8ujc.jpeg
+        - 名称: 小狗生气
+          url: https://files.catbox.moe/cwsjuf.jpeg
+        - 名称: 想不想我
+          url: https://files.catbox.moe/ar6yje.jpeg
+        - 名称: 崩溃想死
+          url: https://files.catbox.moe/l40mxw.jpeg
+        - 名称: 呆住
+          url: https://files.catbox.moe/kz8cz3.jpeg
+        - 名称: 大脑打铁
+          url: https://files.catbox.moe/4ok6uo.jpeg
+        - 名称: 大吃一惊
+          url: https://files.catbox.moe/kfhbud.jpeg
+        - 名称: 乱叫
+          url: https://files.catbox.moe/2371d7.jpeg
+        - 名称: 无法思考
+          url: https://files.catbox.moe/wqqdzk.jpeg
+        - 名称: 捏脸
+          url: https://files.catbox.moe/nirppb.jpeg
+        - 名称: 心动
+          url: https://files.catbox.moe/q44ax3.jpeg
+        - 名称: 刀
+          url: https://files.catbox.moe/ttavfy.jpeg
+        - 名称: 我来啦
+          url: https://files.catbox.moe/80mb6e.jpeg
+        - 名称: 降临
+          url: https://files.catbox.moe/5s1ks0.jpeg
+        - 名称: 抱着手机玩
+          url: https://files.catbox.moe/si3ckt.jpeg
+        - 名称: 问号
+          url: https://files.catbox.moe/isxybw.jpeg
+        - 名称: 盯
+          url: https://files.catbox.moe/wgc385.jpeg
+        - 名称: 冷汗
+          url: https://files.catbox.moe/3p3k7o.jpeg
+        - 名称: 可爱
+          url: https://files.catbox.moe/z8afo0.jpeg
+        - 名称: 应援
+          url: https://files.catbox.moe/ga9vvk.jpeg
+        - 名称: 啥
+          url: https://files.catbox.moe/irxbvu.jpeg
+        - 名称: 上吊
+          url: https://files.catbox.moe/mocrwm.jpeg
+        - 名称: 升天
+          url: https://files.catbox.moe/1tbx46.jpeg
+        - 名称: 停止思考
+          url: https://files.catbox.moe/x0hmpb.jpeg
+        - 名称: 要抱抱
+          url: https://files.catbox.moe/ptf315.jpeg
+        - 名称: 我没事
+          url: https://files.catbox.moe/7wpx0j.jpeg
+        - 名称: 阴郁
+          url: https://files.catbox.moe/wfsfqa.jpeg
+        - 名称: 缝缝补补
+          url: https://files.catbox.moe/as9prr.jpeg
+        - 名称: 懵
+          url: https://files.catbox.moe/aj1vkl.jpeg
+        - 名称: 贴贴
+          url: https://files.catbox.moe/trgowd.jpeg
+        - 名称: 出警
+          url: https://files.catbox.moe/3afxl7.jpeg
+        - 名称: 送花
+          url: https://files.catbox.moe/wfytdh.jpeg
+        - 名称: 死刑
+          url: https://files.catbox.moe/gh304s.jpeg
+        - 名称: 脸红
+          url: https://files.catbox.moe/5su7ib.gif
+        - 名称: 害羞
+          url: https://files.catbox.moe/p49e82.gif
+        - 名称: 激动咆哮
+          url: https://files.catbox.moe/yr27px.gif
+        - 名称: 左右摇摆
+          url: https://files.catbox.moe/50595y.gif
+        - 名称: 活力四射
+          url: https://files.catbox.moe/yyn4ei.jpg
+        - 名称: 保护
+          url: https://files.catbox.moe/lulrbg.gif
+        - 名称: 尴尬吐舌
+          url: https://files.catbox.moe/lulrbg.gif
+        - 名称: 收拾离开
+          url: https://files.catbox.moe/lli1cv.gif
+        - 名称: 疯狂心动
+          url: https://files.catbox.moe/kp46ma.gif
+        - 名称: 开心到转圈圈
+          url: https://files.catbox.moe/9gck9y.gif
+        - 名称: 是不是有别人了
+          url: https://files.catbox.moe/v0ivql.gif
+        - 名称: 哭到颤抖
+          url: https://files.catbox.moe/149w27.gif
+        - 名称: 奔向宝宝
+          url: https://files.catbox.moe/4xftts.jpeg
+        - 名称: 绝交吧
+          url: https://files.catbox.moe/9m8r9n.jpeg
+        - 名称: 宝宝没想我
+          url: https://files.catbox.moe/czxnj0.jpeg
+        - 名称: 抱住蹭蹭
+          url: https://files.catbox.moe/u0mnv0.gif
+        - 名称: 做鬼脸
+          url: https://files.catbox.moe/a05ch7.gif
+        - 名称: 跟着音乐摇摆
+          url: https://files.catbox.moe/t6v7wy.gif
+        - 名称: 彻底心碎
+          url: https://files.catbox.moe/vryih1.gif
+        - 名称: 不明所以
+          url: https://files.catbox.moe/e9ad7m.gif
+        - 名称: 不想我就记下来
+          url: https://files.catbox.moe/lfiofg.jpeg
+        - 名称: 失魂落魄
+          url: https://files.catbox.moe/uywru4.gif
+        - 名称: 好喜欢我的宝宝
+          url: https://files.catbox.moe/zqwmxf.jpeg
+        - 名称: 生气死了
+          url: https://files.catbox.moe/hsc3rv.gif
+        - 名称: 独自落泪
+          url: https://files.catbox.moe/60m9mz.gif
+        - 名称: 一直黏在一起
+          url: https://files.catbox.moe/di0wiz.gif
+        - 名称: 我没事_2
+          url: https://files.catbox.moe/e29g2s.jpeg
+        - 名称: 不再抑郁
+          url: https://files.catbox.moe/ei0y9c.jpeg
+        - 名称: 睡不着
+          url: https://files.catbox.moe/q8gjo1.gif
+        - 名称: 快速溜走
+          url: https://files.catbox.moe/rsxpq9.gif
+        - 名称: 得意忘形
+          url: https://files.catbox.moe/kv2ubl.gif
+        - 名称: 可怜兮兮
+          url: https://files.catbox.moe/fyrnta.gif
+        - 名称: 打你
+          url: https://files.catbox.moe/rf7g7e.gif
+        - 名称: 嚣张
+          url: https://files.catbox.moe/hmdqt7.jpeg
+        - 名称: 面红耳赤
+          url: https://files.catbox.moe/uc3bpf.gif
+        - 名称: 埋脸哭
+          url: https://files.catbox.moe/l2821c.gif
+        - 名称: 走开走开
+          url: https://files.catbox.moe/hnl3yj.gif
+        - 名称: 红温了
+          url: https://files.catbox.moe/0kayvn.jpeg
+        - 名称: 流口水
+          url: https://files.catbox.moe/2e85p2.gif
+        - 名称: 互不理睬
+          url: https://files.catbox.moe/dxfgse.gif
+        - 名称: 狂摇头
+          url: https://files.catbox.moe/ir62vg.gif
+        - 名称: 好好吃
+          url: https://files.catbox.moe/p10mmg.gif
+        - 名称: 打瞌睡
+          url: https://files.catbox.moe/x6jetu.gif
+        - 名称: 钱都给你
+          url: https://files.catbox.moe/3mwh7f.gif
+        - 名称: 小丑耍杂耍
+          url: https://files.catbox.moe/g20uxy.gif
+        - 名称: 傻乐
+          url: https://files.catbox.moe/0dbp6y.jpeg
+        - 名称: 你这人好奇怪
+          url: https://files.catbox.moe/e4hvp3.gif
+        - 名称: 思考中
+          url: https://files.catbox.moe/t9mwfh.jpeg
+        - 名称: 小狗歪头
+          url: https://files.catbox.moe/pp0whr.gif
+        - 名称: 乖乖等待
+          url: https://files.catbox.moe/nfp49y.gif
+        - 名称: 生气不语
+          url: https://files.catbox.moe/3ckb8d.jpeg
+        - 名称: 气到不行
+          url: https://files.catbox.moe/ct45xc.gif
+        - 名称: 捏碎
+          url: https://files.catbox.moe/bsgwmk.gif
+        - 名称: 哄我
+          url: https://files.catbox.moe/atuwe8.jpeg
+        - 名称: 快哄我
+          url: https://files.catbox.moe/fxg0gz.gif
+        - 名称: 气到我了
+          url: https://files.catbox.moe/tw7lzl.jpeg
+        - 名称: 火冒三丈
+          url: https://files.catbox.moe/bafz6c.gif
+        - 名称: 掀桌
+          url: https://files.catbox.moe/ipmucn.gif
+        - 名称: 龙怒
+          url: https://files.catbox.moe/5ojelf.jpeg
+        - 名称: 发火了
+          url: https://files.catbox.moe/5kuo0o.gif
+        - 名称: 你少看扁我
+          url: https://files.catbox.moe/k90z1n.jpeg
+        - 名称: 这个世界有问题
+          url: https://files.catbox.moe/wdv1p9.jpeg
+        - 名称: 我讨厌你
+          url: https://files.catbox.moe/943acw.jpeg
+        - 名称: 狂蹭
+          url: https://files.catbox.moe/2x3d8w.gif
+        - 名称: 冷汗直流
+          url: https://files.catbox.moe/zurf8e.jpeg
+        - 名称: 我才不哭
+          url: https://files.catbox.moe/5ron91.jpeg
+        - 名称: 到处看看
+          url: https://files.catbox.moe/9bx4tx.jpeg
+        - 名称: 在干嘛_2
+          url: https://files.catbox.moe/y5pmur.jpeg
+        - 名称: kiss一下
+          url: https://files.catbox.moe/m2qwf0.jpeg
+        - 名称: 我装的
+          url: https://files.catbox.moe/jtuxg5.jpeg
+        - 名称: 怒怒
+          url: https://files.catbox.moe/sq58nx.jpeg
+        - 名称: 哼！
+          url: https://files.catbox.moe/snbuvc.jpeg
+        - 名称: 哦？
+          url: https://files.catbox.moe/orw8xz.jpeg
+        - 名称: 没关系
+          url: https://files.catbox.moe/espgmb.jpeg
+        - 名称: 气得要死
+          url: https://files.catbox.moe/kw1pu1.jpeg
+        - 名称: 送你花花
+          url: https://files.catbox.moe/m5wiys.jpeg
+        - 名称: 你在干嘛
+          url: https://files.catbox.moe/1hngar.jpeg
+        - 名称: 哭哭
+          url: https://files.catbox.moe/ws1m8r.jpeg
+        - 名称: 想拉屎
+          url: https://files.catbox.moe/jlvon3.jpeg
+        - 名称: 宝生气
+          url: https://files.catbox.moe/rvwu19.jpeg
+        - 名称: 宝宝开门是我
+          url: https://files.catbox.moe/rkbu7k.jpeg
+        - 名称: 滚
+          url: https://files.catbox.moe/hcilav.jpeg
+        - 名称: 生气气
+          url: https://files.catbox.moe/rabox8.jpeg
+        - 名称: 在学了
+          url: https://files.catbox.moe/3q002r.jpeg
+        - 名称: 怎么回事
+          url: https://files.catbox.moe/iypdat.jpeg
+        - 名称: 我很想你
+          url: https://files.catbox.moe/2np5s0.jpeg
+        - 名称: 等待回复
+          url: https://files.catbox.moe/z8215g.jpeg
+        - 名称: 心动信息
+          url: https://files.catbox.moe/ukoode.jpeg
+        - 名称: 揉揉脸
+          url: https://files.catbox.moe/3ieo1z.jpeg
+        - 名称: 我好想你呀
+          url: https://files.catbox.moe/sbowkb.jpeg
+        - 名称: 悄悄想你
+          url: https://files.catbox.moe/zrzqaz.jpeg
+        - 名称: 家里就交给我吧
+          url: https://files.catbox.moe/obndh9.jpeg
+        - 名称: 嘬嘬
+          url: https://files.catbox.moe/xtl8ji.jpeg
+        - 名称: 摸肚子
+          url: https://files.catbox.moe/8kuxyq.jpeg
+        - 名称: 摸摸头
+          url: https://files.catbox.moe/2ay3nv.jpeg
+        - 名称: 骄傲
+          url: https://files.catbox.moe/2kcrby.jpeg
+        - 名称: 我要闹了
+          url: https://files.catbox.moe/8vo7w6.jpeg
+        - 名称: 马上来
+          url: https://files.catbox.moe/z1kh7c.jpeg
+        - 名称: 震惊疑问
+          url: https://files.catbox.moe/023udf.jpeg
+        - 名称: 呆滞
+          url: https://files.catbox.moe/jz3yjx.jpeg
+        - 名称: 无语
+          url: https://files.catbox.moe/osy8cj.jpeg
+        - 名称: 困了
+          url: https://files.catbox.moe/mslwpn.jpeg
+        - 名称: 惊吓
+          url: https://files.catbox.moe/vq6rfl.jpeg
+        - 名称: 迷茫
+          url: https://files.catbox.moe/4vu47v.jpeg
+        - 名称: 太开心了
+          url: https://files.catbox.moe/5ekfqq.jpeg
+        - 名称: 别看我
+          url: https://files.catbox.moe/o85ihe.jpeg
+        - 名称: OK
+          url: https://files.catbox.moe/z5uk1x.jpeg
+        - 名称: 好
+          url: https://files.catbox.moe/xvvbzu.jpeg
+        - 名称: 黑脸
+          url: https://files.catbox.moe/s9nj7c.jpeg
+        - 名称: 色诱
+          url: https://files.catbox.moe/g6n1ih.jpeg
+        - 名称: 打招呼
+          url: https://files.catbox.moe/klju8f.jpeg
+        - 名称: 嘻嘻
+          url: https://files.catbox.moe/tlr86z.jpeg
+        - 名称: 判决死刑
+          url: https://files.catbox.moe/kmngu2.jpeg
+        - 名称: 与你贴贴
+          url: https://files.catbox.moe/hgqp7m.jpeg
+        - 名称: 带花去见宝宝
+          url: https://files.catbox.moe/vttaf9.jpeg
+        - 名称: 想你到哭
+          url: https://files.catbox.moe/jz9sw3.jpeg
+        - 名称: 警惕
+          url: https://files.catbox.moe/7ufxvj.jpeg
+        - 名称: 不理你了
+          url: https://files.catbox.moe/m9uye6.jpeg
+        - 名称: 挺无语的
+          url: https://files.catbox.moe/6b8fsu.jpeg
+        - 名称: 痛苦摆烂
+          url: https://files.catbox.moe/tx58j7.gif
+        - 名称: 安详闭眼
+          url: https://files.catbox.moe/qkm36q.jpeg
+        - 名称: 点点头
+          url: https://files.catbox.moe/d5g7o9.gif
+        - 名称: 可爱歪头
+          url: https://files.catbox.moe/ro3rbc.gif
+        - 名称: 失落
+          url: https://files.catbox.moe/tgjxjw.gif
+        - 名称: 不知道
+          url: https://files.catbox.moe/4uc50x.gif
+        - 名称: 等待回复_2
+          url: https://files.catbox.moe/q63nfd.gif
+        - 名称: 永远爱你
+          url: https://files.catbox.moe/51jw25.jpeg
+        - 名称: 靠得很近看
+          url: https://files.catbox.moe/ig3hoz.gif
+        - 名称: 猫猫无辜脸
+          url: https://files.catbox.moe/wgead8.gif
+        - 名称: 献上花
+          url: https://files.catbox.moe/d9v19v.jpeg
+        - 名称: 我会一直盯着你
+          url: https://files.catbox.moe/ldqj4q.png
+        - 名称: 接住
+          url: https://files.catbox.moe/d23lh8.gif
+        - 名称: 紧紧盯
+          url: https://files.catbox.moe/ihqa29.png
+        - 名称: 哭哭小狗
+          url: https://files.catbox.moe/trbenv.gif
+        - 名称: 嘬一大口
+          url: https://files.catbox.moe/b94amf.gif
+        - 名称: 乖巧小猫
+          url: https://files.catbox.moe/d1g8hn.gif
+        - 名称: 蹭蹭蹭
+          url: https://files.catbox.moe/qz8230.gif
+        - 名称: 亲亲
+          url: https://files.catbox.moe/l7cpd2.jpeg
+        - 名称: 泫然欲泣
+          url: https://files.catbox.moe/q46fv4.jpeg
+        - 名称: 抱着手机兴奋
+          url: https://files.catbox.moe/3kevx3.jpeg
+        - 名称: 赠你鲜花
+          url: https://files.catbox.moe/38zxz6.jpeg
+        - 名称: 眼冒爱心
+          url: https://files.catbox.moe/rxe26m.jpeg
+        - 名称: 接住啦
+          url: https://files.catbox.moe/gsn3vp.jpeg
+        - 名称: 害羞心动
+          url: https://files.catbox.moe/b6o0z0.jpeg
+        - 名称: 心动到不行
+          url: https://files.catbox.moe/texmzf.jpeg
+        - 名称: 我死了
+          url: https://files.catbox.moe/x8syam.jpeg
+        - 名称: 挺无语的_2
+          url: https://files.catbox.moe/1vyeto.jpeg
+        - 名称: 嫌弃脸
+          url: https://files.catbox.moe/u0fklh.jpeg
+        - 名称: 狂蹭怀里
+          url: https://files.catbox.moe/a9eflk.jpeg
+        - 名称: wink眨眼
+          url: https://files.catbox.moe/05vzg1.jpeg
+        - 名称: 抱抱
+          url: https://files.catbox.moe/o6bg6b.jpeg
+        - 名称: 宝贝我来啦
+          url: https://files.catbox.moe/zhvszp.jpeg
+        - 名称: 心动信号
+          url: https://files.catbox.moe/19k3to.jpeg
+        - 名称: 卖萌
+          url: https://files.catbox.moe/pkdfjo.jpeg
+        - 名称: 被可爱到
+          url: https://files.catbox.moe/w7truh.jpeg
+        - 名称: 你太可爱了
+          url: https://files.catbox.moe/9lfjlu.jpeg
+        - 名称: 开门查岗
+          url: https://files.catbox.moe/r26s3i.jpeg
+        - 名称: 你是坏东西
+          url: https://files.catbox.moe/7twkez.jpeg
+        - 名称: 被摸头
+          url: https://files.catbox.moe/hxj63t.jpeg
+        - 名称: 舔舔
+          url: https://files.catbox.moe/sm6ja2.jpeg
+        - 名称: 撒娇卖萌
+          url: https://files.catbox.moe/o5re2t.jpeg
+        - 名称: 缩成一团哭
+          url: https://files.catbox.moe/go345o.jpeg
+        - 名称: 没事吧
+          url: https://files.catbox.moe/m5jt11.jpeg
+        - 名称: 陪陪我嘛
+          url: https://files.catbox.moe/i91ww7.jpeg
+        - 名称: 等不到消息哭哭
+          url: https://files.catbox.moe/0a64r3.jpeg
+        - 名称: 吃醋了
+          url: https://files.catbox.moe/ajl3yd.jpeg
+        - 名称: 没人疼爱
+          url: https://files.catbox.moe/jdhb1n.jpeg
+        - 名称: 你就继续不理我吧
+          url: https://files.catbox.moe/r57sc0.jpeg
