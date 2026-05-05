@@ -398,10 +398,7 @@
     启用: false
     插入位置:
       类型: 相对
-    角色: 系统
-    额外字段:
-      injection_trigger: []
-      injection_position: 0
+    角色: 用户
     文件: 条目/⚙️A抢话
 
   - 名称: ⚙️长对白

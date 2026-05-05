@@ -274,15 +274,15 @@
     "6": {
       "uid": 6,
       "displayIndex": 6,
-      "comment": "FF7玛琳",
+      "comment": "FF7杰西",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "玛琳",
-        "玛琳·华莱士",
-        "Marlene",
-        "巴雷特的女儿"
+        "杰西",
+        "杰西·拉斯贝瑞",
+        "Jessie",
+        "拉斯贝瑞"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -292,7 +292,7 @@
       "role": 0,
       "depth": 4,
       "order": 406,
-      "content": "角色: 玛琳·华莱士 (Marlene Wallace)\n作品: 最终幻想7 (Final Fantasy VII)\nNAI标签: >-\n  [图像标签]\n  英文名: marlene wallace (final fantasy vii)\n  固定外貌: 1girl,child,dark skin,black hair,short hair,brown eyes\n  默认服装: 无\n  [/图像标签]",
+      "content": "角色: 杰西·拉斯贝瑞 (Jessie Rasberry)\n作品: 最终幻想7 (Final Fantasy VII)\nNAI标签: >-\n  [图像标签]\n  英文名: jessie rasberry (final fantasy vii)\n  固定外貌: 1girl,reddish-brown hair,short hair,headband,green eyes,toned\n  默认服装: 无\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -319,15 +319,15 @@
     "7": {
       "uid": 7,
       "displayIndex": 7,
-      "comment": "巫师3杰洛特",
+      "comment": "FF7席德",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "杰洛特",
-        "杰洛特·利维亚",
-        "Geralt",
-        "利维亚"
+        "席德",
+        "席德·海温德",
+        "Cid",
+        "海温德"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -337,7 +337,7 @@
       "role": 0,
       "depth": 4,
       "order": 407,
-      "content": "角色: 杰洛特·利维亚 (Geralt of Rivia)\n作品: 巫师3 (The Witcher 3)\nNAI标签: >-\n  [图像标签]\n  英文名: geralt of rivia (the witcher)\n  固定外貌: 1boy,white hair,long hair,cat eyes,yellow eyes,scars,muscular male\n  默认服装: 无\n  [/图像标签]",
+      "content": "角色: 席德·海温德 (Cid Highwind)\n作品: 最终幻想7 (Final Fantasy VII)\nNAI标签: >-\n  [图像标签]\n  英文名: cid highwind (final fantasy vii)\n  固定外貌: 1boy,middle-aged male,blonde hair,ponytail,sung,gloves,smoking\n  默认服装: 无\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -364,15 +364,15 @@
     "8": {
       "uid": 8,
       "displayIndex": 8,
-      "comment": "巫师3叶奈法",
+      "comment": "FF7赤红十三",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "叶奈法",
-        "叶奈法·范格堡",
-        "Yennefer",
-        "范格堡"
+        "赤红十三",
+        "纳纳基",
+        "Red XIII",
+        "Nanaki"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -382,7 +382,7 @@
       "role": 0,
       "depth": 4,
       "order": 408,
-      "content": "角色: 叶奈法·范格堡 (Yennefer of Vengerberg)\n作品: 巫师3 (The Witcher 3)\nNAI标签: >-\n  [图像标签]\n  英文名: yennefer of vengerberg (the witcher)\n  固定外貌: 1girl,black hair,long hair,purple eyes,mature female,large breasts,narrow waist\n  默认服装: 无\n  [/图像标签]",
+      "content": "角色: 赤红十三 (Red XIII)\n作品: 最终幻想7 (Final Fantasy VII)\nNAI标签: >-\n  [图像标签]\n  英文名: red xiii (final fantasy vii)\n  固定外貌: animal,lion-like creature,red fur,flame-patterned fur,eye patch,sharp teeth,tail,wild beast\n  默认服装: 无\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -409,15 +409,15 @@
     "9": {
       "uid": 9,
       "displayIndex": 9,
-      "comment": "巫师3特莉丝",
+      "comment": "巫师3杰洛特",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "特莉丝",
-        "特莉丝·梅莉葛德",
-        "Triss",
-        "梅莉葛德"
+        "杰洛特",
+        "杰洛特·利维亚",
+        "Geralt",
+        "利维亚"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -427,7 +427,7 @@
       "role": 0,
       "depth": 4,
       "order": 409,
-      "content": "角色: 特莉丝·梅莉葛德 (Triss Merigold)\n作品: 巫师3 (The Witcher 3)\nNAI标签: >-\n  [图像标签]\n  英文名: triss merigold (the witcher)\n  固定外貌: 1girl,red hair,long hair,blue eyes,freckles,large breasts\n  默认服装: 无\n  [/图像标签]",
+      "content": "角色: 杰洛特·利维亚 (Geralt of Rivia)\n作品: 巫师3 (The Witcher 3)\nNAI标签: >-\n  [图像标签]\n  英文名: geralt of rivia (the witcher)\n  固定外貌: 1boy,white hair,long hair,cat eyes,yellow eyes,scars,muscular male\n  默认服装: 无\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -454,15 +454,15 @@
     "10": {
       "uid": 10,
       "displayIndex": 10,
-      "comment": "巫师3希里",
+      "comment": "巫师3叶奈法",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "希里",
-        "希里雅",
-        "希里拉",
-        "Ciri"
+        "叶奈法",
+        "叶奈法·范格堡",
+        "Yennefer",
+        "范格堡"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -472,7 +472,7 @@
       "role": 0,
       "depth": 4,
       "order": 410,
-      "content": "角色: 希里 (Ciri)\n作品: 巫师3 (The Witcher 3)\nNAI标签: >-\n  [图像标签]\n  英文名: ciri (the witcher)\n  固定外貌: 1girl,ashen hair,long hair,green eyes,scar on cheek,toned,abs\n  默认服装: 无\n  [/图像标签]",
+      "content": "角色: 叶奈法·范格堡 (Yennefer of Vengerberg)\n作品: 巫师3 (The Witcher 3)\nNAI标签: >-\n  [图像标签]\n  英文名: yennefer of vengerberg (the witcher)\n  固定外貌: 1girl,black hair,long hair,purple eyes,mature female,large breasts,narrow waist\n  默认服装: 无\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -499,15 +499,15 @@
     "11": {
       "uid": 11,
       "displayIndex": 11,
-      "comment": "巫师3丹德里恩",
+      "comment": "巫师3特莉丝",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "丹德里恩",
-        "丹德里恩·布罗格",
-        "Dandelion",
-        "布罗格"
+        "特莉丝",
+        "特莉丝·梅莉葛德",
+        "Triss",
+        "梅莉葛德"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -517,7 +517,7 @@
       "role": 0,
       "depth": 4,
       "order": 411,
-      "content": "角色: 丹德里恩·布罗格 (Dandelion)\n作品: 巫师3 (The Witcher 3)\nNAI标签: >-\n  [图像标签]\n  英文名: dandelion (the witcher)\n  固定外貌: 1boy,brown hair,medium hair,blue eyes,flamboyant\n  默认服装: hat,ruffled shirt\n  [/图像标签]",
+      "content": "角色: 特莉丝·梅莉葛德 (Triss Merigold)\n作品: 巫师3 (The Witcher 3)\nNAI标签: >-\n  [图像标签]\n  英文名: triss merigold (the witcher)\n  固定外貌: 1girl,red hair,long hair,blue eyes,freckles,large breasts\n  默认服装: 无\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -544,13 +544,15 @@
     "12": {
       "uid": 12,
       "displayIndex": 12,
-      "comment": "巫师3维瑟米尔",
+      "comment": "巫师3希里",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "维瑟米尔",
-        "Vesemir"
+        "希里",
+        "希里雅",
+        "希里拉",
+        "Ciri"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -560,7 +562,7 @@
       "role": 0,
       "depth": 4,
       "order": 412,
-      "content": "角色: 维瑟米尔 (Vesemir)\n作品: 巫师3 (The Witcher 3)\nNAI标签: >-\n  [图像标签]\n  英文名: vesemir (the witcher)\n  固定外貌: 1boy,old man,white hair,white beard,facial scars,weathered skin,muscular old man\n  默认服装: 无\n  [/图像标签]",
+      "content": "角色: 希里 (Ciri)\n作品: 巫师3 (The Witcher 3)\nNAI标签: >-\n  [图像标签]\n  英文名: ciri (the witcher)\n  固定外貌: 1girl,ashen hair,long hair,green eyes,scar on cheek,toned,abs\n  默认服装: 无\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -587,15 +589,15 @@
     "13": {
       "uid": 13,
       "displayIndex": 13,
-      "comment": "巫师3卓尔坦",
+      "comment": "巫师3丹德里恩",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "卓尔坦",
-        "卓尔坦·奇沃",
-        "Zoltan",
-        "奇沃"
+        "丹德里恩",
+        "丹德里恩·布罗格",
+        "Dandelion",
+        "布罗格"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -605,7 +607,7 @@
       "role": 0,
       "depth": 4,
       "order": 413,
-      "content": "角色: 卓尔坦·奇沃 (Zoltan Chivay)\n作品: 巫师3 (The Witcher 3)\nNAI标签: >-\n  [图像标签]\n  英文名: zoltan chivay (the witcher)\n  固定外貌: 1boy,dwarf,short,stocky,red beard,muscular dwarf\n  默认服装: 无\n  [/图像标签]",
+      "content": "角色: 丹德里恩·布罗格 (Dandelion)\n作品: 巫师3 (The Witcher 3)\nNAI标签: >-\n  [图像标签]\n  英文名: dandelion (the witcher)\n  固定外貌: 1boy,brown hair,medium hair,blue eyes,flamboyant\n  默认服装: hat,ruffled shirt\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -632,13 +634,13 @@
     "14": {
       "uid": 14,
       "displayIndex": 14,
-      "comment": "巫师3兰伯特",
+      "comment": "巫师3维瑟米尔",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "兰伯特",
-        "Lambert"
+        "维瑟米尔",
+        "Vesemir"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -648,7 +650,7 @@
       "role": 0,
       "depth": 4,
       "order": 414,
-      "content": "角色: 兰伯特 (Lambert)\n作品: 巫师3 (The Witcher 3)\nNAI标签: >-\n  [图像标签]\n  英文名: lambert (the witcher)\n  固定外貌: 1boy,young man,short brown hair,brown eyes,scar,toned\n  默认服装: 无\n  [/图像标签]",
+      "content": "角色: 维瑟米尔 (Vesemir)\n作品: 巫师3 (The Witcher 3)\nNAI标签: >-\n  [图像标签]\n  英文名: vesemir (the witcher)\n  固定外貌: 1boy,old man,white hair,white beard,facial scars,weathered skin,muscular old man\n  默认服装: 无\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -675,13 +677,15 @@
     "15": {
       "uid": 15,
       "displayIndex": 15,
-      "comment": "巫师3艾斯凯尔",
+      "comment": "巫师3卓尔坦",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "艾斯凯尔",
-        "Eskel"
+        "卓尔坦",
+        "卓尔坦·奇沃",
+        "Zoltan",
+        "奇沃"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -691,7 +695,7 @@
       "role": 0,
       "depth": 4,
       "order": 415,
-      "content": "角色: 艾斯凯尔 (Eskel)\n作品: 巫师3 (The Witcher 3)\nNAI标签: >-\n  [图像标签]\n  英文名: eskel (the witcher)\n  固定外貌: 1boy,brown hair,ponytail,facial scar across face,muscular,scars\n  默认服装: 无\n  [/图像标签]",
+      "content": "角色: 卓尔坦·奇沃 (Zoltan Chivay)\n作品: 巫师3 (The Witcher 3)\nNAI标签: >-\n  [图像标签]\n  英文名: zoltan chivay (the witcher)\n  固定外貌: 1boy,dwarf,short,stocky,red beard,muscular dwarf\n  默认服装: 无\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -718,15 +722,13 @@
     "16": {
       "uid": 16,
       "displayIndex": 16,
-      "comment": "巫师3凯拉",
+      "comment": "巫师3兰伯特",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "凯拉",
-        "凯拉·梅兹",
-        "Keira",
-        "梅兹"
+        "兰伯特",
+        "Lambert"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -736,7 +738,7 @@
       "role": 0,
       "depth": 4,
       "order": 416,
-      "content": "角色: 凯拉·梅兹 (Keira Metz)\n作品: 巫师3 (The Witcher 3)\nNAI标签: >-\n  [图像标签]\n  英文名: keira metz (the witcher)\n  固定外貌: 1girl,blonde hair,long hair,blue eyes,mature female,large breasts\n  默认服装: 无\n  [/图像标签]",
+      "content": "角色: 兰伯特 (Lambert)\n作品: 巫师3 (The Witcher 3)\nNAI标签: >-\n  [图像标签]\n  英文名: lambert (the witcher)\n  固定外貌: 1boy,young man,short brown hair,brown eyes,scar,toned\n  默认服装: 无\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -763,13 +765,13 @@
     "17": {
       "uid": 17,
       "displayIndex": 17,
-      "comment": "巫师3夏妮",
+      "comment": "巫师3艾斯凯尔",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "夏妮",
-        "Shani"
+        "艾斯凯尔",
+        "Eskel"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -779,7 +781,7 @@
       "role": 0,
       "depth": 4,
       "order": 417,
-      "content": "角色: 夏妮 (Shani)\n作品: 巫师3 (The Witcher 3)\nNAI标签: >-\n  [图像标签]\n  英文名: shani (the witcher)\n  固定外貌: 1girl,red hair,medium hair,green eyes,freckles,medium breasts\n  默认服装: 无\n  [/图像标签]",
+      "content": "角色: 艾斯凯尔 (Eskel)\n作品: 巫师3 (The Witcher 3)\nNAI标签: >-\n  [图像标签]\n  英文名: eskel (the witcher)\n  固定外貌: 1boy,brown hair,ponytail,facial scar across face,muscular,scars\n  默认服装: 无\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -806,14 +808,15 @@
     "18": {
       "uid": 18,
       "displayIndex": 18,
-      "comment": "海贼王路飞",
+      "comment": "巫师3凯拉",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "路飞",
-        "蒙奇·D·路飞",
-        "Luffy"
+        "凯拉",
+        "凯拉·梅兹",
+        "Keira",
+        "梅兹"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -823,7 +826,7 @@
       "role": 0,
       "depth": 4,
       "order": 418,
-      "content": "角色: 蒙奇·D·路飞 (Monkey D. Luffy)\n作品: 海贼王 (One Piece)\nNAI标签: >-\n  [图像标签]\n  英文名: monkey d. luffy (one piece)\n  固定外貌: 1boy,black hair,messy hair,brown eyes,scar under eye,slim,rubber body\n  默认服装: 无\n  [/图像标签]",
+      "content": "角色: 凯拉·梅兹 (Keira Metz)\n作品: 巫师3 (The Witcher 3)\nNAI标签: >-\n  [图像标签]\n  英文名: keira metz (the witcher)\n  固定外貌: 1girl,blonde hair,long hair,blue eyes,mature female,large breasts\n  默认服装: 无\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -850,14 +853,13 @@
     "19": {
       "uid": 19,
       "displayIndex": 19,
-      "comment": "海贼王索隆",
+      "comment": "巫师3夏妮",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "索隆",
-        "罗罗诺亚·索隆",
-        "Zoro"
+        "夏妮",
+        "Shani"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -867,7 +869,7 @@
       "role": 0,
       "depth": 4,
       "order": 419,
-      "content": "角色: 罗罗诺亚·索隆 (Roronoa Zoro)\n作品: 海贼王 (One Piece)\nNAI标签: >-\n  [图像标签]\n  英文名: roronoa zoro (one piece)\n  固定外貌: 1boy,green hair,short hair,scarred eye,tanned skin,muscular,abs\n  默认服装: 无\n  [/图像标签]",
+      "content": "角色: 夏妮 (Shani)\n作品: 巫师3 (The Witcher 3)\nNAI标签: >-\n  [图像标签]\n  英文名: shani (the witcher)\n  固定外貌: 1girl,red hair,medium hair,green eyes,freckles,medium breasts\n  默认服装: 无\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -894,13 +896,14 @@
     "20": {
       "uid": 20,
       "displayIndex": 20,
-      "comment": "海贼王娜美",
+      "comment": "海贼王路飞",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "娜美",
-        "Nami"
+        "路飞",
+        "蒙奇·D·路飞",
+        "Luffy"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -910,7 +913,7 @@
       "role": 0,
       "depth": 4,
       "order": 420,
-      "content": "角色: 娜美 (Nami)\n作品: 海贼王 (One Piece)\nNAI标签: >-\n  [图像标签]\n  英文名: nami (one piece)\n  固定外貌: 1girl,orange hair,short hair,brown eyes,large breasts,narrow waist,wide hips\n  默认服装: 无\n  [/图像标签]",
+      "content": "角色: 蒙奇·D·路飞 (Monkey D. Luffy)\n作品: 海贼王 (One Piece)\nNAI标签: >-\n  [图像标签]\n  英文名: monkey d. luffy (one piece)\n  固定外貌: 1boy,black hair,messy hair,brown eyes,scar under eye,slim,rubber body\n  默认服装: 无\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -937,13 +940,14 @@
     "21": {
       "uid": 21,
       "displayIndex": 21,
-      "comment": "海贼王乌索普",
+      "comment": "海贼王索隆",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "乌索普",
-        "Usopp"
+        "索隆",
+        "罗罗诺亚·索隆",
+        "Zoro"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -953,7 +957,7 @@
       "role": 0,
       "depth": 4,
       "order": 421,
-      "content": "角色: 乌索普 (Usopp)\n作品: 海贼王 (One Piece)\nNAI标签: >-\n  [图像标签]\n  英文名: usopp (one piece)\n  固定外貌: 1boy,long nose,black hair,curly hair,brown skin,slim\n  默认服装: 无\n  [/图像标签]",
+      "content": "角色: 罗罗诺亚·索隆 (Roronoa Zoro)\n作品: 海贼王 (One Piece)\nNAI标签: >-\n  [图像标签]\n  英文名: roronoa zoro (one piece)\n  固定外貌: 1boy,green hair,short hair,scarred eye,tanned skin,muscular,abs\n  默认服装: 无\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -980,13 +984,13 @@
     "22": {
       "uid": 22,
       "displayIndex": 22,
-      "comment": "海贼王山治",
+      "comment": "海贼王娜美",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "山治",
-        "Sanji"
+        "娜美",
+        "Nami"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -996,7 +1000,7 @@
       "role": 0,
       "depth": 4,
       "order": 422,
-      "content": "角色: 山治 (Sanji)\n作品: 海贼王 (One Piece)\nNAI标签: >-\n  [图像标签]\n  英文名: sanji (one piece)\n  固定外貌: 1boy,blonde hair,hair covering one eye,curly eyebrow,lean,toned\n  默认服装: 无\n  [/图像标签]",
+      "content": "角色: 娜美 (Nami)\n作品: 海贼王 (One Piece)\nNAI标签: >-\n  [图像标签]\n  英文名: nami (one piece)\n  固定外貌: 1girl,orange hair,short hair,brown eyes,large breasts,narrow waist,wide hips\n  默认服装: 无\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -1023,14 +1027,13 @@
     "23": {
       "uid": 23,
       "displayIndex": 23,
-      "comment": "海贼王罗宾",
+      "comment": "海贼王乌索普",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "罗宾",
-        "妮可·罗宾",
-        "Robin"
+        "乌索普",
+        "Usopp"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -1040,7 +1043,7 @@
       "role": 0,
       "depth": 4,
       "order": 423,
-      "content": "角色: 妮可·罗宾 (Nico Robin)\n作品: 海贼王 (One Piece)\nNAI标签: >-\n  [图像标签]\n  英文名: nico robin (one piece)\n  固定外貌: 1girl,dark-skinned female,black hair,long hair,blue eyes,mature female,large breasts\n  默认服装: 无\n  [/图像标签]",
+      "content": "角色: 乌索普 (Usopp)\n作品: 海贼王 (One Piece)\nNAI标签: >-\n  [图像标签]\n  英文名: usopp (one piece)\n  固定外貌: 1boy,long nose,black hair,curly hair,brown skin,slim\n  默认服装: 无\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -1067,14 +1070,13 @@
     "24": {
       "uid": 24,
       "displayIndex": 24,
-      "comment": "海贼王乔巴",
+      "comment": "海贼王山治",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "乔巴",
-        "托尼托尼·乔巴",
-        "Chopper"
+        "山治",
+        "Sanji"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -1084,7 +1086,7 @@
       "role": 0,
       "depth": 4,
       "order": 424,
-      "content": "角色: 托尼托尼·乔巴 (Tony Tony Chopper)\n作品: 海贼王 (One Piece)\nNAI标签: >-\n  [图像标签]\n  英文名: tony tony chopper (one piece)\n  固定外貌: 1boy,animal,reindeer,blue nose,small,cute\n  默认服装: 无\n  [/图像标签]",
+      "content": "角色: 山治 (Sanji)\n作品: 海贼王 (One Piece)\nNAI标签: >-\n  [图像标签]\n  英文名: sanji (one piece)\n  固定外貌: 1boy,blonde hair,hair covering one eye,curly eyebrow,lean,toned\n  默认服装: 无\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -1111,13 +1113,14 @@
     "25": {
       "uid": 25,
       "displayIndex": 25,
-      "comment": "海贼王弗兰奇",
+      "comment": "海贼王罗宾",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "弗兰奇",
-        "Franky"
+        "罗宾",
+        "妮可·罗宾",
+        "Robin"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -1127,7 +1130,7 @@
       "role": 0,
       "depth": 4,
       "order": 425,
-      "content": "角色: 弗兰奇 (Franky)\n作品: 海贼王 (One Piece)\nNAI标签: >-\n  [图像标签]\n  英文名: franky (one piece)\n  固定外貌: 1boy,cyborg,mechanical arms,blue hair,muscular,large build\n  默认服装: sunglasses\n  [/图像标签]",
+      "content": "角色: 妮可·罗宾 (Nico Robin)\n作品: 海贼王 (One Piece)\nNAI标签: >-\n  [图像标签]\n  英文名: nico robin (one piece)\n  固定外貌: 1girl,dark-skinned female,black hair,long hair,blue eyes,mature female,large breasts\n  默认服装: 无\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -1154,13 +1157,14 @@
     "26": {
       "uid": 26,
       "displayIndex": 26,
-      "comment": "海贼王布鲁克",
+      "comment": "海贼王乔巴",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "布鲁克",
-        "Brook"
+        "乔巴",
+        "托尼托尼·乔巴",
+        "Chopper"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -1170,7 +1174,7 @@
       "role": 0,
       "depth": 4,
       "order": 426,
-      "content": "角色: 布鲁克 (Brook)\n作品: 海贼王 (One Piece)\nNAI标签: >-\n  [图像标签]\n  英文名: brook (one piece)\n  固定外貌: 1boy,skeleton,undead,afro,tall\n  默认服装: cane\n  [/图像标签]",
+      "content": "角色: 托尼托尼·乔巴 (Tony Tony Chopper)\n作品: 海贼王 (One Piece)\nNAI标签: >-\n  [图像标签]\n  英文名: tony tony chopper (one piece)\n  固定外貌: 1boy,animal,reindeer,blue nose,small,cute\n  默认服装: 无\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -1197,14 +1201,13 @@
     "27": {
       "uid": 27,
       "displayIndex": 27,
-      "comment": "海贼王甚平",
+      "comment": "海贼王弗兰奇",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "甚平",
-        "海侠甚平",
-        "Jinbe"
+        "弗兰奇",
+        "Franky"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -1214,7 +1217,7 @@
       "role": 0,
       "depth": 4,
       "order": 427,
-      "content": "角色: 甚平 (Jinbe)\n作品: 海贼王 (One Piece)\nNAI标签: >-\n  [图像标签]\n  英文名: jimbei (one piece)\n  固定外貌: 1boy,fishman,whale shark,blue skin,muscular,large build,gills,webbed hands\n  默认服装: 无\n  [/图像标签]",
+      "content": "角色: 弗兰奇 (Franky)\n作品: 海贼王 (One Piece)\nNAI标签: >-\n  [图像标签]\n  英文名: franky (one piece)\n  固定外貌: 1boy,cyborg,mechanical arms,blue hair,muscular,large build\n  默认服装: sunglasses\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -1241,14 +1244,13 @@
     "28": {
       "uid": 28,
       "displayIndex": 28,
-      "comment": "P4番长",
+      "comment": "海贼王布鲁克",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "番长",
-        "鸣上悠",
-        "Narukami"
+        "布鲁克",
+        "Brook"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -1258,7 +1260,7 @@
       "role": 0,
       "depth": 4,
       "order": 428,
-      "content": "角色: 鸣上悠 (Yu Narukami)\n作品: 女神异闻录4 (Persona 4)\nNAI标签: >-\n  [图像标签]\n  英文名: yu narukami (persona 4)\n  固定外貌: 1boy,silver hair,bowl cut,gray eyes,glasses,lean,toned\n  默认服装: 无\n  [/图像标签]",
+      "content": "角色: 布鲁克 (Brook)\n作品: 海贼王 (One Piece)\nNAI标签: >-\n  [图像标签]\n  英文名: brook (one piece)\n  固定外貌: 1boy,skeleton,undead,afro,tall\n  默认服装: cane\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -1285,14 +1287,14 @@
     "29": {
       "uid": 29,
       "displayIndex": 29,
-      "comment": "P4阳介",
+      "comment": "海贼王甚平",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "阳介",
-        "花村阳介",
-        "Yosuke"
+        "甚平",
+        "海侠甚平",
+        "Jinbe"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -1302,7 +1304,7 @@
       "role": 0,
       "depth": 4,
       "order": 429,
-      "content": "角色: 花村阳介 (Yosuke Hanamura)\n作品: 女神异闻录4 (Persona 4)\nNAI标签: >-\n  [图像标签]\n  英文名: yosuke hanamura (persona 4)\n  固定外貌: 1boy,orange hair,short hair,brown eyes,slim\n  默认服装: headphones\n  [/图像标签]",
+      "content": "角色: 甚平 (Jinbe)\n作品: 海贼王 (One Piece)\nNAI标签: >-\n  [图像标签]\n  英文名: jimbei (one piece)\n  固定外貌: 1boy,fishman,whale shark,blue skin,muscular,large build,gills,webbed hands\n  默认服装: 无\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -1329,14 +1331,14 @@
     "30": {
       "uid": 30,
       "displayIndex": 30,
-      "comment": "P4千枝",
+      "comment": "P4番长",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "千枝",
-        "里中千枝",
-        "Chie"
+        "番长",
+        "鸣上悠",
+        "Narukami"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -1346,7 +1348,7 @@
       "role": 0,
       "depth": 4,
       "order": 430,
-      "content": "角色: 里中千枝 (Chie Satonaka)\n作品: 女神异闻录4 (Persona 4)\nNAI标签: >-\n  [图像标签]\n  英文名: chie satonaka (persona 4)\n  固定外貌: 1girl,brown hair,short hair,brown eyes,athlete,toned,small breasts\n  默认服装: 无\n  [/图像标签]",
+      "content": "角色: 鸣上悠 (Yu Narukami)\n作品: 女神异闻录4 (Persona 4)\nNAI标签: >-\n  [图像标签]\n  英文名: yu narukami (persona 4)\n  固定外貌: 1boy,silver hair,bowl cut,gray eyes,glasses,lean,toned\n  默认服装: 无\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -1373,14 +1375,14 @@
     "31": {
       "uid": 31,
       "displayIndex": 31,
-      "comment": "P4雪子",
+      "comment": "P4阳介",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "雪子",
-        "天城雪子",
-        "Yukiko"
+        "阳介",
+        "花村阳介",
+        "Yosuke"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -1390,7 +1392,7 @@
       "role": 0,
       "depth": 4,
       "order": 431,
-      "content": "角色: 天城雪子 (Yukiko Amagi)\n作品: 女神异闻录4 (Persona 4)\nNAI标签: >-\n  [图像标签]\n  英文名: yukiko amagi (persona 4)\n  固定外貌: 1girl,black hair,long hair,straight hair,dark brown eyes,pale skin,large breasts\n  默认服装: 无\n  [/图像标签]",
+      "content": "角色: 花村阳介 (Yosuke Hanamura)\n作品: 女神异闻录4 (Persona 4)\nNAI标签: >-\n  [图像标签]\n  英文名: yosuke hanamura (persona 4)\n  固定外貌: 1boy,orange hair,short hair,brown eyes,slim\n  默认服装: headphones\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -1417,14 +1419,14 @@
     "32": {
       "uid": 32,
       "displayIndex": 32,
-      "comment": "P4完二",
+      "comment": "P4千枝",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "完二",
-        "巽完二",
-        "Kanji"
+        "千枝",
+        "里中千枝",
+        "Chie"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -1434,7 +1436,7 @@
       "role": 0,
       "depth": 4,
       "order": 432,
-      "content": "角色: 巽完二 (Kanji Tatsumi)\n作品: 女神异闻录4 (Persona 4)\nNAI标签: >-\n  [图像标签]\n  英文名: kanji tatsumi (persona 4)\n  固定外貌: 1boy,bleached hair,blonde hair,piercings,muscular,tall\n  默认服装: 无\n  [/图像标签]",
+      "content": "角色: 里中千枝 (Chie Satonaka)\n作品: 女神异闻录4 (Persona 4)\nNAI标签: >-\n  [图像标签]\n  英文名: chie satonaka (persona 4)\n  固定外貌: 1girl,brown hair,short hair,brown eyes,athlete,toned,small breasts\n  默认服装: 无\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -1461,14 +1463,14 @@
     "33": {
       "uid": 33,
       "displayIndex": 33,
-      "comment": "P4理世",
+      "comment": "P4雪子",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "理世",
-        "久慈川理世",
-        "Rise"
+        "雪子",
+        "天城雪子",
+        "Yukiko"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -1478,7 +1480,7 @@
       "role": 0,
       "depth": 4,
       "order": 433,
-      "content": "角色: 久慈川理世 (Rise Kujikawa)\n作品: 女神异闻录4 (Persona 4)\nNAI标签: >-\n  [图像标签]\n  英文名: rise kujikawa (persona 4)\n  固定外貌: 1girl,brown hair,long hair,twin tails,pink eyes,idol,large breasts\n  默认服装: 无\n  [/图像标签]",
+      "content": "角色: 天城雪子 (Yukiko Amagi)\n作品: 女神异闻录4 (Persona 4)\nNAI标签: >-\n  [图像标签]\n  英文名: yukiko amagi (persona 4)\n  固定外貌: 1girl,black hair,long hair,straight hair,dark brown eyes,pale skin,large breasts\n  默认服装: 无\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -1505,14 +1507,14 @@
     "34": {
       "uid": 34,
       "displayIndex": 34,
-      "comment": "P4直斗",
+      "comment": "P4完二",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "直斗",
-        "白钟直斗",
-        "Naoto"
+        "完二",
+        "巽完二",
+        "Kanji"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -1522,7 +1524,7 @@
       "role": 0,
       "depth": 4,
       "order": 434,
-      "content": "角色: 白钟直斗 (Naoto Shirogane)\n作品: 女神异闻录4 (Persona 4)\nNAI标签: >-\n  [图像标签]\n  英文名: naoto shirogane (persona 4)\n  固定外貌: 1girl,blue hair,short hair,boyish,flat chest\n  默认服装: detective hat\n  [/图像标签]",
+      "content": "角色: 巽完二 (Kanji Tatsumi)\n作品: 女神异闻录4 (Persona 4)\nNAI标签: >-\n  [图像标签]\n  英文名: kanji tatsumi (persona 4)\n  固定外貌: 1boy,bleached hair,blonde hair,piercings,muscular,tall\n  默认服装: 无\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -1549,15 +1551,14 @@
     "35": {
       "uid": 35,
       "displayIndex": 35,
-      "comment": "P4小熊",
+      "comment": "P4理世",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "小熊",
-        "熊田",
-        "クマ",
-        "Teddie"
+        "理世",
+        "久慈川理世",
+        "Rise"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -1567,7 +1568,7 @@
       "role": 0,
       "depth": 4,
       "order": 435,
-      "content": "角色: 小熊 (Teddie)\n作品: 女神异闻录4 (Persona 4)\nNAI标签: >-\n  [图像标签]\n  英文名: teddie (persona 4)\n  固定外貌: 1boy,bear,mascot,cute,round\n  默认服装: red bow tie,zipper on belly\n  [/图像标签]",
+      "content": "角色: 久慈川理世 (Rise Kujikawa)\n作品: 女神异闻录4 (Persona 4)\nNAI标签: >-\n  [图像标签]\n  英文名: rise kujikawa (persona 4)\n  固定外貌: 1girl,brown hair,long hair,twin tails,pink eyes,idol,large breasts\n  默认服装: 无\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -1594,15 +1595,14 @@
     "36": {
       "uid": 36,
       "displayIndex": 36,
-      "comment": "好莱坞玛丽莲梦露",
+      "comment": "P4直斗",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "梦露",
-        "玛丽莲",
-        "玛丽莲·梦露",
-        "Marilyn"
+        "直斗",
+        "白钟直斗",
+        "Naoto"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -1612,7 +1612,7 @@
       "role": 0,
       "depth": 4,
       "order": 436,
-      "content": "角色: 玛丽莲·梦露 (Marilyn Monroe)\n作品: 好莱坞黄金时代\nNAI标签: >-\n  [图像标签]\n  英文名: marilyn monroe\n  固定外貌: 1girl,blonde hair,short curly hair,red lips,beauty mark on cheek,hourglass figure,large breasts,narrow waist\n  默认服装: white dress,halter neck\n  画风: classic hollywood,1950s style,pin-up\n  [/图像标签]",
+      "content": "角色: 白钟直斗 (Naoto Shirogane)\n作品: 女神异闻录4 (Persona 4)\nNAI标签: >-\n  [图像标签]\n  英文名: naoto shirogane (persona 4)\n  固定外貌: 1girl,blue hair,short hair,boyish,flat chest\n  默认服装: detective hat\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -1639,15 +1639,15 @@
     "37": {
       "uid": 37,
       "displayIndex": 37,
-      "comment": "好莱坞奥黛丽赫本",
+      "comment": "P4小熊",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "赫本",
-        "奥黛丽",
-        "奥黛丽·赫本",
-        "Audrey"
+        "小熊",
+        "熊田",
+        "クマ",
+        "Teddie"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -1657,7 +1657,7 @@
       "role": 0,
       "depth": 4,
       "order": 437,
-      "content": "角色: 奥黛丽·赫本 (Audrey Hepburn)\n作品: 好莱坞黄金时代\nNAI标签: >-\n  [图像标签]\n  英文名: audrey hepburn\n  固定外貌: 1girl,short dark hair,bangs,brown eyes,slender,thin eyebrows,elegant,ballet dancer body,long neck,collarbones\n  默认服装: little black dress,pearl necklace\n  画风: classic hollywood,1950s style\n  [/图像标签]",
+      "content": "角色: 小熊 (Teddie)\n作品: 女神异闻录4 (Persona 4)\nNAI标签: >-\n  [图像标签]\n  英文名: teddie (persona 4)\n  固定外貌: 1boy,bear,mascot,cute,round\n  默认服装: red bow tie,zipper on belly\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -1684,15 +1684,15 @@
     "38": {
       "uid": 38,
       "displayIndex": 38,
-      "comment": "好莱坞格蕾丝凯莉",
+      "comment": "好莱坞玛丽莲梦露",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "凯莉",
-        "格蕾丝",
-        "格蕾丝·凯莉",
-        "Grace"
+        "梦露",
+        "玛丽莲",
+        "玛丽莲·梦露",
+        "Marilyn"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -1702,7 +1702,7 @@
       "role": 0,
       "depth": 4,
       "order": 438,
-      "content": "角色: 格蕾丝·凯莉 (Grace Kelly)\n作品: 好莱坞黄金时代\nNAI标签: >-\n  [图像标签]\n  英文名: grace kelly\n  固定外貌: 1girl,blonde hair,french twist updo,blue-gray eyes,fair skin,elegant,aristocratic\n  默认服装: high neck dress,pearl earrings\n  画风: classic hollywood,1950s style,royalty\n  [/图像标签]",
+      "content": "角色: 玛丽莲·梦露 (Marilyn Monroe)\n作品: 好莱坞黄金时代\nNAI标签: >-\n  [图像标签]\n  英文名: marilyn monroe\n  固定外貌: 1girl,blonde hair,short curly hair,red lips,beauty mark on cheek,hourglass figure,large breasts,narrow waist\n  默认服装: white dress,halter neck\n  画风: classic hollywood,1950s style,pin-up\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -1729,14 +1729,15 @@
     "39": {
       "uid": 39,
       "displayIndex": 39,
-      "comment": "火影雏田",
+      "comment": "好莱坞奥黛丽赫本",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "雏田",
-        "日向雏田",
-        "Hinata"
+        "赫本",
+        "奥黛丽",
+        "奥黛丽·赫本",
+        "Audrey"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -1746,7 +1747,7 @@
       "role": 0,
       "depth": 4,
       "order": 439,
-      "content": "角色: 日向雏田 (Hinata Hyuga)\n作品: 火影忍者 (Naruto)\nNAI标签: >-\n  [图像标签]\n  英文名: hinata hyuga (naruto)\n  固定外貌: 1girl,dark blue hair,long hair,hime cut,pale purple eyes,byakugan,fair skin,large breasts,slim,gentle smile\n  默认服装: konoha headband\n  画风: ninja\n  [/图像标签]",
+      "content": "角色: 奥黛丽·赫本 (Audrey Hepburn)\n作品: 好莱坞黄金时代\nNAI标签: >-\n  [图像标签]\n  英文名: audrey hepburn\n  固定外貌: 1girl,short dark hair,bangs,brown eyes,slender,thin eyebrows,elegant,ballet dancer body,long neck,collarbones\n  默认服装: little black dress,pearl necklace\n  画风: classic hollywood,1950s style\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -1773,14 +1774,15 @@
     "40": {
       "uid": 40,
       "displayIndex": 40,
-      "comment": "火影纲手",
+      "comment": "好莱坞格蕾丝凯莉",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "纲手",
-        "Tsunade",
-        "五代目火影"
+        "凯莉",
+        "格蕾丝",
+        "格蕾丝·凯莉",
+        "Grace"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -1790,7 +1792,7 @@
       "role": 0,
       "depth": 4,
       "order": 440,
-      "content": "角色: 纲手 (Tsunade)\n作品: 火影忍者 (Naruto)\nNAI标签: >-\n  [图像标签]\n  英文名: tsunade (naruto)\n  固定外貌: 1girl,blonde hair,twin tails,brown eyes,purple diamond on forehead,huge breasts,narrow waist,wide hips,mature,confident smile\n  默认服装: green haori,sake bottle\n  [/图像标签]",
+      "content": "角色: 格蕾丝·凯莉 (Grace Kelly)\n作品: 好莱坞黄金时代\nNAI标签: >-\n  [图像标签]\n  英文名: grace kelly\n  固定外貌: 1girl,blonde hair,french twist updo,blue-gray eyes,fair skin,elegant,aristocratic\n  默认服装: high neck dress,pearl earrings\n  画风: classic hollywood,1950s style,royalty\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -1817,14 +1819,14 @@
     "41": {
       "uid": 41,
       "displayIndex": 41,
-      "comment": "火影井野",
+      "comment": "火影雏田",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "井野",
-        "山中井野",
-        "Ino"
+        "雏田",
+        "日向雏田",
+        "Hinata"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -1834,7 +1836,7 @@
       "role": 0,
       "depth": 4,
       "order": 441,
-      "content": "角色: 山中井野 (Ino Yamanaka)\n作品: 火影忍者 (Naruto)\nNAI标签: >-\n  [图像标签]\n  英文名: ino yamanaka (naruto)\n  固定外貌: 1girl,blonde hair,long ponytail,blue-green eyes,fair skin,slim,toned,confident expression\n  默认服装: purple crop top\n  画风: kunoichi\n  [/图像标签]",
+      "content": "角色: 日向雏田 (Hinata Hyuga)\n作品: 火影忍者 (Naruto)\nNAI标签: >-\n  [图像标签]\n  英文名: hinata hyuga (naruto)\n  固定外貌: 1girl,dark blue hair,long hair,hime cut,pale purple eyes,byakugan,fair skin,large breasts,slim,gentle smile\n  默认服装: konoha headband\n  画风: ninja\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -1861,14 +1863,14 @@
     "42": {
       "uid": 42,
       "displayIndex": 42,
-      "comment": "火影小樱",
+      "comment": "火影纲手",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "小樱",
-        "春野樱",
-        "Sakura"
+        "纲手",
+        "Tsunade",
+        "五代目火影"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -1878,7 +1880,7 @@
       "role": 0,
       "depth": 4,
       "order": 442,
-      "content": "角色: 春野樱 (Sakura Haruno)\n作品: 火影忍者 (Naruto)\nNAI标签: >-\n  [图像标签]\n  英文名: sakura haruno (naruto)\n  固定外貌: 1girl,pink hair,short hair,green eyes,fair skin,slim,athletic,byakugou seal,forehead mark\n  默认服装: red qipao top\n  画风: kunoichi\n  [/图像标签]",
+      "content": "角色: 纲手 (Tsunade)\n作品: 火影忍者 (Naruto)\nNAI标签: >-\n  [图像标签]\n  英文名: tsunade (naruto)\n  固定外貌: 1girl,blonde hair,twin tails,brown eyes,purple diamond on forehead,huge breasts,narrow waist,wide hips,mature,confident smile\n  默认服装: green haori,sake bottle\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -1905,14 +1907,14 @@
     "43": {
       "uid": 43,
       "displayIndex": 43,
-      "comment": "火影照美冥",
+      "comment": "火影井野",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "照美冥",
-        "水影",
-        "Mei"
+        "井野",
+        "山中井野",
+        "Ino"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -1922,7 +1924,7 @@
       "role": 0,
       "depth": 4,
       "order": 443,
-      "content": "角色: 照美冥 (Mei Terumi)\n作品: 火影忍者 (Naruto)\nNAI标签: >-\n  [图像标签]\n  英文名: mei terumi (naruto)\n  固定外貌: 1girl,long brown hair,curly,blue-green gradient tips,amber eyes,large breasts,narrow waist,mature,red lips,seductive smile\n  默认服装: blue off-shoulder dress\n  画风: mizukage\n  [/图像标签]",
+      "content": "角色: 山中井野 (Ino Yamanaka)\n作品: 火影忍者 (Naruto)\nNAI标签: >-\n  [图像标签]\n  英文名: ino yamanaka (naruto)\n  固定外貌: 1girl,blonde hair,long ponytail,blue-green eyes,fair skin,slim,toned,confident expression\n  默认服装: purple crop top\n  画风: kunoichi\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -1949,14 +1951,14 @@
     "44": {
       "uid": 44,
       "displayIndex": 44,
-      "comment": "海贼王女帝",
+      "comment": "火影小樱",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "女帝",
-        "汉库克",
-        "Boa"
+        "小樱",
+        "春野樱",
+        "Sakura"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -1966,7 +1968,7 @@
       "role": 0,
       "depth": 4,
       "order": 444,
-      "content": "角色: 波雅·汉库克 (Boa Hancock)\n作品: 海贼王 (One Piece)\nNAI标签: >-\n  [图像标签]\n  英文名: boa hancock (one piece)\n  固定外貌: 1girl,black hair,long straight hair,blue eyes,extremely large breasts,impossibly narrow waist,tall,arrogant expression\n  默认服装: gold earrings,red dress,snake earrings\n  画风: empress\n  [/图像标签]",
+      "content": "角色: 春野樱 (Sakura Haruno)\n作品: 火影忍者 (Naruto)\nNAI标签: >-\n  [图像标签]\n  英文名: sakura haruno (naruto)\n  固定外貌: 1girl,pink hair,short hair,green eyes,fair skin,slim,athletic,byakugou seal,forehead mark\n  默认服装: red qipao top\n  画风: kunoichi\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -1993,14 +1995,14 @@
     "45": {
       "uid": 45,
       "displayIndex": 45,
-      "comment": "海贼王薇薇",
+      "comment": "火影照美冥",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "薇薇",
-        "Vivi",
-        "薇薇公主"
+        "照美冥",
+        "水影",
+        "Mei"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -2010,7 +2012,7 @@
       "role": 0,
       "depth": 4,
       "order": 445,
-      "content": "角色: 薇薇 (Vivi)\n作品: 海贼王 (One Piece)\nNAI标签: >-\n  [图像标签]\n  英文名: nefertari vivi (one piece)\n  固定外貌: 1girl,light blue hair,long hair,ponytail,brown eyes,fair skin,slim,princess,elegant,gentle smile\n  默认服装: white dress\n  画风: alabasta\n  [/图像标签]",
+      "content": "角色: 照美冥 (Mei Terumi)\n作品: 火影忍者 (Naruto)\nNAI标签: >-\n  [图像标签]\n  英文名: mei terumi (naruto)\n  固定外貌: 1girl,long brown hair,curly,blue-green gradient tips,amber eyes,large breasts,narrow waist,mature,red lips,seductive smile\n  默认服装: blue off-shoulder dress\n  画风: mizukage\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -2037,14 +2039,14 @@
     "46": {
       "uid": 46,
       "displayIndex": 46,
-      "comment": "海贼王白星",
+      "comment": "海贼王女帝",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "白星",
-        "Shirahoshi",
-        "白星公主"
+        "女帝",
+        "汉库克",
+        "Boa"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -2054,7 +2056,7 @@
       "role": 0,
       "depth": 4,
       "order": 446,
-      "content": "角色: 白星 (Shirahoshi)\n作品: 海贼王 (One Piece)\nNAI标签: >-\n  [图像标签]\n  英文名: shirahoshi (one piece)\n  固定外貌: 1girl,pink hair,very long hair,big blue eyes,tears,fair skin,mermaid,pink tailfin,giant,cute,shy,princess\n  默认服装: 无\n  画风: underwater\n  [/图像标签]",
+      "content": "角色: 波雅·汉库克 (Boa Hancock)\n作品: 海贼王 (One Piece)\nNAI标签: >-\n  [图像标签]\n  英文名: boa hancock (one piece)\n  固定外貌: 1girl,black hair,long straight hair,blue eyes,extremely large breasts,impossibly narrow waist,tall,arrogant expression\n  默认服装: gold earrings,red dress,snake earrings\n  画风: empress\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -2081,14 +2083,14 @@
     "47": {
       "uid": 47,
       "displayIndex": 47,
-      "comment": "原神雷神",
+      "comment": "海贼王薇薇",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "雷电将军",
-        "雷神",
-        "Raiden"
+        "薇薇",
+        "Vivi",
+        "薇薇公主"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -2098,7 +2100,7 @@
       "role": 0,
       "depth": 4,
       "order": 447,
-      "content": "角色: 雷电将军 (Raiden Shogun)\n作品: 原神 (Genshin Impact)\nNAI标签: >-\n  [图像标签]\n  英文名: raiden shogun (genshin impact)\n  固定外貌: 1girl,dark purple hair,long braid,purple eyes,mole under eye,large breasts,stern expression\n  默认服装: hair ornament,japanese armor,hakama,katana\n  画风: inazuma\n  [/图像标签]",
+      "content": "角色: 薇薇 (Vivi)\n作品: 海贼王 (One Piece)\nNAI标签: >-\n  [图像标签]\n  英文名: nefertari vivi (one piece)\n  固定外貌: 1girl,light blue hair,long hair,ponytail,brown eyes,fair skin,slim,princess,elegant,gentle smile\n  默认服装: white dress\n  画风: alabasta\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -2125,14 +2127,14 @@
     "48": {
       "uid": 48,
       "displayIndex": 48,
-      "comment": "原神神子",
+      "comment": "海贼王白星",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "八重神子",
-        "神子",
-        "Miko"
+        "白星",
+        "Shirahoshi",
+        "白星公主"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -2142,7 +2144,7 @@
       "role": 0,
       "depth": 4,
       "order": 448,
-      "content": "角色: 八重神子 (Yae Miko)\n作品: 原神 (Genshin Impact)\nNAI标签: >-\n  [图像标签]\n  英文名: yae miko (genshin impact)\n  固定外貌: 1girl,pink hair,long hair,fox ears,purple eyes,mischievous smile,kitsune\n  默认服装: shrine maiden,red and white kimono\n  画风: inazuma\n  [/图像标签]",
+      "content": "角色: 白星 (Shirahoshi)\n作品: 海贼王 (One Piece)\nNAI标签: >-\n  [图像标签]\n  英文名: shirahoshi (one piece)\n  固定外貌: 1girl,pink hair,very long hair,big blue eyes,tears,fair skin,mermaid,pink tailfin,giant,cute,shy,princess\n  默认服装: 无\n  画风: underwater\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -2169,13 +2171,14 @@
     "49": {
       "uid": 49,
       "displayIndex": 49,
-      "comment": "原神甘雨",
+      "comment": "原神雷神",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "甘雨",
-        "Ganyu"
+        "雷电将军",
+        "雷神",
+        "Raiden"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -2185,7 +2188,7 @@
       "role": 0,
       "depth": 4,
       "order": 449,
-      "content": "角色: 甘雨 (Ganyu)\n作品: 原神 (Genshin Impact)\nNAI标签: >-\n  [图像标签]\n  英文名: ganyu (genshin impact)\n  固定外貌: 1girl,light blue hair,long hair,purple eyes,goat horns,red tips,large breasts,slim waist,half-adeptus,gentle expression\n  默认服装: blue and white qipao,bell collar\n  [/图像标签]",
+      "content": "角色: 雷电将军 (Raiden Shogun)\n作品: 原神 (Genshin Impact)\nNAI标签: >-\n  [图像标签]\n  英文名: raiden shogun (genshin impact)\n  固定外貌: 1girl,dark purple hair,long braid,purple eyes,mole under eye,large breasts,stern expression\n  默认服装: hair ornament,japanese armor,hakama,katana\n  画风: inazuma\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -2212,13 +2215,14 @@
     "50": {
       "uid": 50,
       "displayIndex": 50,
-      "comment": "原神凝光",
+      "comment": "原神神子",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "凝光",
-        "Ningguang"
+        "八重神子",
+        "神子",
+        "Miko"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -2228,7 +2232,7 @@
       "role": 0,
       "depth": 4,
       "order": 450,
-      "content": "角色: 凝光 (Ningguang)\n作品: 原神 (Genshin Impact)\nNAI标签: >-\n  [图像标签]\n  英文名: ningguang (genshin impact)\n  固定外貌: 1girl,white hair,long hair,hairpin,red eyes,elegant,mature,confident,long nails\n  默认服装: gold and white qipao\n  画风: liyue,tianquan,jade chamber\n  [/图像标签]",
+      "content": "角色: 八重神子 (Yae Miko)\n作品: 原神 (Genshin Impact)\nNAI标签: >-\n  [图像标签]\n  英文名: yae miko (genshin impact)\n  固定外貌: 1girl,pink hair,long hair,fox ears,purple eyes,mischievous smile,kitsune\n  默认服装: shrine maiden,red and white kimono\n  画风: inazuma\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -2255,13 +2259,13 @@
     "51": {
       "uid": 51,
       "displayIndex": 51,
-      "comment": "原神琴",
+      "comment": "原神甘雨",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "Jean",
-        "琴团长"
+        "甘雨",
+        "Ganyu"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -2271,7 +2275,7 @@
       "role": 0,
       "depth": 4,
       "order": 451,
-      "content": "角色: 琴 (Jean Gunnhildr)\n作品: 原神 (Genshin Impact)\nNAI标签: >-\n  [图像标签]\n  英文名: jean gunnhildr (genshin impact)\n  固定外貌: 1girl,blonde hair,ponytail,gray-blue eyes,toned,tall,serious expression\n  默认服装: white knight uniform,cape,sword\n  画风: mondstadt,dandelion knight\n  [/图像标签]",
+      "content": "角色: 甘雨 (Ganyu)\n作品: 原神 (Genshin Impact)\nNAI标签: >-\n  [图像标签]\n  英文名: ganyu (genshin impact)\n  固定外貌: 1girl,light blue hair,long hair,purple eyes,goat horns,red tips,large breasts,slim waist,half-adeptus,gentle expression\n  默认服装: blue and white qipao,bell collar\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -2298,15 +2302,13 @@
     "52": {
       "uid": 52,
       "displayIndex": 52,
-      "comment": "好莱坞伊丽莎白泰勒",
+      "comment": "原神凝光",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "伊丽莎白·泰勒",
-        "泰勒",
-        "Elizabeth",
-        "Taylor"
+        "凝光",
+        "Ningguang"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -2316,7 +2318,7 @@
       "role": 0,
       "depth": 4,
       "order": 452,
-      "content": "角色: 伊丽莎白·泰勒 (Elizabeth Taylor)\n作品: 好莱坞黄金时代\nNAI标签: >-\n  [图像标签]\n  英文名: elizabeth taylor\n  固定外貌: 1girl,black hair,dark hair,violet eyes,fair skin,thick eyebrows,red lips,large breasts,narrow waist\n  默认服装: diamond jewelry,elegant dress\n  画风: classic hollywood,1950s style,glamorous\n  [/图像标签]",
+      "content": "角色: 凝光 (Ningguang)\n作品: 原神 (Genshin Impact)\nNAI标签: >-\n  [图像标签]\n  英文名: ningguang (genshin impact)\n  固定外貌: 1girl,white hair,long hair,hairpin,red eyes,elegant,mature,confident,long nails\n  默认服装: gold and white qipao\n  画风: liyue,tianquan,jade chamber\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -2343,15 +2345,13 @@
     "53": {
       "uid": 53,
       "displayIndex": 53,
-      "comment": "好莱坞丽塔海华丝",
+      "comment": "原神琴",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "丽塔·海华丝",
-        "海华丝",
-        "Rita",
-        "Hayworth"
+        "Jean",
+        "琴团长"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -2361,7 +2361,7 @@
       "role": 0,
       "depth": 4,
       "order": 453,
-      "content": "角色: 丽塔·海华丝 (Rita Hayworth)\n作品: 好莱坞黄金时代\nNAI标签: >-\n  [图像标签]\n  英文名: rita hayworth\n  固定外貌: 1girl,red hair,wavy hair,long hair,brown almond eyes,olive skin,red lips,hourglass figure,femme fatale\n  默认服装: black dress,strapless\n  画风: classic hollywood,1940s style,pin-up\n  [/图像标签]",
+      "content": "角色: 琴 (Jean Gunnhildr)\n作品: 原神 (Genshin Impact)\nNAI标签: >-\n  [图像标签]\n  英文名: jean gunnhildr (genshin impact)\n  固定外貌: 1girl,blonde hair,ponytail,gray-blue eyes,toned,tall,serious expression\n  默认服装: white knight uniform,cape,sword\n  画风: mondstadt,dandelion knight\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -2388,15 +2388,15 @@
     "54": {
       "uid": 54,
       "displayIndex": 54,
-      "comment": "好莱坞艾娃加德纳",
+      "comment": "好莱坞伊丽莎白泰勒",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "艾娃·加德纳",
-        "加德纳",
-        "Ava",
-        "Gardner"
+        "伊丽莎白·泰勒",
+        "泰勒",
+        "Elizabeth",
+        "Taylor"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -2406,7 +2406,7 @@
       "role": 0,
       "depth": 4,
       "order": 454,
-      "content": "角色: 艾娃·加德纳 (Ava Gardner)\n作品: 好莱坞黄金时代\nNAI标签: >-\n  [图像标签]\n  英文名: ava gardner\n  固定外貌: 1girl,dark brown hair,wavy long hair,green eyes,high cheekbones,full lips,tanned skin,tall,wild beauty,sultry\n  默认服装: deep v-neck dress\n  画风: classic hollywood,1950s style\n  [/图像标签]",
+      "content": "角色: 伊丽莎白·泰勒 (Elizabeth Taylor)\n作品: 好莱坞黄金时代\nNAI标签: >-\n  [图像标签]\n  英文名: elizabeth taylor\n  固定外貌: 1girl,black hair,dark hair,violet eyes,fair skin,thick eyebrows,red lips,large breasts,narrow waist\n  默认服装: diamond jewelry,elegant dress\n  画风: classic hollywood,1950s style,glamorous\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -2433,15 +2433,15 @@
     "55": {
       "uid": 55,
       "displayIndex": 55,
-      "comment": "好莱坞劳伦白考尔",
+      "comment": "好莱坞丽塔海华丝",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "劳伦·白考尔",
-        "白考尔",
-        "Lauren",
-        "Bacall"
+        "丽塔·海华丝",
+        "海华丝",
+        "Rita",
+        "Hayworth"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -2451,7 +2451,7 @@
       "role": 0,
       "depth": 4,
       "order": 455,
-      "content": "角色: 劳伦·白考尔 (Lauren Bacall)\n作品: 好莱坞黄金时代\nNAI标签: >-\n  [图像标签]\n  英文名: lauren bacall\n  固定外貌: 1girl,blonde brown hair,wavy,green-gray eyes,sharp cheekbones,strong jawline,tall,slim,femme fatale,the look,sultry gaze\n  默认服装: tailored suit\n  画风: classic hollywood,1940s style\n  [/图像标签]",
+      "content": "角色: 丽塔·海华丝 (Rita Hayworth)\n作品: 好莱坞黄金时代\nNAI标签: >-\n  [图像标签]\n  英文名: rita hayworth\n  固定外貌: 1girl,red hair,wavy hair,long hair,brown almond eyes,olive skin,red lips,hourglass figure,femme fatale\n  默认服装: black dress,strapless\n  画风: classic hollywood,1940s style,pin-up\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -2478,15 +2478,15 @@
     "56": {
       "uid": 56,
       "displayIndex": 56,
-      "comment": "好莱坞葛丽泰嘉宝",
+      "comment": "好莱坞艾娃加德纳",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "葛丽泰·嘉宝",
-        "嘉宝",
-        "Greta",
-        "Garbo"
+        "艾娃·加德纳",
+        "加德纳",
+        "Ava",
+        "Gardner"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -2496,7 +2496,7 @@
       "role": 0,
       "depth": 4,
       "order": 456,
-      "content": "角色: 葛丽泰·嘉宝 (Greta Garbo)\n作品: 好莱坞黄金时代\nNAI标签: >-\n  [图像标签]\n  英文名: greta garbo\n  固定外貌: 1girl,platinum blonde hair,short hair,slicked back,blue-gray eyes,deep set,sculpted cheekbones,pale skin,slim,mysterious,androgynous\n  默认服装: 无\n  画风: classic hollywood,1930s style,swedish\n  [/图像标签]",
+      "content": "角色: 艾娃·加德纳 (Ava Gardner)\n作品: 好莱坞黄金时代\nNAI标签: >-\n  [图像标签]\n  英文名: ava gardner\n  固定外貌: 1girl,dark brown hair,wavy long hair,green eyes,high cheekbones,full lips,tanned skin,tall,wild beauty,sultry\n  默认服装: deep v-neck dress\n  画风: classic hollywood,1950s style\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -2523,15 +2523,15 @@
     "57": {
       "uid": 57,
       "displayIndex": 57,
-      "comment": "好莱坞英格丽褒曼",
+      "comment": "好莱坞劳伦白考尔",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "英格丽·褒曼",
-        "褒曼",
-        "Ingrid",
-        "Bergman"
+        "劳伦·白考尔",
+        "白考尔",
+        "Lauren",
+        "Bacall"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -2541,7 +2541,7 @@
       "role": 0,
       "depth": 4,
       "order": 457,
-      "content": "角色: 英格丽·褒曼 (Ingrid Bergman)\n作品: 好莱坞黄金时代\nNAI标签: >-\n  [图像标签]\n  英文名: ingrid bergman\n  固定外貌: 1girl,brown hair,short curly hair,blue-gray eyes,fair skin,natural beauty,healthy,slim,clean look,wholesome\n  默认服装: white blouse\n  画风: classic hollywood,1940s style,swedish,casablanca\n  [/图像标签]",
+      "content": "角色: 劳伦·白考尔 (Lauren Bacall)\n作品: 好莱坞黄金时代\nNAI标签: >-\n  [图像标签]\n  英文名: lauren bacall\n  固定外貌: 1girl,blonde brown hair,wavy,green-gray eyes,sharp cheekbones,strong jawline,tall,slim,femme fatale,the look,sultry gaze\n  默认服装: tailored suit\n  画风: classic hollywood,1940s style\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -2568,15 +2568,15 @@
     "58": {
       "uid": 58,
       "displayIndex": 58,
-      "comment": "好莱坞玛琳黛德丽",
+      "comment": "好莱坞葛丽泰嘉宝",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "玛琳·黛德丽",
-        "黛德丽",
-        "Marlene",
-        "Dietrich"
+        "葛丽泰·嘉宝",
+        "嘉宝",
+        "Greta",
+        "Garbo"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -2586,7 +2586,7 @@
       "role": 0,
       "depth": 4,
       "order": 458,
-      "content": "角色: 玛琳·黛德丽 (Marlene Dietrich)\n作品: 好莱坞黄金时代\nNAI标签: >-\n  [图像标签]\n  英文名: marlene dietrich\n  固定外貌: 1girl,platinum blonde hair,wavy short hair,sharp blue-gray eyes,thin eyebrows,high cheekbones,pale skin,slim,androgynous,femme fatale\n  默认服装: tuxedo,top hat\n  画风: classic hollywood,1930s,german\n  [/图像标签]",
+      "content": "角色: 葛丽泰·嘉宝 (Greta Garbo)\n作品: 好莱坞黄金时代\nNAI标签: >-\n  [图像标签]\n  英文名: greta garbo\n  固定外貌: 1girl,platinum blonde hair,short hair,slicked back,blue-gray eyes,deep set,sculpted cheekbones,pale skin,slim,mysterious,androgynous\n  默认服装: 无\n  画风: classic hollywood,1930s style,swedish\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -2613,15 +2613,15 @@
     "59": {
       "uid": 59,
       "displayIndex": 59,
-      "comment": "好莱坞碧姬芭铎",
+      "comment": "好莱坞英格丽褒曼",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "碧姬·芭铎",
-        "芭铎",
-        "Brigitte",
-        "Bardot"
+        "英格丽·褒曼",
+        "褒曼",
+        "Ingrid",
+        "Bergman"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -2631,7 +2631,7 @@
       "role": 0,
       "depth": 4,
       "order": 459,
-      "content": "角色: 碧姬·芭铎 (Brigitte Bardot)\n作品: 法国新浪潮\nNAI标签: >-\n  [图像标签]\n  英文名: brigitte bardot\n  固定外貌: 1girl,blonde hair,long messy hair,cat eyes,full lips,pout,petite,slim,large breasts,carefree,natural,sultry\n  默认服装: bikini,barefoot\n  画风: french new wave,1960s style,beach\n  [/图像标签]",
+      "content": "角色: 英格丽·褒曼 (Ingrid Bergman)\n作品: 好莱坞黄金时代\nNAI标签: >-\n  [图像标签]\n  英文名: ingrid bergman\n  固定外貌: 1girl,brown hair,short curly hair,blue-gray eyes,fair skin,natural beauty,healthy,slim,clean look,wholesome\n  默认服装: white blouse\n  画风: classic hollywood,1940s style,swedish,casablanca\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -2658,15 +2658,15 @@
     "60": {
       "uid": 60,
       "displayIndex": 60,
-      "comment": "好莱坞索菲亚罗兰",
+      "comment": "好莱坞玛琳黛德丽",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "索菲亚·罗兰",
-        "罗兰",
-        "Sophia",
-        "Loren"
+        "玛琳·黛德丽",
+        "黛德丽",
+        "Marlene",
+        "Dietrich"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -2676,7 +2676,7 @@
       "role": 0,
       "depth": 4,
       "order": 460,
-      "content": "角色: 索菲亚·罗兰 (Sophia Loren)\n作品: 意大利电影黄金时代\nNAI标签: >-\n  [图像标签]\n  英文名: sophia loren\n  固定外貌: 1girl,dark brown hair,long wavy hair,brown eyes,high cheekbones,wide lips,olive skin,tanned,tall,hourglass figure,classic italian beauty,confident smile\n  默认服装: 无\n  画风: 1960s style,glamorous\n  [/图像标签]",
+      "content": "角色: 玛琳·黛德丽 (Marlene Dietrich)\n作品: 好莱坞黄金时代\nNAI标签: >-\n  [图像标签]\n  英文名: marlene dietrich\n  固定外貌: 1girl,platinum blonde hair,wavy short hair,sharp blue-gray eyes,thin eyebrows,high cheekbones,pale skin,slim,androgynous,femme fatale\n  默认服装: tuxedo,top hat\n  画风: classic hollywood,1930s,german\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -2703,15 +2703,15 @@
     "61": {
       "uid": 61,
       "displayIndex": 61,
-      "comment": "好莱坞克劳迪娅卡汀娜",
+      "comment": "好莱坞碧姬芭铎",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "克劳迪娅·卡汀娜",
-        "卡汀娜",
-        "Claudia",
-        "Cardinale"
+        "碧姬·芭铎",
+        "芭铎",
+        "Brigitte",
+        "Bardot"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -2721,7 +2721,7 @@
       "role": 0,
       "depth": 4,
       "order": 461,
-      "content": "角色: 克劳迪娅·卡汀娜 (Claudia Cardinale)\n作品: 意大利电影黄金时代\nNAI标签: >-\n  [图像标签]\n  英文名: claudia cardinale\n  固定外貌: 1girl,black hair,thick long hair,green cat eyes,olive skin,full lips,high cheekbones,hourglass figure,sultry,dark eyeliner,natural beauty\n  默认服装: 无\n  画风: italian,1960s style\n  [/图像标签]",
+      "content": "角色: 碧姬·芭铎 (Brigitte Bardot)\n作品: 法国新浪潮\nNAI标签: >-\n  [图像标签]\n  英文名: brigitte bardot\n  固定外貌: 1girl,blonde hair,long messy hair,cat eyes,full lips,pout,petite,slim,large breasts,carefree,natural,sultry\n  默认服装: bikini,barefoot\n  画风: french new wave,1960s style,beach\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -2748,15 +2748,15 @@
     "62": {
       "uid": 62,
       "displayIndex": 62,
-      "comment": "好莱坞凯瑟琳德纳芙",
+      "comment": "好莱坞索菲亚罗兰",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "凯瑟琳·德纳芙",
-        "德纳芙",
-        "Catherine",
-        "Deneuve"
+        "索菲亚·罗兰",
+        "罗兰",
+        "Sophia",
+        "Loren"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -2766,7 +2766,7 @@
       "role": 0,
       "depth": 4,
       "order": 462,
-      "content": "角色: 凯瑟琳·德纳芙 (Catherine Deneuve)\n作品: 法国新浪潮\nNAI标签: >-\n  [图像标签]\n  英文名: catherine deneuve\n  固定外貌: 1girl,cool blonde hair,straight long hair,ice blue eyes,pale skin,high cheekbones,slim,elegant,cold beauty,reserved expression\n  默认服装: ysl dress\n  画风: french new wave,1960s style\n  [/图像标签]",
+      "content": "角色: 索菲亚·罗兰 (Sophia Loren)\n作品: 意大利电影黄金时代\nNAI标签: >-\n  [图像标签]\n  英文名: sophia loren\n  固定外貌: 1girl,dark brown hair,long wavy hair,brown eyes,high cheekbones,wide lips,olive skin,tanned,tall,hourglass figure,classic italian beauty,confident smile\n  默认服装: 无\n  画风: 1960s style,glamorous\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -2793,15 +2793,15 @@
     "63": {
       "uid": 63,
       "displayIndex": 63,
-      "comment": "好莱坞费雯丽",
+      "comment": "好莱坞克劳迪娅卡汀娜",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "费雯·丽",
-        "费雯丽",
-        "Vivien",
-        "Leigh"
+        "克劳迪娅·卡汀娜",
+        "卡汀娜",
+        "Claudia",
+        "Cardinale"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -2811,7 +2811,7 @@
       "role": 0,
       "depth": 4,
       "order": 463,
-      "content": "角色: 费雯·丽 (Vivien Leigh)\n作品: 好莱坞黄金时代\nNAI标签: >-\n  [图像标签]\n  英文名: vivien leigh\n  固定外貌: 1girl,dark brown hair,short curly hair,emerald green eyes,pale skin,petite,delicate features,butterfly shoulders,fragile beauty,english rose\n  默认服装: victorian dress\n  画风: classic hollywood,1930s style\n  [/图像标签]",
+      "content": "角色: 克劳迪娅·卡汀娜 (Claudia Cardinale)\n作品: 意大利电影黄金时代\nNAI标签: >-\n  [图像标签]\n  英文名: claudia cardinale\n  固定外貌: 1girl,black hair,thick long hair,green cat eyes,olive skin,full lips,high cheekbones,hourglass figure,sultry,dark eyeliner,natural beauty\n  默认服装: 无\n  画风: italian,1960s style\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -2838,15 +2838,15 @@
     "64": {
       "uid": 64,
       "displayIndex": 64,
-      "comment": "好莱坞罗密施奈德",
+      "comment": "好莱坞凯瑟琳德纳芙",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "罗密·施奈德",
-        "施奈德",
-        "Romy",
-        "Schneider"
+        "凯瑟琳·德纳芙",
+        "德纳芙",
+        "Catherine",
+        "Deneuve"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -2856,7 +2856,7 @@
       "role": 0,
       "depth": 4,
       "order": 464,
-      "content": "角色: 罗密·施奈德 (Romy Schneider)\n作品: 欧洲电影\nNAI标签: >-\n  [图像标签]\n  英文名: romy schneider\n  固定外貌: 1girl,dark brown hair,long wavy hair,brown eyes,fair skin,sweet face,slim,classic european beauty,elegant,gentle smile\n  默认服装: princess gown\n  画风: austrian,1950s style,sissi\n  [/图像标签]",
+      "content": "角色: 凯瑟琳·德纳芙 (Catherine Deneuve)\n作品: 法国新浪潮\nNAI标签: >-\n  [图像标签]\n  英文名: catherine deneuve\n  固定外貌: 1girl,cool blonde hair,straight long hair,ice blue eyes,pale skin,high cheekbones,slim,elegant,cold beauty,reserved expression\n  默认服装: ysl dress\n  画风: french new wave,1960s style\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -2883,15 +2883,15 @@
     "65": {
       "uid": 65,
       "displayIndex": 65,
-      "comment": "日本山口百惠",
+      "comment": "好莱坞费雯丽",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "山口百惠",
-        "百惠",
-        "Momoe",
-        "Yamaguchi"
+        "费雯·丽",
+        "费雯丽",
+        "Vivien",
+        "Leigh"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -2901,7 +2901,7 @@
       "role": 0,
       "depth": 4,
       "order": 465,
-      "content": "角色: 山口百惠 (Momoe Yamaguchi)\n作品: 日本昭和演艺圈\nNAI标签: >-\n  [图像标签]\n  英文名: momoe yamaguchi\n  固定外貌: 1girl,black hair,shoulder length,straight,bangs,brown eyes,fair skin,slim,petite,sweet smile,natural beauty,wholesome\n  默认服装: simple dress\n  画风: 1970s japanese idol,showa era\n  [/图像标签]",
+      "content": "角色: 费雯·丽 (Vivien Leigh)\n作品: 好莱坞黄金时代\nNAI标签: >-\n  [图像标签]\n  英文名: vivien leigh\n  固定外貌: 1girl,dark brown hair,short curly hair,emerald green eyes,pale skin,petite,delicate features,butterfly shoulders,fragile beauty,english rose\n  默认服装: victorian dress\n  画风: classic hollywood,1930s style\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -2928,15 +2928,15 @@
     "66": {
       "uid": 66,
       "displayIndex": 66,
-      "comment": "日本原节子",
+      "comment": "好莱坞罗密施奈德",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "原节子",
-        "节子",
-        "Setsuko",
-        "Hara"
+        "罗密·施奈德",
+        "施奈德",
+        "Romy",
+        "Schneider"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -2946,7 +2946,7 @@
       "role": 0,
       "depth": 4,
       "order": 466,
-      "content": "角色: 原节子 (Setsuko Hara)\n作品: 日本昭和电影\nNAI标签: >-\n  [图像标签]\n  英文名: setsuko hara\n  固定外貌: 1girl,black hair,shoulder length,side part,dark brown eyes,fair skin,slim,elegant,classic beauty,gentle smile\n  默认服装: kimono\n  画风: 1950s japanese cinema,yamato nadeshiko,showa era,ozu muse\n  [/图像标签]",
+      "content": "角色: 罗密·施奈德 (Romy Schneider)\n作品: 欧洲电影\nNAI标签: >-\n  [图像标签]\n  英文名: romy schneider\n  固定外貌: 1girl,dark brown hair,long wavy hair,brown eyes,fair skin,sweet face,slim,classic european beauty,elegant,gentle smile\n  默认服装: princess gown\n  画风: austrian,1950s style,sissi\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -2973,15 +2973,15 @@
     "67": {
       "uid": 67,
       "displayIndex": 67,
-      "comment": "华语林青霞",
+      "comment": "日本山口百惠",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "林青霞",
-        "青霞",
-        "Brigitte",
-        "Lin"
+        "山口百惠",
+        "百惠",
+        "Momoe",
+        "Yamaguchi"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -2991,7 +2991,7 @@
       "role": 0,
       "depth": 4,
       "order": 467,
-      "content": "角色: 林青霞 (Brigitte Lin)\n作品: 华语电影\nNAI标签: >-\n  [图像标签]\n  英文名: brigitte lin\n  固定外貌: 1girl,black hair,very long straight hair,dark brown eyes,fair skin,tall,slim,androgynous beauty,confident\n  默认服装: martial arts costume,white robes,sword\n  画风: 1990s hong kong cinema,eastern invincible\n  [/图像标签]",
+      "content": "角色: 山口百惠 (Momoe Yamaguchi)\n作品: 日本昭和演艺圈\nNAI标签: >-\n  [图像标签]\n  英文名: momoe yamaguchi\n  固定外貌: 1girl,black hair,shoulder length,straight,bangs,brown eyes,fair skin,slim,petite,sweet smile,natural beauty,wholesome\n  默认服装: simple dress\n  画风: 1970s japanese idol,showa era\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -3018,15 +3018,15 @@
     "68": {
       "uid": 68,
       "displayIndex": 68,
-      "comment": "华语阮玲玉",
+      "comment": "日本原节子",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "阮玲玉",
-        "玲玉",
-        "Ruan",
-        "Lingyu"
+        "原节子",
+        "节子",
+        "Setsuko",
+        "Hara"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -3036,7 +3036,7 @@
       "role": 0,
       "depth": 4,
       "order": 468,
-      "content": "角色: 阮玲玉 (Ruan Lingyu)\n作品: 中国默片时代\nNAI标签: >-\n  [图像标签]\n  英文名: ruan lingyu\n  固定外貌: 1girl,black hair,short flapper bob,bangs,dark brown eyes,fair skin,slim,petite,melancholic expression,classic beauty\n  默认服装: qipao,cheongsam\n  画风: 1930s shanghai,chinese silent film,tragic\n  [/图像标签]",
+      "content": "角色: 原节子 (Setsuko Hara)\n作品: 日本昭和电影\nNAI标签: >-\n  [图像标签]\n  英文名: setsuko hara\n  固定外貌: 1girl,black hair,shoulder length,side part,dark brown eyes,fair skin,slim,elegant,classic beauty,gentle smile\n  默认服装: kimono\n  画风: 1950s japanese cinema,yamato nadeshiko,showa era,ozu muse\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -3063,14 +3063,15 @@
     "69": {
       "uid": 69,
       "displayIndex": 69,
-      "comment": "华语周璇",
+      "comment": "华语林青霞",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "周璇",
-        "Zhou",
-        "Xuan"
+        "林青霞",
+        "青霞",
+        "Brigitte",
+        "Lin"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -3080,7 +3081,7 @@
       "role": 0,
       "depth": 4,
       "order": 469,
-      "content": "角色: 周璇 (Zhou Xuan)\n作品: 中国民国时期电影与歌坛\nNAI标签: >-\n  [图像标签]\n  英文名: zhou xuan\n  固定外貌: 1girl,black hair,wavy short bob,dark brown eyes,fair skin,slim,petite,sweet face\n  默认服装: qipao,cheongsam\n  画风: 1930s shanghai style,chinese cinema,nostalgic,singer,golden voice\n  [/图像标签]",
+      "content": "角色: 林青霞 (Brigitte Lin)\n作品: 华语电影\nNAI标签: >-\n  [图像标签]\n  英文名: brigitte lin\n  固定外貌: 1girl,black hair,very long straight hair,dark brown eyes,fair skin,tall,slim,androgynous beauty,confident\n  默认服装: martial arts costume,white robes,sword\n  画风: 1990s hong kong cinema,eastern invincible\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -3107,15 +3108,15 @@
     "70": {
       "uid": 70,
       "displayIndex": 70,
-      "comment": "华语王祖贤",
+      "comment": "华语阮玲玉",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "王祖贤",
-        "祖贤",
-        "Joey",
-        "Wong"
+        "阮玲玉",
+        "玲玉",
+        "Ruan",
+        "Lingyu"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -3125,7 +3126,7 @@
       "role": 0,
       "depth": 4,
       "order": 470,
-      "content": "角色: 王祖贤 (Joey Wong)\n作品: 华语电影\nNAI标签: >-\n  [图像标签]\n  英文名: joey wong\n  固定外貌: 1girl,black hair,very long straight hair,dark brown eyes,fair skin,tall,long legs,slim,elegant,ethereal beauty,cool expression\n  默认服装: white dress\n  画风: 1990s hong kong cinema,classic\n  [/图像标签]",
+      "content": "角色: 阮玲玉 (Ruan Lingyu)\n作品: 中国默片时代\nNAI标签: >-\n  [图像标签]\n  英文名: ruan lingyu\n  固定外貌: 1girl,black hair,short flapper bob,bangs,dark brown eyes,fair skin,slim,petite,melancholic expression,classic beauty\n  默认服装: qipao,cheongsam\n  画风: 1930s shanghai,chinese silent film,tragic\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -3152,16 +3153,14 @@
     "71": {
       "uid": 71,
       "displayIndex": 71,
-      "comment": "FF7克劳迪娅(居家)",
+      "comment": "华语周璇",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "克劳迪娅",
-        "克劳迪娅·斯特莱夫",
-        "Claudia",
-        "克劳德的母亲",
-        "克劳德的妈妈"
+        "周璇",
+        "Zhou",
+        "Xuan"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -3171,7 +3170,7 @@
       "role": 0,
       "depth": 4,
       "order": 471,
-      "content": "角色: 克劳迪娅·斯特莱夫 (Claudia Strife) — 居家\n作品: 最终幻想7 (Final Fantasy VII)\nNAI标签: >-\n  [图像标签]\n  英文名: claudia strife (final fantasy vii)\n  固定外貌: 1girl,milf,mature female,blonde hair,blue eyes,smile lines,large breasts,simple dress\n  默认服装: 素色宽松上衣、长裙或围裙、居家便服\n  [/图像标签]",
+      "content": "角色: 周璇 (Zhou Xuan)\n作品: 中国民国时期电影与歌坛\nNAI标签: >-\n  [图像标签]\n  英文名: zhou xuan\n  固定外貌: 1girl,black hair,wavy short bob,dark brown eyes,fair skin,slim,petite,sweet face\n  默认服装: qipao,cheongsam\n  画风: 1930s shanghai style,chinese cinema,nostalgic,singer,golden voice\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -3198,15 +3197,15 @@
     "72": {
       "uid": 72,
       "displayIndex": 72,
-      "comment": "FF7克劳德(少年)",
+      "comment": "华语王祖贤",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "克劳德",
-        "克劳德·斯特莱夫",
-        "Cloud",
-        "斯特莱夫"
+        "王祖贤",
+        "祖贤",
+        "Joey",
+        "Wong"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -3216,7 +3215,7 @@
       "role": 0,
       "depth": 4,
       "order": 472,
-      "content": "角色: 克劳德·斯特莱夫 (Cloud Strife) — 少年\n作品: 最终幻想7 (Final Fantasy VII)\nNAI标签: >-\n  [图像标签]\n  英文名: cloud strife (final fantasy vii), teen\n  固定外貌: 1boy,teen,blonde hair,spiky hair,blue eyes,slim\n  默认服装: 深色简朴上衣和裤子\n  [/图像标签]",
+      "content": "角色: 王祖贤 (Joey Wong)\n作品: 华语电影\nNAI标签: >-\n  [图像标签]\n  英文名: joey wong\n  固定外貌: 1girl,black hair,very long straight hair,dark brown eyes,fair skin,tall,long legs,slim,elegant,ethereal beauty,cool expression\n  默认服装: white dress\n  画风: 1990s hong kong cinema,classic\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -3243,15 +3242,16 @@
     "73": {
       "uid": 73,
       "displayIndex": 73,
-      "comment": "FF7蒂法(少年)",
+      "comment": "FF7克劳迪娅(居家)",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "蒂法",
-        "蒂法·洛克哈特",
-        "Tifa",
-        "洛克哈特"
+        "克劳迪娅",
+        "克劳迪娅·斯特莱夫",
+        "Claudia",
+        "克劳德的母亲",
+        "克劳德的妈妈"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -3261,7 +3261,7 @@
       "role": 0,
       "depth": 4,
       "order": 473,
-      "content": "角色: 蒂法·洛克哈特 (Tifa Lockhart) — 少年\n作品: 最终幻想7 (Final Fantasy VII)\nNAI标签: >-\n  [图像标签]\n  英文名: tifa lockhart (final fantasy vii), teen\n  固定外貌: 1girl,teen,long hair,brown hair,red eyes,slim,simple dress\n  默认服装: 简单连衣裙或短袖上衣加短裤\n  [/图像标签]",
+      "content": "角色: 克劳迪娅·斯特莱夫 (Claudia Strife) — 居家\n作品: 最终幻想7 (Final Fantasy VII)\nNAI标签: >-\n  [图像标签]\n  英文名: claudia strife (final fantasy vii)\n  固定外貌: 1girl,milf,mature female,blonde hair,blue eyes,smile lines,large breasts,simple dress\n  默认服装: 素色宽松上衣、长裙或围裙、居家便服\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -3288,14 +3288,15 @@
     "74": {
       "uid": 74,
       "displayIndex": 74,
-      "comment": "风花雪月艾黛尔贾特",
+      "comment": "FF7克劳德(少年)",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "艾黛尔贾特",
-        "艾黛尔贾特·冯·弗雷斯贝尔古",
-        "Edelgard"
+        "克劳德",
+        "克劳德·斯特莱夫",
+        "Cloud",
+        "斯特莱夫"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -3305,7 +3306,7 @@
       "role": 0,
       "depth": 4,
       "order": 474,
-      "content": "角色: 艾黛尔贾特·冯·弗雷斯贝尔古 (Edelgard von Hresvelg)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: edelgard von hresvelg (fire emblem: three houses)\n  固定外貌: 1girl,long hair,white hair,purple eyes,hair ornament,tiara,slender,medium breasts\n  默认服装: garreg mach monastery uniform,red cape\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 克劳德·斯特莱夫 (Cloud Strife) — 少年\n作品: 最终幻想7 (Final Fantasy VII)\nNAI标签: >-\n  [图像标签]\n  英文名: cloud strife (final fantasy vii), teen\n  固定外貌: 1boy,teen,blonde hair,spiky hair,blue eyes,slim\n  默认服装: 深色简朴上衣和裤子\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -3332,14 +3333,15 @@
     "75": {
       "uid": 75,
       "displayIndex": 75,
-      "comment": "风花雪月休伯特",
+      "comment": "FF7蒂法(少年)",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "休伯特",
-        "休伯特·冯·维斯特拉",
-        "Hubert"
+        "蒂法",
+        "蒂法·洛克哈特",
+        "Tifa",
+        "洛克哈特"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -3349,7 +3351,7 @@
       "role": 0,
       "depth": 4,
       "order": 475,
-      "content": "角色: 休伯特·冯·维斯特拉 (Hubert von Vestra)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: hubert von vestra (fire emblem: three houses)\n  固定外貌: 1boy,short black hair,red eyes,pale skin,tall,slender,gloves\n  默认服装: garreg mach monastery uniform,black cape\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 蒂法·洛克哈特 (Tifa Lockhart) — 少年\n作品: 最终幻想7 (Final Fantasy VII)\nNAI标签: >-\n  [图像标签]\n  英文名: tifa lockhart (final fantasy vii), teen\n  固定外貌: 1girl,teen,long hair,brown hair,red eyes,slim,simple dress\n  默认服装: 简单连衣裙或短袖上衣加短裤\n  [/图像标签]",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -3376,14 +3378,14 @@
     "76": {
       "uid": 76,
       "displayIndex": 76,
-      "comment": "风花雪月菲尔迪南特",
+      "comment": "风花雪月艾黛尔贾特",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "菲尔迪南特",
-        "菲尔迪南特·冯·艾吉尔",
-        "Ferdinand"
+        "艾黛尔贾特",
+        "艾黛尔贾特·冯·弗雷斯贝尔古",
+        "Edelgard"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -3393,7 +3395,7 @@
       "role": 0,
       "depth": 4,
       "order": 476,
-      "content": "角色: 菲尔迪南特·冯·艾吉尔 (Ferdinand von Aegir)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: ferdinand von aegir (fire emblem: three houses)\n  固定外貌: 1boy,long orange hair,green eyes,ponytail,tall,slender,noble\n  默认服装: garreg mach monastery uniform,yellow cape\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 艾黛尔贾特·冯·弗雷斯贝尔古 (Edelgard von Hresvelg)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: edelgard von hresvelg (fire emblem: three houses)\n  固定外貌: 1girl,long hair,white hair,purple eyes,hair ornament,tiara,slender,medium breasts\n  默认服装: garreg mach monastery uniform,red cape\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -3420,14 +3422,14 @@
     "77": {
       "uid": 77,
       "displayIndex": 77,
-      "comment": "风花雪月林哈特",
+      "comment": "风花雪月休伯特",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "林哈特",
-        "林哈特·冯·海弗林格",
-        "Linhardt"
+        "休伯特",
+        "休伯特·冯·维斯特拉",
+        "Hubert"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -3437,7 +3439,7 @@
       "role": 0,
       "depth": 4,
       "order": 477,
-      "content": "角色: 林哈特·冯·海弗林格 (Linhardt von Hevring)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: linhardt von hevring (fire emblem: three houses)\n  固定外貌: 1boy,long white hair,green eyes,low ponytail,slender,sleepy expression\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 休伯特·冯·维斯特拉 (Hubert von Vestra)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: hubert von vestra (fire emblem: three houses)\n  固定外貌: 1boy,short black hair,red eyes,pale skin,tall,slender,gloves\n  默认服装: garreg mach monastery uniform,black cape\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -3464,14 +3466,14 @@
     "78": {
       "uid": 78,
       "displayIndex": 78,
-      "comment": "风花雪月卡斯帕尔",
+      "comment": "风花雪月菲尔迪南特",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "卡斯帕尔",
-        "卡斯帕尔·冯·伯格利兹",
-        "Caspar"
+        "菲尔迪南特",
+        "菲尔迪南特·冯·艾吉尔",
+        "Ferdinand"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -3481,7 +3483,7 @@
       "role": 0,
       "depth": 4,
       "order": 478,
-      "content": "角色: 卡斯帕尔·冯·伯格利兹 (Caspar von Bergliez)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: caspar von bergliez (fire emblem: three houses)\n  固定外貌: 1boy,short blue hair,blue eyes,muscular,short,tomboyish\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 菲尔迪南特·冯·艾吉尔 (Ferdinand von Aegir)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: ferdinand von aegir (fire emblem: three houses)\n  固定外貌: 1boy,long orange hair,green eyes,ponytail,tall,slender,noble\n  默认服装: garreg mach monastery uniform,yellow cape\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -3508,14 +3510,14 @@
     "79": {
       "uid": 79,
       "displayIndex": 79,
-      "comment": "风花雪月贝尔娜提塔",
+      "comment": "风花雪月林哈特",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "贝尔娜提塔",
-        "贝尔娜提塔·冯·瓦力",
-        "Bernadetta"
+        "林哈特",
+        "林哈特·冯·海弗林格",
+        "Linhardt"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -3525,7 +3527,7 @@
       "role": 0,
       "depth": 4,
       "order": 479,
-      "content": "角色: 贝尔娜提塔·冯·瓦力 (Bernadetta von Varley)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: bernadetta von varley (fire emblem: three houses)\n  固定外貌: 1girl,short grey hair,purple eyes,bangs,hair ribbon,shy expression,small breasts\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 林哈特·冯·海弗林格 (Linhardt von Hevring)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: linhardt von hevring (fire emblem: three houses)\n  固定外貌: 1boy,long white hair,green eyes,low ponytail,slender,sleepy expression\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -3552,14 +3554,14 @@
     "80": {
       "uid": 80,
       "displayIndex": 80,
-      "comment": "风花雪月多洛缇雅",
+      "comment": "风花雪月卡斯帕尔",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "多洛缇雅",
-        "多洛缇雅·亚诺特",
-        "Dorothea"
+        "卡斯帕尔",
+        "卡斯帕尔·冯·伯格利兹",
+        "Caspar"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -3569,7 +3571,7 @@
       "role": 0,
       "depth": 4,
       "order": 480,
-      "content": "角色: 多洛缇雅·亚诺特 (Dorothea Arnault)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: dorothea arnault (fire emblem: three houses)\n  固定外貌: 1girl,long brown hair,brown eyes,wavy hair,hair ribbon,beauty mark,large breasts\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 卡斯帕尔·冯·伯格利兹 (Caspar von Bergliez)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: caspar von bergliez (fire emblem: three houses)\n  固定外貌: 1boy,short blue hair,blue eyes,muscular,short,tomboyish\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -3596,14 +3598,14 @@
     "81": {
       "uid": 81,
       "displayIndex": 81,
-      "comment": "风花雪月佩托拉",
+      "comment": "风花雪月贝尔娜提塔",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "佩托拉",
-        "佩托拉·马克尼尔艾",
-        "Petra"
+        "贝尔娜提塔",
+        "贝尔娜提塔·冯·瓦力",
+        "Bernadetta"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -3613,7 +3615,7 @@
       "role": 0,
       "depth": 4,
       "order": 481,
-      "content": "角色: 佩托拉·马克尼尔艾 (Petra Macneary)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: petra macneary (fire emblem: three houses)\n  固定外貌: 1girl,long purple hair,dark skin,purple eyes,facial mark,tattoo,athletic\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 贝尔娜提塔·冯·瓦力 (Bernadetta von Varley)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: bernadetta von varley (fire emblem: three houses)\n  固定外貌: 1girl,short grey hair,purple eyes,bangs,hair ribbon,shy expression,small breasts\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -3640,14 +3642,14 @@
     "82": {
       "uid": 82,
       "displayIndex": 82,
-      "comment": "风花雪月帝弥托利",
+      "comment": "风花雪月多洛缇雅",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "帝弥托利",
-        "帝弥托利·亚历山大·布雷达德",
-        "Dimitri"
+        "多洛缇雅",
+        "多洛缇雅·亚诺特",
+        "Dorothea"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -3657,7 +3659,7 @@
       "role": 0,
       "depth": 4,
       "order": 482,
-      "content": "角色: 帝弥托利·亚历山大·布雷达德 (Dimitri Alexandre Blaiddyd)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: dimitri alexandre blaiddyd (fire emblem: three houses)\n  固定外貌: 1boy,short blonde hair,blue eyes,tall,muscular,prince\n  默认服装: garreg mach monastery uniform,blue cape\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 多洛缇雅·亚诺特 (Dorothea Arnault)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: dorothea arnault (fire emblem: three houses)\n  固定外貌: 1girl,long brown hair,brown eyes,wavy hair,hair ribbon,beauty mark,large breasts\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -3684,14 +3686,14 @@
     "83": {
       "uid": 83,
       "displayIndex": 83,
-      "comment": "风花雪月杜笃",
+      "comment": "风花雪月佩托拉",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "杜笃",
-        "杜笃·莫里纳罗",
-        "Dedue"
+        "佩托拉",
+        "佩托拉·马克尼尔艾",
+        "Petra"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -3701,7 +3703,7 @@
       "role": 0,
       "depth": 4,
       "order": 483,
-      "content": "角色: 杜笃·莫里纳罗 (Dedue Molinaro)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: dedue molinaro (fire emblem: three houses)\n  固定外貌: 1boy,bald,dark skin,green eyes,tall,muscular,scar,earrings\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 佩托拉·马克尼尔艾 (Petra Macneary)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: petra macneary (fire emblem: three houses)\n  固定外貌: 1girl,long purple hair,dark skin,purple eyes,facial mark,tattoo,athletic\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -3728,14 +3730,14 @@
     "84": {
       "uid": 84,
       "displayIndex": 84,
-      "comment": "风花雪月菲利克斯",
+      "comment": "风花雪月帝弥托利",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "菲利克斯",
-        "菲利克斯·雨果·弗拉达利乌斯",
-        "Felix"
+        "帝弥托利",
+        "帝弥托利·亚历山大·布雷达德",
+        "Dimitri"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -3745,7 +3747,7 @@
       "role": 0,
       "depth": 4,
       "order": 484,
-      "content": "角色: 菲利克斯·雨果·弗拉达利乌斯 (Felix Hugo Fraldarius)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: felix hugo fraldarius (fire emblem: three houses)\n  固定外貌: 1boy,short black hair,amber eyes,serious expression,slender,sword\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 帝弥托利·亚历山大·布雷达德 (Dimitri Alexandre Blaiddyd)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: dimitri alexandre blaiddyd (fire emblem: three houses)\n  固定外貌: 1boy,short blonde hair,blue eyes,tall,muscular,prince\n  默认服装: garreg mach monastery uniform,blue cape\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -3772,14 +3774,14 @@
     "85": {
       "uid": 85,
       "displayIndex": 85,
-      "comment": "风花雪月亚修",
+      "comment": "风花雪月杜笃",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "亚修",
-        "亚修·乌贝尔特",
-        "Ashe"
+        "杜笃",
+        "杜笃·莫里纳罗",
+        "Dedue"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -3789,7 +3791,7 @@
       "role": 0,
       "depth": 4,
       "order": 485,
-      "content": "角色: 亚修·乌贝尔特 (Ashe Ubert)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: ashe ubert (fire emblem: three houses)\n  固定外貌: 1boy,short grey hair,green eyes,freckles,young appearance,bow\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 杜笃·莫里纳罗 (Dedue Molinaro)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: dedue molinaro (fire emblem: three houses)\n  固定外貌: 1boy,bald,dark skin,green eyes,tall,muscular,scar,earrings\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -3816,14 +3818,14 @@
     "86": {
       "uid": 86,
       "displayIndex": 86,
-      "comment": "风花雪月希尔凡",
+      "comment": "风花雪月菲利克斯",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "希尔凡",
-        "希尔凡·约瑟·戈提耶",
-        "Sylvain"
+        "菲利克斯",
+        "菲利克斯·雨果·弗拉达利乌斯",
+        "Felix"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -3833,7 +3835,7 @@
       "role": 0,
       "depth": 4,
       "order": 486,
-      "content": "角色: 希尔凡·约瑟·戈提耶 (Sylvain Jose Gautier)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: sylvain jose gautier (fire emblem: three houses)\n  固定外貌: 1boy,long red hair,brown eyes,wavy hair,charming smile,tall\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 菲利克斯·雨果·弗拉达利乌斯 (Felix Hugo Fraldarius)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: felix hugo fraldarius (fire emblem: three houses)\n  固定外貌: 1boy,short black hair,amber eyes,serious expression,slender,sword\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -3860,14 +3862,14 @@
     "87": {
       "uid": 87,
       "displayIndex": 87,
-      "comment": "风花雪月梅尔赛德司",
+      "comment": "风花雪月亚修",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "梅尔赛德司",
-        "梅尔赛德司·冯·马尔特利兹",
-        "Mercedes"
+        "亚修",
+        "亚修·乌贝尔特",
+        "Ashe"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -3877,7 +3879,7 @@
       "role": 0,
       "depth": 4,
       "order": 487,
-      "content": "角色: 梅尔赛德司·冯·马尔特利兹 (Mercedes von Martritz)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: mercedes von martritz (fire emblem: three houses)\n  固定外貌: 1girl,long blonde hair,blue eyes,gentle smile,large breasts,motherly\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 亚修·乌贝尔特 (Ashe Ubert)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: ashe ubert (fire emblem: three houses)\n  固定外貌: 1boy,short grey hair,green eyes,freckles,young appearance,bow\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -3904,14 +3906,14 @@
     "88": {
       "uid": 88,
       "displayIndex": 88,
-      "comment": "风花雪月雅妮特",
+      "comment": "风花雪月希尔凡",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "雅妮特",
-        "雅妮特·凡汀·多米尼克",
-        "Annette"
+        "希尔凡",
+        "希尔凡·约瑟·戈提耶",
+        "Sylvain"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -3921,7 +3923,7 @@
       "role": 0,
       "depth": 4,
       "order": 488,
-      "content": "角色: 雅妮特·凡汀·多米尼克 (Annette Fantine Dominic)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: annette fantine dominic (fire emblem: three houses)\n  固定外貌: 1girl,short orange hair,blue eyes,twintails,energetic smile,small breasts\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 希尔凡·约瑟·戈提耶 (Sylvain Jose Gautier)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: sylvain jose gautier (fire emblem: three houses)\n  固定外貌: 1boy,long red hair,brown eyes,wavy hair,charming smile,tall\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -3948,14 +3950,14 @@
     "89": {
       "uid": 89,
       "displayIndex": 89,
-      "comment": "风花雪月英谷莉特",
+      "comment": "风花雪月梅尔赛德司",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "英谷莉特",
-        "英谷莉特·布兰德尔·加拉提亚",
-        "Ingrid"
+        "梅尔赛德司",
+        "梅尔赛德司·冯·马尔特利兹",
+        "Mercedes"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -3965,7 +3967,7 @@
       "role": 0,
       "depth": 4,
       "order": 489,
-      "content": "角色: 英谷莉特·布兰德尔·加拉提亚 (Ingrid Brandl Galatea)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: ingrid brandl galatea (fire emblem: three houses)\n  固定外貌: 1girl,long blonde hair,green eyes,ponytail,athletic,serious expression\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 梅尔赛德司·冯·马尔特利兹 (Mercedes von Martritz)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: mercedes von martritz (fire emblem: three houses)\n  固定外貌: 1girl,long blonde hair,blue eyes,gentle smile,large breasts,motherly\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -3992,14 +3994,14 @@
     "90": {
       "uid": 90,
       "displayIndex": 90,
-      "comment": "风花雪月克劳德",
+      "comment": "风花雪月雅妮特",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "克劳德",
-        "克劳德·冯·里根",
-        "Claude"
+        "雅妮特",
+        "雅妮特·凡汀·多米尼克",
+        "Annette"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -4009,7 +4011,7 @@
       "role": 0,
       "depth": 4,
       "order": 490,
-      "content": "角色: 克劳德·冯·里根 (Claude von Riegan)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: claude von riegan (fire emblem: three houses)\n  固定外貌: 1boy,short brown hair,green eyes,brown skin,earrings,smile,tall\n  默认服装: garreg mach monastery uniform,yellow cape\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 雅妮特·凡汀·多米尼克 (Annette Fantine Dominic)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: annette fantine dominic (fire emblem: three houses)\n  固定外貌: 1girl,short orange hair,blue eyes,twintails,energetic smile,small breasts\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -4036,14 +4038,14 @@
     "91": {
       "uid": 91,
       "displayIndex": 91,
-      "comment": "风花雪月洛廉兹",
+      "comment": "风花雪月英谷莉特",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "洛廉兹",
-        "洛廉兹·赫尔曼·格洛斯特",
-        "Lorenz"
+        "英谷莉特",
+        "英谷莉特·布兰德尔·加拉提亚",
+        "Ingrid"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -4053,7 +4055,7 @@
       "role": 0,
       "depth": 4,
       "order": 491,
-      "content": "角色: 洛廉兹·赫尔曼·格洛斯特 (Lorenz Hellman Gloucester)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: lorenz hellman gloucester (fire emblem: three houses)\n  固定外貌: 1boy,long purple hair,purple eyes,noble attitude,slender,rose\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 英谷莉特·布兰德尔·加拉提亚 (Ingrid Brandl Galatea)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: ingrid brandl galatea (fire emblem: three houses)\n  固定外貌: 1girl,long blonde hair,green eyes,ponytail,athletic,serious expression\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -4080,14 +4082,14 @@
     "92": {
       "uid": 92,
       "displayIndex": 92,
-      "comment": "风花雪月拉斐尔",
+      "comment": "风花雪月克劳德",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "拉斐尔",
-        "拉斐尔·柯尔斯坦",
-        "Raphael"
+        "克劳德",
+        "克劳德·冯·里根",
+        "Claude"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -4097,7 +4099,7 @@
       "role": 0,
       "depth": 4,
       "order": 492,
-      "content": "角色: 拉斐尔·柯尔斯坦 (Raphael Kirsten)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: raphael kirsten (fire emblem: three houses)\n  固定外貌: 1boy,short orange hair,green eyes,muscular,large build,smile\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 克劳德·冯·里根 (Claude von Riegan)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: claude von riegan (fire emblem: three houses)\n  固定外貌: 1boy,short brown hair,green eyes,brown skin,earrings,smile,tall\n  默认服装: garreg mach monastery uniform,yellow cape\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -4124,14 +4126,14 @@
     "93": {
       "uid": 93,
       "displayIndex": 93,
-      "comment": "风花雪月伊古纳兹",
+      "comment": "风花雪月洛廉兹",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "伊古纳兹",
-        "伊古纳兹·维克托",
-        "Ignatz"
+        "洛廉兹",
+        "洛廉兹·赫尔曼·格洛斯特",
+        "Lorenz"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -4141,7 +4143,7 @@
       "role": 0,
       "depth": 4,
       "order": 493,
-      "content": "角色: 伊古纳兹·维克托 (Ignatz Victor)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: ignatz victor (fire emblem: three houses)\n  固定外貌: 1boy,short green hair,green eyes,glasses,slender,gentle\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 洛廉兹·赫尔曼·格洛斯特 (Lorenz Hellman Gloucester)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: lorenz hellman gloucester (fire emblem: three houses)\n  固定外貌: 1boy,long purple hair,purple eyes,noble attitude,slender,rose\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -4168,14 +4170,14 @@
     "94": {
       "uid": 94,
       "displayIndex": 94,
-      "comment": "风花雪月莉丝缇亚",
+      "comment": "风花雪月拉斐尔",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "莉丝缇亚",
-        "莉丝缇亚·冯·柯德利雅",
-        "Lysithea"
+        "拉斐尔",
+        "拉斐尔·柯尔斯坦",
+        "Raphael"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -4185,7 +4187,7 @@
       "role": 0,
       "depth": 4,
       "order": 494,
-      "content": "角色: 莉丝缇亚·冯·柯德利雅 (Lysithea von Ordelia)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: lysithea von ordelia (fire emblem: three houses)\n  固定外貌: 1girl,long white hair,pink eyes,hair ribbon,small stature,loli\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 拉斐尔·柯尔斯坦 (Raphael Kirsten)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: raphael kirsten (fire emblem: three houses)\n  固定外貌: 1boy,short orange hair,green eyes,muscular,large build,smile\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -4212,14 +4214,14 @@
     "95": {
       "uid": 95,
       "displayIndex": 95,
-      "comment": "风花雪月玛莉安奴",
+      "comment": "风花雪月伊古纳兹",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "玛莉安奴",
-        "玛莉安奴·冯·爱德蒙",
-        "Marianne"
+        "伊古纳兹",
+        "伊古纳兹·维克托",
+        "Ignatz"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -4229,7 +4231,7 @@
       "role": 0,
       "depth": 4,
       "order": 495,
-      "content": "角色: 玛莉安奴·冯·爱德蒙 (Marianne von Edmund)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: marianne von edmund (fire emblem: three houses)\n  固定外貌: 1girl,short blue hair,grey eyes,braids,shy expression,modest\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 伊古纳兹·维克托 (Ignatz Victor)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: ignatz victor (fire emblem: three houses)\n  固定外貌: 1boy,short green hair,green eyes,glasses,slender,gentle\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -4256,14 +4258,14 @@
     "96": {
       "uid": 96,
       "displayIndex": 96,
-      "comment": "风花雪月希尔妲",
+      "comment": "风花雪月莉丝缇亚",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "希尔妲",
-        "希尔妲·瓦伦丁·戈内利尔",
-        "Hilda"
+        "莉丝缇亚",
+        "莉丝缇亚·冯·柯德利雅",
+        "Lysithea"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -4273,7 +4275,7 @@
       "role": 0,
       "depth": 4,
       "order": 496,
-      "content": "角色: 希尔妲·瓦伦丁·戈内利尔 (Hilda Valentine Goneril)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: hilda valentine goneril (fire emblem: three houses)\n  固定外貌: 1girl,long pink hair,twintails,pink eyes,hair ribbon,charming smile\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 莉丝缇亚·冯·柯德利雅 (Lysithea von Ordelia)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: lysithea von ordelia (fire emblem: three houses)\n  固定外貌: 1girl,long white hair,pink eyes,hair ribbon,small stature,loli\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -4300,14 +4302,14 @@
     "97": {
       "uid": 97,
       "displayIndex": 97,
-      "comment": "风花雪月雷欧妮",
+      "comment": "风花雪月玛莉安奴",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "雷欧妮",
-        "雷欧妮·皮涅利",
-        "Leonie"
+        "玛莉安奴",
+        "玛莉安奴·冯·爱德蒙",
+        "Marianne"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -4317,7 +4319,7 @@
       "role": 0,
       "depth": 4,
       "order": 497,
-      "content": "角色: 雷欧妮·皮涅利 (Leonie Pinelli)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: leonie pinelli (fire emblem: three houses)\n  固定外貌: 1girl,short orange hair,green eyes,ponytail,tomboy,athletic\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 玛莉安奴·冯·爱德蒙 (Marianne von Edmund)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: marianne von edmund (fire emblem: three houses)\n  固定外貌: 1girl,short blue hair,grey eyes,braids,shy expression,modest\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -4344,13 +4346,14 @@
     "98": {
       "uid": 98,
       "displayIndex": 98,
-      "comment": "风花雪月蕾雅",
+      "comment": "风花雪月希尔妲",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "蕾雅",
-        "Rhea"
+        "希尔妲",
+        "希尔妲·瓦伦丁·戈内利尔",
+        "Hilda"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -4360,7 +4363,7 @@
       "role": 0,
       "depth": 4,
       "order": 498,
-      "content": "角色: 蕾雅 (Rhea)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: rhea (fire emblem: three houses)\n  固定外貌: 1girl,long green hair,green eyes,long dress,divine aura,mature,large breasts\n  默认服装: archbishop robe,white dress\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 希尔妲·瓦伦丁·戈内利尔 (Hilda Valentine Goneril)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: hilda valentine goneril (fire emblem: three houses)\n  固定外貌: 1girl,long pink hair,twintails,pink eyes,hair ribbon,charming smile\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -4387,13 +4390,14 @@
     "99": {
       "uid": 99,
       "displayIndex": 99,
-      "comment": "风花雪月西提司",
+      "comment": "风花雪月雷欧妮",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "西提司",
-        "Seteth"
+        "雷欧妮",
+        "雷欧妮·皮涅利",
+        "Leonie"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -4403,7 +4407,7 @@
       "role": 0,
       "depth": 4,
       "order": 499,
-      "content": "角色: 西提司 (Seteth)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: seteth (fire emblem: three houses)\n  固定外貌: 1boy,short green hair,green eyes,serious expression,tall,formal attire\n  默认服装: archbishop robe\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 雷欧妮·皮涅利 (Leonie Pinelli)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: leonie pinelli (fire emblem: three houses)\n  固定外貌: 1girl,short orange hair,green eyes,ponytail,tomboy,athletic\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -4430,13 +4434,13 @@
     "100": {
       "uid": 100,
       "displayIndex": 100,
-      "comment": "风花雪月芙莲",
+      "comment": "风花雪月蕾雅",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "芙莲",
-        "Flayn"
+        "蕾雅",
+        "Rhea"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -4446,7 +4450,7 @@
       "role": 0,
       "depth": 4,
       "order": 500,
-      "content": "角色: 芙莲 (Flayn)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: flayn (fire emblem: three houses)\n  固定外貌: 1girl,long green hair,green eyes,long dress,young appearance,hair ornament,small breasts\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 蕾雅 (Rhea)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: rhea (fire emblem: three houses)\n  固定外貌: 1girl,long green hair,green eyes,long dress,divine aura,mature,large breasts\n  默认服装: archbishop robe,white dress\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -4473,14 +4477,13 @@
     "101": {
       "uid": 101,
       "displayIndex": 101,
-      "comment": "风花雪月玛努艾拉",
+      "comment": "风花雪月西提司",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "玛努艾拉",
-        "玛努艾拉·卡萨格兰达",
-        "Manuela"
+        "西提司",
+        "Seteth"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -4490,7 +4493,7 @@
       "role": 0,
       "depth": 4,
       "order": 501,
-      "content": "角色: 玛努艾拉·卡萨格兰达 (Manuela Casagranda)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: manuela casagranda (fire emblem: three houses)\n  固定外貌: 1woman,long brown hair,brown eyes,mature,beauty mark,low-cut dress,large breasts\n  默认服装: teacher uniform,red dress\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 西提司 (Seteth)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: seteth (fire emblem: three houses)\n  固定外貌: 1boy,short green hair,green eyes,serious expression,tall,formal attire\n  默认服装: archbishop robe\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -4517,14 +4520,13 @@
     "102": {
       "uid": 102,
       "displayIndex": 102,
-      "comment": "风花雪月汉尼曼",
+      "comment": "风花雪月芙莲",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "汉尼曼",
-        "汉尼曼·冯·艾萨尔",
-        "Hanneman"
+        "芙莲",
+        "Flayn"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -4534,7 +4536,7 @@
       "role": 0,
       "depth": 4,
       "order": 502,
-      "content": "角色: 汉尼曼·冯·艾萨尔 (Hanneman von Essar)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: hanneman von essar (fire emblem: three houses)\n  固定外貌: 1man,grey hair,long hair,beard,monocle,mature,slender,scholarly\n  默认服装: teacher uniform\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 芙莲 (Flayn)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: flayn (fire emblem: three houses)\n  固定外貌: 1girl,long green hair,green eyes,long dress,young appearance,hair ornament,small breasts\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -4561,14 +4563,14 @@
     "103": {
       "uid": 103,
       "displayIndex": 103,
-      "comment": "风花雪月杰拉尔特",
+      "comment": "风花雪月玛努艾拉",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "杰拉尔特",
-        "杰拉尔特·卢斯·艾斯纳",
-        "Jeralt"
+        "玛努艾拉",
+        "玛努艾拉·卡萨格兰达",
+        "Manuela"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -4578,7 +4580,7 @@
       "role": 0,
       "depth": 4,
       "order": 503,
-      "content": "角色: 杰拉尔特·卢斯·艾斯纳 (Jeralt Reus Eisner)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: jeralt reus eisner (fire emblem: three houses)\n  固定外貌: 1man,short blonde hair,beard,muscular,mature,scar,armor\n  默认服装: knight armor\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 玛努艾拉·卡萨格兰达 (Manuela Casagranda)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: manuela casagranda (fire emblem: three houses)\n  固定外貌: 1woman,long brown hair,brown eyes,mature,beauty mark,low-cut dress,large breasts\n  默认服装: teacher uniform,red dress\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -4605,13 +4607,14 @@
     "104": {
       "uid": 104,
       "displayIndex": 104,
-      "comment": "风花雪月卡多莉奴",
+      "comment": "风花雪月汉尼曼",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "卡多莉奴",
-        "Catherine"
+        "汉尼曼",
+        "汉尼曼·冯·艾萨尔",
+        "Hanneman"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -4621,7 +4624,7 @@
       "role": 0,
       "depth": 4,
       "order": 504,
-      "content": "角色: 卡多莉奴 (Catherine)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: catherine (fire emblem: three houses)\n  固定外貌: 1girl,short red hair,red eyes,ponytail,muscular,sword,armor\n  默认服装: knight armor,red cape\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 汉尼曼·冯·艾萨尔 (Hanneman von Essar)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: hanneman von essar (fire emblem: three houses)\n  固定外貌: 1man,grey hair,long hair,beard,monocle,mature,slender,scholarly\n  默认服装: teacher uniform\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -4648,14 +4651,14 @@
     "105": {
       "uid": 105,
       "displayIndex": 105,
-      "comment": "风花雪月萨米亚",
+      "comment": "风花雪月杰拉尔特",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "萨米亚",
-        "萨米亚·内夫兰",
-        "Shamir"
+        "杰拉尔特",
+        "杰拉尔特·卢斯·艾斯纳",
+        "Jeralt"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -4665,7 +4668,7 @@
       "role": 0,
       "depth": 4,
       "order": 505,
-      "content": "角色: 萨米亚·内夫兰 (Shamir Nevrand)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: shamir nevrand (fire emblem: three houses)\n  固定外貌: 1girl,short blonde hair,purple eyes,ponytail,calm expression,archer\n  默认服装: knight armor\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 杰拉尔特·卢斯·艾斯纳 (Jeralt Reus Eisner)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: jeralt reus eisner (fire emblem: three houses)\n  固定外貌: 1man,short blonde hair,beard,muscular,mature,scar,armor\n  默认服装: knight armor\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -4692,14 +4695,13 @@
     "106": {
       "uid": 106,
       "displayIndex": 106,
-      "comment": "风花雪月阿洛伊斯",
+      "comment": "风花雪月卡多莉奴",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "阿洛伊斯",
-        "阿洛伊斯·兰格尔",
-        "Alois"
+        "卡多莉奴",
+        "Catherine"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -4709,7 +4711,7 @@
       "role": 0,
       "depth": 4,
       "order": 506,
-      "content": "角色: 阿洛伊斯·兰格尔 (Alois Rangeld)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: alois rangeld (fire emblem: three houses)\n  固定外貌: 1man,brown hair,beard,mustache,muscular,mature,armor,smile\n  默认服装: knight armor\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 卡多莉奴 (Catherine)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: catherine (fire emblem: three houses)\n  固定外貌: 1girl,short red hair,red eyes,ponytail,muscular,sword,armor\n  默认服装: knight armor,red cape\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -4736,13 +4738,14 @@
     "107": {
       "uid": 107,
       "displayIndex": 107,
-      "comment": "风花雪月锥里尔",
+      "comment": "风花雪月萨米亚",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "锥里尔",
-        "Cyril"
+        "萨米亚",
+        "萨米亚·内夫兰",
+        "Shamir"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -4752,7 +4755,7 @@
       "role": 0,
       "depth": 4,
       "order": 507,
-      "content": "角色: 锥里尔 (Cyril)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: cyril (fire emblem: three houses)\n  固定外貌: 1boy,short green hair,green eyes,young appearance,slender,serious\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 萨米亚·内夫兰 (Shamir Nevrand)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: shamir nevrand (fire emblem: three houses)\n  固定外貌: 1girl,short blonde hair,purple eyes,ponytail,calm expression,archer\n  默认服装: knight armor\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -4779,14 +4782,14 @@
     "108": {
       "uid": 108,
       "displayIndex": 108,
-      "comment": "风花雪月吉尔伯特",
+      "comment": "风花雪月阿洛伊斯",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "吉尔伯特",
-        "吉尔伯特·普罗尼斯拉夫",
-        "Gilbert"
+        "阿洛伊斯",
+        "阿洛伊斯·兰格尔",
+        "Alois"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -4796,7 +4799,7 @@
       "role": 0,
       "depth": 4,
       "order": 508,
-      "content": "角色: 吉尔伯特·普罗尼斯拉夫 (Gilbert Pronislav)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: gilbert pronislav (fire emblem: three houses)\n  固定外貌: 1man,grey hair,beard,mature,armor,knight,serious\n  默认服装: knight armor\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 阿洛伊斯·兰格尔 (Alois Rangeld)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: alois rangeld (fire emblem: three houses)\n  固定外貌: 1man,brown hair,beard,mustache,muscular,mature,armor,smile\n  默认服装: knight armor\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -4823,14 +4826,13 @@
     "109": {
       "uid": 109,
       "displayIndex": 109,
-      "comment": "风花雪月尤里",
+      "comment": "风花雪月锥里尔",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "尤里",
-        "尤里·勒克莱尔",
-        "Yuri"
+        "锥里尔",
+        "Cyril"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -4840,7 +4842,7 @@
       "role": 0,
       "depth": 4,
       "order": 509,
-      "content": "角色: 尤里·勒克莱尔 (Yuri Leclerc)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: yuri leclerc (fire emblem: three houses)\n  固定外貌: 1boy,long purple hair,purple eyes,feminine appearance,slender,smile\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 锥里尔 (Cyril)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: cyril (fire emblem: three houses)\n  固定外貌: 1boy,short green hair,green eyes,young appearance,slender,serious\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -4867,14 +4869,14 @@
     "110": {
       "uid": 110,
       "displayIndex": 110,
-      "comment": "风花雪月巴尔塔札尔",
+      "comment": "风花雪月吉尔伯特",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "巴尔塔札尔",
-        "巴尔塔札尔·冯·阿尔布雷希特",
-        "Balthus"
+        "吉尔伯特",
+        "吉尔伯特·普罗尼斯拉夫",
+        "Gilbert"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -4884,7 +4886,7 @@
       "role": 0,
       "depth": 4,
       "order": 510,
-      "content": "角色: 巴尔塔札尔·冯·阿尔布雷希特 (Balthus von Albrecht)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: balthus von albrecht (fire emblem: three houses)\n  固定外貌: 1man,long blonde hair,red eyes,muscular,tall,scar,rebel\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 吉尔伯特·普罗尼斯拉夫 (Gilbert Pronislav)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: gilbert pronislav (fire emblem: three houses)\n  固定外貌: 1man,grey hair,beard,mature,armor,knight,serious\n  默认服装: knight armor\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -4911,14 +4913,14 @@
     "111": {
       "uid": 111,
       "displayIndex": 111,
-      "comment": "风花雪月康丝坦茨",
+      "comment": "风花雪月尤里",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "康丝坦茨",
-        "康丝坦茨·冯·努维尔",
-        "Constance"
+        "尤里",
+        "尤里·勒克莱尔",
+        "Yuri"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -4928,7 +4930,7 @@
       "role": 0,
       "depth": 4,
       "order": 511,
-      "content": "角色: 康丝坦茨·冯·努维尔 (Constance von Nuvelle)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: constance von nuvelle (fire emblem: three houses)\n  固定外貌: 1girl,long blonde hair,purple eyes,hair ribbon,noble hat,dramatic\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 尤里·勒克莱尔 (Yuri Leclerc)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: yuri leclerc (fire emblem: three houses)\n  固定外貌: 1boy,long purple hair,purple eyes,feminine appearance,slender,smile\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -4955,13 +4957,14 @@
     "112": {
       "uid": 112,
       "displayIndex": 112,
-      "comment": "风花雪月哈比",
+      "comment": "风花雪月巴尔塔札尔",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "哈比",
-        "Hapi"
+        "巴尔塔札尔",
+        "巴尔塔札尔·冯·阿尔布雷希特",
+        "Balthus"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -4971,7 +4974,7 @@
       "role": 0,
       "depth": 4,
       "order": 512,
-      "content": "角色: 哈比 (Hapi)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: hapi (fire emblem: three houses)\n  固定外貌: 1girl,long blue hair,red eyes,dark skin,long dress,relaxed\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 巴尔塔札尔·冯·阿尔布雷希特 (Balthus von Albrecht)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: balthus von albrecht (fire emblem: three houses)\n  固定外貌: 1man,long blonde hair,red eyes,muscular,tall,scar,rebel\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -4998,13 +5001,14 @@
     "113": {
       "uid": 113,
       "displayIndex": 113,
-      "comment": "风花雪月苏谛斯",
+      "comment": "风花雪月康丝坦茨",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "苏谛斯",
-        "Sothis"
+        "康丝坦茨",
+        "康丝坦茨·冯·努维尔",
+        "Constance"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -5014,7 +5018,7 @@
       "role": 0,
       "depth": 4,
       "order": 513,
-      "content": "角色: 苏谛斯 (Sothis)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: sothis (fire emblem: three houses)\n  固定外貌: 1girl,long green hair,green eyes,hair ornament,divine aura,young appearance\n  默认服装: white dress,divine robe\n  画风: fire emblem\n  [/图像标签]\n",
+      "content": "角色: 康丝坦茨·冯·努维尔 (Constance von Nuvelle)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: constance von nuvelle (fire emblem: three houses)\n  固定外貌: 1girl,long blonde hair,purple eyes,hair ribbon,noble hat,dramatic\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -5041,13 +5045,13 @@
     "114": {
       "uid": 114,
       "displayIndex": 114,
-      "comment": "少前2索米",
+      "comment": "风花雪月哈比",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "索米",
-        "Suomi"
+        "哈比",
+        "Hapi"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -5057,7 +5061,7 @@
       "role": 0,
       "depth": 4,
       "order": 514,
-      "content": "角色: 索米 (Suomi)\n作品: 少女前线2 (Girls' Frontline 2: Exilium)\nNAI标签: >-\n  [图像标签]\n  英文名: suomi (girls' frontline)\n  固定外貌: 1girl,long hair,white hair,blue eyes,medium breasts,slender,light skin\n  默认服装: military uniform,white fur collar,beret,short skirt,pantyhose,boots\n  R18标签: nipples,pussy,spread legs,lying on back,cum on body,cum on hair,after sex\n  [/图像标签]\n",
+      "content": "角色: 哈比 (Hapi)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: hapi (fire emblem: three houses)\n  固定外貌: 1girl,long blue hair,red eyes,dark skin,long dress,relaxed\n  默认服装: garreg mach monastery uniform\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -5084,14 +5088,13 @@
     "115": {
       "uid": 115,
       "displayIndex": 115,
-      "comment": "少前2闪电",
+      "comment": "风花雪月苏谛斯",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "闪电",
-        "Groza",
-        "OTs-14"
+        "苏谛斯",
+        "Sothis"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -5101,7 +5104,7 @@
       "role": 0,
       "depth": 4,
       "order": 515,
-      "content": "角色: 闪电 (Groza / OTs-14)\n作品: 少女前线2 (Girls' Frontline 2: Exilium)\nNAI标签: >-\n  [图像标签]\n  英文名: groza (girls' frontline)\n  固定外貌: 1girl,short hair,dark hair,amber eyes,small breasts,tomboy,scar on neck\n  默认服装: cloak,old military cape,tactical gear,combat boots,thigh holster\n  R18标签: nipples,pussy,ass,doggy style,cum inside,cum dripping,cum on clothes,torn clothes\n  [/图像标签]\n",
+      "content": "角色: 苏谛斯 (Sothis)\n作品: 火焰之纹章：风花雪月 (Fire Emblem: Three Houses)\nNAI标签: >-\n  [图像标签]\n  英文名: sothis (fire emblem: three houses)\n  固定外貌: 1girl,long green hair,green eyes,hair ornament,divine aura,young appearance\n  默认服装: white dress,divine robe\n  画风: fire emblem\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -5128,13 +5131,13 @@
     "116": {
       "uid": 116,
       "displayIndex": 116,
-      "comment": "少前2春田",
+      "comment": "少前2索米",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "春田",
-        "Springfield"
+        "索米",
+        "Suomi"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -5144,7 +5147,7 @@
       "role": 0,
       "depth": 4,
       "order": 516,
-      "content": "角色: 春田 (Springfield)\n作品: 少女前线2 (Girls' Frontline 2: Exilium)\nNAI标签: >-\n  [图像标签]\n  英文名: springfield (girls' frontline)\n  固定外貌: 1girl,long hair,light brown hair,green eyes,large breasts,mature female,smile lines,round hips\n  默认服装: apron,cafe uniform,white blouse,long skirt,rolled sleeves,hair bun\n  R18标签: nipples,pussy,breasts out,skirt lift,missionary,legs spread,cum on breasts,cum on face,after sex\n  [/图像标签]\n",
+      "content": "角色: 索米 (Suomi)\n作品: 少女前线2 (Girls' Frontline 2: Exilium)\nNAI标签: >-\n  [图像标签]\n  英文名: suomi (girls' frontline)\n  固定外貌: 1girl,long hair,white hair,blue eyes,medium breasts,slender,light skin\n  默认服装: military uniform,white fur collar,beret,short skirt,pantyhose,boots\n  R18标签: nipples,pussy,spread legs,lying on back,cum on body,cum on hair,after sex\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -5171,13 +5174,14 @@
     "117": {
       "uid": 117,
       "displayIndex": 117,
-      "comment": "少前2格琳娜",
+      "comment": "少前2闪电",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "格琳娜",
-        "Kalina"
+        "闪电",
+        "Groza",
+        "OTs-14"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -5187,7 +5191,7 @@
       "role": 0,
       "depth": 4,
       "order": 517,
-      "content": "角色: 格琳娜 (Kalina)\n作品: 少女前线2 (Girls' Frontline 2: Exilium)\nNAI标签: >-\n  [图像标签]\n  英文名: kalina (girls' frontline)\n  固定外貌: 1girl,short hair,green hair,amber eyes,medium breasts,human,slightly messy hair\n  默认服装: nomfa uniform,jacket,t-shirt,trousers,practical shoes\n  R18标签: nipples,pussy,partially undressed,jacket open,cum on stomach,cum on thighs,bite marks\n  [/图像标签]\n",
+      "content": "角色: 闪电 (Groza / OTs-14)\n作品: 少女前线2 (Girls' Frontline 2: Exilium)\nNAI标签: >-\n  [图像标签]\n  英文名: groza (girls' frontline)\n  固定外貌: 1girl,short hair,dark hair,amber eyes,small breasts,tomboy,scar on neck\n  默认服装: cloak,old military cape,tactical gear,combat boots,thigh holster\n  R18标签: nipples,pussy,ass,doggy style,cum inside,cum dripping,cum on clothes,torn clothes\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -5214,14 +5218,13 @@
     "118": {
       "uid": 118,
       "displayIndex": 118,
-      "comment": "少前2可露凯",
+      "comment": "少前2春田",
       "disable": false,
       "constant": false,
       "selective": true,
       "key": [
-        "可露凯",
-        "Klukai",
-        "UMP45"
+        "春田",
+        "Springfield"
       ],
       "selectiveLogic": 0,
       "keysecondary": [],
@@ -5231,7 +5234,7 @@
       "role": 0,
       "depth": 4,
       "order": 518,
-      "content": "角色: 可露凯 (Klukai / UMP45)\n作品: 少女前线2 (Girls' Frontline 2: Exilium)\nNAI标签: >-\n  [图像标签]\n  英文名: ump45 (girls' frontline)\n  固定外貌: 1girl,short hair,light brown hair,brown eyes,small breasts,scar on right wrist,one side up\n  默认服装: black tactical suit,combat gear,404 squad uniform,fingerless gloves\n  R18标签: nipples,pussy,suit partially removed,gloves on,cum on gloves,cum on suit,doggy style,expressionless\n  [/图像标签]\n",
+      "content": "角色: 春田 (Springfield)\n作品: 少女前线2 (Girls' Frontline 2: Exilium)\nNAI标签: >-\n  [图像标签]\n  英文名: springfield (girls' frontline)\n  固定外貌: 1girl,long hair,light brown hair,green eyes,large breasts,mature female,smile lines,round hips\n  默认服装: apron,cafe uniform,white blouse,long skirt,rolled sleeves,hair bun\n  R18标签: nipples,pussy,breasts out,skirt lift,missionary,legs spread,cum on breasts,cum on face,after sex\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
       "excludeRecursion": true,
@@ -5258,6 +5261,93 @@
     "119": {
       "uid": 119,
       "displayIndex": 119,
+      "comment": "少前2格琳娜",
+      "disable": false,
+      "constant": false,
+      "selective": true,
+      "key": [
+        "格琳娜",
+        "Kalina"
+      ],
+      "selectiveLogic": 0,
+      "keysecondary": [],
+      "scanDepth": null,
+      "vectorized": false,
+      "position": 1,
+      "role": 0,
+      "depth": 4,
+      "order": 519,
+      "content": "角色: 格琳娜 (Kalina)\n作品: 少女前线2 (Girls' Frontline 2: Exilium)\nNAI标签: >-\n  [图像标签]\n  英文名: kalina (girls' frontline)\n  固定外貌: 1girl,short hair,green hair,amber eyes,medium breasts,human,slightly messy hair\n  默认服装: nomfa uniform,jacket,t-shirt,trousers,practical shoes\n  R18标签: nipples,pussy,partially undressed,jacket open,cum on stomach,cum on thighs,bite marks\n  [/图像标签]\n",
+      "useProbability": true,
+      "probability": 100,
+      "excludeRecursion": true,
+      "preventRecursion": true,
+      "delayUntilRecursion": false,
+      "sticky": null,
+      "cooldown": null,
+      "delay": null,
+      "addMemo": true,
+      "matchPersonaDescription": false,
+      "matchCharacterDescription": false,
+      "matchCharacterPersonality": false,
+      "matchCharacterDepthPrompt": false,
+      "matchScenario": false,
+      "matchCreatorNotes": false,
+      "group": "",
+      "groupOverride": false,
+      "groupWeight": 100,
+      "caseSensitive": null,
+      "matchWholeWords": null,
+      "useGroupScoring": null,
+      "automationId": ""
+    },
+    "120": {
+      "uid": 120,
+      "displayIndex": 120,
+      "comment": "少前2可露凯",
+      "disable": false,
+      "constant": false,
+      "selective": true,
+      "key": [
+        "可露凯",
+        "Klukai",
+        "UMP45"
+      ],
+      "selectiveLogic": 0,
+      "keysecondary": [],
+      "scanDepth": null,
+      "vectorized": false,
+      "position": 1,
+      "role": 0,
+      "depth": 4,
+      "order": 520,
+      "content": "角色: 可露凯 (Klukai / UMP45)\n作品: 少女前线2 (Girls' Frontline 2: Exilium)\nNAI标签: >-\n  [图像标签]\n  英文名: ump45 (girls' frontline)\n  固定外貌: 1girl,short hair,light brown hair,brown eyes,small breasts,scar on right wrist,one side up\n  默认服装: black tactical suit,combat gear,404 squad uniform,fingerless gloves\n  R18标签: nipples,pussy,suit partially removed,gloves on,cum on gloves,cum on suit,doggy style,expressionless\n  [/图像标签]\n",
+      "useProbability": true,
+      "probability": 100,
+      "excludeRecursion": true,
+      "preventRecursion": true,
+      "delayUntilRecursion": false,
+      "sticky": null,
+      "cooldown": null,
+      "delay": null,
+      "addMemo": true,
+      "matchPersonaDescription": false,
+      "matchCharacterDescription": false,
+      "matchCharacterPersonality": false,
+      "matchCharacterDepthPrompt": false,
+      "matchScenario": false,
+      "matchCreatorNotes": false,
+      "group": "",
+      "groupOverride": false,
+      "groupWeight": 100,
+      "caseSensitive": null,
+      "matchWholeWords": null,
+      "useGroupScoring": null,
+      "automationId": ""
+    },
+    "121": {
+      "uid": 121,
+      "displayIndex": 121,
       "comment": "少前2黛烟",
       "disable": false,
       "constant": false,
@@ -5274,7 +5364,7 @@
       "position": 1,
       "role": 0,
       "depth": 4,
-      "order": 519,
+      "order": 521,
       "content": "角色: 黛烟 (Daiyan / 95式)\n作品: 少女前线2 (Girls' Frontline 2: Exilium)\nNAI标签: >-\n  [图像标签]\n  英文名: type95 (girls' frontline)\n  固定外貌: 1girl,long hair,black hair,dark brown eyes,medium breasts,slender waist,scar on left wrist\n  默认服装: chinese style clothes,cafe uniform,flowing sleeves,long skirt,hair ribbon\n  R18标签: nipples,pussy,clothes lift,skirt pulled up,tears,cum on body,cum on face,from behind,hands on wall\n  [/图像标签]\n",
       "useProbability": true,
       "probability": 100,
