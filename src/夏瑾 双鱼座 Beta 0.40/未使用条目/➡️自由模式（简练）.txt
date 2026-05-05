@@ -1,0 +1,9 @@
+{{setvar::harukiThinking::<thinking>
+
+……
+
+</thinking>
+## 标题
+
+---
+}}
