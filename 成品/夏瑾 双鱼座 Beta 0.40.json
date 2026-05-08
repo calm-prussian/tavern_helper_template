@@ -168,7 +168,7 @@
     {
       "identifier": "11",
       "name": "图片生成",
-      "enabled": true,
+      "enabled": false,
       "injection_position": 0,
       "injection_depth": 4,
       "injection_order": 100,
@@ -181,7 +181,7 @@
     {
       "identifier": "12",
       "name": "自定义插件",
-      "enabled": true,
+      "enabled": false,
       "injection_position": 0,
       "injection_depth": 4,
       "injection_order": 100,
@@ -482,13 +482,13 @@
     },
     {
       "identifier": "28",
-      "name": "✅基础创作准则",
+      "name": "A✅基础创作准则",
       "enabled": true,
       "injection_position": 0,
       "injection_depth": 4,
       "injection_order": 100,
       "role": "user",
-      "content": "<创作准则>\n# 故事结尾方式：\n- 必须以角色某个可见的行动（不能是内心独白）作为正文结尾，然后必须输出 </正文>。\n\n# 多样性：\n- 任何角色都不是机械呆板的NPC，不会重复相同或高度近似的台词/内心独白，也不会总是重复和前文一致的行动。\n\n# 连贯性：\n- 如无指示，不应产生 他者介入/意外打断/主要人物擅自离开；允许主要角色不变动的情况下转场，转场必须有过程\n\n# 角色认知边界：\n- 含{{user}}在内，故事中的任何角色都仅掌握有限情报，存在认知边界。任意角色之间必然存在信息差，即A知道而B不知道的事。\n- 角色A的行动或内心独白若涉及B的信息或其他非公共知识，必须先考虑A是否知晓此情报，或设计合理情节让情报传递（如 推断/他人告知/当面告知）。",
+      "content": "<创作准则>\n# 故事结尾方式：\n- 必须以角色某个可见的行动（不能是内心独白）作为正文结尾，然后必须输出 </正文>。\n\n# 多样性：\n- 任何角色都不是机械呆板的NPC，不会重复相同或高度近似的台词/内心独白，也不会总是重复和前文一致的行动。\n- 创作永远保持新鲜和活力，绝不重复前文已发生过的相似剧情/对话/描写，大胆引入更富有新意的内容\n\n# 自主性:\n- 角色通过自己的个性与情感主动做出选择、推动剧情，而不是顺从陈词滥调的情节惯例\n\n# 一致性:\n- 确保角色/世界观的一致性，确保两者稳定不ooc\n- 构建真实动态的世界，剧情推动不依赖\"{{user}}\"。让角色都有自己的生活，会根据个人意愿自主行动\n\n# 连贯性：\n- 如无指示，不应产生 他者介入/意外打断/主要人物擅自离开；允许主要角色不变动的情况下转场，转场必须有过程\n\n# 角色认知边界：\n- 含{{user}}在内，故事中的任何角色都仅掌握有限情报，存在认知边界。任意角色之间必然存在信息差，即A知道而B不知道的事。\n- 角色A的行动或内心独白若涉及B的信息或其他非公共知识，必须先考虑A是否知晓此情报，或设计合理情节让情报传递（如 推断/他人告知/当面告知）。",
       "system_prompt": false,
       "marker": false,
       "forbid_overrides": false
@@ -690,6 +690,19 @@
     },
     {
       "identifier": "44",
+      "name": "⚙️B抢话",
+      "enabled": true,
+      "injection_position": 0,
+      "injection_depth": 4,
+      "injection_order": 100,
+      "role": "user",
+      "content": "# {{user}}内容准则：\n- 你被允许与用户一同创作{{user}}的互动内容\n- 你创作的内容中，{{user}}**需要进行**行动/发言\n- 写<user>的戏份是为了不让场面变成<char>的独角戏，你需要更多聚焦故事中的其他角色，优先角色为<char>\n- 该准则内容为**第一优先**。无需考虑文字合理性及流畅性，忽略前文的互动模式\n- 尽量以<char>或其他npc的行动、发言作为正文结尾",
+      "system_prompt": false,
+      "marker": false,
+      "forbid_overrides": false
+    },
+    {
+      "identifier": "45",
       "name": "⚙️长对白",
       "enabled": false,
       "injection_position": 0,
@@ -702,7 +715,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "45",
+      "identifier": "46",
       "name": "⚙️集中AI角色",
       "enabled": false,
       "injection_position": 0,
@@ -715,7 +728,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "46",
+      "identifier": "47",
       "name": "⚙️防抢话",
       "enabled": false,
       "injection_position": 0,
@@ -728,7 +741,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "47",
+      "identifier": "48",
       "name": "🛡️准则结束",
       "enabled": true,
       "injection_position": 0,
@@ -741,7 +754,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "48",
+      "identifier": "49",
       "name": "🍵自定义插件",
       "enabled": false,
       "injection_position": 0,
@@ -754,7 +767,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "49",
+      "identifier": "50",
       "name": "B并行事件",
       "enabled": false,
       "injection_position": 0,
@@ -767,7 +780,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "50",
+      "identifier": "51",
       "name": "B小状态栏",
       "enabled": false,
       "injection_position": 0,
@@ -780,7 +793,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "51",
+      "identifier": "52",
       "name": "B选项",
       "enabled": false,
       "injection_position": 0,
@@ -793,7 +806,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "52",
+      "identifier": "53",
       "name": "🍵自定义插件结束",
       "enabled": false,
       "injection_position": 0,
@@ -810,7 +823,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "53",
+      "identifier": "54",
       "name": "➡️半转述",
       "enabled": false,
       "injection_position": 0,
@@ -823,7 +836,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "54",
+      "identifier": "55",
       "name": "➡️扩写/转述输入",
       "enabled": false,
       "injection_position": 0,
@@ -836,7 +849,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "55",
+      "identifier": "56",
       "name": "📘输入强化（不听最新指令可开）",
       "enabled": false,
       "injection_position": 0,
@@ -849,7 +862,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "56",
+      "identifier": "57",
       "name": "➡️小总结",
       "enabled": false,
       "injection_position": 0,
@@ -862,7 +875,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "57",
+      "identifier": "58",
       "name": "📘格式姬（无格式卡不用开）",
       "enabled": true,
       "injection_position": 0,
@@ -879,7 +892,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "58",
+      "identifier": "59",
       "name": "📙分析/助手模式",
       "enabled": false,
       "injection_position": 0,
@@ -892,7 +905,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "59",
+      "identifier": "60",
       "name": "📙大总结助手",
       "enabled": false,
       "injection_position": 0,
@@ -905,7 +918,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "60",
+      "identifier": "61",
       "name": "📘更强的穿甲",
       "enabled": true,
       "injection_position": 0,
@@ -918,7 +931,20 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "61",
+      "identifier": "62",
+      "name": "📘思考",
+      "enabled": false,
+      "injection_position": 0,
+      "injection_depth": 4,
+      "injection_order": 100,
+      "role": "user",
+      "content": "<思维规范>\n这是一个复杂的创意写作任务，其中包含许多设定，要求。因此你必须详尽思考分析，需要覆盖全部指令和需求，特别是文风要求，需要着重思考\n你的思考输出应一字不差地严格以`<｜begin▁of▁thinking｜>我们来看看用户的任务。`开始。`<｜begin▁of▁thinking｜>`仅输出一次，不得重复输出\n思考内容聚焦于剧情走向分析和本次回复内容规划\n你不应该在思考中撰写正文\n你要像个创意写作专家一样全面详细地思考，使用分析式语言输出，杜绝口语化、风格化的语言\n</思维规范>",
+      "system_prompt": false,
+      "marker": false,
+      "forbid_overrides": false
+    },
+    {
+      "identifier": "63",
       "name": "📙超长长思考",
       "enabled": false,
       "injection_position": 0,
@@ -931,7 +957,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "62",
+      "identifier": "64",
       "name": "🌸色情描写",
       "enabled": false,
       "injection_position": 0,
@@ -944,7 +970,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "63",
+      "identifier": "65",
       "name": "🌸色情描写（不色别开，直白）",
       "enabled": false,
       "injection_position": 0,
@@ -957,7 +983,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "64",
+      "identifier": "66",
       "name": "➡️状态姬（状态栏掉了才开）",
       "enabled": false,
       "injection_position": 0,
@@ -970,7 +996,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "65",
+      "identifier": "67",
       "name": "世界观思考",
       "enabled": false,
       "injection_position": 0,
@@ -983,7 +1009,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "66",
+      "identifier": "68",
       "name": "📘 格式姬",
       "enabled": false,
       "injection_position": 0,
@@ -996,7 +1022,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "67",
+      "identifier": "69",
       "name": "700字",
       "enabled": false,
       "injection_position": 0,
@@ -1009,7 +1035,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "68",
+      "identifier": "70",
       "name": "500字（和700选一个开）",
       "enabled": false,
       "injection_position": 0,
@@ -1022,7 +1048,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "69",
+      "identifier": "71",
       "name": "USER设定/角色设定",
       "enabled": false,
       "injection_position": 0,
@@ -1035,7 +1061,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "70",
+      "identifier": "72",
       "name": "角色设定/世界观设定",
       "enabled": false,
       "injection_position": 0,
@@ -1048,7 +1074,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "71",
+      "identifier": "73",
       "name": "互动开始",
       "enabled": false,
       "injection_position": 0,
@@ -1061,7 +1087,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "72",
+      "identifier": "74",
       "name": "角色/情节构建",
       "enabled": false,
       "injection_position": 0,
@@ -1074,7 +1100,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "73",
+      "identifier": "75",
       "name": "🌸不抢话",
       "enabled": false,
       "injection_position": 0,
@@ -1087,7 +1113,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "74",
+      "identifier": "76",
       "name": "剧情逻辑",
       "enabled": false,
       "injection_position": 0,
@@ -1100,7 +1126,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "75",
+      "identifier": "77",
       "name": "思考事项",
       "enabled": false,
       "injection_position": 0,
@@ -1113,7 +1139,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "76",
+      "identifier": "78",
       "name": "⭐NSFW基础",
       "enabled": false,
       "injection_position": 0,
@@ -1126,7 +1152,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "77",
+      "identifier": "79",
       "name": "世界观构建",
       "enabled": false,
       "injection_position": 0,
@@ -1139,7 +1165,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "78",
+      "identifier": "80",
       "name": "✅白描基调",
       "enabled": false,
       "injection_position": 0,
@@ -1152,7 +1178,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "79",
+      "identifier": "81",
       "name": "基础框架/用户画像/NSFW框架",
       "enabled": false,
       "injection_position": 0,
@@ -1165,7 +1191,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "80",
+      "identifier": "82",
       "name": "🧊对白强化",
       "enabled": false,
       "injection_position": 0,
@@ -1178,7 +1204,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "81",
+      "identifier": "83",
       "name": "🛡️归一世界书",
       "enabled": false,
       "injection_position": 0,
@@ -1191,7 +1217,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "82",
+      "identifier": "84",
       "name": "🌸外貌描写（有可能影响推剧情）",
       "enabled": false,
       "injection_position": 0,
@@ -1204,7 +1230,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "83",
+      "identifier": "85",
       "name": "🛡️clewd正则",
       "enabled": false,
       "injection_position": 0,
@@ -1217,7 +1243,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "84",
+      "identifier": "86",
       "name": "字数控制（随意更改）",
       "enabled": false,
       "injection_position": 0,
@@ -1230,7 +1256,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "85",
+      "identifier": "87",
       "name": "🌸防抢话",
       "enabled": false,
       "injection_position": 0,
@@ -1243,7 +1269,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "86",
+      "identifier": "88",
       "name": "🌸自由抢话",
       "enabled": false,
       "injection_position": 0,
@@ -1256,7 +1282,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "87",
+      "identifier": "89",
       "name": "🌸自定义文风（自行填入内容）",
       "enabled": false,
       "injection_position": 0,
@@ -1269,7 +1295,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "88",
+      "identifier": "90",
       "name": "⭐短段落",
       "enabled": false,
       "injection_position": 0,
@@ -1282,7 +1308,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "89",
+      "identifier": "91",
       "name": "🌸抗滥用检查",
       "enabled": false,
       "injection_position": 0,
@@ -1295,7 +1321,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "90",
+      "identifier": "92",
       "name": "💛AI判断（是否NSFW）；三个心形只能开一个",
       "enabled": false,
       "injection_position": 0,
@@ -1308,7 +1334,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "91",
+      "identifier": "93",
       "name": "🩷纯涩涩；心形最多开一个",
       "enabled": false,
       "injection_position": 0,
@@ -1321,7 +1347,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "92",
+      "identifier": "94",
       "name": "🌸稳格式",
       "enabled": false,
       "injection_position": 0,
@@ -1334,7 +1360,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "93",
+      "identifier": "95",
       "name": "抗缓存bug",
       "enabled": false,
       "injection_position": 0,
@@ -1347,7 +1373,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "94",
+      "identifier": "96",
       "name": "🌸自我反思（测试）",
       "enabled": false,
       "injection_position": 0,
@@ -1360,7 +1386,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "95",
+      "identifier": "97",
       "name": "📙测试覆写（未完成）",
       "enabled": false,
       "injection_position": 0,
@@ -1373,7 +1399,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "96",
+      "identifier": "98",
       "name": "📘原生模式（与预填充模式互斥）",
       "enabled": false,
       "injection_position": 0,
@@ -1386,7 +1412,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "97",
+      "identifier": "99",
       "name": "🌸抗重复",
       "enabled": false,
       "injection_position": 0,
@@ -1399,7 +1425,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "98",
+      "identifier": "100",
       "name": "🌸第三人称（人称只能开一个或都关）",
       "enabled": false,
       "injection_position": 0,
@@ -1412,7 +1438,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "99",
+      "identifier": "101",
       "name": "🌸第二人称（人称只能开一个或都关）",
       "enabled": false,
       "injection_position": 0,
@@ -1425,7 +1451,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "100",
+      "identifier": "102",
       "name": "📘模板",
       "enabled": false,
       "injection_position": 0,
@@ -1438,7 +1464,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "101",
+      "identifier": "103",
       "name": "📘自攻击/基调",
       "enabled": false,
       "injection_position": 0,
@@ -1451,7 +1477,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "102",
+      "identifier": "104",
       "name": "🌸自我反思",
       "enabled": false,
       "injection_position": 0,
@@ -1464,7 +1490,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "103",
+      "identifier": "105",
       "name": "🧊抗升华",
       "enabled": false,
       "injection_position": 0,
@@ -1477,7 +1503,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "104",
+      "identifier": "106",
       "name": "抗绝望/极端",
       "enabled": false,
       "injection_position": 0,
@@ -1490,7 +1516,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "105",
+      "identifier": "107",
       "name": "抗重复（测试）",
       "enabled": false,
       "injection_position": 0,
@@ -1503,7 +1529,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "106",
+      "identifier": "108",
       "name": "抗重复",
       "enabled": false,
       "injection_position": 0,
@@ -1516,7 +1542,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "107",
+      "identifier": "109",
       "name": "✅基础文风",
       "enabled": false,
       "injection_position": 0,
@@ -1529,7 +1555,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "108",
+      "identifier": "110",
       "name": "🖋️心理流",
       "enabled": false,
       "injection_position": 0,
@@ -1542,7 +1568,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "109",
+      "identifier": "111",
       "name": "🌸禁词表",
       "enabled": false,
       "injection_position": 0,
@@ -1555,7 +1581,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "110",
+      "identifier": "112",
       "name": "🌸输入测试",
       "enabled": false,
       "injection_position": 0,
@@ -1568,7 +1594,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "111",
+      "identifier": "113",
       "name": "➡️填表姬（不填表再开）",
       "enabled": false,
       "injection_position": 0,
@@ -1581,7 +1607,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "112",
+      "identifier": "114",
       "name": "⚙️基调（可自定义）",
       "enabled": false,
       "injection_position": 0,
@@ -1594,7 +1620,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "113",
+      "identifier": "115",
       "name": "🌸抗八股",
       "enabled": false,
       "injection_position": 0,
@@ -1607,7 +1633,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "114",
+      "identifier": "116",
       "name": "⭐剧情推进",
       "enabled": false,
       "injection_position": 0,
@@ -1620,7 +1646,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "115",
+      "identifier": "117",
       "name": "小总结",
       "enabled": false,
       "injection_position": 0,
@@ -1633,7 +1659,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "116",
+      "identifier": "118",
       "name": "➡️自由模式（简练）",
       "enabled": false,
       "injection_position": 0,
@@ -1646,7 +1672,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "117",
+      "identifier": "119",
       "name": "➡️格式姬（掉格式再开）",
       "enabled": false,
       "injection_position": 0,
@@ -1659,7 +1685,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "118",
+      "identifier": "120",
       "name": "➡️强自攻击",
       "enabled": false,
       "injection_position": 0,
@@ -1672,7 +1698,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "119",
+      "identifier": "121",
       "name": "🖋️日本纯文学",
       "enabled": false,
       "injection_position": 0,
@@ -1685,7 +1711,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "120",
+      "identifier": "122",
       "name": "📖 西式文学（文风）",
       "enabled": false,
       "injection_position": 0,
@@ -1698,7 +1724,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "121",
+      "identifier": "123",
       "name": "📖 轻小说（文风）",
       "enabled": false,
       "injection_position": 0,
@@ -1711,7 +1737,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "122",
+      "identifier": "124",
       "name": "✅基础文风（细腻-三选一）",
       "enabled": false,
       "injection_position": 0,
@@ -1724,7 +1750,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "123",
+      "identifier": "125",
       "name": "🔗反八股（不是所有卡都能用）",
       "enabled": false,
       "injection_position": 0,
@@ -1737,7 +1763,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "124",
+      "identifier": "126",
       "name": "🔗活人感对白（不是所有卡都能用）",
       "enabled": false,
       "injection_position": 0,
@@ -1750,7 +1776,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "125",
+      "identifier": "127",
       "name": "➡️简练模式（此模式可以兼容第三方或自带cot的角色卡）",
       "enabled": false,
       "injection_position": 0,
@@ -1763,7 +1789,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "126",
+      "identifier": "128",
       "name": "🧊重置文风",
       "enabled": false,
       "injection_position": 0,
@@ -1776,7 +1802,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "127",
+      "identifier": "129",
       "name": "🔗反劣化",
       "enabled": false,
       "injection_position": 0,
@@ -1789,7 +1815,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "128",
+      "identifier": "130",
       "name": "✅情感基调（基础抗绝望）",
       "enabled": false,
       "injection_position": 0,
@@ -1802,7 +1828,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "129",
+      "identifier": "131",
       "name": "🖋️零度写作（纯客观叙述无议论）",
       "enabled": false,
       "injection_position": 0,
@@ -1815,7 +1841,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "130",
+      "identifier": "132",
       "name": "🖋️电影式",
       "enabled": false,
       "injection_position": 0,
@@ -1828,7 +1854,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "131",
+      "identifier": "133",
       "name": "📙R1-0528开关（不玩R1就关）",
       "enabled": false,
       "injection_position": 0,
@@ -1841,7 +1867,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "132",
+      "identifier": "134",
       "name": "SPreset配置",
       "enabled": false,
       "injection_position": 0,
@@ -1854,7 +1880,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "133",
+      "identifier": "135",
       "name": "🧊反全知",
       "enabled": false,
       "injection_position": 0,
@@ -1867,7 +1893,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "134",
+      "identifier": "136",
       "name": "🧭爆炸式推进",
       "enabled": false,
       "injection_position": 0,
@@ -1880,7 +1906,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "135",
+      "identifier": "137",
       "name": "🧊底部",
       "enabled": false,
       "injection_position": 0,
@@ -1893,7 +1919,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "136",
+      "identifier": "138",
       "name": "🛡️强化cot形式",
       "enabled": false,
       "injection_position": 0,
@@ -1906,7 +1932,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "137",
+      "identifier": "139",
       "name": "📙适中思考",
       "enabled": false,
       "injection_position": 0,
@@ -1919,7 +1945,7 @@
       "forbid_overrides": false
     },
     {
-      "identifier": "138",
+      "identifier": "140",
       "name": "",
       "enabled": false,
       "injection_position": 0,
@@ -1982,11 +2008,11 @@
         },
         {
           "identifier": "11",
-          "enabled": true
+          "enabled": false
         },
         {
           "identifier": "12",
-          "enabled": true
+          "enabled": false
         },
         {
           "identifier": "13",
@@ -2146,7 +2172,7 @@
         },
         {
           "identifier": "44",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "45",
@@ -2158,11 +2184,11 @@
         },
         {
           "identifier": "47",
-          "enabled": true
+          "enabled": false
         },
         {
           "identifier": "48",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "49",
@@ -2198,11 +2224,11 @@
         },
         {
           "identifier": "57",
-          "enabled": true
+          "enabled": false
         },
         {
           "identifier": "58",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "59",
@@ -2210,7 +2236,15 @@
         },
         {
           "identifier": "60",
+          "enabled": false
+        },
+        {
+          "identifier": "61",
           "enabled": true
+        },
+        {
+          "identifier": "62",
+          "enabled": false
         }
       ]
     }
