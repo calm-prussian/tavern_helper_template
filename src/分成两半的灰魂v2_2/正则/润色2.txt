@@ -1,0 +1,85 @@
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>润色</title>
+  </head>
+  <body>
+    <div id="refine" style="display: none;">$1</div>
+    <script>
+      (function() {
+        const refineHtml = document.getElementById('refine').innerHTML;
+        const fixedJson = refineHtml.trim().replace(/'/g, '"');
+        
+        try {
+          const jsonRefine = JSON.parse(fixedJson);
+          
+          // 检查SillyTavern上下文
+          if (!window.top.window.SillyTavern) {
+            console.error('❌ 无法访问 SillyTavern 对象');
+            return;
+          }
+        
+        const stCtx = window.top.window.SillyTavern.getContext();
+        
+        const lastMsgIndex = stCtx.chat.length - 1;
+        const originalMes = stCtx.chat[lastMsgIndex].mes;
+        
+        // 移除<refine>标签
+        let chat_mes = originalMes.replace(/\n*?<refine>[\s\S]*?<\/refine>/g, '');
+        
+        // 逐个应用替换（按原文长度从长到短排序，避免重叠问题）
+        jsonRefine.sort((a, b) => b.original.length - a.original.length);
+        
+        let replaceCount = 0;
+        for (let i = 0; i < jsonRefine.length; i++) {
+          const refine = jsonRefine[i];
+          chat_mes = chat_mes.replaceAll(refine.original, refine.corrected);
+        }
+        
+        // 更新消息
+        stCtx.chat[lastMsgIndex].mes = chat_mes;
+        window.top.window.eval(`(function () {
+          function waitForDomChange(target, options = { childList: true, subtree: true }) {
+            return new Promise(resolve => {
+              const observer = new MutationObserver(() => {
+                observer.disconnect();
+                resolve();
+              });
+              observer.observe(target, options);
+            });
+          }
+          
+          const editBtn = document.querySelector('.last_mes .mes_block .mes_edit');
+          
+          if (!editBtn) {
+            console.error('❌ 找不到编辑按钮');
+            return;
+          }
+          
+          const textEl = document.querySelector('.last_mes .mes_block .mes_text');
+          
+          const a = waitForDomChange(textEl, { childList: true, subtree: true });
+          editBtn.click();
+          
+          a.then(() => {
+            const doneBtn = window.top.window.document.querySelector('.last_mes .mes_edit_done');
+            if (doneBtn) {
+              doneBtn.click();
+            } else {
+              console.error('❌ 找不到完成按钮');
+            }
+          });
+        })();
+        `);
+      } catch (e) {
+        console.error('❌ 脚本执行失败:', e.message);
+        console.error('错误堆栈:', e.stack);
+      }
+      })();
+    </script>
+  </body>
+</html>
+```
