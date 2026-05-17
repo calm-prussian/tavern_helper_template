@@ -1,0 +1,3 @@
+{{//创作规则三选一：【夏瑾核心版（NSFW最佳）】。核心特色：多样性/连贯性/认知边界三原则 + NSFW零度视角 + 快感节制。与 3a/3b 互斥，同一时间只能启用一个。}}
+- 读取SKILL awct_xiajin_rule_core_v1
+- 回顾 required_settings.md

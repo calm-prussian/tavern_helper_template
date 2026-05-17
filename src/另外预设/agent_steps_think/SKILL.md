@@ -12,8 +12,8 @@ description: 你需要遵循的Agent步骤，你最先读取的Skill必须是age
 2.角色思考与写草稿
 - 对每个出场角色：
   a. 检查 persist/ 下是否有 角色名.md → 有则 workspace_read_file 读取，无则从上下文/角色卡提取设定后 workspace_write_file 创建
-  b. 让角色对本轮场景进行一句话思考
-  c. 将角色的思考追加写入 persist/角色名.md
+  b. 记忆检索：从 persist/角色名.md 中，根据时间、地点、在场人物筛选与当前场景相关的条目
+  c. 让角色基于被检索到的记忆，对本轮场景进行一句话思考
 - 读取writing_guide和writing_principles
 - 回顾 required_settings.md 和各角色 persist/ 档案
 - 创建draft.md，将草稿写入
@@ -40,11 +40,16 @@ description: 你需要遵循的Agent步骤，你最先读取的Skill必须是age
 - 回顾变量更新的规则（应该改变哪些变量？这些变量的值应该设定为多少？）
 - 输出<UpdateVariable>更新变量（<UpdateVariable>里必须含有<JSONPatch>）
 - 检查变量是否有不完整或错误
-7.最后的检查
+7.记忆更新
+- 从 draft.md 中提取本轮的：时间、地点、在场人物
+- 提取每个角色的言行和发生的事件
+- 按格式 `=== 时间 | 地点：xxx | 在场：xxx, xxx ===` 追加写入 persist/角色名.md
+8.最后的检查
 - 逻辑正确吗？
 - 禁库内容是否被完全去除？
 - 格式正确吗？
 - 变量正确吗？
-8.提交并终止Agent
+- persist/ 记忆是否正确写入？
+9.提交并终止Agent
 以上流程必须按顺序依次进行，每一步都必须执行，每一次检查都必须充分。
 </参考步骤>

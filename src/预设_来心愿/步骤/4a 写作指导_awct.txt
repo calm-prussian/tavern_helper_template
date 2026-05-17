@@ -1,0 +1,3 @@
+{{//文风指导三选一：【默认轻小说版】。与 4b/4c 互斥，同一时间只能启用一个。}}
+- 读取SKILL awct_style_lightnovel_v1
+- 回顾各角色 persist/ 档案

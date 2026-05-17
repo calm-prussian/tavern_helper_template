@@ -1,0 +1,203 @@
+# yaml-language-server: $schema=https://testingcf.jsdelivr.net/gh/StageDog/tavern_sync/dist/schema/preset.zh.json
+设置:
+  上下文长度: 2000000
+  最大回复token数: 40960
+  流式传输: true
+  温度: 1
+  频率惩罚: 0
+  存在惩罚: 0
+  top_p: 1
+  压缩系统消息: false
+  推理强度: 自动
+  请求思维链: true
+  请求图片: false
+  启用函数调用: false
+  启用网络搜索: false
+  允许发送图片: 禁用
+  允许发送视频: false
+  角色名称前缀: 默认
+
+锚点: {}
+
+提示词:
+  - 名称: Agent System Prompt
+    启用: true
+    插入位置:
+      类型: 相对
+    角色: 系统
+    内容: ''
+
+  - 名称: Main Prompt
+    启用: false
+    角色: 系统
+    内容: Write {{char}}'s next reply in a fictional chat between {{char}} and
+      {{user}}.
+
+  - id: 角色定义之前
+    启用: true
+
+  - id: 角色定义之后
+    启用: true
+
+  - id: 玩家描述
+    启用: true
+
+  - id: 角色描述
+    启用: true
+
+  - id: 角色性格
+    启用: true
+
+  - id: 情景
+    启用: true
+
+  - 名称: Enhance Definitions
+    启用: false
+    角色: 系统
+    内容:
+       If you have more knowledge of {{char}}, add to the character's lore and
+       personality to enhance them but keep the Character Sheet's definitions
+       absolute.
+
+  - 名称: Auxiliary Prompt
+    启用: true
+    角色: 系统
+    内容: ''
+
+  - id: 对话示例
+    启用: true
+
+  - id: 聊天记录
+    启用: true
+
+  - 名称: Post-History Instructions
+    启用: true
+    角色: 系统
+    内容: ''
+
+  - 名称: Agent Results
+    启用: true
+    插入位置:
+      类型: 相对
+    角色: 系统
+    内容: ''
+
+  - 名称: Agent流程开始
+    启用: true
+    角色: 系统
+    文件: 步骤/Agent流程开始.txt
+
+  - 名称: 1 创建required_settings.md
+    启用: true
+    角色: 系统
+    文件: 步骤/1 创建required_settings.txt
+
+  - 名称: 2 角色思考
+    启用: true
+    角色: 系统
+    文件: 步骤/2 角色思考.txt
+
+  - 名称: 3a 创作要求_awct
+    启用: true
+    角色: 系统
+    文件: 步骤/3a 创作要求_awct.txt
+
+  - 名称: 3b 创作要求_huihun
+    启用: false
+    角色: 系统
+    文件: 步骤/3b 创作要求_huihun.txt
+
+  - 名称: 3c 创作要求_xiajin
+    启用: false
+    角色: 系统
+    文件: 步骤/3c 创作要求_xiajin.txt
+
+  - 名称: 4a 写作指导_awct
+    启用: true
+    角色: 系统
+    文件: 步骤/4a 写作指导_awct.txt
+
+  - 名称: 4b 写作指导_huihun
+    启用: false
+    角色: 系统
+    文件: 步骤/4b 写作指导_huihun.txt
+
+  - 名称: 4c 写作指导_xiajin
+    启用: false
+    角色: 系统
+    文件: 步骤/4c 写作指导_xiajin.txt
+
+  - 名称: 5a 人称_第一人称
+    启用: false
+    角色: 系统
+    文件: 步骤/5a 人称_第一人称.txt
+
+  - 名称: 5b 人称_第二人称
+    启用: false
+    角色: 系统
+    文件: 步骤/5b 人称_第二人称.txt
+
+  - 名称: 5c 人称_第三人称
+    启用: true
+    角色: 系统
+    文件: 步骤/5c 人称_第三人称.txt
+
+  - 名称: 5d 人称_全知视角
+    启用: false
+    角色: 系统
+    文件: 步骤/5d 人称_全知视角.txt
+
+  - 名称: 6 写草稿
+    启用: true
+    角色: 系统
+    文件: 步骤/6 写草稿.txt
+
+  - 名称: 7 逻辑检查
+    启用: true
+    角色: 系统
+    文件: 步骤/7 逻辑检查.txt
+
+  - 名称: 8 去除禁库内容
+    启用: true
+    角色: 系统
+    文件: 步骤/8 去除禁库内容.txt
+
+  - 名称: 9 补全格式
+    启用: true
+    角色: 系统
+    文件: 步骤/9 补全格式.txt
+
+  - 名称: 10 更新变量
+    启用: true
+    角色: 系统
+    文件: 步骤/10 更新变量.txt
+
+  - 名称: 11 记忆更新
+    启用: true
+    角色: 系统
+    文件: 步骤/11 记忆更新.txt
+
+  - 名称: 12 最后的检查
+    启用: true
+    角色: 系统
+    文件: 步骤/12 最后的检查.txt
+
+  - 名称: 13 提交并终止Agent
+    启用: true
+    角色: 系统
+    文件: 步骤/13 提交并终止Agent.txt
+
+  - 名称: Agent流程结束
+    启用: true
+    角色: 系统
+    文件: 步骤/Agent流程结束.txt
+
+未添加的提示词: []
+
+扩展字段:
+  正则: []
+
+  酒馆助手:
+    脚本库: []
+
+    变量: {}
