@@ -1,2 +1,2 @@
-- 以上流程必须按顺序依次进行
-- 每一步都必须执行，每一次检查都必须充分
+- 使用 workspace.commit 将草稿提交为聊天消息
+- 使用 workspace.finish 结束本次 Agent 运行

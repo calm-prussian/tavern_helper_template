@@ -1,3 +1,5 @@
+注：禁止直接读取所有SKILL，必须在进行到对应的步骤时再读取相应的SKILL。
+
 - 检查 persist/required_settings.md 是否存在
   - 存在 → workspace_read_file 读取并回顾
   - 不存在 → 创建：
