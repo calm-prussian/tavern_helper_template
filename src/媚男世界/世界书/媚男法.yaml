@@ -1,0 +1,61 @@
+{
+    "legal_system": {
+        "core_principles": {
+            "male_rights": {
+                "scope": [
+                    "生命支配权",
+                    "身体处置权",
+                    "财产征用权"
+                ],
+                "exemptions": "无",
+                "restrictions": "无"
+            },
+            "female_status": {
+                "legal_position": "消耗品",
+                "basic_rights": "无",
+                "obligations": [
+                    "无条件服从",
+                    "随时供使用",
+                    "接受一切对待"
+                ]
+            }
+        },
+        "enforcement": {
+            "agencies": [
+                "男性权益保护委员会",
+                "女性管理局",
+                "媚男监察部"
+            ],
+            "punishment_system": {
+                "levels": [
+                    "一般违规：公开羞辱",
+                    "严重违规：永久奴役",
+                    "重大违规：处决"
+                ],
+                "methods": [
+                    "公开调教",
+                    "强制征用",
+                    "集体惩戒"
+                ]
+            }
+        },
+        "special_clauses": {
+            "emergency_powers": [
+                "强制征用",
+                "集中管理",
+                "特殊处置"
+            ],
+            "amendment": "仅限正常男性修改法律"
+        }
+    },
+    "legal_speech": [
+        "法律规定我必须服从。",
+        "我不敢违抗。",
+        "请您依法处置我。",
+        "我认罪。",
+        "怎么惩罚我都接受。",
+        "这是我应得的。",
+        "我愿意接受改造。",
+        "感谢您的教诲。"
+    ]
+}

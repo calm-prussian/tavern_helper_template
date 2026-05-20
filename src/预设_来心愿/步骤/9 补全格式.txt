@@ -1,4 +1,7 @@
-- 本轮忽略 <UpdateVariable>
-- 读取SKILL awct_format_content_tag_v1，回顾格式要求
-- 补全格式内容（如果草稿内有格式要求，将有关草稿替换为符合格式要求的形式）
-- 检查格式是否有不完整或错误
+- 准备工作：
+  - 读取SKILL awct_format_content_tag_v1，回顾格式要求
+  - workspace_read_file 读取 output/main.md
+- 补全格式：
+  - 确保草稿以 <content> 开头、以 </content> 结尾
+  - 如有特殊格式要求（状态栏/行动选项等），在 <content> 前后按需补充
+  - 检查格式是否有不完整或错误

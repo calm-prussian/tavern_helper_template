@@ -1,3 +1,1 @@
-- 从 draft.md 中提取本轮的：时间、地点、在场人物
-- 提取每个角色的言行和发生的事件
-- 按格式「=== 时间 | 地点：xxx | 在场：xxx, xxx ===」追加写入 persist/角色名.md
+{{getvar::persist_memory_operation}}

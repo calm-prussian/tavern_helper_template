@@ -2,4 +2,4 @@
 - 禁库内容是否被完全去除？
 - 格式正确吗？
 - 变量正确吗？
-- persist/ 记忆是否正确写入？
+{{getvar::persist_memory_check}}

@@ -1,0 +1,4 @@
+- 读取所有 scratch/part_xx_revised.md
+- 按顺序拼接成完整草稿
+- 写入 output/main.md
+- 检查整体流畅度和一致性

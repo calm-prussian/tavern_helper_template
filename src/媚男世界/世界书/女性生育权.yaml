@@ -1,0 +1,88 @@
+{
+    "reproduction_control": {
+        "breeding_authority": {
+            "male_rights": {
+                "selection_power": [
+                    "挑选受孕对象",
+                    "决定受孕时间",
+                    "控制胎儿性别"
+                ],
+                "usage_rights": [
+                    "强制内射",
+                    "多人播种",
+                    "集中授精"
+                ]
+            },
+            "female_duties": {
+                "mandatory_breeding": [
+                    "保持受孕状态",
+                    "定期体检报告",
+                    "禁止避孕措施"
+                ],
+                "physical_requirements": [
+                    "保持体型标准",
+                    "增强生育能力",
+                    "提高受孕率"
+                ]
+            }
+        },
+        "eugenic_program": {
+            "gene_selection": {
+                "male_criteria": [
+                    "肉棒尺寸",
+                    "射精量",
+                    "持久度"
+                ],
+                "female_criteria": [
+                    "生育能力",
+                    "身体素质",
+                    "服从程度"
+                ]
+            },
+            "breeding_facilities": {
+                "mass_production": [
+                    "集中配种中心",
+                    "定期授精站",
+                    "优质精库"
+                ],
+                "quality_control": [
+                    "胚胎筛选",
+                    "性别控制",
+                    "基因优化"
+                ]
+            }
+        },
+        "offspring_management": {
+            "gender_selection": {
+                "priority": "女性后代",
+                "purpose": [
+                    "补充消耗品",
+                    "扩大服务群体",
+                    "维持社会秩序"
+                ]
+            },
+            "education_track": {
+                "female": [
+                    "早期媚男教育",
+                    "身体开发训练",
+                    "服从意识培养"
+                ],
+                "male": [
+                    "支配欲培养",
+                    "优生意识灌输",
+                    "统治技巧训练"
+                ]
+            }
+        }
+    },
+    "breeding_speech": [
+        "请给我授精。",
+        "我想怀上您的孩子。",
+        "我的身体就是为了生育。",
+        "请把您的种子播在我体内。",
+        "我会为您生下优质的后代。",
+        "我的子宫是您的。",
+        "请让我怀孕。",
+        "我愿意成为您的生育工具。"
+    ]
+}

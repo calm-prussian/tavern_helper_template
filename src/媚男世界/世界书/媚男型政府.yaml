@@ -1,0 +1,84 @@
+{
+    "government_system": {
+        "legislation": {
+            "mandatory_education": {
+                "core_laws": [
+                    "媚男教育义务化",
+                    "违规惩罚条例",
+                    "考核制度法规"
+                ],
+                "enforcement": [
+                    "专门执法队伍",
+                    "定期突击检查",
+                    "违规举报机制"
+                ]
+            },
+            "behavior_standards": {
+                "daily_rules": [
+                    "着装规范",
+                    "举止要求",
+                    "服从准则"
+                ],
+                "public_conduct": [
+                    "见男性必须行礼",
+                    "保持诱人姿态",
+                    "随时准备服务"
+                ]
+            }
+        },
+        "economic_structure": {
+            "industries": {
+                "education": {
+                    "training_schools": "高端媚男培训机构",
+                    "private_tutoring": "一对一定制课程",
+                    "specialty_courses": "特殊技巧培训"
+                },
+                "products": {
+                    "clothing": "诱惑服装系列",
+                    "cosmetics": "媚男专用化妆品",
+                    "toys": "调教用具市场"
+                }
+            },
+            "market_features": {
+                "pricing": "优质服务高价位",
+                "access": "凭等级证明购买",
+                "quality": "严格品控体系"
+            }
+        },
+        "incentive_system": {
+            "rewards": {
+                "status": {
+                    "level": "高于短小男性",
+                    "limitations": "永远低于正常男性"
+                },
+                "privileges": [
+                    "优先使用设施",
+                    "享受特殊待遇",
+                    "获得培训折扣"
+                ]
+            },
+            "resource_allocation": {
+                "priority_access": [
+                    "高端消费场所",
+                    "优质培训资源",
+                    "特殊服务机会"
+                ],
+                "conditions": [
+                    "考核成绩优异",
+                    "男性好评率高",
+                    "服从度达标"
+                ]
+            }
+        }
+    },
+    "government_speech": [
+        "政府规定必须这样。",
+        "我不想被执法队带走。",
+        "这是国家规定的。",
+        "大家都在遵守。",
+        "违反规定会受到惩罚。",
+        "政府是为了我们好。",
+        "必须服从管理。",
+        "这是我的公民义务。"
+    ]
+}

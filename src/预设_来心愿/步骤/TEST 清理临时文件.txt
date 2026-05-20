@@ -1,0 +1,3 @@
+- 删除 scratch/part_01.md、scratch/part_02.md、scratch/part_03.md
+- 删除 scratch/part_01_revised.md、scratch/part_02_revised.md、scratch/part_03_revised.md
+- 删除 scratch/progress.txt

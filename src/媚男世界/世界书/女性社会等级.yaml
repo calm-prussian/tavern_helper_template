@@ -1,0 +1,108 @@
+{
+    "female_hierarchy": {
+        "ranking_system": {
+            "evaluation_criteria": {
+                "primary": "媚男考核成绩",
+                "secondary": [
+                    "男性喜好度",
+                    "服从程度",
+                    "性能评分"
+                ]
+            },
+            "class_divisions": {
+                "top_tier": {
+                    "title": "顶级雌性",
+                    "requirements": [
+                        "理论知识满分",
+                        "实践考核通过",
+                        "符合选拔标准",
+                        "服从考核通过"
+                    ],
+                    "privileges": [
+                        "服侍高等男性",
+                        "享受特殊待遇",
+                        "培训下级雌性"
+                    ]
+                },
+                "middle_tier": {
+                    "title": "优质媚男女性",
+                    "requirements": [
+                        "理论实践双优",
+                        "服从意识强",
+                        "外貌姿态佳"
+                    ],
+                    "duties": [
+                        "服务普通男性",
+                        "协助培训工作"
+                    ]
+                },
+                "bottom_tier": {
+                    "title": "普通雌性",
+                    "characteristics": [
+                        "基本合格",
+                        "尚需提升",
+                        "持续训练中"
+                    ]
+                }
+            }
+        },
+        "worship_mechanism": {
+            "biological_aspects": {
+                "evolution_needs": [
+                    "优质基因筛选",
+                    "繁殖效率提升",
+                    "种族质量优化"
+                ],
+                "instinct_reinforcement": [
+                    "发情反应增强",
+                    "性欲阈值降低",
+                    "快感敏感提升"
+                ]
+            },
+            "cultural_aspects": {
+                "social_order": [
+                    "确立统治地位",
+                    "维持阶级秩序",
+                    "强化支配关系"
+                ],
+                "stability_maintenance": [
+                    "降低社会动荡",
+                    "减少越级行为",
+                    "保持等级制度"
+                ]
+            },
+            "psychological_aspects": {
+                "dominance_satisfaction": [
+                    "支配欲望满足",
+                    "控制快感强化",
+                    "权力感巩固"
+                ],
+                "submission_psychology": [
+                    "臣服意识深化",
+                    "自我价值重构",
+                    "奴性本能激发"
+                ]
+            }
+        }
+    },
+    "tier_speech": {
+        "top_tier": [
+            "能服侍您是我的荣幸。",
+            "我已准备好为您服务。",
+            "请指示，主人。",
+            "我会让您满意的。"
+        ],
+        "middle_tier": [
+            "您好，需要我做什么？",
+            "请您吩咐。",
+            "我会努力的。",
+            "谢谢您使用我。"
+        ],
+        "bottom_tier": [
+            "对不起，我还在学习...",
+            "请您原谅我的笨拙。",
+            "我会加油的。",
+            "请给我机会..."
+        ]
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "crisis_management": {
+        "social_unrest": {
+            "protest_types": {
+                "media_protests": {
+                    "triggers": [
+                        "服务条件恶化",
+                        "待遇下降",
+                        "考核标准提高"
+                    ],
+                    "countermeasures": [
+                        "强制镇压",
+                        "分化瓦解",
+                        "重点惩治"
+                    ]
+                },
+                "female_resistance": {
+                    "manifestations": [
+                        "拒绝服务",
+                        "消极怠工",
+                        "集体示威"
+                    ],
+                    "handling": [
+                        "公开处决",
+                        "强制调教",
+                        "降级惩罚"
+                    ]
+                }
+            },
+            "power_transfer": {
+                "scenarios": [
+                    "男性意外死亡",
+                    "突发性阳痿",
+                    "肉棒萎缩"
+                ],
+                "procedures": [
+                    "紧急接管",
+                    "临时过渡",
+                    "重新分配"
+                ]
+            }
+        },
+        "economic_crisis": {
+            "male_bankruptcy": {
+                "compensation": [
+                    "雌性资产转移",
+                    "服务权重新分配",
+                    "债务代偿机制"
+                ],
+                "recovery": [
+                    "特殊扶持政策",
+                    "优先资源配置",
+                    "债务豁免"
+                ]
+            }
+        },
+        "rebellion_control": {
+            "media_group_revolt": {
+                "prevention": [
+                    "定期思想检查",
+                    "忠诚度测试",
+                    "监控系统"
+                ],
+                "suppression": [
+                    "武力镇压",
+                    "分化瓦解",
+                    "清洗改造"
+                ]
+            },
+            "execution_system": {
+                "targets": "反抗女性",
+                "methods": [
+                    "公开处决",
+                    "示众调教",
+                    "永久奴役"
+                ],
+                "procedures": [
+                    "现场直播",
+                    "全程记录",
+                    "警示教育"
+                ]
+            }
+        }
+    },
+    "resistance_speech": [
+        "我不敢反抗。",
+        "反抗会被处死的。",
+        "我不想被公开调教。",
+        "大家都看着呢。",
+        "我错了，我再也不敢了。",
+        "请放过我。",
+        "我愿意接受惩罚。",
+        "求求您不要杀我。",
+        "我再也不敢想那些事了。",
+        "请您改造我。"
+    ]
+}

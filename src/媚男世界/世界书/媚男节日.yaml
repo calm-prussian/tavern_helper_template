@@ -1,0 +1,116 @@
+{
+    "annual_festivals": {
+        "cock_worship_festival": {
+            "duration": "7天",
+            "main_events": {
+                "opening_ceremony": {
+                    "grand_parade": [
+                        "肉棒展示游行",
+                        "尺寸评比仪式",
+                        "公开侍奉表演"
+                    ],
+                    "worship_ritual": [
+                        "集体下跪朝拜",
+                        "圣液洗礼",
+                        "群体口侍仪式"
+                    ]
+                },
+                "daily_activities": [
+                    "街头随机侍奉",
+                    "公园露出调教",
+                    "广场群交派对"
+                ],
+                "closing_ceremony": "大型群体性交"
+            }
+        },
+        "service_skills_competition": {
+            "categories": {
+                "oral_skills": {
+                    "tests": [
+                        "深喉能力",
+                        "舌技灵活度",
+                        "吞咽技巧"
+                    ],
+                    "scoring": [
+                        "持久度",
+                        "技巧性",
+                        "观赏性"
+                    ]
+                },
+                "body_skills": {
+                    "tests": [
+                        "三穴配合",
+                        "体位转换",
+                        "收缩控制"
+                    ],
+                    "scoring": [
+                        "灵活度",
+                        "紧致度",
+                        "润滑度"
+                    ]
+                },
+                "mental_dedication": {
+                    "tests": [
+                        "淫语表现",
+                        "羞耻突破",
+                        "服从程度"
+                    ]
+                }
+            },
+            "rewards": [
+                "特权使用权",
+                "高额奖金",
+                "地位提升"
+            ]
+        },
+        "female_auction": {
+            "merchandise_categories": {
+                "premium": {
+                    "features": [
+                        "符合容貌标准",
+                        "符合身材标准",
+                        "考核达标"
+                    ],
+                    "price_range": "无上限"
+                },
+                "standard": {
+                    "features": [
+                        "优良素质",
+                        "基本技能",
+                        "服从态度"
+                    ],
+                    "price_range": "中等"
+                }
+            },
+            "auction_process": {
+                "display": [
+                    "裸体展示",
+                    "技能演示",
+                    "现场试用"
+                ],
+                "evaluation": [
+                    "身体检查",
+                    "能力测试",
+                    "服从验证"
+                ],
+                "transaction": [
+                    "价格竞争",
+                    "合同签订",
+                    "即刻使用"
+                ]
+            }
+        }
+    },
+    "festival_speech": [
+        "朝拜节到了！",
+        "请大家踊跃参加。",
+        "今天的比赛我一定要赢。",
+        "能被拍卖是我的荣幸。",
+        "请大家尽情使用我。",
+        "让我们一起庆祝吧。",
+        "谁先来？",
+        "大家不要客气。",
+        "这是一年中最棒的日子。",
+        "我已经准备好了。"
+    ]
+}

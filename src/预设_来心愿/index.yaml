@@ -92,6 +92,50 @@
     角色: 系统
     文件: 步骤/Agent流程开始.txt
 
+  - 名称: 变量初始化
+    启用: true
+    角色: 系统
+    内容: |-
+      {{setvar::char_think_step::}}
+
+      {{setvar::thought_ref::}}
+
+      {{setvar::persist_state_check::}}
+
+      {{setvar::persist_memory_operation::}}
+
+      {{setvar::persist_memory_check::}}
+
+  - 名称: 角色持久化
+    启用: true
+    角色: 系统
+    内容: |-
+      {{setvar::char_think_step::
+      - 检查 persist/ 下是否有 角色名.md → 有则读取，无则从上下文/角色卡提取后创建
+      - 记忆检索：从 persist/角色名.md 中筛选与当前场景相关的条目
+      - 让角色基于记忆进行一句话思考，写入 scratch/角色名_thought.md
+      }}
+
+      {{setvar::thought_ref::
+      - 参考 scratch/角色名_thought.md 中各角色的思考
+      }}
+
+      {{setvar::persist_state_check::
+      - 角色行动是否符合 persist/ 中记录的状态和思考
+      }}
+
+      {{setvar::persist_memory_operation::
+      - 提取信息：
+        - 从 output/main.md 中提取本轮时间、地点、在场人物
+        - 提取每个角色的言行和发生的事件
+      - 写入记忆：
+        - 按格式「=== 时间 | 地点：xxx | 在场：xxx, xxx ===」追加写入 persist/角色名.md（先用 workspace_read_file 读取文件，拼接新内容，再用 workspace_write_file 写回完整文件）
+      }}
+
+      {{setvar::persist_memory_check::
+      - persist/ 记忆是否正确写入？
+      }}
+
   - 名称: 1 创建required_settings.md
     启用: true
     角色: 系统
@@ -157,13 +201,33 @@
     角色: 系统
     文件: 步骤/6 写草稿.txt
 
+  - 名称: TEST 分块处理
+    启用: true
+    角色: 系统
+    文件: 步骤/TEST 分块处理.txt
+
+  - 名称: TEST 逐块去八股
+    启用: true
+    角色: 系统
+    文件: 步骤/TEST 逐块去八股.txt
+
+  - 名称: TEST 合并结果
+    启用: true
+    角色: 系统
+    文件: 步骤/TEST 合并结果.txt
+
+  - 名称: TEST 清理临时文件
+    启用: false
+    角色: 系统
+    文件: 步骤/TEST 清理临时文件.txt
+
   - 名称: 7 逻辑检查
     启用: true
     角色: 系统
     文件: 步骤/7 逻辑检查.txt
 
   - 名称: 8 去除禁库内容
-    启用: true
+    启用: false
     角色: 系统
     文件: 步骤/8 去除禁库内容.txt
 

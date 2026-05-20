@@ -1,0 +1,6 @@
+将 output/preliminary_draft.md 按自然段分块：
+- 把第 1 部分写入 scratch/part_01.md
+- 把第 2 部分写入 scratch/part_02.md
+- 把第 3 部分写入 scratch/part_03.md
+- 分块数量根据内容长度决定，约 3～5 块
+- 分块时不要切断句子，保持段落完整性

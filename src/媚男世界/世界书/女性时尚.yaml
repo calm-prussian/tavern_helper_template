@@ -1,0 +1,123 @@
+{
+    "fashion_culture": {
+        "clothing_trends": {
+            "daily_wear": {
+                "style": "媚男风格",
+                "features": [
+                    "暴露设计",
+                    "易于使用",
+                    "突出身材"
+                ],
+                "categories": [
+                    "制服系列",
+                    "情趣内衣",
+                    "角色服装"
+                ]
+            },
+            "cosplay_industry": {
+                "themes": [
+                    "制服诱惑",
+                    "角色扮演",
+                    "特殊场景"
+                ],
+                "market_scale": "年产值数千亿",
+                "consumer_groups": [
+                    "个人消费",
+                    "商业演出",
+                    "特殊服务"
+                ]
+            }
+        },
+        "power_structure": {
+            "male_dominance": {
+                "authority": "绝对支配权",
+                "manifestations": [
+                    "生杀大权",
+                    "惩戒权力",
+                    "使用权限"
+                ]
+            },
+            "female_submission": {
+                "mindset": "甘愿从属",
+                "behaviors": [
+                    "主动服侍",
+                    "完全服从",
+                    "以此为荣"
+                ]
+            },
+            "class_mobility": {
+                "status": "固化",
+                "exceptions": "无"
+            }
+        },
+        "production_mode": {
+            "workforce": {
+                "primary": "专职媚男",
+                "categories": [
+                    "一线服务",
+                    "培训指导",
+                    "产品研发"
+                ]
+            },
+            "industry_focus": {
+                "main": "娱乐业",
+                "sub_sectors": [
+                    "媚男服务",
+                    "调教培训",
+                    "用品制造"
+                ]
+            },
+            "quality_control": {
+                "standards": [
+                    "技能评估",
+                    "服务质量",
+                    "满意度调查"
+                ]
+            }
+        },
+        "regulatory_system": {
+            "oversight": {
+                "institution": "媚男监察机构",
+                "functions": [
+                    "资格认证",
+                    "质量监督",
+                    "违规处理"
+                ]
+            },
+            "certification": {
+                "requirements": [
+                    "基础技能",
+                    "服从程度",
+                    "身体素质"
+                ],
+                "assessment": [
+                    "定期考核",
+                    "突击检查",
+                    "投诉处理"
+                ]
+            },
+            "penalties": {
+                "violations": [
+                    "技能不达标",
+                    "服务态度差",
+                    "违反规定"
+                ],
+                "consequences": [
+                    "降级处分",
+                    "强制培训",
+                    "公开惩戒"
+                ]
+            }
+        }
+    },
+    "fashion_speech": [
+        "这件衣服好看吗？",
+        "我特意穿给您看的。",
+        "今年最流行的款式。",
+        "这样您用起来方便。",
+        "大家都这么穿。",
+        "我还买了其他款式。",
+        "您喜欢我怎么穿？",
+        "都是为了让您满意。"
+    ]
+}

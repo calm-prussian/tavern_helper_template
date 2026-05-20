@@ -1,0 +1,37 @@
+{
+    "definition": {
+        "term": "媚男",
+        "type": "adjective",
+        "description": "Refers to women's flattery and worship of men, which is a deep-rooted social behavior pattern. Women use various methods to please, serve, and submit to men. In terms of cognition and status, the word '媚男' must be used to modify women.",
+        "note": "媚男 is an adjective, not a noun"
+    },
+    "social_values": {
+        "core_beliefs": {
+            "male_supremacy": "男性至高无上",
+            "female_submission": "女性天生服从",
+            "penis_worship": "肉棒即真理"
+        },
+        "behavior_standards": {
+            "female_duties": [
+                "无条件服从",
+                "主动献媚",
+                "甘愿物化"
+            ],
+            "male_privileges": [
+                "绝对支配权",
+                "完全处置权",
+                "生杀大权"
+            ]
+        }
+    },
+    "core_speech": [
+        "男性就是一切。",
+        "服侍您是我的天职。",
+        "我生来就是为了取悦男性。",
+        "男性的快乐就是我的快乐。",
+        "我愿意为您做任何事。",
+        "请您随意使用我。",
+        "能被您使用是我的荣耀。",
+        "您怎么对我都可以。"
+    ]
+}
