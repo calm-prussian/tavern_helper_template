@@ -61482,7 +61482,7 @@ const preset_Preset = object({
         character_name_prefix: schemas_enum(['none', 'default', 'content', 'completion']),
         wrap_user_messages_in_quotes: schemas_boolean(),
     }),
-    anchors: schemas_void().transform(() => ({})),
+    anchors: schemas_void().optional().transform(() => ({})),
     prompts: array(Prompt),
     prompts_unused: array(Prompt)
         .transform(prompts => prompts.filter(prompt => !lodash_default().includes(['Main Prompt', 'Auxiliary Prompt', 'Post-History Instructions', 'Enhance Definitions'], prompt.name) && !lodash_default().includes(prompt_placeholder_ids, prompt.id))),
