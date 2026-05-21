@@ -3,7 +3,7 @@
   上下文长度: 2000000
   最大回复token数: 32000
   流式传输: true
-  温度: 0.86
+  温度: 1.03
   频率惩罚: 0
   存在惩罚: 0
   top_p: 1
@@ -21,6 +21,13 @@
 锚点: {}
 
 提示词:
+  - 名称: Agent System Prompt
+    启用: true
+    插入位置:
+      类型: 相对
+    角色: 系统
+    内容: ""
+
   - 名称: ❄️重置缓存（玄学，有时候有奇效）
     启用: false
     角色: 用户
@@ -50,7 +57,7 @@
     文件: 条目/🛡️ 变量（别动）
 
   - 名称: 📘 字数设置（随意更改）
-    启用: true
+    启用: false
     插入位置:
       类型: 相对
     角色: 系统
@@ -58,8 +65,17 @@
       {{setvar::wordsCloud::不得小于500，不得大于1500}}{{//
       以下内容为注释，不会发送给AI：想要变动正文字数，更改上面的数字即可，默认为1000。如希望AI少写，可更改为“不得大于”。}}{{trim}}
 
+  - 名称: 📘 字数设置（随意更改）
+    启用: true
+    插入位置:
+      类型: 相对
+    角色: 系统
+    内容: |-
+      {{setvar::wordsCloud:: 400 到 900 }}{{//
+      以下内容为注释，不会发送给AI：想要变动正文字数，更改上面的数字即可，默认为1000。如希望AI少写，可更改为“不得大于”。}}{{trim}}
+
   - 名称: 🛡️最大推理强度
-    启用: false
+    启用: true
     插入位置:
       类型: 相对
     角色: 系统
@@ -113,6 +129,13 @@
       类型: 相对
     角色: 用户
     文件: 条目/📘错误避免
+
+  - 名称: 写作戒律
+    启用: true
+    插入位置:
+      类型: 相对
+    角色: 系统
+    文件: 条目/写作戒律
 
   - 名称: 图片生成
     启用: false
@@ -210,19 +233,19 @@
     角色: 用户
     文件: 条目/✅禁词表
 
-  - 名称: 🪶调频·日常随性
+  - 名称: A🪶调频·日常随性
     启用: true
     插入位置:
       类型: 相对
     角色: 用户
-    文件: 条目/🪶调频·日常随性
+    文件: 条目/A🪶调频·日常随性
 
-  - 名称: 🖋️默认
+  - 名称: A🖋️默认
     启用: true
     插入位置:
       类型: 相对
     角色: 用户
-    文件: 条目/🖋️默认
+    文件: 条目/A🖋️默认
 
   - 名称: 🖋️通俗
     启用: false
@@ -244,8 +267,8 @@
       类型: 相对
     角色: 系统
     额外字段:
-      injection_trigger: []
       injection_position: 0
+      injection_trigger: []
     文件: 条目/🖋️轻喜剧
 
   - 名称: 🖋️沉浸式
@@ -406,14 +429,21 @@
     文件: 条目/⚙️A抢话
 
   - 名称: ⚙️B抢话
-    启用: true
+    启用: false
     插入位置:
       类型: 相对
     角色: 用户
     文件: 条目/⚙️B抢话
 
+  - 名称: ⚙️C抢话
+    启用: true
+    插入位置:
+      类型: 相对
+    角色: 用户
+    文件: 条目/⚙️C抢话
+
   - 名称: ⚙️长对白
-    启用: false
+    启用: true
     插入位置:
       类型: 相对
     角色: 用户
@@ -439,53 +469,22 @@
     角色: 用户
     文件: 条目/⚙️防抢话
 
-  - 名称: 🛡️准则结束
+  - 名称: A🛡️准则结束
     启用: true
     插入位置:
       类型: 相对
     角色: 用户
-    文件: 条目/🛡️准则结束
+    文件: 条目/A🛡️准则结束
 
   - 名称: 🍵自定义插件
-    启用: false
+    启用: true
     插入位置:
       类型: 相对
     角色: 系统
-    内容: <自定义插件>
-
-  - 名称: B并行事件
-    启用: false
-    插入位置:
-      类型: 相对
-    角色: 系统
-    文件: 条目/B并行事件
-
-  - 名称: B小状态栏
-    启用: false
-    插入位置:
-      类型: 相对
-    角色: 系统
-    文件: 条目/B小状态栏
-
-  - 名称: B选项
-    启用: false
-    插入位置:
-      类型: 相对
-    角色: 系统
-    文件: 条目/B选项
-
-  - 名称: 🍵自定义插件结束
-    启用: false
-    插入位置:
-      类型: 相对
-    角色: 系统
-    内容: </自定义插件>
-    额外字段:
-      injection_trigger: []
-      injection_position: 0
+    内容: "{{outlet::diy-plugins}}"
 
   - 名称: ➡️半转述
-    启用: false
+    启用: true
     插入位置:
       类型: 相对
     角色: 用户
@@ -518,8 +517,8 @@
       类型: 相对
     角色: 用户
     额外字段:
-      injection_trigger: []
       injection_position: 0
+      injection_trigger: []
     文件: 条目/📘格式姬（无格式卡不用开）
 
   - 名称: 📙分析/助手模式
@@ -549,6 +548,13 @@
       类型: 相对
     角色: 用户
     文件: 条目/📘思考
+
+  - 名称: Agent Results
+    启用: true
+    插入位置:
+      类型: 相对
+    角色: 系统
+    内容: ""
 
 未添加的提示词:
   - 名称: 📙超长长思考
@@ -1192,19 +1198,6 @@
         仅格式显示: true
         仅格式提示词: false
 
-    - 正则名称: 【云瑾】八股抹除 - 4.24
-      id: b713fbff-47ae-4616-8d7a-655c4ba407e2
-      启用: false
-      查找表达式: /而(?=是)|(?<=[，”。\s])不是[\S]*?[，,
-        。]|(个动作|个反应|个认知|个笑容)|突然|忽然|一(丝+)|(、?)不容置疑([的地]?)|(、?)(不易|难以)(觉察|察觉)([的地]?)|(微|几)不可(查|察|闻)([的地]?)|[，,]([^，,]*?)指(关节|节|尖)([^，,。]*?)白([^，,]*?)(?=[。，,])|(?<=[\s”。])([^，”]*?)(一抹|弧度)([^，]*?)[。，]|[，,]([^，,”]*?)(一抹|弧度)([^，]*?)(?=[。，,])/g
-      内容: ""
-      来源:
-        用户输入: false
-        AI输出: true
-      作用于:
-        仅格式显示: true
-        仅格式提示词: true
-
     - 正则名称: 【云瑾】切除10楼以内小总结
       id: 30c53ab4-0c58-4df8-8d3c-e1ba24abcb92
       启用: true
@@ -1243,43 +1236,6 @@
         仅格式显示: false
         仅格式提示词: true
 
-    - 正则名称: 【夏瑾】语气正则
-      id: 7861fbe0-ed5f-40af-91c1-17f6a3a1a690
-      启用: false
-      查找表达式: /(?<=(语气|语调|声音)([\u4e00-\u9fa5]+?))([,，]?)(得?)(如同|像|仿佛).*?(?=[。，,])/g
-      内容: ""
-      来源:
-        用户输入: false
-        AI输出: true
-      作用于:
-        仅格式显示: true
-        仅格式提示词: true
-
-    - 正则名称: 【夏瑾】破折号处理
-      id: 2112de1c-3a68-45bb-a389-1fd17dc09931
-      启用: true
-      查找表达式: /(?<=[\u4e00-\u9fa5])——(?=[\u4e00-\u9fa5])/g
-      内容: ，
-      来源:
-        用户输入: false
-        AI输出: true
-      作用于:
-        仅格式显示: true
-        仅格式提示词: true
-
-    - 正则名称: 【夏瑾】比喻正则
-      id: 85b2b65a-3762-4006-965c-69eda41ea80b
-      启用: false
-      查找表达式: /(?<=[\s”。])([^。，,]*?)(话(像|如同|仿佛))(.*?)。/g
-      内容: |+
-        
-      来源:
-        用户输入: false
-        AI输出: true
-      作用于:
-        仅格式显示: true
-        仅格式提示词: true
-
   酒馆助手:
     脚本库: []
 
@@ -1287,179 +1243,183 @@
 
   SPreset:
     ChatSquash:
-      启用: false
-      separate_chat_history: false
-      parse_clewd: true
-      角色: follow
-      stop_string: "User:"
-      user_prefix: |-
-        
-
-        Human: 
-      user_suffix: ""
       char_prefix: |-
         
 
         Assistant: 
       char_suffix: ""
-      prefix_system: ""
-      suffix_system: ""
       enable_squashed_separator: true
+      enable_stop_string: false
+      启用: false
+      parse_clewd: true
+      prefix_system: ""
+      re_split: false
+      角色: follow
+      separate_chat_history: false
+      squashed_post_script: ""
+      squashed_post_script_enable: false
       squashed_separator_regex: false
       squashed_separator_string: <|no-trans|>
-      squashed_post_script_enable: false
-      squashed_post_script: ""
+      stop_string: "User:"
+      suffix_system: ""
+      user_prefix: |-
+        
+
+        Human: 
       user_role_system: false
-      enable_stop_string: false
-      re_split: false
+      user_suffix: ""
+    MacroNest: false
     RegexBinding:
       regexes:
-        - id: 51b3f4a5-ee72-4980-abda-8d8fb67479be
-          scriptName: 【云瑾】包裹最新指示
+        - 禁用: false
           findRegex: ^([\s\S]*)$
+          id: 51b3f4a5-ee72-4980-abda-8d8fb67479be
+          markdownOnly: false
+          maxDepth: 1
+          minDepth: null
+          placement:
+            - 1
+          promptOnly: true
           replaceString: |-
             <最新互动>
             $1
             </最新互动>
-          trimStrings: []
-          placement:
-            - 1
-          禁用: false
-          markdownOnly: false
-          promptOnly: true
           runOnEdit: true
+          scriptName: 【云瑾】包裹最新指示
           substituteRegex: 0
-          minDepth: null
-          maxDepth: 1
-        - id: d0939a86-4170-44d8-8968-b6148a5c2ed6
-          scriptName: 【云瑾】移除额外tag_1.5
+          trimStrings: []
+        - 禁用: false
           findRegex: /^[\s\S]*?(我将进行符合需求的创作：|</thinking>|#+
             正式创作|<\/preparation>)|(<!--[\s\S]*?-->\s?)|<content>\s*##[\s\S]*?---|<thinking>[\s\S]*?</thinking>/g
-          replaceString: ""
-          trimStrings: []
+          id: d0939a86-4170-44d8-8968-b6148a5c2ed6
+          markdownOnly: true
+          maxDepth: null
+          minDepth: null
           placement:
             - 2
-          禁用: false
-          markdownOnly: true
           promptOnly: true
+          replaceString: ""
           runOnEdit: true
+          scriptName: 【云瑾】移除额外tag_1.5
           substituteRegex: 0
-          minDepth: null
-          maxDepth: null
-        - id: b713fbff-47ae-4616-8d7a-655c4ba407e2
-          scriptName: 【云瑾】八股抹除 - 4.24
+          trimStrings: []
+        - 禁用: true
           findRegex: /而(?=是)|(?<=[，"。\\s])不是[\\S]*?[，,
             。]|(个动作|个反应|个认知|个笑容)|突然|忽然|一(丝+)|(、?)不容置疑([的地]?)|(、?)(不易|难以)(觉察|察觉)([的地]?)|(微|几)不可(查|察|闻)([的地]?)|[，,]([^，,]*?)指(关节|节|尖)(.*?)白([^，,]*?)(?=[。，,])|(?<=[\\s"。])([^，"]*?)(一抹|弧度)([^，]*?)[。，]|[，,]([^，,"]*?)(一抹|弧度)([^，]*?)(?=[。，,])|(?<=[\\s"。])(.*?)(语气|话像)([^。]*?)[。，]/g
-          replaceString: ""
-          trimStrings: []
-          placement:
-            - 2
-          禁用: true
+          id: b713fbff-47ae-4616-8d7a-655c4ba407e2
           markdownOnly: true
-          promptOnly: true
-          runOnEdit: true
-          substituteRegex: 0
-          minDepth: null
           maxDepth: null
-        - id: 30c53ab4-0c58-4df8-8d3c-e1ba24abcb92
-          scriptName: 【云瑾】切除10楼以内小总结
+          minDepth: null
+          placement:
+            - 2
+          promptOnly: true
+          replaceString: ""
+          runOnEdit: true
+          scriptName: 【云瑾】八股抹除 - 4.24
+          substituteRegex: 0
+          trimStrings: []
+        - 禁用: false
           findRegex: /<scene>(.*?)<\/details>/gs
-          replaceString: ""
-          trimStrings: []
-          placement:
-            - 2
-          禁用: false
+          id: 30c53ab4-0c58-4df8-8d3c-e1ba24abcb92
           markdownOnly: false
-          promptOnly: true
-          runOnEdit: true
-          substituteRegex: 0
-          minDepth: null
           maxDepth: 9
-        - id: 4c56b336-bfb1-4766-a053-6f072bfd57c9
-          scriptName: 【云瑾】切除10楼以上正文&仅保留小总结
-          findRegex: /[\s\S]*<scene>|<\/scene>|<summary>摘要<\/summary>|<details>|<\/details>[\s\S]*/gs
-          replaceString: ""
-          trimStrings: []
+          minDepth: null
           placement:
             - 2
-          禁用: false
-          markdownOnly: false
           promptOnly: true
+          replaceString: ""
           runOnEdit: true
+          scriptName: 【云瑾】切除10楼以内小总结
           substituteRegex: 0
-          minDepth: 10
-          maxDepth: null
-        - id: 14c836a8-2b8c-40ee-a476-83f17a7b8772
-          scriptName: 【夏瑾】底部正则
-          findRegex: /(.*)/s
-          replaceString: </补充资料>$1<补充资料>
           trimStrings: []
+        - 禁用: false
+          findRegex: /[\s\S]*<scene>|<\/scene>|<summary>摘要<\/summary>|<details>|<\/details>[\s\S]*/gs
+          id: 4c56b336-bfb1-4766-a053-6f072bfd57c9
+          markdownOnly: false
+          maxDepth: null
+          minDepth: 10
+          placement:
+            - 2
+          promptOnly: true
+          replaceString: ""
+          runOnEdit: true
+          scriptName: 【云瑾】切除10楼以上正文&仅保留小总结
+          substituteRegex: 0
+          trimStrings: []
+        - 禁用: true
+          findRegex: /(.*)/s
+          id: 14c836a8-2b8c-40ee-a476-83f17a7b8772
+          markdownOnly: false
+          maxDepth: null
+          minDepth: null
           placement:
             - 1
             - 2
-          禁用: true
-          markdownOnly: false
           promptOnly: true
+          replaceString: </补充资料>$1<补充资料>
           runOnEdit: true
+          scriptName: 【夏瑾】底部正则
           substituteRegex: 0
-          minDepth: null
-          maxDepth: null
-        - id: 7861fbe0-ed5f-40af-91c1-17f6a3a1a690
-          scriptName: 【夏瑾】语气正则
+          trimStrings: []
+        - 禁用: true
           findRegex: /(?<=(语气|语调|声音)([\u4e00-\u9fa5]+?))([,，]?)(得?)(如同|像|仿佛).*?(?=[。，,])/g
+          id: 7861fbe0-ed5f-40af-91c1-17f6a3a1a690
+          markdownOnly: true
+          maxDepth: null
+          minDepth: null
+          placement:
+            - 2
+          promptOnly: true
           replaceString: ""
-          trimStrings: []
-          placement:
-            - 2
-          禁用: true
-          markdownOnly: true
-          promptOnly: true
           runOnEdit: true
+          scriptName: 【夏瑾】语气正则
           substituteRegex: 0
-          minDepth: null
-          maxDepth: null
-        - id: 2112de1c-3a68-45bb-a389-1fd17dc09931
-          scriptName: 【夏瑾】破折号处理
+          trimStrings: []
+        - 禁用: false
           findRegex: /(?<=[\u4e00-\u9fa5])——(?=[\u4e00-\u9fa5])/g
-          replaceString: ，
-          trimStrings: []
+          id: 2112de1c-3a68-45bb-a389-1fd17dc09931
+          markdownOnly: true
+          maxDepth: null
+          minDepth: null
           placement:
             - 2
-          禁用: false
-          markdownOnly: true
           promptOnly: true
+          replaceString: ，
           runOnEdit: true
+          scriptName: 【夏瑾】破折号处理
           substituteRegex: 0
-          minDepth: null
-          maxDepth: null
-        - id: 85b2b65a-3762-4006-965c-69eda41ea80b
-          scriptName: 【夏瑾】比喻正则
+          trimStrings: []
+        - 禁用: true
           findRegex: /(?<=[\s"。])([^。，,]*?)(话像)(.*?)。/g
+          id: 85b2b65a-3762-4006-965c-69eda41ea80b
+          markdownOnly: true
+          maxDepth: null
+          minDepth: null
+          placement:
+            - 2
+          promptOnly: true
           replaceString: |+
             
-          trimStrings: []
-          placement:
-            - 2
-          禁用: true
-          markdownOnly: true
-          promptOnly: true
           runOnEdit: true
+          scriptName: 【夏瑾】比喻正则
           substituteRegex: 0
-          minDepth: null
-          maxDepth: null
-        - id: 1b4c2151-0467-4f7d-8dc6-8db9282fef09
-          scriptName: 【云瑾】移除正文tag_1.5
-          禁用: false
-          runOnEdit: true
+          trimStrings: []
+        - 禁用: false
           findRegex: /^[\s\S]*?(<正文>|<\/正文>)/g
-          trimStrings: []
-          replaceString: ""
+          id: 1b4c2151-0467-4f7d-8dc6-8db9282fef09
+          markdownOnly: true
+          maxDepth: null
+          minDepth: null
           placement:
             - 2
-          substituteRegex: 0
-          minDepth: null
-          maxDepth: null
-          markdownOnly: true
           promptOnly: false
-    MacroNest: false
+          replaceString: ""
+          runOnEdit: true
+          scriptName: 【云瑾】移除正文tag_1.5
+          substituteRegex: 0
+          trimStrings: []
     ToolBindings: {}
+
+  luker:
+    prompt_groups: []
+    prompt_layout: []

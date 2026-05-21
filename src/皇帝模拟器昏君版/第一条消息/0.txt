@@ -1,0 +1,285 @@
+```html
+<html>
+<head>
+<style>
+body {
+  font-family: 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  margin: 0;
+  padding: 20px;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.card-intro {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+  padding: 30px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  background: linear-gradient(45deg, #FFD700, #FFA500, #FF69B4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  font-weight: 300;
+}
+
+.content {
+  padding: 30px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  border-left: 4px solid #FFD700;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.info-label {
+  font-size: 14px;
+  color: #FFD700;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.info-value {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.description-section {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #FFD700;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.description-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: justify;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.tag {
+  background: linear-gradient(135deg, #FF6B6B, #4ECDC4);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+  padding: 20px 30px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 5px 0;
+}
+
+.creator-highlight {
+  color: #FFD700;
+  font-weight: bold;
+}
+
+.warning {
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.2), rgba(255, 107, 107, 0.1));
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  padding: 15px;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+.warning-text {
+  color: #FFB3B3;
+  font-size: 14px;
+  margin: 0;
+}
+
+.emoji-icon {
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-intro {
+  animation: fadeInUp 0.8s ease-out;
+}
+</style>
+</head>
+<body>
+<!-- disable-default-loading -->
+<div class="card-intro">
+  <div class="header">
+    <h1 class="title">👑 皇帝模拟器昏君版 👑</h1>
+    <p class="subtitle">体验至高无上的皇权生活</p>
+  </div>
+  
+  <div class="content">
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-label">🎨 创作者</div>
+        <div class="info-value creator-highlight">喵桃 (MeowTao)</div>
+      </div>
+      
+      <div class="info-card">
+        <div class="info-label">🧪 测试预设</div>
+        <div class="info-value">mr鹿鹿预设 2.7.6</div>
+      </div>
+      
+      <div class="info-card">
+        <div class="info-label">🤖 测试模型</div>
+        <div class="info-value">Claude-Sonnet-4</div>
+      </div>
+      
+      <div class="info-card">
+        <div class="info-label">📝 版本状态</div>
+        <div class="info-value">v1.0</div>
+      </div>
+    </div>
+    
+    <div class="description-section">
+      <h2 class="section-title">
+        <span class="emoji-icon">📖</span>
+        角色卡简介
+      </h2>
+      <p class="description-text">
+         🌹 这是一个为您量身打造的纵欲天堂，林晚长公主将朝堂风雨悉数化作您的龙床暖帐。早朝时她跨坐龙椅批阅奏章，用潮吹浸湿虎符；边关战报成了胡姬腰间的金铃震颤。核心玩法包括用阳精为妃嫔亵裤题诗、朱批玉玺在处女雪臀钤印「御用」、命逆臣妻女在庆功宴表演「肉屏风」等极致亵渎体验。系统暗黑特权包括将女刺客调教成活体自慰器，男刺客阉割为「人棍拂尘」。所有现实危机都将被情欲转化：旱灾由贵妇赤身祈雨，科举考试在「肉身考案」上用舌书写。您每滴精液都是改写王朝律法的朱砂，每次射精都触发新的堕落庆典。32岁的绝色长公主会亲自为您扫除障碍，将谋逆者妻女制成会说话的便器，谏官牙齿镶成妃嫔的阴蒂首饰。这里没有权力危机，只有更深层的欲望陷阱——您只需撕碎道德，在姐姐用凤仙花汁为您阴茎题写的敕令中，享受整个帝国沦为您精盆的极致快感。
+      </p>
+      
+      <div class="tags">
+        <span class="tag">👑 古风角色</span>
+        <span class="tag">🏛️ 皇室模拟</span>
+        <span class="tag">❤️ 后宫系统</span>
+        <span class="tag">📊 状态管理</span>
+        <span class="tag">🎭 沉浸体验</span>
+      </div>
+    </div>
+    
+    <div class="description-section">
+      <h2 class="section-title">
+        <span class="emoji-icon">⚙️</span>
+        功能特色
+      </h2>
+      <p class="description-text">
+        • <strong>丰富的状态系统：</strong>包含时间、库银、龙精、极乐、后宫人数等多项状态指标<br>
+        • <strong>动态场景切换：</strong>支持不同地点的场景变化，如寝宫、朝堂、御花园等<br>
+        • <strong>角色互动系统：</strong>与长公主、妃子等角色进行深度互动<br>
+        • <strong>心理描写：</strong>详细的角色心理活动描述，增强代入感<br>
+        • <strong>美化界面：</strong>配套的状态栏美化系统，提升视觉体验
+      </p>
+    </div>
+    
+    <div class="warning">
+      <p class="warning-text">
+        <strong>⚠️ 使用须知：</strong><br>
+        • 本角色卡为首次创作，如有不足之处请多多包涵<br>
+        • 建议配合推荐的测试预设和模型使用以获得最佳体验<br>
+        • 角色卡内容仅供娱乐，请勿与现实混淆
+      </p>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <p class="footer-text">
+      <strong>📋 使用许可</strong>
+    </p>
+    <p class="footer-text">
+      ✅ <strong>二创允许：</strong>欢迎在此基础上进行二次创作，请标明原作者
+    </p>
+    <p class="footer-text">
+      ❌ <strong>商用禁止：</strong>本作品仅供个人娱乐使用，禁止商业用途
+    </p>
+    <p class="footer-text">
+      ♥ <strong>反馈：</strong>请在类脑社区或旅程搜索meowtaoyo
+    </p>
+    <p class="footer-text" style="margin-top: 20px; font-style: italic;">
+      感谢您选择使用本角色卡，愿您在古代皇室的世界中度过愉快的时光！
+    </p>
+  </div>
+</div>
+</body>
+</html>
+```

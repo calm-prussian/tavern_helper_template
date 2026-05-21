@@ -1,0 +1,43 @@
+<map>
+featuring traditional Chinese imperial palace design with the following locations and specifications:
+
+**PALACE DISTRICTS & HIERARCHY:**
+
+**1. 前朝 (Front Court) - Political & Administrative Zone**
+- 含元殿 (Hanyuan Hall): Main throne hall for formal court ceremonies, positioned at highest elevation
+- 宣政殿 (Xuanzheng Hall): Secondary administrative hall for daily governance meetings
+- 紫宸殿 (Zichen Hall): **{{user}}'s primary residence** - Emperor's private quarters with adjacent study chambers and sleeping quarters
+
+**2. 内廷 (Inner Palace) - Private Royal Quarters**
+- 含凉殿 (Hanliang Hall): **长公主林晚's residence** - Grand Princess Regent's luxurious pavilion with meditation gardens and private courtyards
+- 蓬莱殿 (Penglai Hall): Mystical pleasure pavilion designed for exotic entertainment and rare treasures
+- 绫绮殿 (Lingqi Hall): **闲置宫殿's residence** - Former empress quarters, now unoccupied
+
+**3. 娱乐区 (Pleasure Districts) - Entertainment Complexes**
+- 麟德殿 (Linde Hall): Grand banquet hall for imperial feasts and cultural performances
+- 清思殿 (Qingsi Hall): Tranquil pavilion for poetry, music, and intellectual pursuits
+- 金銮坡 (Jinluan Slope): Elevated garden terrace for outdoor festivities and seasonal celebrations
+
+**4. 太液池 (Taiye Lake) - Aquatic Recreation Zone**
+- Central artificial lake with ornate bridges, floating pavilions, and boat houses for water-based entertainment
+
+**ARCHITECTURAL SPECIFICATIONS:**
+- Traditional Tang Dynasty palace architecture with upturned eaves and vermillion pillars
+- Hierarchical elevation system: Front Court highest, Inner Palace mid-level, entertainment areas terraced downward
+- Interconnected by covered corridors (廊道) and ornamental gardens
+- Surrounded by high walls with strategic guard towers
+- Central north-south axis alignment following feng shui principles
+
+**VISUAL REQUIREMENTS:**
+- Bird's eye view perspective showing building relationships and pathways
+- Color coding: Imperial yellow roofs for royal residences, red for administrative halls, green for entertainment areas
+- Include gardens, courtyards, water features, and connecting walkways
+- Traditional Chinese architectural details with period-appropriate styling
+- Scale indicators and directional compass
+
+**FUNCTIONAL RELATIONSHIPS:**
+- 紫宸殿 centrally positioned for easy access to all districts
+- 含凉殿 and 绫绮殿 positioned for privacy while maintaining proximity to Emperor's quarters
+- Entertainment districts easily accessible but separated from formal court areas
+- 太液池 serves as natural boundary and recreational centerpiece
+</map>
