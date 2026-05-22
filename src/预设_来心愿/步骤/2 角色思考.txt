@@ -1,1 +1,0 @@
-{{getvar::char_think_step}}

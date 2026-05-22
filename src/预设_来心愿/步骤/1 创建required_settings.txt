@@ -1,8 +1,0 @@
-注：禁止直接读取所有SKILL，必须在进行到对应的步骤时再读取相应的SKILL。
-
-- 检查 persist/required_settings.md 是否存在
-  - 存在 → workspace_read_file 读取并回顾
-  - 不存在 → 创建：
-    - 列举本轮写作所需的世界观
-    - 如有特殊规则（如故事中需要检定等），列举这些规则
-    - workspace_write_file 写入 persist/required_settings.md

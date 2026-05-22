@@ -1,3 +1,0 @@
-{{//创作规则三选一：【默认基础版】。与 3b/3c 互斥，同一时间只能启用一个。}}
-- 读取SKILL awct_rule_strict_v1
-- 回顾 required_settings.md

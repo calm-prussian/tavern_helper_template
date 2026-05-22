@@ -1,2 +1,0 @@
-- 使用 workspace.commit 将草稿提交为聊天消息
-- 使用 workspace.finish 结束本次 Agent 运行

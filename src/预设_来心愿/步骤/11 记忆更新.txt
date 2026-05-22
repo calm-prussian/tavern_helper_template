@@ -1,1 +1,0 @@
-{{getvar::persist_memory_operation}}
