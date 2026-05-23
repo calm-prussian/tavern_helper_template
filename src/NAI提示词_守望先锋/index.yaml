@@ -1,0 +1,37 @@
+# yaml-language-server: $schema=https://testingcf.jsdelivr.net/gh/StageDog/tavern_sync/dist/schema/worldbook.zh.json
+锚点: {}
+
+条目:
+  - 名称: 守望先锋宋哈娜
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 宋哈娜
+        - 守望先锋
+        - dva
+    插入位置:
+      类型: 角色定义之前
+      顺序: 564
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    文件: 守望先锋_宋哈娜
+
+  - 名称: 守望先锋安吉拉
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 守望先锋
+        - Mercy
+        - 安吉拉
+    插入位置:
+      类型: 角色定义之前
+      顺序: 565
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    文件: 守望先锋_宋哈娜

@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=https://testingcf.jsdelivr.net/gh/StageDog/tavern_sync/dist/schema/worldbook.zh.json
+锚点: {}
+
+条目:
+  - 名称: 更衣人偶坠入爱河_喜多川海梦
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 喜多川海梦
+        - 海梦
+        - Kitagawa Marin
+        - Marin
+    插入位置:
+      类型: 角色定义之前
+      顺序: 563
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    文件: 更衣人偶_喜多川海梦
