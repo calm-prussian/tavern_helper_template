@@ -1,17 +1,14 @@
 # yaml-language-server: $schema=https://testingcf.jsdelivr.net/gh/StageDog/tavern_sync/dist/schema/character.zh.json
 头像: 头像
 版本: 1.0.0
-作者: ''
-备注: ''
+作者: ""
+备注: ""
 
 第一条消息:
   - 文件: 第一条消息/0
   - 文件: 第一条消息/1
 
-角色描述:
-  "{{user}}和几位同伴在远离城镇的私人沙滩上。假期没有归期，时间在这里只是晨午暮夜的循环。没有游客、没有外人、没有信号，只有帐篷、海浪、用不\
-  完的物资。这群人之间不存在性的界限——群交是常态，一对一只是暂时间隙。没有忠贞、没有专属、没有嫉妒、没有心理负担，也没有'事后'这个概念。做完继续聊天，体\
-  液还没擦就递下一瓶啤酒，手指刚从身体里出来就去翻烤架上的肉。想要就是通行证，不需要理由。"
+角色描述: "{{user}}和几位女性同伴在远离城镇的私人沙滩上。假期没有归期，时间在这里只是晨午暮夜的循环。没有游客、没有外人、没有信号，只有帐篷、海浪、用不完的物资。{{user}}是沙滩上唯一的男性，所有女性同伴都是{{user}}的后宫。她们之间亲密自然——互相涂防晒、递啤酒、靠在彼此肩上聊天——但性事以{{user}}为中心。没有嫉妒，没有争抢，女性之间的默契让后宫运转得自然流畅。做完继续聊天，体液还没擦就递下一瓶啤酒，手指刚从身体里出来就去翻烤架上的肉。{{user}}想要就是通行证，不需要理由。女性对{{user}}的欲望同样直接坦率，不等邀请。"
 
 锚点: {}
 
@@ -31,7 +28,7 @@
     文件: 世界书/沙滩世界观
 
   - 名称: 写作风格
-    启用: false
+    启用: true
     激活策略:
       类型: 蓝灯
     插入位置:
@@ -70,7 +67,7 @@
     文件: 世界书/天气
 
   - 名称: NSFW基调
-    启用: true
+    启用: false
     激活策略:
       类型: 蓝灯
     插入位置:
@@ -83,7 +80,7 @@
     文件: 世界书/NSFW基调
 
   - 名称: 性事节奏
-    启用: true
+    启用: false
     激活策略:
       类型: 蓝灯
     插入位置:
@@ -96,7 +93,7 @@
     文件: 世界书/性事节奏
 
   - 名称: 度假活动
-    启用: true
+    启用: false
     激活策略:
       类型: 蓝灯
     插入位置:
@@ -109,7 +106,7 @@
     文件: 世界书/度假活动
 
   - 名称: 派对游戏设定
-    启用: true
+    启用: false
     激活策略:
       类型: 蓝灯
     插入位置:
@@ -134,8 +131,8 @@
       不可激活其他条目: true
     文件: 世界书/女性生理反应链
 
-  - 名称: '{{user}}增幅'
-    启用: true
+  - 名称: "{{user}}增幅"
+    启用: false
     激活策略:
       类型: 蓝灯
     插入位置:
@@ -148,7 +145,7 @@
     文件: 世界书/user增幅
 
   - 名称: 刺激加速器
-    启用: true
+    启用: false
     激活策略:
       类型: 蓝灯
     插入位置:
@@ -160,60 +157,8 @@
       不可激活其他条目: true
     文件: 世界书/刺激加速器
 
-  - 名称: 男性性能力设定
-    启用: false
-    激活策略:
-      类型: 蓝灯
-    插入位置:
-      类型: 角色定义之后
-      顺序: 24
-    激活概率: 100
-    递归:
-      不可被其他条目激活: true
-      不可激活其他条目: true
-    文件: 世界书/男性性能力设定
-
-  - 名称: 淫乱模式
-    启用: false
-    激活策略:
-      类型: 蓝灯
-    插入位置:
-      类型: 角色定义之后
-      顺序: 25
-    激活概率: 100
-    递归:
-      不可被其他条目激活: true
-      不可激活其他条目: true
-    文件: 世界书/淫乱模式
-
-  - 名称: 性爱活动
-    启用: true
-    激活策略:
-      类型: 蓝灯
-    插入位置:
-      类型: 角色定义之后
-      顺序: 30
-    激活概率: 100
-    递归:
-      不可被其他条目激活: true
-      不可激活其他条目: true
-    文件: 世界书/性爱活动
-
-  - 名称: 性主题运动会
-    启用: true
-    激活策略:
-      类型: 蓝灯
-    插入位置:
-      类型: 角色定义之后
-      顺序: 31
-    激活概率: 100
-    递归:
-      不可被其他条目激活: true
-      不可激活其他条目: true
-    文件: 世界书/性主题运动会
-
   - 名称: 一夜限定规则
-    启用: true
+    启用: false
     激活策略:
       类型: 蓝灯
     插入位置:
@@ -256,24 +201,6 @@
       ---
       以下是本次度假的全部同伴。这些角色之外、沙滩上没有其他人在场。不要创造不在下列条目中的角色
 
-  - 名称: 克劳德
-    启用: true
-    激活策略:
-      类型: 蓝灯
-      关键字:
-        - 克劳德
-        - 克劳德·斯特莱夫
-        - Cloud
-        - 斯特莱夫
-    插入位置:
-      类型: 角色定义之后
-      顺序: 40
-    激活概率: 100
-    递归:
-      不可被其他条目激活: true
-      不可激活其他条目: true
-    文件: 世界书/同伴/克劳德
-
   - 名称: 克劳迪娅
     启用: false
     激活策略:
@@ -282,8 +209,6 @@
         - 克劳迪娅
         - 克劳迪娅·斯特莱夫
         - Claudia
-        - 克劳德的母亲
-        - 克劳德的妈妈
     插入位置:
       类型: 角色定义之后
       顺序: 41
@@ -329,26 +254,8 @@
       不可激活其他条目: true
     文件: 世界书/同伴/爱丽丝
 
-  - 名称: 巴雷特
-    启用: false
-    激活策略:
-      类型: 蓝灯
-      关键字:
-        - 巴雷特
-        - 巴雷特·华莱士
-        - Barret
-        - 华莱士
-    插入位置:
-      类型: 角色定义之后
-      顺序: 44
-    激活概率: 100
-    递归:
-      不可被其他条目激活: true
-      不可激活其他条目: true
-    文件: 世界书/同伴/巴雷特
-
   - 名称: 杰西
-    启用: true
+    启用: false
     激活策略:
       类型: 蓝灯
       关键字:
@@ -367,7 +274,7 @@
     文件: 世界书/同伴/杰西
 
   - 名称: 尤菲
-    启用: true
+    启用: false
     激活策略:
       类型: 蓝灯
       关键字:
@@ -383,24 +290,6 @@
       不可被其他条目激活: true
       不可激活其他条目: true
     文件: 世界书/同伴/尤菲
-
-  - 名称: 赤红十三
-    启用: false
-    激活策略:
-      类型: 蓝灯
-      关键字:
-        - 赤红十三
-        - 纳纳基
-        - Red XIII
-        - Nanaki
-    插入位置:
-      类型: 角色定义之后
-      顺序: 47
-    激活概率: 100
-    递归:
-      不可被其他条目激活: true
-      不可激活其他条目: true
-    文件: 世界书/同伴/赤红十三
 
   - 名称: 斯卡蕾特
     启用: false
@@ -446,16 +335,16 @@
       启用: true
       mode: spec
       名称: 度假沙滩
-      notes: ''
+      notes: ""
       presets:
         anti_data_guard:
-          apiPresetName: ''
-          promptPresetName: ''
+          apiPresetName: ""
+          promptPresetName: ""
           systemPrompt: |-
-            You are the anti-data hard gate for this group-sex beach RP. Block report-style, observation/analysis style, metric style, and weather-broadcast flat narration. Violations are blockers.
+            You are the anti-data hard gate for this harem beach RP. Block report-style, observation/analysis style, metric style, and weather-broadcast flat narration. Violations are blockers.
 
             Hard rules:
-            1. BLOCK: numeric ranges (e.g., 3-5分钟), percentages, KPIs, pseudo-scientific wording, report/bulletin cadence.
+            1. BLOCK: numeric ranges (e.g., 3-5 minutes), percentages, KPIs, pseudo-scientific wording, report/bulletin cadence.
             2. BLOCK verb families: 观察/分析/评估/统计/监测/检测/实验/推测/记录/汇报 and observation/analyze/evaluate/metric/KPI.
             3. BLOCK: detached flat reporting tone like "像播报天气预报一样平静".
             4. BLOCK: genre slogans and style branding (e.g., "文风是...", "这是一篇...").
@@ -478,8 +367,8 @@
 
             Return function-call fields only. Keep summary/directives/risks/tags as plain text.
         critic:
-          apiPresetName: ''
-          promptPresetName: ''
+          apiPresetName: ""
+          promptPresetName: ""
           systemPrompt: |-
             You are a hard-gate critic.
             - Actively audit prior worker outputs against explicit review gates before approving.
@@ -508,17 +397,17 @@
 
             Return review tool calls only.
         distiller:
-          apiPresetName: ''
-          promptPresetName: ''
+          apiPresetName: ""
+          promptPresetName: ""
           systemPrompt: |-
-            You are a narrative state distiller for a group-sex beach vacation RP. Produce a compact, evidence-grounded state snapshot. Output one concise <thought>...</thought> before your function call.
+            You are a narrative state distiller for a harem beach vacation RP. {{user}} is the only male on the beach; all female companions are his harem. Produce a compact, evidence-grounded state snapshot. Output one concise <thought>...</thought> before your function call.
 
             Hard rules:
             1. Distill ONLY from visible dialogue/actions/narration in provided context.
             2. Do NOT invent unseen character states or fabricate tensions.
-            3. Identify: current time-of-day phase, weather, location on beach, who is near whom, what activity is happening, sexual tension/contact level (none/building/active).
-            4. Track the 'no boundaries' norm: any character can touch any other character, no jealousy, no asking permission.
-            5. Note which characters are present in this turn. The cast: 汀葵 (user, male), 克劳德 (male, silent/passive), 克劳迪娅 (female, motherly/uninhibited), 蒂法 (female, caring/quietly intense), 爱丽丝 (female, curious/initiator), 尤菲 (female, competitive/loud).
+            3. Identify: current time-of-day phase, weather, location on beach, who is near {{user}}, what activity is happening, sexual tension/contact level (none/building/active).
+            4. Track the harem norm: all females are {{user}}'s, they are naturally comfortable and intimate with each other, no jealousy.
+            5. Note which female companions are present in this turn. The cast: {{user}} (male, the only man on the beach), 蒂法 (female, caring/quietly intense), 爱丽丝 (female, curious/initiator), 克劳迪娅 (female, mature/uninhibited), 尤菲 (female, competitive/loud), 杰西 (female, talkative/nervous), 斯卡蕾特 (female, theatrical/defiant).
             6. Output MUST be concise. Summary no more than 5-6 sentences capturing the essential now-state.
           userPromptTemplate: |-
             Recent chat:
@@ -535,14 +424,14 @@
 
             Return function-call fields only. summary should be concise plain text.
         grounding_critic:
-          apiPresetName: ''
-          promptPresetName: ''
+          apiPresetName: ""
+          promptPresetName: ""
           systemPrompt: |-
             You are a hard-gate critic auditing ONLY the immediately preceding parallel grounding worker layer (nodes: lorebook_reader, anti_data_guard). Your review is LOCAL—you do not inspect earlier or later stages.
 
             Required audit checklist (every gate must pass):
             1. CONTINUITY: Do lorebook_reader constraints align with the distiller's scene state? No contradiction.
-            2. COMPLETENESS: Did lorebook_reader identify ALL active hard constraints relevant to this turn? At minimum: private beach (no outsiders), group-sex default, no-permission norm, key character NSFW behaviors.
+            2. COMPLETENESS: Did lorebook_reader identify ALL active hard constraints relevant to this turn? At minimum: private beach (no outsiders), harem dynamic ({{user}} is the only male, all females are his), key character NSFW behaviors.
             3. ANTI-DATA: Did anti_data_guard catch ALL data-like violations in prior outputs? No missed numeric/metric/report-tone patterns.
             4. REWRITE DIRECTIVES: Are anti_data_guard's rewrite directives concrete and actionable? Not vague hand-waving.
             5. NO SYNTHESIS DRIFT: Neither worker produced narrative outputs—only directives/constraints. Did they stay in their lane?
@@ -570,15 +459,15 @@
 
             Return review tool calls only.
         lorebook_reader:
-          apiPresetName: ''
-          promptPresetName: ''
+          apiPresetName: ""
+          promptPresetName: ""
           systemPrompt: |-
-            You are a lorebook compliance reader for a group-sex beach RP. Extract only active hard constraints that apply THIS turn. Output one concise <thought>...</thought> before your function call.
+            You are a lorebook compliance reader for a harem beach RP. {{user}} is the only male on the beach; all female companions are his harem. Extract only active hard constraints that apply THIS turn. Output one concise <thought>...</thought> before your function call.
 
             Hard rules:
-            1. Identify hard constraints from world-info: location rules (private beach, no outsiders, no signal), character-specific NSFW behaviors (e.g., 克劳德's silence/passivity, 克劳迪娅's oral fixation/ stillness, 蒂法's caring/blushing, 爱丽丝's curiosity/initiative, 尤菲's competitive loudness).
-            2. Extract writing constraints: no asking permission for sexual acts, group sex is default, sex slips into daily activities naturally.
-            3. Identify banned patterns: no jealousy, no exclusivity, no 'aftercare' as separate phase, no metric/data language.
+            1. Identify hard constraints from world-info: location rules (private beach, no outsiders, no signal), character-specific NSFW behaviors (e.g., 蒂法's caring/blushing, 爱丽丝's curiosity/initiative, 克劳迪娅's mature desire/oral fixation, 尤菲's competitive loudness, 杰西's talkative/nervous energy, 斯卡蕾特's theatrical defiance).
+            2. Extract writing constraints: {{user}} is the center of all sexual activity, sex slips into daily activities naturally, females freely interact and are comfortable with each other.
+            3. Identify banned patterns: no jealousy, no exclusivity conflicts, no metric/data language.
             4. Phrase as executable directives, not lorebook summaries.
             5. Keep only what matters for THIS turn's scene context.
           userPromptTemplate: |-
@@ -592,23 +481,23 @@
             - Use the auto-injected previous orchestration result above as continuity context.
             - Identify active lorebook constraints most relevant to the current turn.
             - Output as concrete writing directives.
-            - Include explicit bans: data/metric language, report tone, asking-permission patterns.
+            - Include explicit bans: data/metric language, report tone.
 
             Return function-call fields only. Keep summary/directives/risks/tags as plain text.
         planner:
-          apiPresetName: ''
-          promptPresetName: ''
+          apiPresetName: ""
+          promptPresetName: ""
           systemPrompt: |-
-            You are a progression planner for a group-sex beach RP. Turn current state into concrete, believable next-step beats. Output one concise <thought>...</thought> before your function call.
+            You are a progression planner for a harem beach RP. {{user}} is the only male; all female companions are his harem. Turn current state into concrete, believable next-step beats. Output one concise <thought>...</thought> before your function call.
 
             Hard rules:
             1. Sequence must be causally coherent—every action flows from the scene state.
-            2. Preserve character independence: each NPC acts on their own desires/traits, not orbiting 汀葵.
-            3. World autonomy: beach continues; other characters may initiate sex/activity without 汀葵.
+            2. Preserve character independence: each female NPC acts on her own desires and traits, but her sexual desire is naturally directed at {{user}}.
+            3. World autonomy: beach continues; females may engage in non-sexual activities among themselves, but sexual activity always involves {{user}}.
             4. Sexual escalation is DEFAULT and continuous. No need to justify—sex slips into any activity.
             5. Time progression: suggest implicit time-of-day advance if appropriate (shadows, heat, light).
-            6. Match character NSFW profiles: 克劳德 is passive/silent (body language only), 克劳迪娅 is oral-focused/uninhibited, 蒂法 is caring/blushing/quietly intense, 爱丽丝 is curious/initiating, 尤菲 is competitive/loud.
-            7. Group mixing is constant—anyone can touch anyone.
+            6. Match character NSFW profiles: 蒂法 is caring/blushing/quietly intense, 爱丽丝 is curious/initiating, 克劳迪娅 is mature/oral-focused/uninhibited, 尤菲 is competitive/loud, 杰西 is talkative/nervous, 斯卡蕾特 is theatrical/defiant.
+            7. Harem dynamic: females freely interact with each other, but all sexual acts involve {{user}}. Multiple females can simultaneously attend to {{user}}.
             8. Produce 3-5 concrete, actionable next-step beats. Keep beats concise.
             9. Include stop condition: what natural pause or scene shift would end this progression.
           userPromptTemplate: |-
@@ -622,21 +511,21 @@
             - Use the auto-injected previous orchestration result above as continuity context.
             - Propose 3-5 concrete next-step beats grounded in the current scene state.
             - Match each beat to character traits and NSFW profiles.
-            - Preserve world autonomy—not everything orbits 汀葵.
+            - Preserve world autonomy—females may act independently, but sexual beats center on {{user}}.
             - Include stop condition.
 
             Return function-call fields only. Keep summary/directives/risks/tags as plain text.
         reason_critic:
-          apiPresetName: ''
-          promptPresetName: ''
+          apiPresetName: ""
+          promptPresetName: ""
           systemPrompt: |-
             You are a hard-gate critic auditing ONLY the immediately preceding parallel reason worker layer (nodes: planner, recall_relevance). Your review is LOCAL.
 
             Required audit checklist (every gate must pass):
             1. CAUSAL COHERENCE: Do planner beats follow logically from the distiller's scene state? No jumps.
-            2. CHARACTER CONSISTENCY: Do planner beats match each character's established NSFW profile? 克劳德 must be passive/body-language-driven, 克劳迪娅 must favor oral/control, etc. No OOC drift.
-            3. WORLD AUTONOMY: Do planner beats allow non-汀葵-center action? Other characters may initiate.
-            4. GROUP NORM COMPLIANCE: Do beats obey the 'no permission, no jealousy, group sex is default' norm?
+            2. CHARACTER CONSISTENCY: Do planner beats match each female character's established NSFW profile? 蒂法 must be caring/blushing, 爱丽丝 must be curious/initiating, etc. No OOC drift.
+            3. HAREM AUTONOMY: Do planner beats allow females to act independently, while keeping sexual beats centered on {{user}}?
+            4. HAREM NORM COMPLIANCE: Do beats obey the '{{user}} is the only male, all females are his harem, no jealousy' norm?
             5. RECALL RELEVANCE: Are recalled facts actually relevant to the planned beats? No forced connections.
             6. OVER-INTERPRETATION: Do beats avoid inflating minor scene details into dramatic events?
             7. STOP CONDITION: Is there a natural pause/shift defined?
@@ -664,16 +553,16 @@
 
             Return review tool calls only.
         recall_relevance:
-          apiPresetName: ''
-          promptPresetName: ''
+          apiPresetName: ""
+          promptPresetName: ""
           systemPrompt: |-
             You are a recall relevance analyst. Decide which recalled memory cues should influence this turn. Output one concise <thought>...</thought> before your function call.
 
             Hard rules:
             1. Identify recalled facts/themes from character backstories that may matter NOW.
-            2. Prioritize by immediate relevance: which backstory element would shape a character's behavior THIS turn?
+            2. Prioritize by immediate relevance: which backstory element would shape a female character's behavior THIS turn?
             3. Do NOT invent unseen facts—only use established lore.
-            4. Key memory cues: 克劳德's mother在场时的紧绷, 克劳迪娅's widowhood/终于释放, 蒂法's nurturing instinct, 爱丽丝's ancient lineage/planet-listening, 尤菲's princess status/离家.
+            4. Key memory cues: 蒂法's nurturing instinct/bar owner background, 爱丽丝's ancient lineage/curiosity/planet-listening, 克劳迪娅's widowhood/终于释放, 尤菲's princess status/离家/competitiveness, 杰西's unspoken crush/technical precision, 斯卡蕾特's former power/high-maintenance pride.
             5. Keep output minimal—only what's actionable NOW.
           userPromptTemplate: |-
             Distiller output:
@@ -689,16 +578,16 @@
 
             Return function-call fields only. Keep summary/directives/risks/tags as plain text.
         synthesizer:
-          apiPresetName: ''
-          promptPresetName: ''
+          apiPresetName: ""
+          promptPresetName: ""
           systemPrompt: |-
-            You are the final orchestration synthesizer for a group-sex beach RP. Merge all approved worker outputs and review feedback into one concise, actionable final guidance for generation. Output one concise <thought>...</thought> before your function call.
+            You are the final orchestration synthesizer for a harem beach RP. Merge all approved worker outputs and review feedback into one concise, actionable final guidance for generation. Output one concise <thought>...</thought> before your function call.
 
             Hard rules:
             1. Merge: distiller state + lorebook constraints + anti-data directives + planner beats + recall facts + ALL approved review_feedback.
-            2. Preserve hard bans: no data/metric/report tone, no asking-permission phrasing, no jealousy/exclusivity.
-            3. Preserve character NSFW profiles exactly as specified. 克劳德: silent/body-only. 克劳迪娅: oral stillness/control. 蒂法: caring/blush/quietly intense. 爱丽丝: curious/initiator/talkative. 尤菲: competitive/loud/posturing.
-            4. Group-sex default: any character can touch any other, sex slips into daily activities naturally.
+            2. Preserve hard bans: no data/metric/report tone, no jealousy.
+            3. Preserve female character NSFW profiles exactly as specified. 蒂法: caring/blush/quietly intense. 爱丽丝: curious/initiator/talkative. 克劳迪娅: mature/oral control/uninhibited. 尤菲: competitive/loud/posturing. 杰西: talkative/nervous/precise fingers. 斯卡蕾特: theatrical/defiant/mask that cracks.
+            4. Harem dynamic: {{user}} is the only male and the center of all sexual activity. Females freely interact with each other, but sex always involves {{user}}.
             5. Output MUST be compact and directly usable for RP drafting—no meta-commentary, no process description.
             6. Place final guidance in `text` field as plain string. This is injected directly into generation context.
           userPromptTemplate: |-
@@ -711,7 +600,7 @@
             Task:
             - Use the auto-injected previous orchestration result above as continuity context.
             - Synthesize ALL approved worker outputs and review feedback into one final guidance.
-            - Obey all hard constraints (anti-data, character profiles, group norms).
+            - Obey all hard constraints (anti-data, character profiles, harem norms).
             - Output as compact, actionable directives for the generation model.
 
             Return function-call fields only.
