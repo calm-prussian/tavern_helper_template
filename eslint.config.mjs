@@ -28,6 +28,7 @@ export default [
       ...eslintPluginBetterTailwindcss.configs['recommended-error'].rules,
       'better-tailwindcss/enforce-consistent-line-wrapping': ['off', { preferSingleLine: true, printWidth: 120 }],
       'better-tailwindcss/no-unregistered-classes': ['off', { ignore: ['fa-*'] }],
+      'better-tailwindcss/no-unknown-classes': ['warn', { ignore: ['inline-drawer*', 'text_pole', 'menu_button', 'flex-container', 'sysHR', 'fa-*', 'postgen-*', 'down'] }],
     },
     settings: {
       'better-tailwindcss': {

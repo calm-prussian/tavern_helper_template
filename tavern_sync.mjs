@@ -52686,6 +52686,7 @@ function to_original_worldbook_entry(entry, index) {
         before_author_note: 2,
         after_author_note: 3,
         at_depth: 4,
+        outlet: 7,
     }[entry.position.type])
         .set('role', { system: 0, user: 1, assistant: 2 }[entry.position?.role ?? 'system'])
         .set('depth', entry.position?.depth ?? 4)
@@ -52698,7 +52699,8 @@ function to_original_worldbook_entry(entry, index) {
         .set('delayUntilRecursion', entry.recursion?.delay_until ?? false)
         .set('sticky', entry.effect?.sticky ?? null)
         .set('cooldown', entry.effect?.cooldown ?? null)
-        .set('delay', entry.effect?.delay ?? null);
+        .set('delay', entry.effect?.delay ?? null)
+        .set('outletName', entry.outletName ?? '');
     if (entry.extra) {
         result = result.set('extra', entry.extra);
     }
@@ -55770,6 +55772,7 @@ const Worldbook_entry = object({
             'before_author_note',
             'after_author_note',
             'at_depth',
+            'outlet',
         ]),
         role: schemas_enum(['system', 'assistant', 'user']),
         depth: schemas_number(),
@@ -55792,6 +55795,7 @@ const Worldbook_entry = object({
     groupOverride: schemas_boolean().default(false),
     groupWeight: schemas_number().default(100),
     useGroupScoring: schemas_boolean().nullable().default(null),
+    outletName: schemas_string().default(''),
     extra: record(schemas_string(), any()).optional(),
     content: schemas_string(),
 })
@@ -56075,6 +56079,7 @@ const worldbook_en_Worldbook_entry = strictObject({
             'before_author_note',
             'after_author_note',
             'at_depth',
+            'outlet',
         ])
             .describe(dist_dedent(`
             插入位置类型:
@@ -56085,6 +56090,7 @@ const worldbook_en_Worldbook_entry = strictObject({
             - before_author_note: 作者注释之前
             - after_author_note: 作者注释之后
             - at_depth: 插入到指定深度
+            - outlet: 出口, 不自动注入, 需配合 outletName 使用
           `)),
         role: schemas_enum(['system', 'assistant', 'user'])
             .optional()
@@ -56157,6 +56163,7 @@ const worldbook_en_Worldbook_entry = strictObject({
     })
         .optional()
         .describe('包含组'),
+    outletName: coerce_string().optional().describe("出口名, 仅位置类型为 'outlet' 时有效"),
     extra: record(schemas_string(), any()).optional().describe('额外字段: 用于为预设提示词绑定额外数据'),
     content: coerce_string().optional().describe('内嵌的提示词内容'),
     file: coerce_string().optional().describe('外链的提示词文件路径'),
@@ -56432,6 +56439,8 @@ const worldbook_zh_zh_to_en_map = {
     作者注释之前: 'before_author_note',
     作者注释之后: 'after_author_note',
     指定深度: 'at_depth',
+    出口: 'outlet',
+    出口名: 'outletName',
     角色: 'role',
     系统: 'system',
     AI: 'assistant',
@@ -56501,6 +56510,7 @@ const worldbook_zh_Worldbook_entry = strictObject({
             '作者注释之前',
             '作者注释之后',
             '指定深度',
+            '出口',
         ]),
         角色: schemas_enum(['系统', 'AI', '用户']).optional().describe("该条目的消息身份, 仅位置类型为`'指定深度'`时有效"),
         深度: schemas_number().optional().describe("该条目要插入的深度, 仅位置类型为`'指定深度'`时有效"),
@@ -56571,6 +56581,7 @@ const worldbook_zh_Worldbook_entry = strictObject({
     })
         .optional()
         .describe('包含组'),
+    出口名: coerce_string().optional().describe("出口名, 仅插入位置为'出口'时有效"),
     额外字段: record(schemas_string(), any()).optional().describe('额外字段: 用于为预设提示词绑定额外数据'),
     内容: coerce_string().optional().describe('内嵌的提示词内容'),
     文件: coerce_string().optional().describe('外链的提示词文件路径'),
@@ -56869,6 +56880,7 @@ class Character_syncer extends Syncer_interface {
                 }
             });
         }
+
         // 正则
         {
             const states = local_data === null
@@ -58295,7 +58307,30 @@ class Worldbook_syncer extends Syncer_interface {
             .sort()
             .value();
         if (duplicated_names.length > 0) {
-            return { result_data: {}, error_data: { 以下条目存在同名条目: duplicated_names }, files: [] };
+            const used_names = new Set();
+            const name_counters = {};
+            tavern_data.entries.forEach(entry => {
+                let name = entry.name;
+                if (name === '') {
+                    name_counters[''] = (name_counters[''] || 0) + 1;
+                    name = `未命名${name_counters['']}`;
+                    while (used_names.has(name)) {
+                        name_counters['']++;
+                        name = `未命名${name_counters['']}`;
+                    }
+                }
+                else if (used_names.has(name)) {
+                    name_counters[name] = (name_counters[name] || 1) + 1;
+                    let new_name = `${name}_${name_counters[name]}`;
+                    while (used_names.has(new_name)) {
+                        name_counters[name]++;
+                        new_name = `${name}_${name_counters[name]}`;
+                    }
+                    name = new_name;
+                }
+                used_names.add(name);
+                entry.name = name;
+            });
         }
         tavern_data.entries.forEach(entry => {
             lodash_default().set(entry, 'content', replace_user_name(entry.content ?? ''));
