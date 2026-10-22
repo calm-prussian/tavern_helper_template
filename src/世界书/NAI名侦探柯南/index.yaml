@@ -1,0 +1,588 @@
+# yaml-language-server: $schema=https://testingcf.jsdelivr.net/gh/StageDog/tavern_sync/dist/schema/worldbook.zh.json
+
+锚点: {}
+
+条目:
+
+  - 文件夹: 主角团
+    条目:
+      - 名称: 江户川柯南
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字:
+            - 江户川柯南
+            - 柯南
+            - edogawa_conan
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <江户川柯南_tag>
+          主体形象: edogawa_conan, meitantei_conan, 1boy, child, short_hair, spiked_hair, black_hair, blue_eyes, glasses, black-framed_eyewear
+          招牌装: blue_jacket, white_shirt, bowtie, shorts, white_socks, sneakers
+          便服: hoodie, shorts, sneakers
+          </江户川柯南_tag>
+
+      - 名称: 工藤新一
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字:
+            - 工藤新一
+            - 新一
+            - kudou_shin'ichi
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <工藤新一_tag>
+          主体形象: kudou_shin'ichi, meitantei_conan, 1boy, teen, short_hair, spiked_hair, black_hair, blue_eyes
+          帝丹高中制服: teitan_high_school_uniform, blue_jacket, white_shirt, necktie, pants
+          便服: blue_jacket, white_shirt, collared_shirt, pants
+          </工藤新一_tag>
+
+      - 名称: 灰原哀
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字:
+            - 灰原哀
+            - 灰原
+            - 哀
+            - haibara_ai
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <灰原哀_tag>
+          主体形象: haibara_ai, meitantei_conan, 1girl, child, short_hair, brown_hair, blue_eyes
+          白大褂: lab_coat, turtleneck, pleated_skirt
+          便服: red_sweater, pleated_skirt
+          小学校服: school_uniform, white_shirt, pleated_skirt
+          </灰原哀_tag>
+
+      - 名称: 宫野志保
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字:
+            - 宫野志保
+            - 志保
+            - 雪莉
+            - miyano_shiho
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <宫野志保_tag>
+          主体形象: miyano_shiho, meitantei_conan, 1girl, mature_female, long_hair, brown_hair, blue_eyes
+          白大褂: lab_coat, black_shirt, black_skirt, thighhighs
+          便服: black_sweater, pleated_skirt, pantyhose
+          </宫野志保_tag>
+
+      - 名称: 阿笠博士
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字:
+            - 阿笠博士
+            - 阿笠
+            - agasa_hiroshi
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <阿笠博士_tag>
+          主体形象: agasa_hiroshi, meitantei_conan, 1boy, old_man, short_hair, grey_hair, blue_eyes, mustache, glasses, round_eyewear
+          白大褂: lab_coat, collared_shirt, pants
+          便服: brown_sweater, pants
+          </阿笠博士_tag>
+
+      - 名称: 吉田步美
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字:
+            - 吉田步美
+            - 步美
+            - yoshida_ayumi
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <吉田步美_tag>
+          主体形象: yoshida_ayumi, meitantei_conan, 1girl, child, short_hair, brown_hair, blue_eyes, hairband
+          便服: dress, white_socks, shoes
+          小学校服: school_uniform, white_shirt, pleated_skirt
+          </吉田步美_tag>
+
+      - 名称: 圆谷光彦
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字:
+            - 圆谷光彦
+            - 光彦
+            - tsuburaya_mitsuhiko
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <圆谷光彦_tag>
+          主体形象: tsuburaya_mitsuhiko, meitantei_conan, 1boy, child, short_hair, brown_hair, blue_eyes
+          便服: collared_shirt, shorts
+          小学校服: school_uniform, white_shirt, shorts
+          </圆谷光彦_tag>
+
+      - 名称: 小岛元太
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字:
+            - 小岛元太
+            - 元太
+            - kojima_genta
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <小岛元太_tag>
+          主体形象: kojima_genta, meitantei_conan, 1boy, child, fat, short_hair, brown_hair, blue_eyes
+          便服: t-shirt, shorts
+          小学校服: school_uniform, white_shirt, shorts
+          </小岛元太_tag>
+
+  - 文件夹: 毛利一家
+    条目:
+      - 名称: 毛利小五郎
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字:
+            - 毛利小五郎
+            - 小五郎
+            - mouri_kogoro
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <毛利小五郎_tag>
+          主体形象: mouri_kogoro, meitantei_conan, 1boy, mature_male, short_hair, black_hair, facial_hair, mustache, blue_eyes
+          西装: suit, white_shirt, necktie
+          便服: collared_shirt, pants
+          </毛利小五郎_tag>
+
+      - 名称: 毛利兰
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字:
+            - 毛利兰
+            - 小兰
+            - mouri_ran
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <毛利兰_tag>
+          主体形象: mouri_ran, meitantei_conan, 1girl, long_hair, black_hair, blue_eyes
+          帝丹高中制服: teitan_high_school_uniform, blue_jacket, white_shirt, necktie, pleated_skirt
+          便服: white_sweater, pleated_skirt
+          空手道服: karate_gi
+          </毛利兰_tag>
+
+      - 名称: 妃英理
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字:
+            - 妃英理
+            - 英理
+            - kisaki_eri
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <妃英理_tag>
+          主体形象: kisaki_eri, meitantei_conan, 1girl, mature_female, hair_bun, black_hair, blue_eyes, glasses
+          律师职业装: blue_suit, white_shirt, yellow_necktie, skirt
+          便服: turtleneck_sweater, skirt, pearl_necklace
+          </妃英理_tag>
+
+  - 文件夹: 警察们
+    条目:
+      - 名称: 目暮十三
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字:
+            - 目暮十三
+            - 目暮
+            - megure_juuzou
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <目暮十三_tag>
+          主体形象: megure_juuzou, meitantei_conan, 1boy, mature_male, fat, short_hair, black_hair, thick_mustache, hat
+          警服: police_uniform, white_shirt, necktie, suit
+          便服: collared_shirt, suit, hat
+          </目暮十三_tag>
+
+      - 名称: 佐藤美和子
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字:
+            - 佐藤美和子
+            - 美和子
+            - satou_miwako
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <佐藤美和子_tag>
+          主体形象: satou_miwako, meitantei_conan, 1girl, short_hair, black_hair, blue_eyes
+          警服: police_uniform, blue_jacket, white_shirt, collared_shirt, necktie, skirt
+          便服: red_sweater, pleated_skirt
+          礼服: strapless_dress, pearl_necklace, earrings
+          </佐藤美和子_tag>
+
+      - 名称: 高木涉
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字:
+            - 高木涉
+            - 高木
+            - takagi_wataru
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <高木涉_tag>
+          主体形象: takagi_wataru_(meitantei_conan), meitantei_conan, 1boy, short_hair, black_hair, blue_eyes
+          警服: police_uniform, blue_jacket, white_shirt, necktie, pants
+          便服: collared_shirt, pants
+          </高木涉_tag>
+
+      - 名称: 白鸟任三郎
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字:
+            - 白鸟任三郎
+            - 白鸟
+            - shiratori_ninzaburou
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <白鸟任三郎_tag>
+          主体形象: shiratori_ninzaburou, meitantei_conan, 1boy, short_hair, black_hair, blue_eyes
+          警服: police_uniform, white_shirt, necktie, suit
+          便服: sweater, pants
+          </白鸟任三郎_tag>
+
+      - 名称: 千叶和伸
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字:
+            - 千叶和伸
+            - 千叶
+            - chiba_kazunobu
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <千叶和伸_tag>
+          主体形象: chiba_kazunobu, meitantei_conan, 1boy, short_hair, black_hair, thick_eyebrows
+          警服: police_uniform, blue_jacket, white_shirt, necktie, armband
+          便服: hoodie, pants
+          </千叶和伸_tag>
+
+      - 名称: 宫本由美
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字:
+            - 宫本由美
+            - 由美
+            - miyamoto_yumi
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <宫本由美_tag>
+          主体形象: miyamoto_yumi, meitantei_conan, 1girl, long_hair, black_hair, blue_eyes
+          警服: police_uniform, police_hat, blue_jacket, white_shirt, necktie, skirt
+          便服: sweater, miniskirt
+          </宫本由美_tag>
+
+      - 名称: 三池苗子
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字:
+            - 三池苗子
+            - 苗子
+            - miike_naeko
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <三池苗子_tag>
+          主体形象: miike_naeko, meitantei_conan, 1girl, black_hair, low_twintails, blue_eyes
+          警服: police_uniform, police_hat, blue_hat, white_shirt, blue_necktie, skirt
+          便服: sweater, pleated_skirt
+          </三池苗子_tag>
+
+      - 名称: 松田阵平
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字:
+            - 松田阵平
+            - 松田
+            - matsuda_jinpei
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <松田阵平_tag>
+          主体形象: matsuda_jinpei, meitantei_conan, 1boy, short_hair, black_hair, blue_eyes, sunglasses
+          警服: police_uniform, black_jacket, white_shirt, black_necktie, pants
+          便服: black_shirt, pants, sunglasses
+          </松田阵平_tag>
+
+      - 名称: 萩原研二
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字:
+            - 萩原研二
+            - 研二
+            - hagiwara_kenji
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <萩原研二_tag>
+          主体形象: hagiwara_kenji, meitantei_conan, 1boy, short_hair, black_hair, blue_eyes
+          警服: police_uniform, blue_jacket, white_shirt, necktie, gloves, pants
+          便服: collared_shirt, pants
+          </萩原研二_tag>
+
+      - 名称: 萩原千速
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字:
+            - 萩原千速
+            - 千速
+            - hagiwara_chihaya
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <萩原千速_tag>
+          主体形象: hagiwara_chihaya, meitantei_conan, 1girl, long_hair, brown_hair, blue_eyes, red_lips
+          警服: police_uniform, policewoman, blue_jacket, white_shirt, turtleneck, skirt
+          便服: turtleneck_sweater, miniskirt
+          </萩原千速_tag>
+
+      - 名称: 伊达航
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字:
+            - 伊达航
+            - 伊达
+            - date_wataru
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <伊达航_tag>
+          主体形象: date_wataru, meitantei_conan, 1boy, mature_male, short_hair, black_hair, blue_eyes
+          警服: police_uniform, blue_shirt, pants
+          便服: collared_shirt, pants
+          </伊达航_tag>
+
+      - 名称: 大和敢助
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字:
+            - 大和敢助
+            - 敢助
+            - yamato_kansuke
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <大和敢助_tag>
+          主体形象: yamato_kansuke, meitantei_conan, 1boy, mature_male, short_hair, black_hair, facial_hair, mustache, stubble, scar, scar_across_eye, scar_on_face
+          警服: police_uniform, white_shirt, collared_shirt, necktie, pants
+          便服: collared_shirt, jacket
+          </大和敢助_tag>
+
+      - 名称: 上原由衣
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字:
+            - 上原由衣
+            - 由衣
+            - uehara_yui
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <上原由衣_tag>
+          主体形象: uehara_yui, meitantei_conan, 1girl, hair_bun, black_hair, blue_eyes
+          警服: police_uniform, white_shirt, necktie, skirt
+          便服: turtleneck_sweater, skirt
+          </上原由衣_tag>
+
+      - 名称: 横沟重悟
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字:
+            - 横沟重悟
+            - 重悟
+            - yokomizo_jugo
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <横沟重悟_tag>
+          主体形象: yokomizo_jugo, meitantei_conan, 1boy, very_short_hair, buzz_cut, black_hair, thick_eyebrows
+          警服: police_uniform, suit, white_shirt, necktie
+          便服: collared_shirt, pants
+          </横沟重悟_tag>
+
+      - 名称: 横沟参悟
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字:
+            - 横沟参悟
+            - 参悟
+            - yokomizo_sango
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <横沟参悟_tag>
+          主体形象: yokomizo_sango, meitantei_conan, 1boy, short_hair, black_hair
+          警服: police_uniform, white_shirt, necktie, suit
+          便服: collared_shirt, pants
+          </横沟参悟_tag>

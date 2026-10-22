@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://testingcf.jsdelivr.net/gh/StageDog/tavern_sync/dist/schema/worldbook.zh.json
+
+锚点: {}
+
+条目:
+  - 名称: 露西
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字: [露西, lucy_(cyberpunk), lucy]
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <露西_tag>
+      主体形象: lucy_(cyberpunk), cyberpunk:_edgerunners, cyberpunk_(series), 1girl, short_hair, white_hair, bob_cut, parted_bangs, multicolored_eyes, gradient_eyes, red_eyeliner, red_lips, makeup, cyborg
+      招牌装: black_leotard, white_jacket, open_jacket, off_shoulder, bare_shoulders
+      潜行服: bodysuit, gloves, boots
+      便服: sleeveless_shirt, black_shirt, shorts
+      </露西_tag>

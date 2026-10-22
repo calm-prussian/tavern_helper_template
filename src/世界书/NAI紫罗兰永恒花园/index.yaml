@@ -1,0 +1,222 @@
+# yaml-language-server: $schema=https://testingcf.jsdelivr.net/gh/StageDog/tavern_sync/dist/schema/worldbook.zh.json
+
+锚点: {}
+
+条目:
+
+  - 名称: 薇尔莉特
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 薇尔莉特
+        - 薇尔莉特·伊芙加登
+        - violet_evergarden
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <薇尔莉特_tag>
+      主体形象: violet_evergarden, violet_evergarden_(series), 1girl, long_hair, blonde_hair, blue_eyes, hair_between_eyes, hair_ribbon
+      招牌装: blue_jacket, dress, puffy_sleeves, ribbon, ascot, gloves, brooch, green_gem
+      军装: military_uniform, gloves
+      便服: white_dress, ribbon
+      </薇尔莉特_tag>
+
+  - 名称: 基尔伯特
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 基尔伯特
+        - 基尔伯特·布干维利亚
+        - gilbert_bougainvillea
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <基尔伯特_tag>
+      主体形象: gilbert_bougainvillea, violet_evergarden_(series), 1boy, short_hair, blonde_hair, blue_eyes
+      军装: military_uniform, gloves
+      便服: collared_shirt, pants
+      </基尔伯特_tag>
+
+  - 名称: 迪特福利特
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 迪特福利特
+        - 迪特福利特·布干维利亚
+        - dietfried_bougainvillea
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <迪特福利特_tag>
+      主体形象: dietfried_bougainvillea, violet_evergarden_(series), 1boy, short_hair, black_hair
+      军装: military_uniform, gloves
+      便服: collared_shirt, pants
+      </迪特福利特_tag>
+
+  - 名称: 霍金斯
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 霍金斯
+        - 克劳迪亚·霍金斯
+        - claudia_hodgins
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <霍金斯_tag>
+      主体形象: claudia_hodgins, violet_evergarden_(series), 1boy, short_hair, blonde_hair, blue_eyes
+      便服: white_shirt, collared_shirt, pants
+      西装: suit, necktie
+      </霍金斯_tag>
+
+  - 名称: 艾莉卡·布朗
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 艾莉卡
+        - 艾莉卡·布朗
+        - erica_brown
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <艾莉卡·布朗_tag>
+      主体形象: erica_brown, violet_evergarden_(series), 1girl, short_hair, brown_hair, brown_eyes, glasses, mole_under_mouth
+      便服: dress
+      </艾莉卡·布朗_tag>
+
+  - 名称: 爱丽丝·卡娜莉
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 爱丽丝·卡娜莉
+        - 卡娜莉
+        - iris_cannary
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <爱丽丝·卡娜莉_tag>
+      主体形象: iris_cannary, violet_evergarden_(series), 1girl, short_hair, brown_hair, blue_eyes
+      便服: dress
+      </爱丽丝·卡娜莉_tag>
+
+  - 名称: 露库莉娅
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 露库莉娅
+        - 露库莉娅·马尔伯勒
+        - luculia_marlborough
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <露库莉娅_tag>
+      主体形象: luculia_marlborough, violet_evergarden_(series), 1girl, long_hair, red_hair, green_eyes, freckles, braid
+      便服: shirt, skirt
+      连衣裙: green_dress
+      </露库莉娅_tag>
+
+  - 名称: 安·玛格诺利亚
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 安·玛格诺利亚
+        - 安
+        - ann_magnolia
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <安·玛格诺利亚_tag>
+      主体形象: ann_magnolia, violet_evergarden_(series), 1girl, child, short_hair, blonde_hair, blue_eyes
+      便服: dress, puffy_sleeves, frills
+      </安·玛格诺利亚_tag>
+
+  - 名称: 克拉拉·玛格诺利亚
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 克拉拉
+        - 克拉拉·玛格诺利亚
+        - clara_magnolia
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <克拉拉·玛格诺利亚_tag>
+      主体形象: clara_magnolia, violet_evergarden_(series), 1girl, short_hair, brown_hair, brown_eyes
+      便服: dress
+      </克拉拉·玛格诺利亚_tag>
+
+  - 名称: 夏洛特·德罗塞尔
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 夏洛特
+        - 德罗塞尔
+        - charlotte_abelfreyja_drossel
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <夏洛特·德罗塞尔_tag>
+      主体形象: charlotte_abelfreyja_drossel, violet_evergarden_(series), 1girl, long_hair, brown_hair, brown_eyes, crown_braid
+      公主礼服: white_dress, crown, hair_flower
+      便服: blue_dress
+      </夏洛特·德罗塞尔_tag>

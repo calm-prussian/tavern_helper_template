@@ -1,0 +1,48 @@
+{
+  "entries": {
+    "0": {
+      "uid": 0,
+      "displayIndex": 0,
+      "comment": "露西",
+      "disable": false,
+      "constant": false,
+      "selective": true,
+      "key": [
+        "露西",
+        "lucy_(cyberpunk)",
+        "lucy"
+      ],
+      "selectiveLogic": 0,
+      "keysecondary": [],
+      "scanDepth": null,
+      "vectorized": false,
+      "position": 1,
+      "role": 0,
+      "depth": 4,
+      "order": 1,
+      "content": "<露西_tag>\n主体形象: lucy_(cyberpunk), cyberpunk:_edgerunners, cyberpunk_(series), 1girl, short_hair, white_hair, bob_cut, parted_bangs, multicolored_eyes, gradient_eyes, red_eyeliner, red_lips, makeup, cyborg\n招牌装: black_leotard, white_jacket, open_jacket, off_shoulder, bare_shoulders\n潜行服: bodysuit, gloves, boots\n便服: sleeveless_shirt, black_shirt, shorts\n</露西_tag>",
+      "useProbability": true,
+      "probability": 100,
+      "excludeRecursion": true,
+      "preventRecursion": true,
+      "delayUntilRecursion": false,
+      "sticky": null,
+      "cooldown": null,
+      "delay": null,
+      "addMemo": true,
+      "matchPersonaDescription": false,
+      "matchCharacterDescription": false,
+      "matchCharacterPersonality": false,
+      "matchCharacterDepthPrompt": false,
+      "matchScenario": false,
+      "matchCreatorNotes": false,
+      "group": "",
+      "groupOverride": false,
+      "groupWeight": 100,
+      "caseSensitive": null,
+      "matchWholeWords": null,
+      "useGroupScoring": null,
+      "automationId": ""
+    }
+  }
+}

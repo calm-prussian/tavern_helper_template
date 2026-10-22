@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=https://testingcf.jsdelivr.net/gh/StageDog/tavern_sync/dist/schema/worldbook.zh.json
+
+锚点: {}
+
+条目:
+  - 名称: 贵妇人
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字: [贵妇人, 贵夫人, 貴婦人, 贵妇]
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <贵妇人_tag>
+      主体形象: 1girl, mature_female, solo, long_hair, black_hair, hair_bun, purple_eyes, red_lips, makeup, lipstick, curvy, large_breasts
+      和装: kimono, japanese_clothes, obi, kanzashi, hair_ornament
+      晚礼服: gown, off-shoulder_dress, stole, pearl_necklace, earrings, high_heels, gloves
+      洋装: dress, shawl, handbag, high_heels
+      私服: pencil_skirt, blouse, pantyhose, high_heels
+      </贵妇人_tag>
+
+  - 名称: 千金
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字: [千金, 千金小姐, 大小姐, お嬢様]
+    插入位置:
+      类型: 角色定义之后
+      顺序: 2
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <千金_tag>
+      主体形象: 1girl, long_hair, black_hair, hime_cut, blue_eyes, hair_ribbon
+      振袖: furisode, kimono, japanese_clothes, obi, kanzashi, hair_ornament
+      校服: school_uniform, pleated_skirt, thighhighs, mary_janes
+      洋装: dress, frills, ribbon, mary_janes
+      私服: blouse, pleated_skirt, cardigan
+      </千金_tag>

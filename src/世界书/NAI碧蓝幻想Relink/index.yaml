@@ -1,0 +1,598 @@
+# yaml-language-server: $schema=https://testingcf.jsdelivr.net/gh/StageDog/tavern_sync/dist/schema/worldbook.zh.json
+
+锚点: {}
+
+条目:
+  - 文件夹: 主角与搭档
+    条目:
+      - 名称: 格兰
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [格兰, 古兰, gran_(granblue_fantasy)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <格兰_tag>
+          主体形象: gran_(granblue_fantasy), granblue_fantasy, 1boy, short_hair, brown_hair
+          便服: jacket, collared_shirt, gloves, pants
+          铠甲: armor, gloves
+          </格兰_tag>
+
+      - 名称: 姬塔
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [姬塔, 姬妲, djeeta_(granblue_fantasy)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <姬塔_tag>
+          主体形象: djeeta_(granblue_fantasy), granblue_fantasy, 1girl, short_hair, blonde_hair, hairband
+          便服: jacket, skirt, thighhighs, gloves
+          铠甲: armor, gloves
+          </姬塔_tag>
+
+      - 名称: 露莉亚
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [露莉亚, 露丽娅, lyria_(granblue_fantasy)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <露莉亚_tag>
+          主体形象: lyria_(granblue_fantasy), granblue_fantasy, 1girl, very_long_hair, blue_hair, blue_eyes, ahoge
+          白裙: white_dress, barefoot
+          便服: dress
+          </露莉亚_tag>
+
+      - 名称: 碧
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [碧酱, vyrn_(granblue_fantasy)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <碧_tag>
+          主体形象: vyrn_(granblue_fantasy), granblue_fantasy, dragon, small_dragon, red_scales, wings
+          </碧_tag>
+
+  - 文件夹: 可玩角色
+    条目:
+      - 名称: 卡塔莉娜
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [卡塔莉娜, 卡特莉娜, katalina_(granblue_fantasy)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <卡塔莉娜_tag>
+          主体形象: katalina_(granblue_fantasy), granblue_fantasy, 1girl, long_hair, brown_hair, ponytail, earrings
+          铠甲: armor, red_armor, gloves
+          便服: dress
+          </卡塔莉娜_tag>
+
+      - 名称: 拉卡姆
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [拉卡姆, 拉坎, rackam_(granblue_fantasy)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <拉卡姆_tag>
+          主体形象: rackam_(granblue_fantasy), granblue_fantasy, 1boy, short_hair, brown_hair, facial_hair
+          便服: jacket, gloves, pants
+          铠甲: armor
+          </拉卡姆_tag>
+
+      - 名称: 伊欧
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [伊欧, io_(granblue_fantasy)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <伊欧_tag>
+          主体形象: io_(granblue_fantasy), granblue_fantasy, 1girl, long_hair, blonde_hair, twintails, blue_eyes, dark-skinned_female, hair_ornament
+          连衣裙: dress
+          </伊欧_tag>
+
+      - 名称: 欧根
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [欧根, 尤根, eugen_(granblue_fantasy)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <欧根_tag>
+          主体形象: eugen_(granblue_fantasy), granblue_fantasy, 1boy, mature_male, muscular_male, short_hair, brown_hair, facial_hair, beard, eyepatch
+          铠甲: armor, gloves
+          便服: shirt, pants
+          </欧根_tag>
+
+      - 名称: 罗塞塔
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [罗塞塔, 罗塞妲, rosetta_(granblue_fantasy)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <罗塞塔_tag>
+          主体形象: rosetta_(granblue_fantasy), granblue_fantasy, 1girl, long_hair, brown_hair, purple_eyes, large_breasts, hair_flower, bare_shoulders
+          连衣裙: dress, gloves
+          </罗塞塔_tag>
+
+      - 名称: 夏洛特
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [夏洛特, 夏洛蒂, charlotta_(granblue_fantasy)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <夏洛特_tag>
+          主体形象: charlotta_(granblue_fantasy), granblue_fantasy, 1girl, long_hair, blonde_hair, pointy_ears, harvin, blue_eyes
+          铠甲: armor, gloves
+          礼服: dress, crown
+          </夏洛特_tag>
+
+      - 名称: 兰斯洛特
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [兰斯洛特, lancelot_(granblue_fantasy)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <兰斯洛特_tag>
+          主体形象: lancelot_(granblue_fantasy), granblue_fantasy, 1boy, short_hair, black_hair, blue_eyes
+          铠甲: armor, gloves
+          便服: shirt, pants
+          </兰斯洛特_tag>
+
+      - 名称: 巴恩
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [巴恩, 班恩, vane_(granblue_fantasy)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <巴恩_tag>
+          主体形象: vane_(granblue_fantasy), granblue_fantasy, 1boy, short_hair, blonde_hair, green_eyes, muscular_male
+          铠甲: armor, gloves
+          便服: shirt, pants
+          </巴恩_tag>
+
+      - 名称: 珀西瓦尔
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [珀西瓦尔, 帕西瓦尔, percival_(granblue_fantasy)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <珀西瓦尔_tag>
+          主体形象: percival_(granblue_fantasy), granblue_fantasy, 1boy, short_hair, red_hair, red_eyes
+          铠甲: armor, red_armor, gloves
+          便服: shirt, pants
+          </珀西瓦尔_tag>
+
+      - 名称: 齐格飞
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [齐格飞, 齐格弗里德, siegfried_(granblue_fantasy)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <齐格飞_tag>
+          主体形象: siegfried_(granblue_fantasy), granblue_fantasy, 1boy, long_hair, brown_hair
+          铠甲: armor, gloves
+          便服: shirt, pants
+          </齐格飞_tag>
+
+      - 名称: 菲莉
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [菲莉, 菲丽, ferry_(granblue_fantasy)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <菲莉_tag>
+          主体形象: ferry_(granblue_fantasy), granblue_fantasy, 1girl, long_hair, blue_hair, yellow_eyes, animal_ears, erune
+          连衣裙: dress, gloves
+          </菲莉_tag>
+
+      - 名称: 卡莉奥斯特萝
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [卡莉奥斯特萝, 卡里奥斯特罗, cagliostro_(granblue_fantasy)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <卡莉奥斯特萝_tag>
+          主体形象: cagliostro_(granblue_fantasy), granblue_fantasy, 1girl, long_hair, blonde_hair, purple_eyes, hairband
+          连衣裙: dress, cape, black_thighhighs
+          礼服: dress, crown
+          </卡莉奥斯特萝_tag>
+
+      - 名称: 尤达拉哈
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [尤达拉哈, 尤达拉, yodarha_(granblue_fantasy)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <尤达拉哈_tag>
+          主体形象: yodarha_(granblue_fantasy), granblue_fantasy, 1boy, short_hair, brown_hair, facial_hair, mustache, pointy_ears, harvin
+          和服: kimono, hakama, japanese_clothes
+          </尤达拉哈_tag>
+
+      - 名称: 娜尔梅亚
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [娜尔梅亚, 娜尔梅娅, narmaya_(granblue_fantasy)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <娜尔梅亚_tag>
+          主体形象: narmaya_(granblue_fantasy), granblue_fantasy, 1girl, long_hair, pink_hair, blue_eyes, hair_over_one_eye, pointy_ears, horns, draph, large_breasts
+          和服: kimono, japanese_clothes
+          </娜尔梅亚_tag>
+
+      - 名称: 赛达
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [赛达, 泽塔, zeta_(granblue_fantasy)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <赛达_tag>
+          主体形象: zeta_(granblue_fantasy), granblue_fantasy, 1girl, long_hair, blonde_hair, twintails, blue_eyes, hairband, large_breasts
+          战斗服: armor, gloves, thighhighs
+          </赛达_tag>
+
+      - 名称: 贝阿朵莉丝
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [贝阿朵莉丝, 贝雅特丽齐, beatrix_(granblue_fantasy)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <贝阿朵莉丝_tag>
+          主体形象: beatrix_(granblue_fantasy), granblue_fantasy, 1girl, long_hair, brown_hair, ponytail, large_breasts
+          战斗服: armor, gloves, thighhighs
+          </贝阿朵莉丝_tag>
+
+      - 名称: 圣德芬
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [圣德芬, 桑达尔冯, sandalphon_(granblue_fantasy)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <圣德芬_tag>
+          主体形象: sandalphon_(granblue_fantasy), granblue_fantasy, 1boy, short_hair, brown_hair, red_eyes, messy_hair, ahoge, wings
+          铠甲: armor, hood, gloves
+          </圣德芬_tag>
+
+      - 名称: 赛奥弗
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [赛奥弗, seofon_(granblue_fantasy)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <赛奥弗_tag>
+          主体形象: seofon_(granblue_fantasy), granblue_fantasy, 1boy, short_hair, blonde_hair, blue_eyes
+          铠甲: armor, cape, gloves
+          </赛奥弗_tag>
+
+      - 名称: 图伊恩
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [图伊恩, 崔恩, tweyen_(granblue_fantasy)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <图伊恩_tag>
+          主体形象: tweyen_(granblue_fantasy), granblue_fantasy, 1girl, long_hair, brown_hair, head_wings, large_breasts, hair_ornament
+          连衣裙: dress
+          </图伊恩_tag>
+
+      - 名称: 巴泽拉加
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [巴泽拉加, vaseraga]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <巴泽拉加_tag>
+          主体形象: vaseraga, granblue_fantasy, 1boy, muscular_male, dark-skinned_male, blonde_hair, horns, draph
+          铠甲: armor, helmet, gloves
+          </巴泽拉加_tag>
+
+      - 名称: 尤斯提斯
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [尤斯提斯, eustace_(granblue_fantasy)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <尤斯提斯_tag>
+          主体形象: eustace_(granblue_fantasy), granblue_fantasy, 1boy, short_hair, white_hair, dark-skinned_male, animal_ears, erune, hair_over_one_eye
+          便服: jacket, gloves, pants
+          </尤斯提斯_tag>
+
+      - 名称: 芙劳
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [芙劳, fraux]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <芙劳_tag>
+          主体形象: fraux, granblue_fantasy, 1girl, long_hair, grey_hair, twintails, animal_ears, erune, braid
+          连衣裙: dress
+          </芙劳_tag>
+
+      - 名称: 伊德
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [伊德, id_(granblue_fantasy:_relink)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <伊德_tag>
+          主体形象: id_(granblue_fantasy:_relink), granblue_fantasy, 1boy, short_hair, white_hair, red_eyes
+          铠甲: armor, black_gloves
+          便服: shirt, pants
+          </伊德_tag>
+
+  - 文件夹: 剧情角色
+    条目:
+      - 名称: 罗兰
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [罗兰, rolan_(granblue_fantasy:_relink)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <罗兰_tag>
+          主体形象: rolan_(granblue_fantasy:_relink), granblue_fantasy, 1boy, long_hair, brown_hair, ponytail, glasses
+          便服: jacket, gloves, pants, boots
+          </罗兰_tag>
+
+      - 名称: 莉莉丝
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [莉莉丝, lilith_(granblue_fantasy:_relink)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <莉莉丝_tag>
+          主体形象: lilith_(granblue_fantasy:_relink), granblue_fantasy, 1girl, long_hair, grey_hair, red_eyes, detached_sleeves
+          连衣裙: dress
+          </莉莉丝_tag>
+
+      - 名称: 加兰莎
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [加兰莎, 加朗莎, gallanza_(granblue_fantasy:_relink)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <加兰莎_tag>
+          主体形象: gallanza_(granblue_fantasy:_relink), granblue_fantasy, 1boy, blonde_hair, horns, scar, scar_on_face, pointy_ears, draph
+          铠甲: armor
+          </加兰莎_tag>
+
+      - 名称: 玛格丽尔
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [玛格丽尔, maglielle_(granblue_fantasy:_relink)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <玛格丽尔_tag>
+          主体形象: maglielle_(granblue_fantasy:_relink), granblue_fantasy, 1girl, long_hair, blonde_hair, red_eyes, pointy_ears, harvin, earrings
+          白裙: white_dress, ascot, hairband
+          </玛格丽尔_tag>
+
+      - 名称: 扎斯巴
+        启用: true
+        激活策略:
+          类型: 绿灯
+          关键字: [扎斯巴, zathba_(granblue_fantasy:_relink)]
+        插入位置:
+          类型: 角色定义之后
+          顺序: 1
+        激活概率: 100
+        递归:
+          不可被其他条目激活: true
+          不可激活其他条目: true
+        内容: |-
+          <扎斯巴_tag>
+          主体形象: zathba_(granblue_fantasy:_relink), granblue_fantasy, 1boy, short_hair, animal_ears, horns, muscular_male, beard
+          便服: jacket, pants
+          </扎斯巴_tag>

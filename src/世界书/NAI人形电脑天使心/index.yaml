@@ -1,0 +1,259 @@
+# yaml-language-server: $schema=https://testingcf.jsdelivr.net/gh/StageDog/tavern_sync/dist/schema/worldbook.zh.json
+
+锚点: {}
+
+条目:
+
+  - 名称: 小叽
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 小叽
+        - 艾露妲
+        - chii
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <小叽_tag>
+      主体形象: chii, chobits, persocom_(chobits), 1girl, android, very_long_hair, blonde_hair, brown_eyes, robot_ears, hair_tubes, sidelocks
+      招牌白裙: white_dress, frills, bare_shoulders, ribbon, choker, thighhighs, barefoot
+      便服: shirt, skirt, thighhighs
+      内衣: underwear, choker, thighhighs
+      </小叽_tag>
+
+  - 名称: 芙蕾雅
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 芙蕾雅
+        - freya
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <芙蕾雅_tag>
+      主体形象: freya_(chobits), chobits, persocom_(chobits), 1girl, android, very_long_hair, blonde_hair, brown_eyes, robot_ears, hair_tubes
+      黑裙: black_dress, gothic_lolita, frills, off-shoulder_dress, black_thighhighs
+      </芙蕾雅_tag>
+
+  - 名称: 丝茉茉
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 丝茉茉
+        - すもも
+        - sumomo
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <丝茉茉_tag>
+      主体形象: sumomo_(chobits), chobits, persocom_(chobits), 1girl, android, mini_person, minigirl, very_long_hair, blonde_hair, brown_eyes, robot_ears, twintails, hair_tubes, hair_bell, bell
+      便服: pink_dress, frills, ribbon, bell
+      </丝茉茉_tag>
+
+  - 名称: 柚姬
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 柚姬
+        - 柚子
+        - yuzuki
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <柚姬_tag>
+      主体形象: yuzuki_(chobits), chobits, persocom_(chobits), 1girl, android, long_hair, blue_hair, blue_eyes, twin_braids, hairband
+      女仆装: maid, maid_apron, apron, maid_headdress, black_dress, thighhighs, pantyhose
+      便服: dress, thighhighs
+      </柚姬_tag>
+
+  - 名称: 琴子
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 琴子
+        - kotoko
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <琴子_tag>
+      主体形象: kotoko_(chobits), chobits, persocom_(chobits), 1girl, android, mini_person, minigirl, very_long_hair, blonde_hair, brown_eyes, robot_ears, twintails, hair_bell, bell
+      水手裙: sailor_dress, bell
+      </琴子_tag>
+
+  - 名称: 阿塔西
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 阿塔西
+        - アタシ
+        - atashi
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <阿塔西_tag>
+      主体形象: atashi_(chobits), chobits, persocom_(chobits), 1girl, android, very_long_hair, blonde_hair, brown_eyes, robot_ears, hair_tubes, twintails
+      粉裙: pink_dress, puffy_sleeves, frills, ribbon
+      </阿塔西_tag>
+
+  - 名称: 本须和秀树
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 本须和秀树
+        - 秀树
+        - motosuwa_hideki
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <本须和秀树_tag>
+      主体形象: motosuwa_hideki, chobits, 1boy, short_hair, black_hair, brown_eyes
+      便服: collared_shirt, pants
+      </本须和秀树_tag>
+
+  - 名称: 大村裕美
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 大村裕美
+        - 裕美
+        - oomura_yumi
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <大村裕美_tag>
+      主体形象: oomura_yumi, chobits, 1girl, long_hair, black_hair, brown_eyes
+      便服: blouse, skirt
+      和服: kimono, hair_flower
+      </大村裕美_tag>
+
+  - 名称: 日比谷千岁
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 日比谷千岁
+        - 千岁
+        - hibiya_chitose
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <日比谷千岁_tag>
+      主体形象: hibiya_chitose, chobits, 1girl, mature_female, very_long_hair, black_hair
+      便服: dress
+      </日比谷千岁_tag>
+
+  - 名称: 清水多香子
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 清水多香子
+        - 多香子
+        - shimizu_takako
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <清水多香子_tag>
+      主体形象: shimizu_takako_(chobits), chobits, 1girl, mature_female, long_hair, black_hair
+      便服: blouse, skirt
+      </清水多香子_tag>
+
+  - 名称: 国分寺稔
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 国分寺稔
+        - 稔
+        - kokubunji_minoru
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <国分寺稔_tag>
+      主体形象: kokubunji_minoru, chobits, 1boy, short_hair, black_hair
+      便服: collared_shirt, shorts
+      </国分寺稔_tag>
+
+  - 名称: 新保弘
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 新保弘
+        - 新保
+        - shinbo_hiromu
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <新保弘_tag>
+      主体形象: shinbo_hiromu, chobits, 1boy, short_hair, black_hair
+      便服: collared_shirt, pants
+      </新保弘_tag>

@@ -1,0 +1,395 @@
+# yaml-language-server: $schema=https://testingcf.jsdelivr.net/gh/StageDog/tavern_sync/dist/schema/worldbook.zh.json
+
+锚点: {}
+
+条目:
+
+  - 名称: 古河渚
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 古河渚
+        - 渚
+        - furukawa_nagisa
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <古河渚_tag>
+      主体形象: furukawa_nagisa, clannad, 1girl, short_hair, brown_hair, antenna_hair, brown_eyes
+      光坂校服: hikarizaka_private_high_school_uniform, sailor_collar, ribbon, skirt
+      便服: dress, ribbon
+      </古河渚_tag>
+
+  - 名称: 冈崎朋也
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 冈崎朋也
+        - 朋也
+        - okazaki_tomoya
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <冈崎朋也_tag>
+      主体形象: okazaki_tomoya, clannad, 1boy, short_hair, blue_hair, blue_eyes, antenna_hair
+      光坂校服: hikarizaka_private_high_school_uniform, collared_shirt, pants
+      便服: shirt, pants
+      </冈崎朋也_tag>
+
+  - 名称: 冈崎汐
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 冈崎汐
+        - 汐
+        - okazaki_ushio
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <冈崎汐_tag>
+      主体形象: okazaki_ushio, clannad, 1girl, child, short_hair, brown_hair, antenna_hair, brown_eyes
+      便服: dress, hat
+      水手裙: sailor_dress
+      </冈崎汐_tag>
+
+  - 名称: 藤林杏
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 藤林杏
+        - 杏
+        - fujibayashi_kyou
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <藤林杏_tag>
+      主体形象: fujibayashi_kyou, clannad, 1girl, very_long_hair, purple_hair, purple_eyes
+      光坂校服: hikarizaka_private_high_school_uniform, white_ribbon, skirt, white_thighhighs
+      运动服: gym_uniform
+      </藤林杏_tag>
+
+  - 名称: 藤林椋
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 藤林椋
+        - 椋
+        - fujibayashi_ryou
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <藤林椋_tag>
+      主体形象: fujibayashi_ryou, clannad, 1girl, short_hair, purple_hair, purple_eyes
+      光坂校服: hikarizaka_private_high_school_uniform, ribbon, skirt, white_thighhighs
+      便服: dress
+      </藤林椋_tag>
+
+  - 名称: 伊吹风子
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 伊吹风子
+        - 风子
+        - ibuki_fuuko
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <伊吹风子_tag>
+      主体形象: ibuki_fuuko, clannad, 1girl, low-tied_long_hair, brown_hair, brown_eyes, starfish
+      光坂校服: hikarizaka_private_high_school_uniform, sailor_collar, skirt
+      便服: dress
+      </伊吹风子_tag>
+
+  - 名称: 坂上智代
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 坂上智代
+        - 智代
+        - sakagami_tomoyo
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <坂上智代_tag>
+      主体形象: sakagami_tomoyo, clannad, 1girl, very_long_hair, grey_hair, blue_eyes, black_hairband
+      光坂校服: hikarizaka_private_high_school_uniform, skirt
+      便服: dress
+      </坂上智代_tag>
+
+  - 名称: 一之濑琴美
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 一之濑琴美
+        - 琴美
+        - ichinose_kotomi
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <一之濑琴美_tag>
+      主体形象: ichinose_kotomi, clannad, 1girl, long_hair, blue_hair, purple_eyes, two_side_up, hair_bobbles, hair_ornament
+      光坂校服: hikarizaka_private_high_school_uniform, serafuku, sailor_collar, skirt
+      便服: dress
+      </一之濑琴美_tag>
+
+  - 名称: 春原阳平
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 春原阳平
+        - 阳平
+        - sunohara_youhei
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <春原阳平_tag>
+      主体形象: sunohara_youhei, clannad, 1boy, short_hair, blonde_hair, blue_eyes
+      光坂校服: hikarizaka_private_high_school_uniform, collared_shirt, necktie, pants
+      便服: shirt, pants
+      </春原阳平_tag>
+
+  - 名称: 春原芽衣
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 春原芽衣
+        - 芽衣
+        - sunohara_mei
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <春原芽衣_tag>
+      主体形象: sunohara_mei, clannad, 1girl, child, twintails, blue_hair, brown_eyes, hair_ribbon
+      便服: dress, ribbon
+      </春原芽衣_tag>
+
+  - 名称: 宫泽有纪宁
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 宫泽有纪宁
+        - 有纪宁
+        - miyazawa_yukine
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <宫泽有纪宁_tag>
+      主体形象: miyazawa_yukine, clannad, 1girl, long_hair, brown_hair, blue_eyes, ahoge
+      光坂校服: hikarizaka_private_high_school_uniform, sailor_collar, skirt
+      便服: dress
+      </宫泽有纪宁_tag>
+
+  - 名称: 古河早苗
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 古河早苗
+        - 早苗
+        - furukawa_sanae
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <古河早苗_tag>
+      主体形象: furukawa_sanae, clannad, 1girl, mature_female, long_hair, brown_hair, antenna_hair, brown_eyes
+      面包店围裙: apron, dress
+      便服: dress, ribbon
+      </古河早苗_tag>
+
+  - 名称: 古河秋生
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 古河秋生
+        - 秋生
+        - furukawa_akio
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <古河秋生_tag>
+      主体形象: furukawa_akio, clannad, 1boy, mature_male, short_hair, brown_hair, brown_eyes
+      面包店围裙: apron, shirt
+      便服: shirt, pants
+      </古河秋生_tag>
+
+  - 名称: 相乐美佐枝
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 相乐美佐枝
+        - 美佐枝
+        - sagara_misae
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <相乐美佐枝_tag>
+      主体形象: sagara_misae, clannad, 1girl, mature_female, long_hair, brown_hair, yellow_eyes
+      便服: shirt, sleeves_rolled_up, apron, skirt
+      </相乐美佐枝_tag>
+
+  - 名称: 伊吹公子
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 伊吹公子
+        - 公子
+        - ibuki_kouko
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <伊吹公子_tag>
+      主体形象: ibuki_kouko, clannad, 1girl, mature_female, long_hair, brown_hair, brown_eyes
+      便服: dress, pantyhose
+      </伊吹公子_tag>
+
+  - 名称: 芳野祐介
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 芳野祐介
+        - 芳野
+        - yoshino_yuusuke
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <芳野祐介_tag>
+      主体形象: yoshino_yuusuke, clannad, 1boy, short_hair, brown_hair
+      便服: shirt, pants
+      </芳野祐介_tag>
+
+  - 名称: 冈崎直幸
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 冈崎直幸
+        - 直幸
+        - okazaki_naoyuki
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <冈崎直幸_tag>
+      主体形象: okazaki_naoyuki, clannad, 1boy, mature_male, short_hair, brown_hair, glasses
+      便服: shirt, pants
+      </冈崎直幸_tag>
+
+  - 名称: 幻想世界的少女
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字:
+        - 幻想世界的少女
+        - 幻想世界
+        - girl_from_the_illusionary_world
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <幻想世界的少女_tag>
+      主体形象: girl_from_the_illusionary_world, clannad, 1girl, long_hair, brown_hair, brown_eyes
+      白裙: white_dress, sundress, barefoot
+      </幻想世界的少女_tag>
