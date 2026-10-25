@@ -1,0 +1,876 @@
+```
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>绿皮火车 · 车厢系统</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: transparent; padding: 4px; color: #e2e8f0; }
+  .train-box { width: 100%; max-width: 680px; margin: 4px auto; border: 1px solid rgba(226, 232, 240, 0.12); border-radius: 12px; background: linear-gradient(165deg, #0d121a 0%, #131a24 100%); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45); overflow: hidden; }
+  .t-header { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; background: rgba(15, 23, 42, 0.6); border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
+  .t-title { display: flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 600; color: #f8fafc; }
+  .t-dot { width: 8px; height: 8px; border-radius: 50%; background: #10b981; box-shadow: 0 0 8px #10b981; }
+  .t-sub { font-size: 12px; color: #94a3b8; }
+  .main-nav { display: flex; background: rgba(0, 0, 0, 0.25); border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+  .m-tab { flex: 1; text-align: center; padding: 9px 0; font-size: 13px; color: #94a3b8; cursor: pointer; user-select: none; transition: all 0.2s; border-bottom: 2px solid transparent; }
+  .m-tab:hover { color: #cbd5e1; background: rgba(255, 255, 255, 0.03); }
+  .m-tab.active { color: #38bdf8; font-weight: 600; background: rgba(56, 189, 248, 0.08); border-bottom-color: #38bdf8; }
+  .tab-pane { display: none; padding: 14px; }
+  .tab-pane.active { display: block; }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 8px; }
+  .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .card { background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 8px; padding: 8px 10px; }
+  .card .lbl { font-size: 11px; color: #94a3b8; margin-bottom: 2px; }
+  .card .val { font-size: 13px; font-weight: 500; color: #f1f5f9; word-break: break-word; }
+  .sec-title { font-size: 12px; font-weight: 600; color: #38bdf8; margin: 12px 0 6px 0; display: flex; align-items: center; justify-content: space-between; }
+  .sec-title span { display: flex; align-items: center; gap: 6px; }
+  .sec-title span::before { content: ''; display: inline-block; width: 3px; height: 11px; background: #38bdf8; border-radius: 2px; }
+  .bar-bg { width: 100%; height: 6px; background: rgba(255, 255, 255, 0.1); border-radius: 99px; overflow: hidden; margin-top: 5px; }
+  .bar-fill { height: 100%; background: linear-gradient(90deg, #38bdf8, #34d399); }
+  .attr-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; }
+  .attr-item { display: flex; justify-content: space-between; align-items: center; padding: 6px 10px; background: rgba(255, 255, 255, 0.035); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 6px; font-size: 12.5px; }
+  .attr-item .an { color: #cbd5e1; }
+  .attr-item .av { font-weight: 600; color: #f8fafc; }
+  .attr-item .add { font-size: 11px; color: #34d399; margin-left: 4px; }
+  .badge { display: inline-block; padding: 2px 7px; border-radius: 4px; font-size: 11.5px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
+  .tag-gold { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: rgba(245, 158, 11, 0.3); }
+  .tag-purple { background: rgba(168, 85, 247, 0.18); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.35); font-weight: 600; }
+  .talent summary { list-style: none; display: flex; align-items: center; gap: 4px; cursor: pointer; }
+  .talent summary::-webkit-details-marker { display: none; }
+  .talent summary .caret { color: #94a3b8; font-size: 10px; transition: transform 0.15s; }
+  .talent[open] summary .caret { transform: rotate(180deg); }
+  .talent-effect { margin-top: 6px; padding-left: 8px; border-left: 2px solid #a855f7; color: #cbd5e1; font-size: 11.5px; line-height: 1.65; }
+  .body-detail-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-left: 3px solid #38bdf8; border-radius: 8px; padding: 10px 12px; font-size: 12.5px; line-height: 1.7; color: #e2e8f0; }
+  .mind-box { padding: 9px 12px; border-radius: 8px; background: rgba(0, 0, 0, 0.25); border-left: 3px solid #818cf8; font-size: 12.5px; color: #cbd5e1; line-height: 1.6; font-style: italic; }
+  .char-picker { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 8px; margin-bottom: 12px; border-bottom: 1px dashed rgba(255, 255, 255, 0.08); }
+  .char-btn { padding: 5px 12px; border-radius: 20px; font-size: 12px; color: #94a3b8; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); cursor: pointer; white-space: nowrap; user-select: none; transition: all 0.18s; }
+  .char-btn:hover { color: #f1f5f9; border-color: rgba(255, 255, 255, 0.3); }
+  .char-btn.active { color: #0d121a; background: #38bdf8; font-weight: 600; border-color: #38bdf8; }
+  .char-card-body { display: none; }
+  .char-card-body.active { display: block; }
+  .foot-tools { display: flex; justify-content: flex-end; gap: 8px; padding-top: 10px; margin-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.06); }
+  .btn-mini { font-size: 11px; padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(255, 255, 255, 0.15); color: #94a3b8; background: transparent; cursor: pointer; }
+  .btn-mini:hover { color: #f43f5e; border-color: #f43f5e; }
+  .btn-mini.import { color: #38bdf8; border-color: rgba(56, 189, 248, 0.4); }
+  .btn-mini.import:hover { color: #0d121a; background: #38bdf8; border-color: #38bdf8; }
+  .empty-tip { text-align: center; color: #64748b; font-size: 12px; padding: 24px 0; }
+  .store-list { display: flex; flex-direction: column; gap: 5px; }
+  .store-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 7px 10px; background: rgba(255, 255, 255, 0.035); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 7px; font-size: 12.5px; }
+  .store-name { color: #e2e8f0; word-break: break-word; }
+  .store-qty { color: #fbbf24; font-weight: 600; white-space: nowrap; }
+  .cap-tip { font-size: 11px; color: #64748b; margin-top: 5px; line-height: 1.5; }
+  @media (max-width: 420px) {
+    .m-tab { font-size: 11.5px; padding: 8px 1px; }
+    .tab-pane { padding: 10px; }
+  }
+</style>
+</head>
+<body>
+<div class="train-box" id="trainApp"><div class="empty-tip">正在同步车厢数据…</div></div>
+<script>
+(function() {
+  var STORAGE_KEY = 'TRAIN_PANEL_PERSIST_DATA';
+
+  function getRawContent() {
+    try {
+      if (typeof getChatMessages === 'function' && typeof getCurrentMessageId === 'function') {
+        var list = getChatMessages(getCurrentMessageId());
+        if (list) {
+          var msg = (list.length !== undefined) ? list[0] : list;
+          return (typeof msg === 'string') ? msg : (msg.message || '');
+        }
+      }
+    } catch (e) {}
+    return '';
+  }
+
+  function getCurrentId() {
+    try { return getCurrentMessageId(); } catch (e) { return null; }
+  }
+
+  function getStatData() {
+    try {
+      var id = getCurrentId();
+      if (id === null) return null;
+      if (typeof getVariables === 'function') {
+        var vars = getVariables({ type: 'message', message_id: id });
+        var data = vars && vars.stat_data;
+        if (data && data.主角) return data;
+      }
+      if (typeof Mvu !== 'undefined' && Mvu && typeof Mvu.getMvuData === 'function') {
+        var mvu_data = Mvu.getMvuData({ type: 'message', message_id: id });
+        if (mvu_data && mvu_data.stat_data && mvu_data.stat_data.主角) return mvu_data.stat_data;
+      }
+    } catch (e) {}
+    return null;
+  }
+
+  function num(v, d) {
+    var n = parseFloat(v);
+    return isNaN(n) ? d : n;
+  }
+
+  function esc(s) {
+    var a = String.fromCharCode(38);
+    return String(s || '').replace(/&/g, a + 'amp;').replace(/</g, a + 'lt;').replace(/>/g, a + 'gt;').replace(/"/g, a + 'quot;').replace(/'/g, a + '#39;');
+  }
+
+  function getTagBlock(text, name) {
+    var r = new RegExp('<(?:' + name + ')[^>]*>([\\s\\S]*?)<\\/(?:' + name + ')>', 'i');
+    var m = String(text || '').match(r);
+    return m ? m[1] : '';
+  }
+
+  function getAllTagBlocks(text, name) {
+    var out = [];
+    var r = new RegExp('<(?:' + name + ')[^>]*>([\\s\\S]*?)<\\/(?:' + name + ')>', 'gi');
+    var m;
+    while ((m = r.exec(String(text || ''))) !== null) { out.push(m[1]); }
+    return out;
+  }
+
+  function parseRows(str) {
+    var out = [];
+    var lines = String(str || '').split('\n');
+    for (var i = 0; i < lines.length; i++) {
+      var s = lines[i].replace(/^\s+|\s+$/g, '');
+      var m = s.match(/\[([^\]]+)\]/);
+      if (!m) continue;
+      var parts = m[1].replace(/｜/g, '|').split('|');
+      for (var j = 0; j < parts.length; j++) parts[j] = parts[j].replace(/^\s+|\s+$/g, '');
+      if (parts[0]) out.push(parts);
+    }
+    return out;
+  }
+
+  function getV(rows, key, def) {
+    for (var i = 0; i < rows.length; i++) {
+      if (rows[i][0] === key && rows[i][1] !== undefined && rows[i][1] !== '') return rows[i][1];
+    }
+    return def || '';
+  }
+
+  function getAll(rows, key) {
+    var out = [];
+    for (var i = 0; i < rows.length; i++) {
+      if (rows[i][0] === key) out.push(rows[i]);
+    }
+    return out;
+  }
+
+  function renderExpBar(cur, max) {
+    var c = parseFloat(cur) || 0, m = parseFloat(max) || 0;
+    var p = m > 0 ? Math.min(100, Math.max(0, Math.round(c / m * 100))) : 0;
+    return `<div class="bar-bg"><div class="bar-fill" style="width:${p}%"></div></div>`;
+  }
+
+  function renderAttrGrid(attrMap) {
+    var keys = Object.keys(attrMap || {});
+    if (!keys.length) return `<div class="empty-tip" style="padding:8px;">无属性数据</div>`;
+    var h = `<div class="attr-list">`;
+    for (var i = 0; i < keys.length; i++) {
+      var k = keys[i], it = attrMap[k];
+      var addHtml = it.add ? `<span class="add">${esc(it.add)}</span>` : '';
+      h += `<div class="attr-item"><span class="an">${esc(k)}</span><div><span class="av">${esc(it.v || '0')}</span>${addHtml}</div></div>`;
+    }
+    return h + `</div>`;
+  }
+
+  function loadPersistData() {
+    try {
+      var s = localStorage.getItem(STORAGE_KEY);
+      if (s) {
+        var d = JSON.parse(s);
+        if (!d.user) d.user = { attrs: {}, items: [] };
+        if (!d.user.items) d.user.items = [];
+        if (!d.store) d.store = { cap: 30, items: [] };
+        if (!d.store.items) d.store.items = [];
+        return d;
+      }
+    } catch (e) {}
+    return { glob: {}, user: { attrs: {}, items: [] }, chars: {}, store: { cap: 30, items: [] } };
+  }
+
+  function savePersistData(data) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch (e) {}
+  }
+
+  function mergeState(oldData, raw) {
+    var st = getTagBlock(raw, '状态栏|status');
+    var globBlock = getTagBlock(st || raw, '全局|global');
+    var userBlock = getTagBlock(st || raw, '用户|user|玩家');
+    var charBlocks = getAllTagBlocks(st, '角色|char|npc');
+    if (!charBlocks.length) charBlocks = getAllTagBlocks(raw, '角色|char|npc');
+
+    var gr = parseRows(globBlock);
+    ['时间', '位置', '积分', '站点', '繁衍协议', '暴击'].forEach(function(k) {
+      var v = getV(gr, k); if (v) oldData.glob[k] = v;
+    });
+
+    if (userBlock) {
+      var ur = parseRows(userBlock);
+      ['等级', '称号', '称号作用', '天赋', '天赋作用', '状态'].forEach(function(k) { var v = getV(ur, k); if (v) oldData.user[k] = v; });
+      var ex = getAll(ur, '经验'); if (ex.length) oldData.user.exp = [ex[0][1], ex[0][2]];
+      var uAttrs = getAll(ur, '属性');
+      uAttrs.forEach(function(a) { if (a[1]) oldData.user.attrs[a[1]] = { v: a[2] || '0', add: a[3] || '' }; });
+      var uItems = getAll(ur, '物品');
+      if (uItems.length) {
+        var itArr = [];
+        uItems.forEach(function(it) {
+          var name = String(it[1] || '').replace(/^\s+|\s+$/g, '');
+          if (!name || name === '无' || name === '无物品') return;
+          itArr.push({ name: name, qty: String(it[2] || '').replace(/^\s+|\s+$/g, ''), unit: String(it[3] || '').replace(/^\s+|\s+$/g, '') });
+        });
+        oldData.user.items = itArr;
+      }
+    }
+
+    var storeBlock = getTagBlock(raw, '仓库|store|storage');
+    if (storeBlock) {
+      var sr = parseRows(storeBlock);
+      var cap = 30;
+      var storeItems = [];
+      sr.forEach(function(r) {
+        if (r[0] === '容量' || r[0] === '仓储容量') {
+          var m = String(r[1] || '').match(/(\d+)\s*$/);
+          if (m) cap = parseInt(m[1], 10) || 30;
+        } else if (r[0] === '仓' || r[0] === '仓库' || r[0] === '物品') {
+          var name = String(r[2] || '').replace(/^\s+|\s+$/g, '');
+          if (!name || name === '无' || name === '无物品') return;
+          storeItems.push({
+            cat: String(r[1] || '其他').replace(/^\s+|\s+$/g, '') || '其他',
+            name: name,
+            qty: String(r[3] || '0').replace(/^\s+|\s+$/g, ''),
+            unit: String(r[4] || '').replace(/^\s+|\s+$/g, ''),
+          });
+        }
+      });
+      oldData.store = { cap: cap, items: storeItems };
+    }
+
+    charBlocks.forEach(function(cb) {
+      var cr = parseRows(cb);
+      var name = getV(cr, '姓名');
+      if (!name) return;
+      if (!oldData.chars[name]) {
+        oldData.chars[name] = { name: name, attrs: {} };
+      }
+      var cObj = oldData.chars[name];
+      ['身份', '等级', '好感', '天赋', '天赋作用', '容貌', '身材', '内心', '状态'].forEach(function(k) {
+        var v = getV(cr, k); if (v) cObj[k] = v;
+      });
+      var cx = getAll(cr, '经验'); if (cx.length) cObj.exp = [cx[0][1], cx[0][2]];
+      var cAttrs = getAll(cr, '属性');
+      cAttrs.forEach(function(a) { if (a[1]) cObj.attrs[a[1]] = { v: a[2] || '0', add: a[3] || '' }; });
+    });
+
+    savePersistData(oldData);
+    return oldData;
+  }
+
+  function attrFromStat(attrs) {
+    var source = attrs || {};
+    var keys = Object.keys(source);
+    if (!keys.length) keys = ['力量', '敏捷', '体力', '精神'];
+    var out = {};
+    keys.forEach(function(k) {
+      var a = source[k] || {};
+      var add = num(a.加值, 0);
+      out[k] = { v: String(num(a.数值, 0)), add: add ? ('+' + add) : '' };
+    });
+    return out;
+  }
+
+  function itemsFromStat(items) {
+    return Object.keys(items || {}).map(function(name) {
+      var it = items[name] || {};
+      return {
+        name: name,
+        qty: String(it.数量 !== undefined ? it.数量 : 0),
+        unit: it.单位 || '',
+        cat: it.分类 || '其他',
+      };
+    });
+  }
+
+  function canonicalRoom(room) {
+    var s = String(room || '');
+    var m = s.match(/\d+/);
+    if (m) {
+      var n = parseInt(m[0], 10);
+      if (n >= 1 && n <= 10) return n + '号房';
+    }
+    return s || '未知房';
+  }
+
+  function normalizeBeds(beds) {
+    var out = {};
+    Object.keys(beds || {}).forEach(function(key) {
+      var label = canonicalRoom(key);
+      var r = beds[key] || {};
+      if (!out[label]) out[label] = { 左铺: '空', 右铺: '空' };
+      var target = out[label];
+      ['左铺', '右铺'].forEach(function(side) {
+        var name = r[side];
+        if (!name || name === '空') return;
+        if (target[side] === name) return;
+        if (target[side] === '空') { target[side] = name; return; }
+        if (target.左铺 === name || target.右铺 === name) return;
+      });
+    });
+    return out;
+  }
+
+  function normalizeSite(site) {
+    var defaults = {名称: '待抵达', 评级: '未知', 类型: '未知', 状态: '行驶中', 剩余: '未知', 危险度: '未知', 已探索: [], 特殊规则: '无'};
+    if (!site) return defaults;
+    if (typeof site === 'string') { defaults.剩余 = site; return defaults; }
+    var out = {};
+    Object.keys(defaults).forEach(function(k) {
+      out[k] = site[k] !== undefined && site[k] !== null ? site[k] : defaults[k];
+    });
+    if (!Array.isArray(out.已探索)) out.已探索 = out.已探索 ? [String(out.已探索)] : [];
+    return out;
+  }
+
+  function normalizeCarriage(carriage) {
+    var c = carriage || {};
+    var f = c.设施 || {};
+    return {
+      数量: c.数量 !== undefined && c.数量 !== null ? c.数量 : 4,
+      设施: {
+        厨房: f.厨房 || '基础',
+        沐浴: f.沐浴 || '基础',
+        供电: f.供电 || '无',
+        防御: f.防御 || '无',
+      },
+    };
+  }
+
+  function stateFromStat(stat) {
+    var w = stat.世界 || {};
+    var p = stat.主角 || {};
+    var s = stat.仓库 || {};
+    var cs = stat.角色 || {};
+    var pe = p.经验 || {};
+
+    var chars = {};
+    Object.keys(cs).forEach(function(name) {
+      var c = cs[name] || {};
+      var e = c.经验 || {};
+      chars[name] = {
+        name: name,
+        '身份': c.身份 || '随车成员',
+        '等级': String(c.等级 !== undefined ? c.等级 : 1),
+        exp: [e.当前 || 0, e.所需 || 100],
+        '好感': String(c.好感 !== undefined ? c.好感 : 0),
+        '天赋': c.天赋 || '未觉醒',
+        '天赋作用': c.天赋作用 || '',
+        '容貌': c.容貌 || '',
+        '身材': c.身材 || '',
+        '内心': c.内心 || '',
+        '状态': c.状态 || '',
+        '怀孕': (function() {
+          var preg = c.怀孕 || {};
+          if (typeof preg === 'string') preg = { 状态: preg };
+          return preg;
+        })(),
+        attrs: attrFromStat(c.属性),
+      };
+    });
+
+    return {
+      glob: {
+        '时间': w.时间 || '',
+        '位置': w.位置 || '',
+        '积分': String(w.积分 !== undefined ? w.积分 : 0),
+        '站点': (w.站点 && typeof w.站点 === 'object') ? (w.站点.名称 || '待抵达') : (w.站点 || ''),
+        '繁衍协议': w.繁衍协议 || '',
+        '暴击': w.暴击 || '',
+      },
+      user: {
+        '等级': String(p.等级 !== undefined ? p.等级 : 1),
+        exp: [pe.当前 || 0, pe.所需 || 100],
+        '称号': p.称号 || '列车新人',
+        '称号作用': p.称号作用 || '',
+        '天赋': p.天赋 || 'SSS 暴击翻倍',
+        '天赋作用': p.天赋作用 || '',
+        '状态': p.状态 || '',
+        attrs: attrFromStat(p.属性),
+        items: itemsFromStat(p.物品),
+      },
+      chars: chars,
+      store: {
+        cap: num(s.容量, 30),
+        items: itemsFromStat(s.物品),
+      },
+      beds: normalizeBeds((stat.卧铺 && stat.卧铺.房间) || {}),
+      site: normalizeSite(w.站点),
+      carriage: normalizeCarriage(stat.车厢),
+    };
+  }
+
+  function attrToStat(attrs) {
+    var out = {};
+    ['力量', '敏捷', '体力', '精神'].forEach(function(k) {
+      var a = (attrs && attrs[k]) || {};
+      out[k] = { 数值: num(a.v, 0), 加值: num(String(a.add || '').replace('+', ''), 0) };
+    });
+    return out;
+  }
+
+  function buildStatFromLegacy(state) {
+    var data = {
+      世界: {
+        时间: state.glob['时间'] || '',
+        位置: state.glob['位置'] || '',
+        积分: num(state.glob['积分'], 0),
+        站点: {
+          名称: '待抵达',
+          评级: '未知',
+          类型: '未知',
+          状态: '行驶中',
+          剩余: state.glob['站点'] || '未知',
+          危险度: '未知',
+          已探索: [],
+          特殊规则: '无',
+        },
+        繁衍协议: state.glob['繁衍协议'] || '',
+        暴击: state.glob['暴击'] || '',
+      },
+      主角: {
+        等级: num(state.user['等级'], 1),
+        经验: {
+          当前: num(state.user.exp && state.user.exp[0], 0),
+          所需: num(state.user.exp && state.user.exp[1], 100),
+        },
+        称号: state.user['称号'] || '列车新人',
+        称号作用: state.user['称号作用'] || '',
+        天赋: state.user['天赋'] || 'SSS 暴击翻倍',
+        天赋作用: state.user['天赋作用'] || '',
+        属性: attrToStat(state.user.attrs),
+        状态: state.user['状态'] || '',
+        物品: {},
+      },
+      仓库: {
+        容量: num(state.store && state.store.cap, 30),
+        物品: {},
+      },
+      卧铺: { 房间: {} },
+      车厢: {
+        数量: 4,
+        设施: { 厨房: '基础', 沐浴: '基础', 供电: '无', 防御: '无' },
+      },
+      角色: {},
+    };
+
+    (state.user.items || []).forEach(function(it) {
+      var name = (typeof it === 'string') ? it : it.name;
+      if (!name) return;
+      data.主角.物品[name] = {
+        分类: '其他',
+        数量: num(typeof it === 'object' ? it.qty : 1, 1),
+        单位: (typeof it === 'object' && it.unit) || '',
+      };
+    });
+
+    ((state.store && state.store.items) || []).forEach(function(it) {
+      if (!it.name) return;
+      data.仓库.物品[it.name] = {
+        分类: it.cat || '其他',
+        数量: num(it.qty, 0),
+        单位: it.unit || '',
+      };
+    });
+
+    Object.keys(state.chars || {}).forEach(function(name) {
+      var c = state.chars[name];
+      var e = c.exp || [0, 100];
+      data.角色[name] = {
+        身份: c['身份'] || '随车成员',
+        等级: num(c['等级'], 1),
+        经验: { 当前: num(e[0], 0), 所需: num(e[1], 100) },
+        好感: num(c['好感'], 0),
+        天赋: c['天赋'] || '未觉醒',
+        天赋作用: c['天赋作用'] || '',
+        容貌: c['容貌'] || '',
+        身材: c['身材'] || '',
+        内心: c['内心'] || '',
+        状态: c['状态'] || '',
+        怀孕: { 状态: '未受孕', 天数: 0, 父亲: '', 显怀: false, 生产记录: '' },
+        属性: attrToStat(c.attrs),
+      };
+    });
+
+    return data;
+  }
+
+  function roomIndex(room) {
+    var m = String(room || '').match(/\d+/);
+    return m ? parseInt(m[0], 10) : 999;
+  }
+
+  function fmtBed(name) {
+    if (!name || name === '空') return '空';
+    return name === '主角' ? '你' : name;
+  }
+
+  function findBed(beds, name) {
+    var rooms = Object.keys(beds || {});
+    for (var i = 0; i < rooms.length; i++) {
+      var r = beds[rooms[i]] || {};
+      if (r.左铺 === name) return rooms[i] + ' · 左铺';
+      if (r.右铺 === name) return rooms[i] + ' · 右铺';
+    }
+    return '';
+  }
+
+  function renderGlobalTab(glob, beds, site, carriage) {
+    var h = `<div class="cap-tip" style="margin-bottom:8px;">以下为全车共享状态，不属于单个角色。</div>`;
+    var siteRating = (site.评级 && site.评级 !== '未知') ? site.评级 + '级' : '评级未知';
+    h += `<div class="sec-title"><span>列车运行</span></div><div class="grid">
+      <div class="card"><div class="lbl">当前时间</div><div class="val">${esc(glob['时间'] || '未知')}</div></div>
+      <div class="card"><div class="lbl">车厢位置</div><div class="val">${esc(glob['位置'] || '行驶中')}</div></div>
+      <div class="card"><div class="lbl">积分余额</div><div class="val" style="color:#fbbf24;">${esc(glob['积分'] || '0')}</div></div>
+      <div class="card"><div class="lbl">${site.状态 === '停靠中' ? '当前站点' : '下一站'}</div><div class="val">${esc(site.名称 || '待抵达')}</div><div style="font-size:11px;color:#94a3b8;margin-top:2px;">${esc(siteRating)} · ${esc(site.类型 || '未知')} · ${esc(site.剩余 || '未知')}</div></div>
+    </div>`;
+    h += `<div class="sec-title"><span>站点情报</span></div><div class="grid">
+      <div class="card"><div class="lbl">状态 / 剩余</div><div class="val" style="font-size:12px;">${esc(site.状态 || '行驶中')} · ${esc(site.剩余 || '未知')}</div></div>
+      <div class="card"><div class="lbl">危险度</div><div class="val" style="font-size:12px;">${esc(site.危险度 || '未知')}</div></div>
+      <div class="card"><div class="lbl">已探索</div><div class="val" style="font-size:12px;">${esc((site.已探索 || []).join('、') || '未探索')}</div></div>
+    </div>
+    <div class="card" style="margin-bottom:8px;"><div class="lbl">特殊规则</div><div class="val" style="font-size:12px;line-height:1.6;">${esc(site.特殊规则 || '无')}</div></div>`;
+    if (glob['繁衍协议'] || glob['暴击']) {
+      h += `<div class="sec-title"><span>全车状态</span></div><div class="grid">`;
+      if (glob['繁衍协议']) h += `<div class="card"><div class="lbl">繁衍协议</div><div class="val">${esc(glob['繁衍协议'])}</div></div>`;
+      if (glob['暴击']) h += `<div class="card"><div class="lbl">暴击状态</div><div class="val" style="color:#34d399;">${esc(glob['暴击'])}</div></div>`;
+      h += `</div>`;
+    }
+
+    var rooms = Object.keys(beds || {}).sort(function(a, b) { return roomIndex(a) - roomIndex(b); });
+    var occupied = rooms.filter(function(room) {
+      var r = beds[room] || {};
+      return (r.左铺 && r.左铺 !== '空') || (r.右铺 && r.右铺 !== '空');
+    });
+    h += `<div class="sec-title"><span>卧铺分配 · ${occupied.length} / 10 间</span></div>`;
+    if (!occupied.length) {
+      h += `<div class="empty-tip" style="padding:10px;">还没有人占铺，先到先得。</div>`;
+    } else {
+      h += `<div class="store-list">`;
+      occupied.forEach(function(room) {
+        var r = beds[room] || {};
+        h += `<div class="store-row"><div class="store-name">${esc(room)}</div><div class="store-qty" style="color:#cbd5e1;font-weight:500;">${esc(fmtBed(r.左铺))} / ${esc(fmtBed(r.右铺))}</div></div>`;
+      });
+      h += `</div>`;
+    }
+
+    var fac = carriage.设施 || {};
+    h += `<div class="sec-title"><span>车厢设施 · ${esc(carriage.数量 || '4')} 节</span></div><div class="grid cols-3">
+      <div class="card"><div class="lbl">厨房</div><div class="val" style="font-size:12px;">${esc(fac.厨房 || '基础')}</div></div>
+      <div class="card"><div class="lbl">沐浴</div><div class="val" style="font-size:12px;">${esc(fac.沐浴 || '基础')}</div></div>
+      <div class="card"><div class="lbl">供电</div><div class="val" style="font-size:12px;">${esc(fac.供电 || '无')}</div></div>
+      <div class="card"><div class="lbl">防御</div><div class="val" style="font-size:12px;">${esc(fac.防御 || '无')}</div></div>
+    </div>`;
+    return h;
+  }
+
+  function renderEffectBadge(name, effect, tagClass) {
+    var label = esc(name || '未激活');
+    var cls = tagClass || 'tag-purple';
+    if (!effect) return `<span class="badge ${cls}">${label}</span>`;
+    return `<details class="talent"><summary><span class="badge ${cls}">${label}</span><span class="caret">▾</span></summary><div class="talent-effect">${esc(effect)}</div></details>`;
+  }
+
+  function renderTalent(name, effect) {
+    var label = esc(name || '未激活');
+    if (!effect) return `<span class="badge tag-purple">${label}</span>`;
+    return `<details class="talent"><summary><span class="badge tag-purple">${label}</span><span class="caret">▾</span></summary><div class="talent-effect">${esc(effect)}</div></details>`;
+  }
+
+  function renderUserTab(user, beds) {
+    var h = `<div class="sec-title"><span>等级与进阶</span></div>`;
+    
+    h += `<div class="grid cols-3">
+      <div class="card"><div class="lbl">等级</div><div class="val" style="color:#38bdf8;">Lv.${esc(user['等级'] || '1')}</div></div>
+      <div class="card"><div class="lbl">称号</div><div class="val">${renderEffectBadge(user['称号'], user['称号作用'], 'tag-gold')}</div></div>
+      <div class="card"><div class="lbl">专属天赋</div><div class="val">${renderTalent(user['天赋'], user['天赋作用'])}</div></div>
+    </div>`;
+
+    if (user.exp) {
+      h += `<div class="card" style="margin-bottom:8px;"><div class="lbl">经验进度 (${esc(user.exp[0] || '0')} / ${esc(user.exp[1] || '?')})</div>${renderExpBar(user.exp[0], user.exp[1])}</div>`;
+    }
+    h += `<div class="sec-title"><span>基础与拓展属性</span></div>` + renderAttrGrid(user.attrs);
+
+    h += `<div class="sec-title"><span>当前状态</span></div><div class="card" style="margin-bottom:8px;"><div class="val" style="font-size:12.5px;line-height:1.6;">${esc(user['状态'] || '正常')}</div></div>`;
+
+    h += `<div class="sec-title"><span>铺位</span></div><div class="card" style="margin-bottom:8px;"><div class="val" style="font-size:12.5px;">${esc(findBed(beds, '主角') || '未分配')}</div></div>`;
+
+    h += `<div class="sec-title"><span>随身物品</span></div>`;
+    if (user.items && user.items.length) {
+      h += `<div style="display:flex;flex-wrap:wrap;gap:6px;">`;
+      user.items.forEach(function(it) {
+        var name = (typeof it === 'string') ? it : (it.name || '');
+        var qty = (typeof it === 'object' && it.qty) ? (' ×' + it.qty + (it.unit || '')) : '';
+        h += `<span class="badge" style="background:rgba(255,255,255,0.06);color:#cbd5e1;border-color:rgba(255,255,255,0.1);">${esc(name)}${esc(qty)}</span>`;
+      });
+      h += `</div>`;
+    } else {
+      h += `<div class="empty-tip" style="padding:8px;">随身没有物品</div>`;
+    }
+    return h;
+  }
+
+  function normalizeCat(c) {
+    var s = String(c || '').replace(/^\s+|\s+$/g, '');
+    if (!s) return '其他';
+    if (STORE_ORDER.indexOf(s) !== -1) return s;
+    if (s.indexOf('水果') !== -1) return '食物';
+    if (s.indexOf('食') !== -1) return '食物';
+    if (s.indexOf('饮') !== -1 || s === '水') return '饮水';
+    if (s.indexOf('药') !== -1) return '药品';
+    if (s.indexOf('装备') !== -1 || s.indexOf('武器') !== -1) return '装备';
+    if (s.indexOf('材料') !== -1) return '材料';
+    return '其他';
+  }
+
+  var STORE_ORDER = ['食物', '饮水', '药品', '材料', '装备', '其他'];
+
+  function renderStoreTab(store) {
+    var items = (store && store.items) || [];
+    var cap = parseInt(store && store.cap, 10) || 30;
+    var used = items.length;
+    var p = cap > 0 ? Math.min(100, Math.round(used / cap * 100)) : 0;
+    var barColor = used >= cap ? 'linear-gradient(90deg,#f59e0b,#ef4444)' : 'linear-gradient(90deg,#38bdf8,#34d399)';
+    var h = `<div class="card" style="margin-bottom:10px;">
+      <div class="lbl">餐车公共仓储 · ${used} / ${cap} 格</div>
+      <div class="bar-bg"><div class="bar-fill" style="width:${p}%;background:${barColor};"></div></div>
+      <div class="cap-tip">同类物资堆叠，1 类占 1 格；大型装备每件占 1 格。取用自由，消耗会从这里扣除。</div>
+    </div>`;
+
+    if (!items.length) {
+      return h + `<div class="empty-tip">仓储为空。搜刮、购买或从随身物品存入后会显示在这里。</div>`;
+    }
+
+    var groups = {};
+    items.forEach(function(it) {
+      var c = normalizeCat(it.cat);
+      if (!groups[c]) groups[c] = [];
+      groups[c].push(it);
+    });
+    var cats = STORE_ORDER.filter(function(c) { return groups[c] && groups[c].length; });
+    Object.keys(groups).forEach(function(c) { if (cats.indexOf(c) === -1) cats.push(c); });
+
+    cats.forEach(function(c) {
+      h += `<div class="sec-title"><span>${esc(c)} · ${groups[c].length} 格</span></div><div class="store-list">`;
+      groups[c].forEach(function(it) {
+        h += `<div class="store-row"><div class="store-name">${esc(it.name)}</div><div class="store-qty">${esc(it.qty || '0')}${esc(it.unit || '')}</div></div>`;
+      });
+      h += `</div>`;
+    });
+    return h;
+  }
+
+  function renderCharsTab(charsMap, beds) {
+    var names = Object.keys(charsMap || {});
+    if (!names.length) return `<div class="empty-tip">暂无随车角色数据…</div>`;
+    
+    var h = `<div class="char-picker">`;
+    for (var i = 0; i < names.length; i++) {
+      var c = charsMap[names[i]];
+      var activeCls = (i === 0) ? ' active' : '';
+      h += `<div class="char-btn${activeCls}" data-cidx="${i}">${esc(c.name)} Lv.${esc(c['等级'] || '1')}</div>`;
+    }
+    h += `</div>`;
+
+    for (var j = 0; j < names.length; j++) {
+      var charObj = charsMap[names[j]];
+      var actBody = (j === 0) ? ' active' : '';
+      h += `<div class="char-card-body${actBody}" id="charBody_${j}">`;
+      h += `<div class="grid cols-3">`;
+      h += `<div class="card"><div class="lbl">姓名 / 身份</div><div class="val">${esc(charObj.name)}<br><span style="font-size:11px;color:#94a3b8;">${esc(charObj['身份'] || '随车人员')}</span></div></div>`;
+      h += `<div class="card"><div class="lbl">等级 / 好感</div><div class="val"><span style="color:#38bdf8;">Lv.${esc(charObj['等级'] || '1')}</span><br><span style="color:#f43f5e;font-size:12px;">❤ ${esc(charObj['好感'] || '0')}</span></div></div>`;
+      h += `<div class="card"><div class="lbl">专属天赋</div><div class="val" style="padding-top:2px;">${renderTalent(charObj['天赋'], charObj['天赋作用'])}</div></div>`;
+      h += `</div>`;
+
+      if (charObj.exp) {
+        h += `<div class="card" style="margin-bottom:8px;"><div class="lbl">角色经验 (${esc(charObj.exp[0] || '0')} / ${esc(charObj.exp[1] || '?')})</div>${renderExpBar(charObj.exp[0], charObj.exp[1])}</div>`;
+      }
+
+      h += `<div class="sec-title"><span>容貌特征</span></div><div class="card" style="margin-bottom:8px;"><div class="val" style="font-size:12.5px;line-height:1.6;">${esc(charObj['容貌'] || '（未记录）')}</div></div>`;
+      h += `<div class="sec-title"><span>身材特写（照片级写实）</span></div><div class="body-detail-card" style="margin-bottom:8px;">${esc(charObj['身材'] || '（未记录）')}</div>`;
+      h += `<div class="sec-title"><span>内心想法</span></div><div class="mind-box">“${esc(charObj['内心'] || '……')}”</div>`;
+      h += `<div class="sec-title"><span>当前状态</span></div><div class="card" style="margin-bottom:8px;"><div class="val" style="font-size:12.5px;line-height:1.6;">${esc(charObj['状态'] || '正常')}</div></div>`;
+      var preg = charObj['怀孕'] || {};
+      var pregText;
+      var pregProgress = '';
+      if (preg.状态 === '怀孕中') {
+        var pregDays = parseInt(preg.天数, 10) || 0;
+        pregText = '怀孕中 · 第 ' + esc(pregDays) + ' / 280 天' + (preg.显怀 ? ' · 已显怀' : '');
+        pregProgress = `<div style="font-size:11px;color:#94a3b8;margin-top:6px;">孕期进度</div>` + renderExpBar(pregDays, 280);
+      } else if (preg.状态 === '已生产') {
+        pregText = '已生产';
+        if (preg.生产记录) pregText += ' · ' + esc(preg.生产记录);
+      } else if (preg.状态 === '已转化') {
+        pregText = '已转化（生命因子）';
+      } else {
+        pregText = preg.状态 || '未受孕';
+      }
+      if (preg.父亲 && preg.状态 !== '未受孕' && preg.状态 !== '已转化') pregText += ' · 父亲：' + esc(preg.父亲);
+      h += `<div class="sec-title"><span>怀孕 / 生育</span></div><div class="card" style="margin-bottom:8px;"><div class="val" style="font-size:12.5px;line-height:1.6;">${pregText}</div>${pregProgress}</div>`;
+      h += `<div class="sec-title"><span>铺位</span></div><div class="card" style="margin-bottom:8px;"><div class="val" style="font-size:12.5px;">${esc(findBed(beds, charObj.name) || '未分配')}</div></div>`;
+      h += `<div class="sec-title"><span>专属属性</span></div>` + renderAttrGrid(charObj.attrs);
+      h += `</div>`;
+    }
+    return h;
+  }
+
+  function clearMemory() {
+    if (confirm('确认清空旧文本缓存吗？MVU 变量不会受影响。')) {
+      localStorage.removeItem(STORAGE_KEY);
+      location.reload();
+    }
+  }
+  window.clearTrainMemory = clearMemory;
+
+  function importLegacy() {
+    var raw = getRawContent();
+    if (raw.indexOf('<状态栏>') === -1) {
+      alert('当前楼层没有旧状态栏可导入。');
+      return;
+    }
+    var id = getCurrentId();
+    if (id === null) return;
+    var data = buildStatFromLegacy(mergeState(loadPersistData(), raw));
+    var newText = raw.replace(/<状态栏>[\s\S]*?<\/状态栏>/i, '').replace(/\s+$/, '');
+    if (newText.indexOf('<StatusPlaceHolderImpl/>') === -1) {
+      newText += '\n\n<StatusPlaceHolderImpl/>';
+    }
+
+    try {
+      var tasks = [];
+      if (typeof Mvu !== 'undefined' && Mvu && typeof Mvu.replaceMvuData === 'function') {
+        var m = Mvu.getMvuData({ type: 'message', message_id: id }) || {};
+        m.stat_data = data;
+        tasks.push(Mvu.replaceMvuData(m, { type: 'message', message_id: id }));
+      } else if (typeof getVariables === 'function' && typeof replaceVariables === 'function') {
+        var vars = getVariables({ type: 'message', message_id: id }) || {};
+        vars.stat_data = data;
+        replaceVariables(vars, { type: 'message', message_id: id });
+      } else {
+        alert('当前环境不支持写入 MVU 变量。');
+        return;
+      }
+
+      if (typeof setChatMessages === 'function') {
+        tasks.push(setChatMessages([{ message_id: id, message: newText }], { refresh: 'affected' }));
+      } else {
+        alert('已写入 MVU 变量，但当前环境无法移除旧状态栏；下一层新消息会使用 MVU。');
+      }
+
+      if (tasks.length) {
+        Promise.all(tasks)
+          .then(function() { location.reload(); })
+          .catch(function(e) {
+            console.error(e);
+            alert('导入失败: ' + e);
+          });
+      } else {
+        location.reload();
+      }
+    } catch (e) {
+      console.error(e);
+      alert('导入失败: ' + e);
+    }
+  }
+  window.importTrainLegacy = importLegacy;
+
+  function bindTabs(app) {
+    var tabs = app.querySelectorAll('.m-tab');
+    tabs.forEach(function(tb) {
+      tb.addEventListener('click', function() {
+        tabs.forEach(function(t) { t.classList.remove('active'); });
+        app.querySelectorAll('.tab-pane').forEach(function(p) { p.classList.remove('active'); });
+        tb.classList.add('active');
+        var target = app.querySelector('#' + tb.getAttribute('data-tab'));
+        if (target) target.classList.add('active');
+      });
+    });
+
+    var cBtns = app.querySelectorAll('.char-btn');
+    cBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        cBtns.forEach(function(b) { b.classList.remove('active'); });
+        app.querySelectorAll('.char-card-body').forEach(function(cb) { cb.classList.remove('active'); });
+        btn.classList.add('active');
+        var bodyTarget = app.querySelector('#charBody_' + btn.getAttribute('data-cidx'));
+        if (bodyTarget) bodyTarget.classList.add('active');
+      });
+    });
+  }
+
+  function renderPanel(finalState, source, canImport) {
+    var charCount = Object.keys(finalState.chars).length;
+    var storeItems = (finalState.store && finalState.store.items) || [];
+    var storeUsed = storeItems.length;
+    var app = document.getElementById('trainApp');
+    if (!app) return;
+    var site = finalState.site || normalizeSite(finalState.glob['站点']);
+    var carriage = finalState.carriage || normalizeCarriage(finalState.carriage);
+    var beds = normalizeBeds(finalState.beds || {});
+
+    app.innerHTML = `
+      <div class="t-header">
+        <div class="t-title"><div class="t-dot"></div>绿皮火车 · 车厢系统</div>
+        <div class="t-sub">${esc(finalState.glob['时间'] || '第1天')} · ${esc(finalState.glob['位置'] || '车厢内')} · ${esc(source)}</div>
+      </div>
+      <div class="main-nav">
+        <div class="m-tab active" data-tab="tab_global">列车总览</div>
+        <div class="m-tab" data-tab="tab_user">个人状态</div>
+        <div class="m-tab" data-tab="tab_store">车厢仓储 (${storeUsed})</div>
+        <div class="m-tab" data-tab="tab_chars">随车成员 (${charCount})</div>
+      </div>
+      <div class="tab-pane active" id="tab_global">${renderGlobalTab(finalState.glob, beds, site, carriage)}</div>
+      <div class="tab-pane" id="tab_user">${renderUserTab(finalState.user, beds)}</div>
+      <div class="tab-pane" id="tab_store">${renderStoreTab(finalState.store)}</div>
+      <div class="tab-pane" id="tab_chars">${renderCharsTab(finalState.chars, beds)}</div>
+      <div class="foot-tools">
+        ${canImport ? `<button class="btn-mini import" onclick="window.importTrainLegacy()">导入旧状态栏到 MVU</button>` : ''}
+        <button class="btn-mini" onclick="window.clearTrainMemory()">清空旧文本缓存</button>
+      </div>`;
+
+    bindTabs(app);
+  }
+
+  function init() {
+    var raw = getRawContent();
+    var hasLegacy = raw.indexOf('<状态栏>') !== -1;
+    var stat = hasLegacy ? null : getStatData();
+    var finalState = stat ? stateFromStat(stat) : mergeState(loadPersistData(), raw);
+    renderPanel(finalState, stat ? 'MVU' : '旧文本', !stat && hasLegacy);
+
+    if (!stat && !hasLegacy) {
+      var tries = 0;
+      var timer = setInterval(function() {
+        tries++;
+        var latest = getStatData();
+        if (latest) {
+          clearInterval(timer);
+          renderPanel(stateFromStat(latest), 'MVU', false);
+        } else if (tries >= 20) {
+          clearInterval(timer);
+        }
+      }, 500);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+</body>
+</html>
+```

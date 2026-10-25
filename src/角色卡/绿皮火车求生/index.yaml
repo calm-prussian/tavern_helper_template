@@ -1,0 +1,451 @@
+# yaml-language-server: $schema=https://testingcf.jsdelivr.net/gh/StageDog/tavern_sync/dist/schema/character.zh.json
+头像: 头像
+版本: ""
+作者: ""
+备注: ""
+
+第一条消息:
+  - 文件: 第一条消息/0
+
+角色描述: ""
+
+锚点: {}
+
+世界书名称: 绿皮火车求生
+条目:
+  - 名称: 世界观设定
+    启用: true
+    激活策略:
+      类型: 蓝灯
+    插入位置:
+      类型: 角色定义之前
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: false
+      不可激活其他条目: false
+    文件: 世界书/世界观设定
+
+  - 名称: 开局设定-无限制
+    启用: true
+    激活策略:
+      类型: 蓝灯
+    插入位置:
+      类型: 角色定义之前
+      顺序: 2
+    激活概率: 100
+    递归:
+      不可被其他条目激活: false
+      不可激活其他条目: false
+    文件: 世界书/开局设定-无限制
+
+  - 名称: 开局设定
+    启用: false
+    激活策略:
+      类型: 蓝灯
+    插入位置:
+      类型: 角色定义之前
+      顺序: 2
+    激活概率: 100
+    递归:
+      不可被其他条目激活: false
+      不可激活其他条目: false
+    文件: 世界书/开局设定
+
+  - 名称: 等级与属性系统
+    启用: true
+    激活策略:
+      类型: 蓝灯
+    插入位置:
+      类型: 角色定义之前
+      顺序: 5
+    激活概率: 100
+    递归:
+      不可被其他条目激活: false
+      不可激活其他条目: false
+    文件: 世界书/等级与属性系统
+
+  - 名称: 积分商城
+    启用: true
+    激活策略:
+      类型: 蓝灯
+    插入位置:
+      类型: 角色定义之前
+      顺序: 6
+    激活概率: 100
+    递归:
+      不可被其他条目激活: false
+      不可激活其他条目: false
+    文件: 世界书/积分商城
+
+  - 名称: 全球火车论坛
+    启用: true
+    激活策略:
+      类型: 蓝灯
+    插入位置:
+      类型: 角色定义之前
+      顺序: 7
+    激活概率: 100
+    递归:
+      不可被其他条目激活: false
+      不可激活其他条目: false
+    文件: 世界书/全球火车论坛
+
+  - 名称: 站点规则
+    启用: true
+    激活策略:
+      类型: 蓝灯
+    插入位置:
+      类型: 角色定义之前
+      顺序: 8
+    激活概率: 100
+    递归:
+      不可被其他条目激活: false
+      不可激活其他条目: false
+    文件: 世界书/站点规则
+
+  - 名称: 暴击翻倍
+    启用: true
+    激活策略:
+      类型: 蓝灯
+    插入位置:
+      类型: 角色定义之前
+      顺序: 9
+    激活概率: 100
+    递归:
+      不可被其他条目激活: false
+      不可激活其他条目: false
+    文件: 世界书/暴击翻倍
+
+  - 名称: 繁衍规则
+    启用: true
+    激活策略:
+      类型: 蓝灯
+    插入位置:
+      类型: 角色定义之前
+      顺序: 10
+    激活概率: 100
+    递归:
+      不可被其他条目激活: false
+      不可激活其他条目: false
+    文件: 世界书/繁衍规则
+
+  - 名称: 天赋
+    启用: true
+    激活策略:
+      类型: 蓝灯
+    插入位置:
+      类型: 角色定义之前
+      顺序: 11
+    激活概率: 100
+    递归:
+      不可被其他条目激活: false
+      不可激活其他条目: false
+    文件: 世界书/天赋
+
+  - 名称: "[initvar]变量初始化勿开"
+    启用: false
+    激活策略:
+      类型: 蓝灯
+    插入位置:
+      类型: 角色定义之前
+      顺序: 14720
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    文件: 世界书/变量/initvar
+
+  - 名称: 变量列表
+    启用: true
+    激活策略:
+      类型: 蓝灯
+    插入位置:
+      类型: 指定深度
+      角色: 系统
+      深度: 0
+      顺序: 14720
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    文件: 世界书/变量/变量列表
+
+  - 名称: "[mvu_update]变量更新规则"
+    启用: true
+    激活策略:
+      类型: 蓝灯
+    插入位置:
+      类型: 指定深度
+      角色: 系统
+      深度: 0
+      顺序: 14720
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    文件: 世界书/变量/变量更新规则
+
+  - 名称: "[mvu_update]变量输出格式"
+    启用: true
+    激活策略:
+      类型: 蓝灯
+    插入位置:
+      类型: 指定深度
+      角色: 系统
+      深度: 0
+      顺序: 14720
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    文件: 世界书/变量/变量输出格式
+
+扩展字段:
+  正则:
+    - 正则名称: "[美化]绿皮火车-积分商城终端"
+      id: 96b8bd3c-6144-4b0c-92da-0eaaf77adaff
+      启用: true
+      查找表达式: /<积分商城>([\s\S]*?)<\/积分商城>/gis
+      文件: 正则/[美化]绿皮火车-积分商城终端
+      来源:
+        用户输入: false
+        AI输出: true
+        思维链: false
+      作用于:
+        仅格式显示: true
+        仅格式提示词: false
+
+    - 正则名称: "[不发送]去除变量更新"
+      id: 62db0ea9-47f8-400f-bdab-e146a2ed30c6
+      启用: true
+      查找表达式: /<update(?:variable)?>(?:(?!.*<\/update(?:variable)?>).*$|.*<\/update(?:variable)?>)/gsi
+      内容: ""
+      来源:
+        用户输入: true
+        AI输出: true
+        思维链: false
+      作用于:
+        仅格式显示: false
+        仅格式提示词: true
+      最大深度: 3
+
+    - 正则名称: "[折叠]变量更新中"
+      id: a8c8db17-bc1b-423b-aa84-edbb1f22462c
+      启用: true
+      查找表达式: /<update(?:variable)?>(?!.*<\/update(?:variable)?>)\s*(.*)\s*$/gsi
+      内容: |-
+        
+        <details>
+        <summary>变量更新中{{random::.::..::...}}</summary>
+        $1
+        </details>
+      来源:
+        用户输入: true
+        AI输出: true
+        思维链: false
+      作用于:
+        仅格式显示: true
+        仅格式提示词: false
+
+    - 正则名称: "[折叠]完整变量更新"
+      id: e3117d38-a81a-4ea3-be5c-3b0a82dc5afe
+      启用: true
+      查找表达式: /<update(?:variable)?>\s*(.*)\s*<\/update(?:variable)?>/gsi
+      内容: |-
+        
+        <details>
+        <summary>变量更新情况</summary>
+        $1
+        </details>
+      来源:
+        用户输入: true
+        AI输出: true
+        思维链: false
+      作用于:
+        仅格式显示: true
+        仅格式提示词: false
+
+    - 正则名称: "[面板]绿皮火车车厢面板（旧文本）"
+      id: 29ef43d1-5d7b-4365-957c-27960078831c
+      启用: true
+      查找表达式: /<状态栏>[\s\S]*?<\/状态栏>(?:\s*<(?:角色|char)[^>]*>[\s\S]*?<\/(?:角色|char)>)*(?:\s*<火车论坛>[\s\S]*?<\/火车论坛>)?/gis
+      文件: 正则/[面板]绿皮火车车厢面板
+      来源:
+        用户输入: false
+        AI输出: true
+        思维链: false
+      作用于:
+        仅格式显示: true
+        仅格式提示词: false
+
+    - 正则名称: "[面板]绿皮火车车厢面板"
+      id: e143c1ee-7054-4e05-8315-71e73445ff74
+      启用: true
+      查找表达式: <StatusPlaceHolderImpl/>
+      文件: 正则/[面板]绿皮火车车厢面板
+      来源:
+        用户输入: false
+        AI输出: true
+        思维链: false
+      作用于:
+        仅格式显示: true
+        仅格式提示词: false
+
+    - 正则名称: 论坛
+      id: a032c19b-c1b4-4488-a240-c70518b6d88d
+      启用: false
+      查找表达式: /<火车论坛>([\s\S]*?)<\/火车论坛>/gis
+      文件: 正则/论坛
+      来源:
+        用户输入: false
+        AI输出: true
+        思维链: false
+      作用于:
+        仅格式显示: true
+        仅格式提示词: false
+
+    - 正则名称: "[美化]绿皮火车-跨界论坛终端"
+      id: fdba59fc-c579-4744-a1d9-ae0741799f3a
+      启用: true
+      查找表达式: /<火车论坛>([\s\S]*?)<\/火车论坛>/gis
+      文件: 正则/[美化]绿皮火车-跨界论坛终端
+      来源:
+        用户输入: false
+        AI输出: true
+        思维链: false
+      作用于:
+        仅格式显示: true
+        仅格式提示词: false
+
+  酒馆助手:
+    脚本库:
+      - 名称: MVUZOD
+        id: b1a4391f-49f4-43d5-bffb-ecf07765fffd
+        启用: true
+        类型: 脚本
+        内容: import
+          'https://testingcf.jsdelivr.net/gh/MagicalAstrogy/MagVarUpdate/artifact/bundle.js'
+        导出时携带:
+          数据: true
+          按钮: true
+        按钮:
+          启用: true
+          按钮列表:
+            - 名称: 重新处理变量
+              可见: true
+            - 名称: 重新读取初始变量
+              可见: false
+            - 名称: 快照楼层
+              可见: false
+            - 名称: 重演楼层
+              可见: false
+            - 名称: 重试额外模型解析
+              可见: false
+            - 名称: 清除旧楼层变量
+              可见: false
+            - 名称: 增量校正额外模型解析
+              可见: false
+
+      - 名称: 变量结构
+        id: 0d5b986a-953c-4e33-a79c-7c468d83d23b
+        启用: true
+        类型: 脚本
+        内容: |-
+          import { registerMvuSchema } from 'https://testingcf.jsdelivr.net/gh/StageDog/tavern_resource/dist/util/mvu_zod.js';
+
+          const Attribute = z.object({ 数值: z.coerce.number().prefault(0), 加值: z.coerce.number().prefault(0) }).prefault({});
+          const Attributes = z.object({ 力量: Attribute, 敏捷: Attribute, 体力: Attribute, 精神: Attribute }).prefault({});
+          const Item = z.object({ 分类: z.string().prefault('其他'), 数量: z.coerce.number().prefault(0), 单位: z.string().prefault('') }).prefault({});
+          const Exp = z.object({ 当前: z.coerce.number().prefault(0), 所需: z.coerce.number().prefault(100) }).prefault({});
+          const Bedroom = z.object({ 左铺: z.string().prefault('空'), 右铺: z.string().prefault('空') }).prefault({});
+          const Site = z.object({
+            名称: z.string().prefault('待抵达'),
+            评级: z.string().prefault('未知'),
+            类型: z.string().prefault('未知'),
+            状态: z.string().prefault('行驶中'),
+            剩余: z.string().prefault('1小时'),
+            危险度: z.string().prefault('未知'),
+            已探索: z.array(z.string()).prefault([]),
+            特殊规则: z.string().prefault('无'),
+          }).prefault({});
+          const SiteInput = z.union([z.string(), Site]).transform(v => (typeof v === 'string' ? Site.parse({ 剩余: v }) : v)).prefault({});
+          const Pregnancy = z.object({
+            状态: z.string().prefault('未受孕'),
+            天数: z.coerce.number().prefault(0),
+            父亲: z.string().prefault(''),
+            显怀: z.boolean().prefault(false),
+            生产记录: z.string().prefault(''),
+          }).prefault({});
+          const Carriage = z.object({
+            数量: z.coerce.number().prefault(4),
+            设施: z.object({
+              厨房: z.string().prefault('基础'),
+              沐浴: z.string().prefault('基础'),
+              供电: z.string().prefault('无'),
+              防御: z.string().prefault('无'),
+            }).prefault({}),
+          }).prefault({});
+          const Char = z.object({
+            身份: z.string().prefault('随车成员'),
+            等级: z.coerce.number().prefault(1),
+            经验: Exp,
+            好感: z.coerce.number().transform(v => _.clamp(v, 0, 100)).prefault(0),
+            天赋: z.string().prefault('未觉醒'),
+            天赋作用: z.string().prefault(''),
+            容貌: z.string().prefault('未记录'),
+            身材: z.string().prefault('未记录'),
+            内心: z.string().prefault(''),
+            状态: z.string().prefault('正常'),
+            怀孕: Pregnancy,
+            属性: Attributes,
+          }).prefault({});
+
+          const Schema = z.object({
+            世界: z.object({
+              时间: z.string().prefault('第1天 16:40'),
+              位置: z.string().prefault('卧铺车厢'),
+              积分: z.coerce.number().prefault(0),
+              站点: SiteInput,
+              繁衍协议: z.string().prefault('已激活 · 累计结合 0 次'),
+              暴击: z.string().prefault(''),
+            }).prefault({}),
+            主角: z.object({
+              等级: z.coerce.number().prefault(1),
+              经验: Exp,
+              称号: z.string().prefault('列车新人'),
+              称号作用: z.string().prefault('无特殊效果，仅为初始身份。'),
+              天赋: z.string().prefault('SSS 暴击翻倍'),
+              天赋作用: z.string().prefault(''),
+              属性: Attributes,
+              状态: z.string().prefault('赤裸，仅一双拖鞋'),
+              物品: z.record(z.string().describe('物品名'), Item).prefault({}),
+            }).prefault({}),
+            仓库: z.object({
+              容量: z.coerce.number().prefault(30),
+              物品: z.record(z.string().describe('物品名'), Item).prefault({}),
+            }).prefault({}),
+            卧铺: z.object({
+              房间: z.record(z.string().describe('房间号'), Bedroom).prefault({}),
+            }).prefault({}),
+            车厢: Carriage,
+            角色: z.record(z.string().describe('角色名'), Char).prefault({}),
+          });
+
+          $(() => {
+            registerMvuSchema(Schema);
+          });
+        导出时携带:
+          数据: true
+          按钮: true
+
+    变量: {}
+
+  odysseia_trace:
+    v: 1
+    kid: v1
+    nonce: 2sgu5YxnmgMFghdV
+    ciphertext: vNFdy2MePnB4nKiIpCJTTl3GH63eUmbeSzwPHdYI9v8dM5RqyWasaF9RBCApJt6-N3I6Jyv8mnGKpQ5ap52CIGJZHMeNWjwIFVz-H_G1DXUek1oeKFMHwQehHdcsCCR3gs138mz49A1YUSSYk00PJ68uKTvjTqSII31VsK0x0JXP5HaL8QdhOdk-LMv_05JutolzNU_9Cq_gThaR8mepn4GNgIkchjQaFPK5BQvpCzW3DOAs-24
+
+  xiaobaix-tasks:
+    tasks: []

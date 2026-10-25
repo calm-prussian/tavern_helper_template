@@ -1,0 +1,123 @@
+```
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:transparent; padding:4px 0; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color:#e2e8f0; }
+.forum-wrap {
+width:100%; max-width:680px; margin:6px auto; border-radius:12px;
+background:linear-gradient(165deg, #0b1118 0%, #151d28 100%);
+border:1px solid rgba(56, 189, 248, 0.35);
+box-shadow:0 8px 24px rgba(0, 0, 0, 0.5); overflow:hidden;
+}
+.f-header {
+display:flex; align-items:center; justify-content:space-between;
+padding:10px 14px; background:rgba(15, 23, 42, 0.7); border-bottom:1px solid rgba(56, 189, 248, 0.2);
+}
+.f-title { display:flex; align-items:center; gap:8px; font-size:13.5px; font-weight:600; color:#38bdf8; }
+.f-badge { font-size:11px; padding:2px 8px; border-radius:12px; background:rgba(56, 189, 248, 0.15); border:1px solid rgba(56, 189, 248, 0.3); color:#7dd3fc; }
+.f-sub { font-size:11.5px; color:#94a3b8; }
+.f-content { padding:12px; }
+.post-item {
+border:1px solid rgba(255, 255, 255, 0.08); border-radius:8px;
+background:rgba(255, 255, 255, 0.025); margin-bottom:10px; overflow:hidden;
+}
+.post-head {
+padding:10px 12px; cursor:pointer; display:flex; align-items:center; justify-content:space-between;
+font-size:13px; user-select:none; transition:background 0.2s;
+}
+.post-head:hover { background:rgba(56, 189, 248, 0.06); }
+.post-title { font-weight:600; color:#f1f5f9; display:flex; align-items:center; gap:6px; }
+.post-meta { font-size:11.5px; color:#64748b; }
+.post-body {
+display:none; padding:12px; border-top:1px dashed rgba(255, 255, 255, 0.08);
+font-size:12.5px; line-height:1.7; color:#cbd5e1; background:rgba(0,0,0,0.15);
+}
+.post-item.open .post-body { display:block; }
+.reply-list { margin-top:10px; border-top:1px solid rgba(255, 255, 255, 0.06); padding-top:8px; }
+.reply-item {
+margin-top:6px; padding:7px 10px; background:rgba(255, 255, 255, 0.02);
+border-left:2px solid #38bdf8; font-size:12px; border-radius:0 6px 6px 0;
+}
+.reply-user { color:#7dd3fc; font-weight:600; margin-right:6px; }
+.reply-text { color:#cbd5e1; }
+.reply-time { font-size:10.5px; color:#64748b; margin-left:6px; }
+.tag-id { background:rgba(245, 158, 11, 0.15); color:#fbbf24; border:1px solid rgba(245, 158, 11, 0.3); padding:1px 5px; border-radius:4px; font-size:11px; }
+</style>
+</head>
+<body>
+<div class="forum-wrap">
+<textarea class="forum-raw" style="display:none;">$1</textarea>
+<div class="f-header">
+<div class="f-title">📡 全球绿皮火车 · 跨界匿名终端 <span class="f-badge">车厢屏</span></div>
+<div class="f-sub">点击标题展开讨论</div>
+</div>
+<div class="f-content forum-render"></div>
+</div>
+<script>
+(function() {
+var cs = document.currentScript;
+var root = cs ? cs.previousElementSibling : document.querySelector('.forum-wrap:last-of-type');
+if (!root) return;
+var rawElem = root.querySelector('.forum-raw');
+var container = root.querySelector('.forum-render');
+var raw = rawElem ? rawElem.value : '';
+function esc(s) {
+var a = String.fromCharCode(38);
+return String(s || '').replace(/&/g, a + 'amp;').replace(/</g, a + 'lt;').replace(/>/g, a + 'gt;').replace(/"/g, a + 'quot;').replace(/'/g, a + '#39;');
+}
+var lines = raw.split('\n');
+var rows = [], posts = [], map = {};
+for (var i = 0; i < lines.length; i++) {
+var s = lines[i].trim();
+if (s.indexOf('[') !== -1 && s.indexOf(']') !== -1) {
+var content = s.substring(s.indexOf('[') + 1, s.lastIndexOf(']'));
+var parts = content.split('|');
+if (parts.length === 1) parts = content.split('｜');
+for (var j = 0; j < parts.length; j++) parts[j] = parts[j].trim();
+if (parts[0]) rows.push(parts);
+}
+}
+for (var i = 0; i < rows.length; i++) {
+var r = rows[i];
+if (r[0] === '帖') {
+var p = { id: r[1] || '?', author: r[2] || '匿名', time: r[3] || '', title: r[4] || '无题', body: r[7] || '', reps: [] };
+posts.push(p);
+map[p.id] = p;
+} else if (r[0] === '回复') {
+var pid = r[1];
+if (map[pid]) {
+map[pid].reps.push({ author: r[2] || '匿名', time: r[3] || '', text: r[4] || '' });
+}
+}
+}
+if (!posts.length) {
+container.innerHTML = '<div style="text-align:center;color:#64748b;font-size:12px;padding:16px;">当前频段未截获新帖子…</div>';
+return;
+}
+var h = '';
+for (var k = 0; k < posts.length; k++) {
+var po = posts[k];
+h += '<div class="post-item' + (k === 0 ? ' open' : '') + '">';
+h += '<div class="post-head" onclick="this.parentNode.classList.toggle(\'open\')">';
+h += '<div class="post-title"><span class="tag-id">#' + esc(po.id) + '</span>' + esc(po.title) + '</div>';
+h += '<div class="post-meta">' + esc(po.author) + (po.time ? ' · ' + esc(po.time) : '') + '</div></div>';
+h += '<div class="post-body">' + esc(po.body);
+if (po.reps && po.reps.length) {
+h += '<div class="reply-list">';
+for (var m = 0; m < po.reps.length; m++) {
+var rp = po.reps[m];
+h += '<div class="reply-item"><span class="reply-user">' + esc(rp.author) + ':</span><span class="reply-text">' + esc(rp.text) + '</span>' + (rp.time ? '<span class="reply-time">' + esc(rp.time) + '</span>' : '') + '</div>';
+}
+h += '</div>';
+}
+h += '</div></div>';
+}
+container.innerHTML = h;
+})();
+</script>
+</body>
+</html>
+```

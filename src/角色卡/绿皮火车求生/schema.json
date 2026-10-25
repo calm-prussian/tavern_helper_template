@@ -1,0 +1,357 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "世界": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "时间": {
+          "default": "第1天 16:40",
+          "type": "string"
+        },
+        "位置": {
+          "default": "卧铺车厢",
+          "type": "string"
+        },
+        "积分": {
+          "default": 0,
+          "type": "number"
+        },
+        "站点": {
+          "default": {},
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "default": {},
+              "type": "object",
+              "properties": {
+                "名称": {
+                  "default": "待抵达",
+                  "type": "string"
+                },
+                "评级": {
+                  "default": "未知",
+                  "type": "string"
+                },
+                "类型": {
+                  "default": "未知",
+                  "type": "string"
+                },
+                "状态": {
+                  "default": "行驶中",
+                  "type": "string"
+                },
+                "剩余": {
+                  "default": "1小时",
+                  "type": "string"
+                },
+                "危险度": {
+                  "default": "未知",
+                  "type": "string"
+                },
+                "已探索": {
+                  "default": [],
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "特殊规则": {
+                  "default": "无",
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        },
+        "繁衍协议": {
+          "default": "已激活 · 累计结合 0 次",
+          "type": "string"
+        },
+        "暴击": {
+          "default": "",
+          "type": "string"
+        }
+      }
+    },
+    "主角": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "等级": {
+          "default": 1,
+          "type": "number"
+        },
+        "经验": {
+          "$ref": "#/$defs/__schema0"
+        },
+        "称号": {
+          "default": "列车新人",
+          "type": "string"
+        },
+        "称号作用": {
+          "default": "无特殊效果，仅为初始身份。",
+          "type": "string"
+        },
+        "天赋": {
+          "default": "SSS 暴击翻倍",
+          "type": "string"
+        },
+        "天赋作用": {
+          "default": "",
+          "type": "string"
+        },
+        "属性": {
+          "$ref": "#/$defs/__schema1"
+        },
+        "状态": {
+          "default": "赤裸，仅一双拖鞋",
+          "type": "string"
+        },
+        "物品": {
+          "default": {},
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "物品名"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/__schema3"
+          }
+        }
+      }
+    },
+    "仓库": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "容量": {
+          "default": 30,
+          "type": "number"
+        },
+        "物品": {
+          "default": {},
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "物品名"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/__schema3"
+          }
+        }
+      }
+    },
+    "卧铺": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "房间": {
+          "default": {},
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "房间号"
+          },
+          "additionalProperties": {
+            "default": {},
+            "type": "object",
+            "properties": {
+              "左铺": {
+                "default": "空",
+                "type": "string"
+              },
+              "右铺": {
+                "default": "空",
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "车厢": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "数量": {
+          "default": 4,
+          "type": "number"
+        },
+        "设施": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "厨房": {
+              "default": "基础",
+              "type": "string"
+            },
+            "沐浴": {
+              "default": "基础",
+              "type": "string"
+            },
+            "供电": {
+              "default": "无",
+              "type": "string"
+            },
+            "防御": {
+              "default": "无",
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "角色": {
+      "default": {},
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "description": "角色名"
+      },
+      "additionalProperties": {
+        "default": {},
+        "type": "object",
+        "properties": {
+          "身份": {
+            "default": "随车成员",
+            "type": "string"
+          },
+          "等级": {
+            "default": 1,
+            "type": "number"
+          },
+          "经验": {
+            "$ref": "#/$defs/__schema0"
+          },
+          "好感": {
+            "default": 0,
+            "type": "number"
+          },
+          "天赋": {
+            "default": "未觉醒",
+            "type": "string"
+          },
+          "天赋作用": {
+            "default": "",
+            "type": "string"
+          },
+          "容貌": {
+            "default": "未记录",
+            "type": "string"
+          },
+          "身材": {
+            "default": "未记录",
+            "type": "string"
+          },
+          "内心": {
+            "default": "",
+            "type": "string"
+          },
+          "状态": {
+            "default": "正常",
+            "type": "string"
+          },
+          "怀孕": {
+            "default": {},
+            "type": "object",
+            "properties": {
+              "状态": {
+                "default": "未受孕",
+                "type": "string"
+              },
+              "天数": {
+                "default": 0,
+                "type": "number"
+              },
+              "父亲": {
+                "default": "",
+                "type": "string"
+              },
+              "显怀": {
+                "default": false,
+                "type": "boolean"
+              },
+              "生产记录": {
+                "default": "",
+                "type": "string"
+              }
+            }
+          },
+          "属性": {
+            "$ref": "#/$defs/__schema1"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "__schema0": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "当前": {
+          "default": 0,
+          "type": "number"
+        },
+        "所需": {
+          "default": 100,
+          "type": "number"
+        }
+      }
+    },
+    "__schema1": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "力量": {
+          "$ref": "#/$defs/__schema2"
+        },
+        "敏捷": {
+          "$ref": "#/$defs/__schema2"
+        },
+        "体力": {
+          "$ref": "#/$defs/__schema2"
+        },
+        "精神": {
+          "$ref": "#/$defs/__schema2"
+        }
+      }
+    },
+    "__schema2": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "数值": {
+          "default": 0,
+          "type": "number"
+        },
+        "加值": {
+          "default": 0,
+          "type": "number"
+        }
+      }
+    },
+    "__schema3": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "分类": {
+          "default": "其他",
+          "type": "string"
+        },
+        "数量": {
+          "default": 0,
+          "type": "number"
+        },
+        "单位": {
+          "default": "",
+          "type": "string"
+        }
+      }
+    }
+  }
+}
