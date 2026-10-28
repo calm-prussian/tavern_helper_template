@@ -1,0 +1,49 @@
+{
+  "entries": {
+    "0": {
+      "uid": 0,
+      "displayIndex": 0,
+      "comment": "岳羽由加莉",
+      "disable": false,
+      "constant": false,
+      "selective": true,
+      "key": [
+        "岳羽由加莉",
+        "由加莉",
+        "ゆかり",
+        "takeba_yukari"
+      ],
+      "selectiveLogic": 0,
+      "keysecondary": [],
+      "scanDepth": null,
+      "vectorized": false,
+      "position": 1,
+      "role": 0,
+      "depth": 4,
+      "order": 1,
+      "content": "<岳羽由加莉_tag>\n主体形象: takeba_yukari, persona_3, 1girl, short_hair, brown_hair, brown_eyes\n校服: gekkoukan_high_school_uniform, pink_cardigan, white_shirt, red_bowtie, black_skirt, heart_choker\n冬便服: takeba_yukari_(winter_casual), cardigan, skirt\n夏便服: takeba_yukari_(summer_casual), shirt, skirt\n泳装: takeba_yukari_(swimsuit), swimsuit\n舞台装: takeba_yukari_(ball_stage), dress\n</岳羽由加莉_tag>",
+      "useProbability": true,
+      "probability": 100,
+      "excludeRecursion": true,
+      "preventRecursion": true,
+      "delayUntilRecursion": false,
+      "sticky": null,
+      "cooldown": null,
+      "delay": null,
+      "addMemo": true,
+      "matchPersonaDescription": false,
+      "matchCharacterDescription": false,
+      "matchCharacterPersonality": false,
+      "matchCharacterDepthPrompt": false,
+      "matchScenario": false,
+      "matchCreatorNotes": false,
+      "group": "",
+      "groupOverride": false,
+      "groupWeight": 100,
+      "caseSensitive": null,
+      "matchWholeWords": null,
+      "useGroupScoring": null,
+      "automationId": ""
+    }
+  }
+}

@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://testingcf.jsdelivr.net/gh/StageDog/tavern_sync/dist/schema/worldbook.zh.json
+
+锚点: {}
+
+条目:
+  - 名称: 岳羽由加莉
+    启用: true
+    激活策略:
+      类型: 绿灯
+      关键字: [岳羽由加莉, 由加莉, ゆかり, takeba_yukari]
+    插入位置:
+      类型: 角色定义之后
+      顺序: 1
+    激活概率: 100
+    递归:
+      不可被其他条目激活: true
+      不可激活其他条目: true
+    内容: |-
+      <岳羽由加莉_tag>
+      主体形象: takeba_yukari, persona_3, 1girl, short_hair, brown_hair, brown_eyes
+      校服: gekkoukan_high_school_uniform, pink_cardigan, white_shirt, red_bowtie, black_skirt, heart_choker
+      冬便服: takeba_yukari_(winter_casual), cardigan, skirt
+      夏便服: takeba_yukari_(summer_casual), shirt, skirt
+      泳装: takeba_yukari_(swimsuit), swimsuit
+      舞台装: takeba_yukari_(ball_stage), dress
+      </岳羽由加莉_tag>
